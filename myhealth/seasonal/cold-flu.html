@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cold, Flu & Vaccination | Guardian, I.D.A. & Remedy'sRx</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../assets/style.css">
+
+  <style>
+    :root {
+      --primary: #0056b3;
+      --accent: #ff6b00;
+      --light: #f8f9fa;
+      --text: #333;
+      --text-light: #6c757d;
+      --shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      --transition: all 0.3s ease;
+    }
+
+    body {
+      font-family: 'Roboto', sans-serif;
+      color: var(--text);
+      overflow-x: hidden;
+      line-height: 1.6;
+    }
+
+    h1, h2, h3 {
+      font-family: 'Poppins', sans-serif;
+    }
+
+    /* ===== Banner ===== */
+    .banner {
+      background: linear-gradient(135deg, var(--primary), #004494);
+      color: white;
+      text-align: center;
+      padding: 80px 20px;
+    }
+    .banner h1 {
+      font-size: 2.4rem;
+      font-weight: 600;
+    }
+
+    /* ===== Section Layout ===== */
+    .section {
+      max-width: 1100px;
+      margin: 80px auto;
+      padding: 0 20px;
+    }
+
+    .intro {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 40px;
+    }
+
+    .intro img {
+      flex: 1;
+      max-width: 480px;
+      border-radius: 12px;
+      box-shadow: var(--shadow);
+    }
+
+    .intro-text {
+      flex: 1;
+    }
+
+    .intro-text h2 {
+      color: var(--primary);
+      margin-bottom: 15px;
+    }
+
+    .btn {
+      display: inline-block;
+      background: var(--accent);
+      color: white;
+      text-decoration: none;
+      padding: 12px 25px;
+      border-radius: 25px;
+      transition: var(--transition);
+      font-weight: 500;
+    }
+    .btn:hover {
+      background: #e55a00;
+      transform: translateY(-2px);
+    }
+
+    /* ===== Info sections ===== */
+    .info-box {
+      background: var(--light);
+      padding: 25px;
+      border-radius: 10px;
+      box-shadow: var(--shadow);
+      margin-top: 40px;
+    }
+    .info-box h3 {
+      color: var(--primary);
+      margin-bottom: 10px;
+    }
+
+    /* ===== More Info Grid ===== */
+    .info-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 25px;
+      margin-top: 40px;
+    }
+    .info-card {
+      background: var(--light);
+      padding: 25px;
+      border-radius: 12px;
+      box-shadow: var(--shadow);
+    }
+    .info-card h4 {
+      color: var(--primary);
+      margin-bottom: 10px;
+    }
+    .info-card a {
+      color: var(--accent);
+      font-weight: 500;
+      text-decoration: none;
+    }
+
+    /* ===== Other Services ===== */
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+      margin-top: 50px;
+    }
+    .service-box {
+      background: var(--light);
+      padding: 25px;
+      text-align: center;
+      border-radius: 12px;
+      box-shadow: var(--shadow);
+    }
+    .service-box i {
+      font-size: 40px;
+      color: var(--primary);
+      margin-bottom: 15px;
+    }
+    .service-box h4 {
+      color: var(--primary);
+      margin-bottom: 10px;
+    }
+
+    .disclaimer {
+      font-size: 0.9rem;
+      color: var(--text-light);
+      margin-top: 50px;
+      border-top: 1px solid #ddd;
+      padding-top: 20px;
+    }
+
+    @media (max-width: 768px) {
+      .intro {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ===== Header Placeholder ===== -->
+  <div id="header-placeholder"></div>
+
+  <!-- ===== Page Banner ===== -->
+  <section class="banner">
+    <h1>Cold, Flu & Vaccination</h1>
+  </section>
+
+  <!-- ===== Intro Section ===== -->
+  <section class="section">
+    <div class="intro">
+      <div class="intro-text">
+        <h2>Cold, Flu & Vaccination</h2>
+        <p>While the common cold and flu are both viral infections with similar symptoms, the flu is a much more serious illness.</p>
+        <p>Discover our tips to recognize, prevent and manage cold and flu symptoms and learn more about your best weapon against the flu: vaccination.</p>
+        <a href="#" class="btn">Find a participating pharmacy</a>
+      </div>
+      <img src="https://images.unsplash.com/photo-1584036561566-baf8f5f1b144?auto=format&fit=crop&w=1000&q=80" alt="Cold and flu awareness">
+    </div>
+  </section>
+
+  <!-- ===== Services from Pharmacist ===== -->
+  <section class="section">
+    <div class="info-box">
+      <h3>Services from your Pharmacist</h3>
+      <p>Several services* related to cold and flu are offered in pharmacy:</p>
+      <ul>
+        <li>Symptom management and assessment</li>
+        <li>Vaccinations and antiviral prescriptions in store</li>
+        <li>Advice on over-the-counter medications</li>
+      </ul>
+      <p><em>*Available at participating locations only. Some conditions may apply.</em></p>
+    </div>
+  </section>
+
+  <!-- ===== People at Risk ===== -->
+  <section class="section">
+    <div class="info-box">
+      <h3>People at Risk</h3>
+      <p>Even healthy adults are not immune to the flu. Vaccination to prevent the flu is especially important for people at higher risk of flu-related complications.</p>
+      <a href="#" class="btn">Find out who is at risk</a>
+    </div>
+  </section>
+
+  <!-- ===== More Information About the Flu ===== -->
+  <section class="section">
+    <h2>More Information About the Flu</h2>
+    <div class="info-grid">
+      <div class="info-card">
+        <h4>Why Get a Flu Shot?</h4>
+        <p>Should you get the flu shot? Discover why vaccination matters and how it protects you.</p>
+        <a href="#">Learn More</a>
+      </div>
+      <div class="info-card">
+        <h4>Your Pharmacist Can Help</h4>
+        <p>Don’t hesitate to reach out to your pharmacist for any flu-related questions or advice.</p>
+        <a href="#">Learn More</a>
+      </div>
+      <div class="info-card">
+        <h4>Treating Flu Symptoms</h4>
+        <p>Feeling feverish? Find out how to manage flu symptoms effectively.</p>
+        <a href="#">Learn More</a>
+      </div>
+      <div class="info-card">
+        <h4>Flu: Protection Methods</h4>
+        <p>Here are 5 easy ways to protect yourself and your family from the flu.</p>
+        <a href="#">Learn More</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Other Services ===== -->
+  <section class="section">
+    <h2>Other Services</h2>
+    <div class="services-grid">
+      <div class="service-box">
+        <i class="fas fa-syringe"></i>
+        <h4>General Vaccination</h4>
+        <p>Get vaccinated against Shingles, Tetanus, Pneumococcal disease and more at your local pharmacy.</p>
+        <a href="#" class="btn">Find your pharmacy</a>
+      </div>
+      <div class="service-box">
+        <i class="fas fa-lungs"></i>
+        <h4>Respiratory Health</h4>
+        <p>Experiencing asthma or strep symptoms? Your pharmacist can help ensure your respiratory health.</p>
+        <a href="#" class="btn">Find your pharmacy</a>
+      </div>
+      <div class="service-box">
+        <i class="fas fa-plane-departure"></i>
+        <h4>Travel Vaccination</h4>
+        <p>Before your trip, get the right immunizations for your safety and peace of mind.</p>
+        <a href="#" class="btn">Find your pharmacy</a>
+      </div>
+    </div>
+
+    <p class="disclaimer">
+      * The information contained herein is provided for informational purposes only and is not intended to replace the advice of a health professional.
+      Always consult your healthcare provider for guidance on your health and medications.
+    </p>
+  </section>
+
+  <!-- ===== Footer Placeholder ===== -->
+  <div id="footer-placeholder"></div>
+
+  <script>
+    async function includeHTML(id, file) {
+      const el = document.getElementById(id);
+      if (el) {
+        const res = await fetch(file);
+        el.innerHTML = await res.text();
+        el.querySelectorAll("script").forEach(oldScript => {
+          const s = document.createElement("script");
+          s.text = oldScript.text;
+          document.body.appendChild(s);
+        });
+      }
+    }
+    includeHTML("header-placeholder", "../../components/header.html");
+    includeHTML("footer-placeholder", "../../components/footer.html");
+  </script>
+
+  <script src="../../assets/script.js"></script>
+</body>
+</html>
