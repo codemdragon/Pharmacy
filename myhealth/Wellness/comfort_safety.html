@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Comfort & Safety | Guardian, I.D.A. & Remedy'sRx</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../assets/style.css">
+
+  <style>
+    :root {
+      --primary: #0056b3;
+      --accent: #ff6b00;
+      --light: #f8f9fa;
+      --text: #333;
+      --text-light: #6c757d;
+      --shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      --transition: all 0.3s ease;
+    }
+
+    body {
+      font-family: 'Roboto', sans-serif;
+      color: var(--text);
+      overflow-x: hidden;
+      line-height: 1.6;
+    }
+
+    h1, h2, h3 {
+      font-family: 'Poppins', sans-serif;
+    }
+
+    /* ===== Banner ===== */
+    .banner {
+      background: linear-gradient(135deg, var(--primary), #004494);
+      color: white;
+      text-align: center;
+      padding: 80px 20px;
+    }
+    .banner h1 {
+      font-size: 2.4rem;
+      font-weight: 600;
+    }
+
+    /* ===== Section Layout ===== */
+    .section {
+      max-width: 1100px;
+      margin: 80px auto;
+      padding: 0 20px;
+    }
+
+    .intro {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 40px;
+    }
+
+    .intro img {
+      flex: 1;
+      max-width: 480px;
+      border-radius: 12px;
+      box-shadow: var(--shadow);
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+    }
+
+    .intro-text {
+      flex: 1;
+    }
+
+    .intro-text h2 {
+      color: var(--primary);
+      margin-bottom: 15px;
+    }
+
+    .btn {
+      display: inline-block;
+      background: var(--accent);
+      color: white;
+      text-decoration: none;
+      padding: 12px 25px;
+      border-radius: 25px;
+      transition: var(--transition);
+      font-weight: 500;
+      border: none;
+      cursor: pointer;
+    }
+    .btn:hover {
+      background: #e55a00;
+      transform: translateY(-2px);
+    }
+
+    /* ===== Info sections ===== */
+    .info-box {
+      background: var(--light);
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: var(--shadow);
+      margin-top: 40px;
+    }
+    .info-box h3 {
+      color: var(--primary);
+      margin-bottom: 15px;
+      font-size: 1.5rem;
+    }
+
+    /* ===== More Info Grid ===== */
+    .info-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 25px;
+      margin-top: 40px;
+    }
+    .info-card {
+      background: #fff;
+      padding: 25px;
+      border-radius: 12px;
+      box-shadow: var(--shadow);
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
+    .info-card img {
+        width: 100%;
+        height: 160px;
+        object-fit: cover;
+        border-radius: 8px;
+        margin-bottom: 15px;
+    }
+    .info-card h4 {
+      color: var(--primary);
+      margin-bottom: 10px;
+    }
+    .info-card p {
+      color: var(--text-light);
+      margin-bottom: 15px;
+      flex-grow: 1;
+    }
+    .info-card a {
+      color: var(--accent);
+      font-weight: 500;
+      text-decoration: none;
+      align-self: flex-start;
+    }
+
+    /* ===== Other Services ===== */
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+      margin-top: 50px;
+    }
+    .service-box {
+      background: #fff;
+      padding: 25px;
+      text-align: center;
+      border-radius: 12px;
+      box-shadow: var(--shadow);
+    }
+    .service-box i {
+      font-size: 40px;
+      color: var(--primary);
+      margin-bottom: 15px;
+    }
+    .service-box h4 {
+      color: var(--primary);
+      margin-bottom: 10px;
+    }
+
+    .disclaimer {
+      font-size: 0.85rem;
+      color: var(--text-light);
+      margin-top: 50px;
+      border-top: 1px solid #ddd;
+      padding-top: 20px;
+      line-height: 1.5;
+    }
+
+    @media (max-width: 768px) {
+      .intro {
+        flex-direction: column;
+      }
+      .intro img {
+        max-width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ===== Header Placeholder ===== -->
+  <div id="header-container"></div>
+
+  <!-- ===== Page Banner ===== -->
+  <section class="banner">
+    <h1>COMFORT & SAFETY</h1>
+  </section>
+
+  <!-- ===== Intro Section ===== -->
+  <section class="section">
+    <div class="intro">
+      <div class="intro-text">
+        <h2>Comfort & Safety</h2>
+        <p>Taking good care of your health is important at all ages, but perhaps even more so in later years. And if you are a caregiver, it's important that you fulfill your role without putting your own health at risk.</p>
+        <p>It’s reassuring to know that comfort and safety are within reach and that your pharmacist can help.</p>
+        <a href="#" class="btn">Find your pharmacy</a>
+      </div>
+      <img src="https://images.unsplash.com/photo-1576765608535-5f04d1e3f289?auto=format&fit=crop&w=1000&q=80" alt="Caregiver helping senior">
+    </div>
+  </section>
+
+  <!-- ===== Pharmacist's Tips ===== -->
+  <section class="section">
+    <div class="info-box">
+      <h3>PHARMACIST'S TIPS</h3>
+      <p>Available at your local pharmacy, mobility aid products are designed to help people maintain health, well-being and personal independence in their homes. Your pharmacy team is there to provide advice based on your specific needs!</p>
+    </div>
+  </section>
+
+  <!-- ===== Prevent Falls ===== -->
+  <section class="section">
+    <div class="info-box">
+      <h3>8 TIPS TO PREVENT FALLS AT HOME</h3>
+      <p>According to Statistics Canada, between 20% and 30% of older Canadians experience one or more falls each year. The risk of falling can be reduced by taking a few simple measures.</p>
+      <a href="#" class="btn">Learn how to prevent falls</a>
+    </div>
+  </section>
+
+  <!-- ===== Tools and Technology ===== -->
+  <section class="section">
+    <h2>Tools and Technology to Keep You Safe</h2>
+    <p style="color: var(--text-light); margin-bottom: 30px;">Choosing aids and monitoring treatments can sometimes feel overwhelming. See how technology and a few simple rules of thumb can increase your wellbeing and safety.</p>
+    <div class="info-grid">
+      <div class="info-card">
+        <img src="https://images.unsplash.com/photo-1599059813005-11265ba4b4ce?auto=format&fit=crop&w=800&q=80" alt="Walker">
+        <h4>Choosing a Walker</h4>
+        <p>When choosing a walker or a walking aid, it is essential to select one that’s suited to your needs. Discover the different kinds and advice.</p>
+        <a href="#">Learn More</a>
+      </div>
+      <div class="info-card">
+        <img src="https://images.unsplash.com/photo-1587854692152-cbe660dbde88?auto=format&fit=crop&w=800&q=80" alt="Compression Socks">
+        <h4>Compression Socks</h4>
+        <p>Compression socks are used to treat or prevent various blood circulation problems in the legs. Discover how to get the most out of them.</p>
+        <a href="#">Learn More</a>
+      </div>
+      <div class="info-card">
+        <img src="https://images.unsplash.com/photo-1515523110800-9415d13b84a8?auto=format&fit=crop&w=800&q=80" alt="Cane">
+        <h4>Choosing a Cane</h4>
+        <p>A cane can be very helpful for supporting a weak leg or compensating for balance problems. Learn how to adjust and use it properly in this article.</p>
+        <a href="#">Learn More</a>
+      </div>
+      <div class="info-card">
+        <img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&w=800&q=80" alt="Health Apps">
+        <h4>Websites and Apps</h4>
+        <p>Learn how technology can help you monitor your treatments and keep you safe in your home.</p>
+        <a href="#">Learn More</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Other Services ===== -->
+  <section class="section">
+    <h2>Services in your pharmacy</h2>
+    <div class="services-grid">
+      <div class="service-box">
+        <i class="fas fa-socks"></i>
+        <h4>COMPRESSION SOCKS</h4>
+        <p>There are many good reasons to use compression socks, whether you have poor blood circulation or want to soothe heavy and tired legs. Your pharmacist will help you choose the right model, size and material for the best fit possible.</p>
+        <a href="#" class="btn">Find your pharmacy</a>
+      </div>
+      <div class="service-box">
+        <i class="fas fa-heartbeat"></i>
+        <h4>HEART HEALTH</h4>
+        <p>If you are taking medication for your heart, your pharmacist could suggest some tests to determine if your blood pressure or your cholesterol are well managed.</p>
+        <a href="#" class="btn">Find your pharmacy</a>
+      </div>
+      <div class="service-box">
+        <i class="fas fa-prescription-bottle-alt"></i>
+        <h4>MEDICATION FOR CHRONIC CONDITIONS</h4>
+        <p>If you have a chronic condition and require regular medication, your pharmacist is here to facilitate your day to day. They can extend prescriptions and re-prescribe your medication, as well as show you tools to help you get the most out of your treatment.</p>
+        <a href="#" class="btn">Find your pharmacy</a>
+      </div>
+    </div>
+
+    <p class="disclaimer">
+      * The information contained herein is provided for informational purposes only and is not intended to provide complete information on the subject matter or to replace the advice of a health professional. This information does not constitute medical consultation, diagnosis or opinion and should not be interpreted as such. Please consult your health care provider if you have any questions about your health, medications or treatment.
+    </p>
+  </section>
+
+  <!-- ===== Footer Placeholder ===== -->
+  <div id="footer-container"></div>
+
+  <script>
+    // Function to convert root-relative paths to relative paths
+    function fixPaths(container) {
+      if (!container) return;
+      
+      container.querySelectorAll('a[data-base-path]').forEach(link => {
+        const basePath = link.getAttribute('data-base-path');
+        if (basePath) {
+          // Calculate relative path from current location (2 levels deep: myhealth/wellness/)
+          if (basePath === 'index.html') {
+            link.href = '../../index.html';
+          } else if (basePath.startsWith('myhealth/wellness/')) {
+            // Same directory level
+            link.href = basePath.replace('myhealth/wellness/', '');
+          } else if (basePath.startsWith('myhealth/')) {
+            // One level up
+            link.href = '../' + basePath.replace('myhealth/', '');
+          } else {
+            link.href = '../' + basePath;
+          }
+        }
+      });
+      
+      // Also fix links without data-base-path that start with /
+      container.querySelectorAll('a[href^="/"]').forEach(link => {
+        if (!link.hasAttribute('data-base-path')) {
+          const href = link.getAttribute('href').substring(1);
+          if (href === 'index.html') {
+            link.href = '../../index.html';
+          } else if (href.startsWith('myhealth/wellness/')) {
+            link.href = href.replace('myhealth/wellness/', '');
+          } else if (href.startsWith('myhealth/')) {
+            link.href = '../' + href.replace('myhealth/', '');
+          } else {
+            link.href = '../' + href;
+          }
+        }
+      });
+    }
+
+    // Load shared header/footer
+    fetch("../../components/header.html")
+      .then(res => {
+        if (!res.ok) throw new Error('Failed to load header');
+        return res.text();
+      })
+      .then(html => {
+        const headerContainer = document.getElementById("header-container");
+        if (headerContainer) {
+          headerContainer.innerHTML = html;
+          fixPaths(headerContainer);
+        }
+      })
+      .catch(err => {
+        console.error('Error loading header:', err);
+        const headerContainer = document.getElementById("header-container");
+        if (headerContainer) {
+          headerContainer.innerHTML = '<p style="padding: 20px; color: red;">Error loading header. Please ensure you are running this from a web server.</p>';
+        }
+      });
+
+    fetch("../../components/footer.html")
+      .then(res => {
+        if (!res.ok) throw new Error('Failed to load footer');
+        return res.text();
+      })
+      .then(html => {
+        const footerContainer = document.getElementById("footer-container");
+        if (footerContainer) {
+          footerContainer.innerHTML = html;
+          fixPaths(footerContainer);
+        }
+      })
+      .catch(err => {
+        console.error('Error loading footer:', err);
+        const footerContainer = document.getElementById("footer-container");
+        if (footerContainer) {
+          footerContainer.innerHTML = '<p style="padding: 20px; color: red;">Error loading footer. Please ensure you are running this from a web server.</p>';
+        }
+      });
+  </script>
+
+  <script src="../../assets/script.js"></script>
+  <script src="../../assets/loader.js"></script>
+</body>
+</html>

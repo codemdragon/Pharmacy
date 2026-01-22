@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Family Health | Guardian, I.D.A. & Remedy'sRx</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../assets/style.css">
+  <script src="../../assets/script.js" defer></script>
+  <script src="../../assets/loader.js"></script>
+
+  <style>
+    :root {
+      --primary: #0056b3;
+      --accent: #ff6b00;
+      --light: #f8f9fa;
+      --text: #333;
+      --text-light: #6c757d;
+      --shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    body {
+      font-family: 'Roboto', sans-serif;
+      color: var(--text);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    h1, h2, h3 {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 600;
+    }
+
+    /* Banner */
+    .banner {
+      background: linear-gradient(135deg, var(--primary), #004494);
+      color: #fff;
+      text-align: center;
+      padding: 80px 20px;
+    }
+    .banner h1 { font-size: 2.5rem; }
+
+    /* Section container */
+    .content {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 80px 20px;
+    }
+
+    /* Image + text block */
+    .section-block {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 40px;
+      flex-wrap: wrap;
+      margin-bottom: 80px;
+    }
+
+    .section-block.reverse {
+      flex-direction: row-reverse;
+    }
+
+    .section-img {
+      flex: 1;
+      min-height: 320px;
+      background-size: cover;
+      background-position: center;
+      border-radius: 12px;
+      box-shadow: var(--shadow);
+    }
+
+    .section-text {
+      flex: 1;
+    }
+
+    .section-text h2 {
+      color: var(--primary);
+      margin-bottom: 15px;
+    }
+
+    .section-text p {
+      color: var(--text-light);
+      margin-bottom: 15px;
+    }
+
+    .btn {
+      display: inline-block;
+      background: var(--accent);
+      color: #fff;
+      padding: 10px 25px;
+      border-radius: 25px;
+      text-decoration: none;
+      transition: all 0.3s;
+    }
+
+    .btn:hover {
+      background: #e55a00;
+      transform: translateY(-2px);
+    }
+
+    /* Services section */
+    .services {
+      background: var(--light);
+      padding: 60px 20px;
+      border-radius: 12px;
+      box-shadow: var(--shadow);
+      margin-bottom: 80px;
+    }
+
+    .services h2 {
+      color: var(--primary);
+      margin-bottom: 15px;
+    }
+
+    .services ul {
+      margin-left: 20px;
+      color: var(--text-light);
+      margin-bottom: 15px;
+    }
+
+    /* Info Cards */
+    .info-section {
+      text-align: center;
+      margin-bottom: 80px;
+    }
+
+    .info-section h2 {
+      color: var(--primary);
+      margin-bottom: 10px;
+    }
+
+    .info-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 25px;
+      margin-top: 40px;
+    }
+
+    .info-card {
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: var(--shadow);
+      padding: 20px;
+      text-align: left;
+    }
+
+    .info-card img {
+      width: 100%;
+      height: 160px;
+      object-fit: cover;
+      border-radius: 10px;
+      margin-bottom: 15px;
+    }
+
+    .info-card h3 {
+      color: var(--primary);
+      margin-bottom: 10px;
+      font-size: 1.1rem;
+    }
+
+    .info-card p {
+      color: var(--text-light);
+      margin-bottom: 10px;
+      font-size: 0.9rem;
+    }
+
+    /* Square service boxes */
+    .pharmacy-services {
+      margin-top: 60px;
+    }
+
+    .pharmacy-services h2 {
+      color: var(--primary);
+      margin-bottom: 30px;
+      text-align: center;
+    }
+
+    .pharmacy-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+    }
+
+    .pharmacy-card {
+      background: #fff;
+      padding: 25px;
+      border-radius: 12px;
+      box-shadow: var(--shadow);
+      text-align: center;
+    }
+
+    .pharmacy-card i {
+      font-size: 2rem;
+      color: var(--primary);
+      margin-bottom: 15px;
+    }
+
+    .pharmacy-card h3 {
+      color: var(--primary);
+      margin-bottom: 10px;
+      font-size: 1.2rem;
+    }
+
+    .pharmacy-card p {
+      color: var(--text-light);
+      margin-bottom: 15px;
+    }
+
+    .disclaimer {
+      font-size: 0.85rem;
+      color: var(--text-light);
+      margin-top: 60px;
+      line-height: 1.5;
+    }
+
+    @media (max-width: 768px) {
+      .section-block, .section-block.reverse {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <div id="header-container"></div>
+
+  <!-- Banner -->
+  <section class="banner">
+    <h1>FAMILY HEALTH</h1>
+  </section>
+
+  <!-- Intro -->
+  <section class="content">
+    <div class="section-block reverse">
+      <div class="section-text">
+        <h2>Family Health</h2>
+        <p>Whether it’s for your parents, your children, your partner or yourself, learn our tips to better manage your family’s health and how your pharmacist can help.</p>
+        <a href="#" class="btn">Find a pharmacy</a>
+      </div>
+      <!-- Family Image -->
+      <div class="section-img" style="background-image:url('https://images.unsplash.com/photo-1511895426328-dc871419a019?auto=format&fit=crop&w=1000&q=80');"></div>
+    </div>
+
+    <!-- Services from Pharmacist -->
+    <div class="services">
+      <h2>SERVICES FROM YOUR PHARMACIST</h2>
+      <p>Several services* related to family health are offered in pharmacy:</p>
+      <ul>
+        <li>Vaccination for seniors: shingles and pneumococcal infections.</li>
+        <li>Vaccination for children.</li>
+        <li>Medication prescription against impetigo and GERD.</li>
+        <li>Personalized medication: dosage form, flavor and custom dose.</li>
+      </ul>
+      <p><em>*These services are offered at participating stores only.</em></p>
+    </div>
+
+    <!-- Caregivers Info Box -->
+    <div class="services">
+      <h2>TAKING CARE OF OURSELVES SO WE CAN TAKE CARE OF OTHERS</h2>
+      <p>If you are one of the numerous individuals who act as a caregiver, it’s important that you take good care of your own health as well.</p>
+      <a href="#" class="btn">Find out how</a>
+    </div>
+
+    <!-- Info Cards -->
+    <div class="info-section">
+      <h2>Manage your family’s medications effectively!</h2>
+      <div class="info-grid">
+        <div class="info-card">
+          <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=800&q=80" alt="Pharmacist giving advice">
+          <h3>Medication Tips</h3>
+          <p>To get the most out of a treatment plan, it’s important to take medications as prescribed. However, you may sometimes run into some problems or have some questions. In such cases, you can count on your pharmacist to find solutions for you.</p>
+          <a href="#" class="btn">Learn More</a>
+        </div>
+        <div class="info-card">
+          <img src="https://images.unsplash.com/photo-1584634630486-252411237d63?auto=format&fit=crop&w=800&q=80" alt="Mother cleaning house">
+          <h3>Preventing Spread of Germs</h3>
+          <p>Whether it’s a cold, the flu, a tummy bug, or head lice, there are effective measures that can reduce the risk of transmitting infections to others.</p>
+          <a href="#" class="btn">Learn More</a>
+        </div>
+        <div class="info-card">
+          <img src="https://images.unsplash.com/photo-1559757172-3690ef9f0d1a?auto=format&fit=crop&w=800&q=80" alt="Woman taking medication">
+          <h3>Taking medication correctly</h3>
+          <p>In order to get the desired benefits out of a treatment, it’s important to take medication correctly. Put your health first and follow our tips to ensure you get the most out of your treatment.</p>
+          <a href="#" class="btn">Learn More</a>
+        </div>
+        <div class="info-card">
+          <img src="https://images.unsplash.com/photo-1544717305-27125fee0be1?auto=format&fit=crop&w=800&q=80" alt="Caregiver helping senior">
+          <h3>Caregivers</h3>
+          <p>Discover practical advice and resources to help caregivers stay healthy, manage stress, and find support—because caring for yourself is caring for others.</p>
+          <a href="#" class="btn">Learn More</a>
+        </div>
+        <div class="info-card">
+          <img src="https://images.unsplash.com/photo-1503454533956-bb7b9b3e5f2?auto=format&fit=crop&w=800&q=80" alt="Children playing">
+          <h3>Your Children’s Health</h3>
+          <p>When you follow the immunization schedule to protect your child and watch out for symptoms of other common infections, you generally don’t need to worry about childhood diseases. Learn more about vaccinations and how they protect your child.</p>
+          <a href="#" class="btn">Learn More</a>
+        </div>
+        <div class="info-card">
+          <img src="https://images.unsplash.com/photo-1532012197267-da84d127e765?auto=format&fit=crop&w=800&q=80" alt="Head Lice">
+          <h3>Head Lice: Causes and Symptoms</h3>
+          <p>Discover the common causes and symptoms of head lice. Learn how to identify and treat lice infestations effectively. Stay informed and protect your family.</p>
+          <a href="#" class="btn">Learn More</a>
+        </div>
+        <div class="info-card">
+          <img src="https://images.unsplash.com/photo-1576189426362-68c8a9c6308?auto=format&fit=crop&w=800&q=80" alt="Flu protection">
+          <h3>Flu: Protection Methods</h3>
+          <p>It is never too early to think about how to protect your family from illnesses like the flu. Here are 5 easy ways to avoid catching the flu.</p>
+          <a href="#" class="btn">Learn More</a>
+        </div>
+        <div class="info-card">
+          <img src="https://images.unsplash.com/photo-1489493857454-1a9444344c4?auto=format&fit=crop&w=800&q=80" alt="ADHD Child">
+          <h3>Attention Deficit Hyperactivity Disorder (ADHD)</h3>
+          <p>Learn about attention deficit hyperactivity disorder (ADHD) and the symptoms of this neurological disorder.</p>
+          <a href="#" class="btn">Learn More</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Pharmacy Services -->
+    <div class="pharmacy-services">
+      <h2>Services in your pharmacy</h2>
+      <div class="pharmacy-grid">
+        <div class="pharmacy-card">
+          <i class="fas fa-baby-carriage"></i>
+          <h3>PREGNANCY & MATERNITY</h3>
+          <p>Your pharmacist can help you through the whole process until the baby arrives. They will answer your questions related to medication and vitamins, as well as help you relieve pregnancy-related symptoms.</p>
+          <a href="#" class="btn">Find your pharmacy</a>
+        </div>
+        <div class="pharmacy-card">
+          <i class="fas fa-syringe"></i>
+          <h3>VACCINATION</h3>
+          <p>When you need protection against the Flu, common diseases (Shingles, HPV or Tetanus) or tropical diseases if you are a traveler, turn to your pharmacist for information and expertise.</p>
+          <a href="#" class="btn">Find your pharmacy</a>
+        </div>
+        <div class="pharmacy-card">
+          <i class="fas fa-pills"></i>
+          <h3>MEDICATION CUSTOMIZATION</h3>
+          <p>To make medication taking easier and help you obtain the best results possible, you can customize your medication according to your personal preferences. See how your pharmacist can personalize your treatment to adapt it to your needs and lifestyle.</p>
+          <a href="#" class="btn">Find your pharmacy</a>
+        </div>
+      </div>
+      <p class="disclaimer">
+        * The information contained herein is provided for informational purposes only and is not intended to provide complete information on the subject matter or to replace the advice of a health professional. This information does not constitute medical consultation, diagnosis or opinion and should not be interpreted as such. Please consult your health care provider if you have any questions about your health, medications or treatment.
+      </p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <div id="footer-container"></div>
+
+  <script>
+    // Function to convert root-relative paths to relative paths
+    function fixPaths(container) {
+      if (!container) return;
+      
+      container.querySelectorAll('a[data-base-path]').forEach(link => {
+        const basePath = link.getAttribute('data-base-path');
+        if (basePath) {
+          // Calculate relative path from current location (2 levels deep: myhealth/general_health/)
+          if (basePath === 'index.html') {
+            link.href = '../../index.html';
+          } else if (basePath.startsWith('myhealth/general_health/')) {
+            // Same directory level
+            link.href = basePath.replace('myhealth/general_health/', '');
+          } else if (basePath.startsWith('myhealth/')) {
+            // One level up
+            link.href = '../' + basePath.replace('myhealth/', '');
+          } else {
+            link.href = '../' + basePath;
+          }
+        }
+      });
+      
+      // Also fix links without data-base-path that start with /
+      container.querySelectorAll('a[href^="/"]').forEach(link => {
+        if (!link.hasAttribute('data-base-path')) {
+          const href = link.getAttribute('href').substring(1);
+          if (href === 'index.html') {
+            link.href = '../../index.html';
+          } else if (href.startsWith('myhealth/general_health/')) {
+            link.href = href.replace('myhealth/general_health/', '');
+          } else if (href.startsWith('myhealth/')) {
+            link.href = '../' + href.replace('myhealth/', '');
+          } else {
+            link.href = '../' + href;
+          }
+        }
+      });
+    }
+
+    // Load shared header/footer
+    fetch("../../components/header.html")
+      .then(res => {
+        if (!res.ok) throw new Error('Failed to load header');
+        return res.text();
+      })
+      .then(html => {
+        const headerContainer = document.getElementById("header-container");
+        if (headerContainer) {
+          headerContainer.innerHTML = html;
+          fixPaths(headerContainer);
+        }
+      })
+      .catch(err => {
+        console.error('Error loading header:', err);
+        const headerContainer = document.getElementById("header-container");
+        if (headerContainer) {
+          headerContainer.innerHTML = '<p style="padding: 20px; color: red;">Error loading header. Please ensure you are running this from a web server.</p>';
+        }
+      });
+
+    fetch("../../components/footer.html")
+      .then(res => {
+        if (!res.ok) throw new Error('Failed to load footer');
+        return res.text();
+      })
+      .then(html => {
+        const footerContainer = document.getElementById("footer-container");
+        if (footerContainer) {
+          footerContainer.innerHTML = html;
+          fixPaths(footerContainer);
+        }
+      })
+      .catch(err => {
+        console.error('Error loading footer:', err);
+        const footerContainer = document.getElementById("footer-container");
+        if (footerContainer) {
+          footerContainer.innerHTML = '<p style="padding: 20px; color: red;">Error loading footer. Please ensure you are running this from a web server.</p>';
+        }
+      });
+  </script>
+</body>
+</html>

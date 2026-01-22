@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pain Management | Guardian, I.D.A. & Remedy'sRx</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../assets/style.css">
+  <script src="../../assets/script.js" defer></script>
+  <script src="../../assets/loader.js"></script>
+
+  <style>
+    :root {
+      --primary: #0056b3;
+      --accent: #ff6b00;
+      --light: #f8f9fa;
+      --text: #333;
+      --text-light: #6c757d;
+      --shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    body {
+      font-family: 'Roboto', sans-serif;
+      color: var(--text);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    h1, h2, h3 {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 600;
+    }
+
+    /* Banner */
+    .banner {
+      background: linear-gradient(135deg, var(--primary), #004494);
+      color: #fff;
+      text-align: center;
+      padding: 80px 20px;
+    }
+    .banner h1 { font-size: 2.5rem; }
+
+    /* Section container */
+    .content {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 80px 20px;
+    }
+
+    /* Image + text block */
+    .section-block {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 40px;
+      flex-wrap: wrap;
+      margin-bottom: 80px;
+    }
+
+    .section-block.reverse {
+      flex-direction: row-reverse;
+    }
+
+    .section-img {
+      flex: 1;
+      min-height: 320px;
+      background-size: cover;
+      background-position: center;
+      border-radius: 12px;
+      box-shadow: var(--shadow);
+    }
+
+    .section-text {
+      flex: 1;
+    }
+
+    .section-text h2 {
+      color: var(--primary);
+      margin-bottom: 15px;
+    }
+
+    .section-text p {
+      color: var(--text-light);
+      margin-bottom: 15px;
+    }
+
+    .btn {
+      display: inline-block;
+      background: var(--accent);
+      color: #fff;
+      padding: 10px 25px;
+      border-radius: 25px;
+      text-decoration: none;
+      transition: all 0.3s;
+    }
+
+    .btn:hover {
+      background: #e55a00;
+      transform: translateY(-2px);
+    }
+
+    /* Services section */
+    .services {
+      background: var(--light);
+      padding: 60px 20px;
+      border-radius: 12px;
+      box-shadow: var(--shadow);
+      margin-bottom: 80px;
+    }
+
+    .services h2 {
+      color: var(--primary);
+      margin-bottom: 15px;
+    }
+
+    .services ul {
+      margin-left: 20px;
+      color: var(--text-light);
+      margin-bottom: 15px;
+    }
+
+    /* Info Cards */
+    .info-section {
+      text-align: center;
+      margin-bottom: 80px;
+    }
+
+    .info-section h2 {
+      color: var(--primary);
+      margin-bottom: 10px;
+    }
+
+    .info-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 25px;
+      margin-top: 40px;
+    }
+
+    .info-card {
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: var(--shadow);
+      padding: 20px;
+      text-align: left;
+    }
+
+    .info-card img {
+      width: 100%;
+      height: 160px;
+      object-fit: cover;
+      border-radius: 10px;
+      margin-bottom: 15px;
+    }
+
+    .info-card h3 {
+      color: var(--primary);
+      margin-bottom: 10px;
+      font-size: 1.1rem;
+    }
+
+    .info-card p {
+      color: var(--text-light);
+      margin-bottom: 10px;
+      font-size: 0.9rem;
+    }
+
+    /* Square service boxes */
+    .pharmacy-services {
+      margin-top: 60px;
+    }
+
+    .pharmacy-services h2 {
+      color: var(--primary);
+      margin-bottom: 30px;
+      text-align: center;
+    }
+
+    .pharmacy-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+    }
+
+    .pharmacy-card {
+      background: #fff;
+      padding: 25px;
+      border-radius: 12px;
+      box-shadow: var(--shadow);
+      text-align: center;
+    }
+
+    .pharmacy-card i {
+      font-size: 2rem;
+      color: var(--primary);
+      margin-bottom: 15px;
+    }
+
+    .pharmacy-card h3 {
+      color: var(--primary);
+      margin-bottom: 10px;
+      font-size: 1.2rem;
+    }
+
+    .pharmacy-card p {
+      color: var(--text-light);
+      margin-bottom: 15px;
+    }
+
+    .disclaimer {
+      font-size: 0.85rem;
+      color: var(--text-light);
+      margin-top: 60px;
+      line-height: 1.5;
+    }
+
+    @media (max-width: 768px) {
+      .section-block, .section-block.reverse {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <div id="header-container"></div>
+
+  <!-- Banner -->
+  <section class="banner">
+    <h1>My Health: Pain Management</h1>
+  </section>
+
+  <!-- Intro -->
+  <section class="content">
+    <div class="section-block reverse">
+      <div class="section-text">
+        <h2>PAIN MANAGEMENT</h2>
+        <p>While pain is a very subjective experience and differs from one person to another, everyone agrees that pain is not a welcomed guest in their daily life. Effectively managing pain becomes a crucial aspect of maintaining a healthy lifestyle, and your pharmacist can be a supportive companion on this journey.</p>
+        <a href="#" class="btn">Find your pharmacy</a>
+      </div>
+      <!-- Image representing pain management/back pain -->
+      <div class="section-img" style="background-image:url('https://images.unsplash.com/photo-1519824145371-296894a0daa9?auto=format&fit=crop&w=1000&q=80');"></div>
+    </div>
+
+    <!-- Services from Pharmacist -->
+    <div class="services">
+      <h2>Services from your Pharmacist</h2>
+      <p>Several services* related to pain management are offered in pharmacy:</p>
+      <ul>
+        <li>Advice on over-the-counter medications to help with pain management.</li>
+        <li>Therapy adjustment to relieve acute and chronic pain.</li>
+        <li>Prescription of medications to relieve pain caused by periods.</li>
+      </ul>
+      <p><em>*These services are offered at participating stores only.</em></p>
+    </div>
+
+    <!-- Lower Back Pain -->
+    <div class="section-block">
+      <div class="section-img" style="background-image:url('https://images.unsplash.com/photo-1544367563-12123d896889?auto=format&fit=crop&w=1000&q=80');"></div>
+      <div class="section-text">
+        <h2>TREATING LOWER BACK PAIN</h2>
+        <p>Many things can cause low back pain. Sometimes, the exact cause of the pain is not known. When left untreated, it can become chronic and can have a significant impact on quality of life. That is why it is important to do something about it.</p>
+        <a href="#" class="btn">Learn more</a>
+      </div>
+    </div>
+
+    <!-- Info Cards -->
+    <div class="info-section">
+      <h2>Pain Management & Medication</h2>
+      <div class="info-grid">
+        <div class="info-card">
+          <img src="https://images.unsplash.com/photo-1587854692152-cbe660dbde88?auto=format&fit=crop&w=800&q=80" alt="Man reading medication labels">
+          <h3>Rheumatoid Arthritis and Antirheumatic Drugs</h3>
+          <p>Find out about the medications commonly prescribed for the treatment of rheumatoid arthritis (RA) and how the pharmacist can help you take them correctly.</p>
+          <a href="#" class="btn">Learn More</a>
+        </div>
+        <div class="info-card">
+          <img src="https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?auto=format&fit=crop&w=800&q=80" alt="Medication Label">
+          <h3>Treating Pain with Opioids</h3>
+          <p>Learn how to manage opioid use at home to achieve satisfactory relief while reducing the risks related to these medications.</p>
+          <a href="#" class="btn">Learn More</a>
+        </div>
+        <div class="info-card">
+          <img src="https://images.unsplash.com/photo-1471864190281-a93a3070b6de?auto=format&fit=crop&w=800&q=80" alt="Analgesics Medications">
+          <h3>Acetaminophen, NSAIDs & Overdose</h3>
+          <p>If you take prescription pain medication, you may be at risk of an accidental overdose if you are also taking an over-the-counter medication such as acetaminophen or nonsteroidal anti-inflammatory drugs.</p>
+          <a href="#" class="btn">Learn More</a>
+        </div>
+        <div class="info-card">
+          <img src="https://images.unsplash.com/photo-1515523110800-9415d13b84a8?auto=format&fit=crop&w=800&q=80" alt="Woman putting topical pain relievers">
+          <h3>Topical Pain Relievers</h3>
+          <p>For localized pain, a non-prescription topical pain reliever can be a convenient way to treat it. Ranging from creams to ointments, find out about the characteristics of the different products sold at pharmacies.</p>
+          <a href="#" class="btn">Learn More</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Pharmacy Services -->
+    <div class="pharmacy-services">
+      <h2>Services in your pharmacy</h2>
+      <div class="pharmacy-grid">
+        <div class="pharmacy-card">
+          <i class="fas fa-mortar-pestle"></i>
+          <h3>ADVICE ON OTC MEDICATION</h3>
+          <p>If you don’t know which over-the-counter medication to choose to relieve your symptoms, don’t be shy to ask your pharmacist!</p>
+          <a href="#" class="btn">Find your pharmacy</a>
+        </div>
+        <div class="pharmacy-card">
+          <i class="fas fa-file-prescription"></i>
+          <h3>MEDICATION FOR CHRONIC CONDITIONS</h3>
+          <p>If you have a chronic condition and require regular medication, your pharmacist is here to facilitate your day to day. They can extend prescriptions and re-prescribe your medication, as well as show you tools to help you get the most out of your treatment.</p>
+          <a href="#" class="btn">Find your pharmacy</a>
+        </div>
+        <div class="pharmacy-card">
+          <i class="fas fa-pills"></i>
+          <h3>MEDICATION CUSTOMIZATION</h3>
+          <p>Sticking to your medication isn’t always a walk in the park. Your pharmacist is here to make minor or major adjustments to your therapy or provide you with custom formulas and innovative packaging to make it all easier.</p>
+          <a href="#" class="btn">Find your pharmacy</a>
+        </div>
+      </div>
+      <p class="disclaimer">
+        * The information contained herein is provided for informational purposes only and is not intended to provide complete information on the subject matter or to replace the advice of a health professional. This information does not constitute medical consultation, diagnosis or opinion and should not be interpreted as such. Please consult your health care provider if you have any questions about your health, medications or treatment.
+      </p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <div id="footer-container"></div>
+
+  <script>
+    // Function to convert root-relative paths to relative paths
+    function fixPaths(container) {
+      container.querySelectorAll('a[data-base-path]').forEach(link => {
+        const basePath = link.getAttribute('data-base-path');
+        if (basePath) {
+          // Calculate relative path from current location (2 levels deep: myhealth/chronic_conditions/)
+          if (basePath === 'index.html') {
+            link.href = '../../index.html';
+          } else if (basePath.startsWith('myhealth/chronic_conditions/')) {
+            // Same directory level
+            link.href = basePath.replace('myhealth/chronic_conditions/', '');
+          } else if (basePath.startsWith('myhealth/')) {
+            // One level up
+            link.href = '../' + basePath.replace('myhealth/', '');
+          } else {
+            link.href = '../' + basePath;
+          }
+        }
+      });
+      
+      // Also fix links without data-base-path that start with /
+      container.querySelectorAll('a[href^="/"]').forEach(link => {
+        if (!link.hasAttribute('data-base-path')) {
+          const href = link.getAttribute('href').substring(1);
+          if (href === 'index.html') {
+            link.href = '../../index.html';
+          } else if (href.startsWith('myhealth/chronic_conditions/')) {
+            link.href = href.replace('myhealth/chronic_conditions/', '');
+          } else if (href.startsWith('myhealth/')) {
+            link.href = '../' + href.replace('myhealth/', '');
+          } else {
+            link.href = '../' + href;
+          }
+        }
+      });
+    }
+
+    // Load shared header/footer
+    fetch("../../components/header.html")
+      .then(res => {
+        if (!res.ok) throw new Error('Failed to load header');
+        return res.text();
+      })
+      .then(html => {
+        const headerContainer = document.getElementById("header-container");
+        if (headerContainer) {
+          headerContainer.innerHTML = html;
+          fixPaths(headerContainer);
+        }
+      })
+      .catch(err => {
+        console.error('Error loading header:', err);
+        const headerContainer = document.getElementById("header-container");
+        if (headerContainer) {
+          headerContainer.innerHTML = '<p style="padding: 20px; color: red;">Error loading header. Please ensure you are running this from a web server.</p>';
+        }
+      });
+
+    fetch("../../components/footer.html")
+      .then(res => {
+        if (!res.ok) throw new Error('Failed to load footer');
+        return res.text();
+      })
+      .then(html => {
+        const footerContainer = document.getElementById("footer-container");
+        if (footerContainer) {
+          footerContainer.innerHTML = html;
+          fixPaths(footerContainer);
+        }
+      })
+      .catch(err => {
+        console.error('Error loading footer:', err);
+        const footerContainer = document.getElementById("footer-container");
+        if (footerContainer) {
+          footerContainer.innerHTML = '<p style="padding: 20px; color: red;">Error loading footer. Please ensure you are running this from a web server.</p>';
+        }
+      });
+  </script>
+</body>
+</html>
