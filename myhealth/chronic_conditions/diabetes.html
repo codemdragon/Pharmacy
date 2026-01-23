@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Diabetes | Guardian, I.D.A. & Remedy'sRx</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../assets/style.css">
+  <script src="../../assets/script.js" defer></script>
+  <script src="../../assets/loader.js"></script>
+
+  <style>
+    :root {
+      --primary: #0056b3;
+      --accent: #ff6b00;
+      --light: #f8f9fa;
+      --text: #333;
+      --text-light: #6c757d;
+      --shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    body {
+      font-family: 'Roboto', sans-serif;
+      color: var(--text);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    h1, h2, h3 {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 600;
+    }
+
+    /* Banner */
+    .banner {
+      background: linear-gradient(135deg, var(--primary), #004494);
+      color: #fff;
+      text-align: center;
+      padding: 80px 20px;
+    }
+    .banner h1 { font-size: 2.5rem; }
+
+    /* Section container */
+    .content {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 80px 20px;
+    }
+
+    /* Image + text block */
+    .section-block {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 40px;
+      flex-wrap: wrap;
+      margin-bottom: 80px;
+    }
+
+    .section-block.reverse {
+      flex-direction: row-reverse;
+    }
+
+    .section-img {
+      flex: 1;
+      min-height: 320px;
+      background-size: cover;
+      background-position: center;
+      border-radius: 12px;
+      box-shadow: var(--shadow);
+    }
+
+    .section-text {
+      flex: 1;
+    }
+
+    .section-text h2 {
+      color: var(--primary);
+      margin-bottom: 15px;
+    }
+
+    .section-text p {
+      color: var(--text-light);
+      margin-bottom: 15px;
+    }
+
+    .btn {
+      display: inline-block;
+      background: var(--accent);
+      color: #fff;
+      padding: 10px 25px;
+      border-radius: 25px;
+      text-decoration: none;
+      transition: all 0.3s;
+    }
+
+    .btn:hover {
+      background: #e55a00;
+      transform: translateY(-2px);
+    }
+
+    /* Services section */
+    .services {
+      background: var(--light);
+      padding: 60px 20px;
+      border-radius: 12px;
+      box-shadow: var(--shadow);
+      margin-bottom: 80px;
+    }
+
+    .services h2 {
+      color: var(--primary);
+      margin-bottom: 15px;
+    }
+
+    .services ul {
+      margin-left: 20px;
+      color: var(--text-light);
+      margin-bottom: 15px;
+    }
+
+    /* Info Cards */
+    .info-section {
+      text-align: center;
+      margin-bottom: 80px;
+    }
+
+    .info-section h2 {
+      color: var(--primary);
+      margin-bottom: 10px;
+    }
+
+    .info-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 25px;
+      margin-top: 40px;
+    }
+
+    .info-card {
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: var(--shadow);
+      padding: 20px;
+      text-align: left;
+    }
+
+    .info-card img {
+      width: 100%;
+      height: 160px;
+      object-fit: cover;
+      border-radius: 10px;
+      margin-bottom: 15px;
+    }
+
+    .info-card h3 {
+      color: var(--primary);
+      margin-bottom: 10px;
+      font-size: 1.1rem;
+    }
+
+    .info-card p {
+      color: var(--text-light);
+      margin-bottom: 10px;
+      font-size: 0.9rem;
+    }
+
+    /* Square service boxes */
+    .pharmacy-services {
+      margin-top: 60px;
+    }
+
+    .pharmacy-services h2 {
+      color: var(--primary);
+      margin-bottom: 30px;
+      text-align: center;
+    }
+
+    .pharmacy-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+    }
+
+    .pharmacy-card {
+      background: #fff;
+      padding: 25px;
+      border-radius: 12px;
+      box-shadow: var(--shadow);
+      text-align: center;
+    }
+
+    .pharmacy-card i {
+      font-size: 2rem;
+      color: var(--primary);
+      margin-bottom: 15px;
+    }
+
+    .pharmacy-card h3 {
+      color: var(--primary);
+      margin-bottom: 10px;
+      font-size: 1.2rem;
+    }
+
+    .pharmacy-card p {
+      color: var(--text-light);
+      margin-bottom: 15px;
+    }
+
+    .disclaimer {
+      font-size: 0.85rem;
+      color: var(--text-light);
+      margin-top: 60px;
+      line-height: 1.5;
+    }
+
+    @media (max-width: 768px) {
+      .section-block, .section-block.reverse {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <div id="header-container"></div>
+
+  <!-- Banner -->
+  <section class="banner">
+    <h1>My Health: Diabetes</h1>
+  </section>
+
+  <!-- Intro -->
+  <section class="content">
+    <div class="section-block reverse">
+      <div class="section-text">
+        <h2>Diabetes</h2>
+        <p>Diabetes is a chronic disease that can’t be cured, but it can be treated and managed. Learn more about diabetes and discover how your pharmacist can help.</p>
+        <a href="#" class="btn">Find a pharmacy</a>
+      </div>
+      <!-- Image of doctor/patient consulting -->
+      <div class="section-img" style="background-image:url('https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=1000&q=80');"></div>
+    </div>
+
+    <!-- Services from Pharmacist -->
+    <div class="services">
+      <h2>Services from your Pharmacist</h2>
+      <p>Several services* related to diabetes are offered in pharmacy:</p>
+      <ul>
+        <li>Blood glucose measurement.</li>
+        <li>H1C testing for prediabetics and diabetics.</li>
+        <li>Synchronization of prescription renewals.</li>
+      </ul>
+      <p><em>*These services are offered at participating stores only.</em></p>
+    </div>
+
+    <!-- Your Pharmacist Can Help / Type 2 Diabetes -->
+    <div class="section-block">
+      <div class="section-img" style="background-image:url('https://images.unsplash.com/photo-1490645935967-10de6ba17061?auto=format&fit=crop&w=1000&q=80');"></div>
+      <div class="section-text">
+        <h2>TYPE 2 DIABETES</h2>
+        <p>Most people with prediabetes will become diabetic if they don’t do anything about it. Prediabetes is a wake-up call! It is urgent that you make changes to your lifestyle to prevent, or at least delay, the onset of type 2 diabetes.</p>
+        <a href="#" class="btn">Learn how to prevent it</a>
+      </div>
+    </div>
+
+    <!-- Info Cards -->
+    <div class="info-section">
+      <h2>What you need to know about diabetes</h2>
+      <div class="info-grid">
+        <div class="info-card">
+          <img src="https://images.unsplash.com/photo-1516627145497-ae6968895b74?auto=format&fit=crop&w=800&q=80" alt="Family having dinner">
+          <h3>Hypoglycemia</h3>
+          <p>When you have diabetes, how low is too low for your blood glucose levels?</p>
+          <a href="#" class="btn">Learn More</a>
+        </div>
+        <div class="info-card">
+          <img src="https://images.unsplash.com/photo-1587854692152-cbe660dbde88?auto=format&fit=crop&w=800&q=80" alt="Glucose meter">
+          <h3>Different Ways to Measure Glucose Levels</h3>
+          <p>Learn more about the different ways to measure glucose levels, and the pros and cons of each.</p>
+          <a href="#" class="btn">Learn More</a>
+        </div>
+        <div class="info-card">
+          <img src="https://images.unsplash.com/photo-1532012197267-da84d127e765?auto=format&fit=crop&w=800&q=80" alt="Woman reading online">
+          <h3>What is diabetes?</h3>
+          <p>Diabetes is a chronic disease caused by a problem with or a lack of insulin. Learn more about diabetes and how to manage it.</p>
+          <a href="#" class="btn">Learn More</a>
+        </div>
+        <div class="info-card">
+          <img src="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?auto=format&fit=crop&w=800&q=80" alt="Foot care">
+          <h3>Diabetes and Foot Care</h3>
+          <p>Taking good care of your feet helps detect and treat injuries that could lead to serious complications.</p>
+          <a href="#" class="btn">Learn More</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Pharmacy Services -->
+    <div class="pharmacy-services">
+      <h2>Services in your pharmacy</h2>
+      <div class="pharmacy-grid">
+        <div class="pharmacy-card">
+          <i class="fas fa-prescription-bottle"></i>
+          <h3>ADVICE ON OTC MEDICATION</h3>
+          <p>If you don’t know which over-the-counter medication to choose to relieve your symptoms, don’t be shy to ask your pharmacist!</p>
+          <a href="#" class="btn">Find your pharmacy</a>
+        </div>
+        <div class="pharmacy-card">
+          <i class="fas fa-heart-pulse"></i>
+          <h3>TESTING AND MONITORING</h3>
+          <p>Whether you have prediabetes, diabetes or are newly diagnosed, many tests exist to ensure your glycemia is well under control and that your treatment is working well.</p>
+          <a href="#" class="btn">Find your pharmacy</a>
+        </div>
+        <div class="pharmacy-card">
+          <i class="fas fa-ruler-horizontal"></i>
+          <h3>WEIGHT MANAGEMENT</h3>
+          <p>If you’re thinking about losing weight, your pharmacist can shed a light on helpful products and make sure your medication doesn’t make you gain weight as a side effect.</p>
+          <a href="#" class="btn">Find your pharmacy</a>
+        </div>
+      </div>
+      <p class="disclaimer">
+        * The information contained herein is provided for informational purposes only and is not intended to provide complete information on the subject matter or to replace the advice of a health professional. This information does not constitute medical consultation, diagnosis or opinion and should not be interpreted as such. Please consult your health care provider if you have any questions about your health, medications or treatment.
+      </p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <div id="footer-container"></div>
+
+  <script>
+    // Function to convert root-relative paths to relative paths
+    function fixPaths(container) {
+      container.querySelectorAll('a[data-base-path]').forEach(link => {
+        const basePath = link.getAttribute('data-base-path');
+        if (basePath) {
+          // Calculate relative path from current location (2 levels deep: myhealth/chronic_conditions/)
+          if (basePath === 'index.html') {
+            link.href = '../../index.html';
+          } else if (basePath.startsWith('myhealth/chronic_conditions/')) {
+            // Same directory level
+            link.href = basePath.replace('myhealth/chronic_conditions/', '');
+          } else if (basePath.startsWith('myhealth/')) {
+            // One level up
+            link.href = '../' + basePath.replace('myhealth/', '');
+          } else {
+            link.href = '../' + basePath;
+          }
+        }
+      });
+      
+      // Also fix links without data-base-path that start with /
+      container.querySelectorAll('a[href^="/"]').forEach(link => {
+        if (!link.hasAttribute('data-base-path')) {
+          const href = link.getAttribute('href').substring(1);
+          if (href === 'index.html') {
+            link.href = '../../index.html';
+          } else if (href.startsWith('myhealth/chronic_conditions/')) {
+            link.href = href.replace('myhealth/chronic_conditions/', '');
+          } else if (href.startsWith('myhealth/')) {
+            link.href = '../' + href.replace('myhealth/', '');
+          } else {
+            link.href = '../' + href;
+          }
+        }
+      });
+    }
+
+    // Load shared header/footer
+    fetch("../../components/header.html")
+      .then(res => {
+        if (!res.ok) throw new Error('Failed to load header');
+        return res.text();
+      })
+      .then(html => {
+        const headerContainer = document.getElementById("header-container");
+        if (headerContainer) {
+          headerContainer.innerHTML = html;
+          fixPaths(headerContainer);
+        }
+      })
+      .catch(err => {
+        console.error('Error loading header:', err);
+        const headerContainer = document.getElementById("header-container");
+        if (headerContainer) {
+          headerContainer.innerHTML = '<p style="padding: 20px; color: red;">Error loading header. Please ensure you are running this from a web server.</p>';
+        }
+      });
+
+    fetch("../../components/footer.html")
+      .then(res => {
+        if (!res.ok) throw new Error('Failed to load footer');
+        return res.text();
+      })
+      .then(html => {
+        const footerContainer = document.getElementById("footer-container");
+        if (footerContainer) {
+          footerContainer.innerHTML = html;
+          fixPaths(footerContainer);
+        }
+      })
+      .catch(err => {
+        console.error('Error loading footer:', err);
+        const footerContainer = document.getElementById("footer-container");
+        if (footerContainer) {
+          footerContainer.innerHTML = '<p style="padding: 20px; color: red;">Error loading footer. Please ensure you are running this from a web server.</p>';
+        }
+      });
+  </script>
+</body>
+</html>

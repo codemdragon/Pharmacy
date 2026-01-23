@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Smoking Cessation | Guardian, I.D.A. & Remedy'sRx</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../assets/style.css">
+
+  <style>
+    :root {
+      --primary: #0056b3;
+      --accent: #ff6b00;
+      --light: #f8f9fa;
+      --text: #333;
+      --text-light: #6c757d;
+      --shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      --transition: all 0.3s ease;
+    }
+
+    body {
+      font-family: 'Roboto', sans-serif;
+      color: var(--text);
+      overflow-x: hidden;
+      line-height: 1.6;
+    }
+
+    h1, h2, h3 {
+      font-family: 'Poppins', sans-serif;
+    }
+
+    /* ===== Banner ===== */
+    .banner {
+      background: linear-gradient(135deg, var(--primary), #004494);
+      color: white;
+      text-align: center;
+      padding: 80px 20px;
+    }
+    .banner h1 {
+      font-size: 2.4rem;
+      font-weight: 600;
+    }
+
+    /* ===== Section Layout ===== */
+    .section {
+      max-width: 1100px;
+      margin: 80px auto;
+      padding: 0 20px;
+    }
+
+    .intro {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 40px;
+    }
+
+    .intro img {
+      flex: 1;
+      max-width: 480px;
+      border-radius: 12px;
+      box-shadow: var(--shadow);
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+    }
+
+    .intro-text {
+      flex: 1;
+    }
+
+    .intro-text h2 {
+      color: var(--primary);
+      margin-bottom: 15px;
+    }
+
+    .btn {
+      display: inline-block;
+      background: var(--accent);
+      color: white;
+      text-decoration: none;
+      padding: 12px 25px;
+      border-radius: 25px;
+      transition: var(--transition);
+      font-weight: 500;
+      border: none;
+      cursor: pointer;
+    }
+    .btn:hover {
+      background: #e55a00;
+      transform: translateY(-2px);
+    }
+
+    /* ===== Info sections ===== */
+    .info-box {
+      background: var(--light);
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: var(--shadow);
+      margin-top: 40px;
+    }
+    .info-box h3 {
+      color: var(--primary);
+      margin-bottom: 15px;
+      font-size: 1.5rem;
+    }
+
+    /* ===== More Info Grid ===== */
+    .info-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 25px;
+      margin-top: 40px;
+    }
+    .info-card {
+      background: #fff;
+      padding: 25px;
+      border-radius: 12px;
+      box-shadow: var(--shadow);
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
+    .info-card img {
+        width: 100%;
+        height: 160px;
+        object-fit: cover;
+        border-radius: 8px;
+        margin-bottom: 15px;
+    }
+    .info-card h4 {
+      color: var(--primary);
+      margin-bottom: 10px;
+    }
+    .info-card p {
+      color: var(--text-light);
+      margin-bottom: 15px;
+      flex-grow: 1;
+    }
+    .info-card a {
+      color: var(--accent);
+      font-weight: 500;
+      text-decoration: none;
+      align-self: flex-start;
+    }
+
+    /* ===== Other Services ===== */
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+      margin-top: 50px;
+    }
+    .service-box {
+      background: #fff;
+      padding: 25px;
+      text-align: center;
+      border-radius: 12px;
+      box-shadow: var(--shadow);
+    }
+    .service-box i {
+      font-size: 40px;
+      color: var(--primary);
+      margin-bottom: 15px;
+    }
+    .service-box h4 {
+      color: var(--primary);
+      margin-bottom: 10px;
+    }
+
+    .disclaimer {
+      font-size: 0.85rem;
+      color: var(--text-light);
+      margin-top: 50px;
+      border-top: 1px solid #ddd;
+      padding-top: 20px;
+      line-height: 1.5;
+    }
+
+    @media (max-width: 768px) {
+      .intro {
+        flex-direction: column;
+      }
+      .intro img {
+        max-width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ===== Header Placeholder ===== -->
+  <div id="header-container"></div>
+
+  <!-- ===== Page Banner ===== -->
+  <section class="banner">
+    <h1>SMOKING CESSATION</h1>
+  </section>
+
+  <!-- ===== Intro Section ===== -->
+  <section class="section">
+    <div class="intro">
+      <div class="intro-text">
+        <h2>Smoking Cessation</h2>
+        <p>Even with all the information out there about the harmful impact of smoking, it can be hard to take action and quit. Find out how your pharmacist can help and get tips on how to achieve your goals.</p>
+        <a href="#" class="btn">Find your pharmacy</a>
+      </div>
+      <img src="https://images.unsplash.com/photo-1551690656952-34342bb7c2f2?auto=format&fit=crop&w=1000&q=80" alt="No smoking sign">
+    </div>
+  </section>
+
+  <!-- ===== Services from Pharmacist ===== -->
+  <section class="section">
+    <div class="info-box">
+      <h3>SERVICES FROM YOUR PHARMACIST</h3>
+      <p>Several services* related to smoking cessation are offered in pharmacy:</p>
+      <ul>
+        <li>Prescription of medication to help quit smoking.</li>
+        <li>Advice on over-the-counter medications related to smoking cessation.</li>
+      </ul>
+      <p><em>*These services are offered at participating pharmacies only.</em></p>
+    </div>
+  </section>
+
+  <!-- ===== Treatment Options ===== -->
+  <section class="section">
+    <div class="info-box">
+      <h3>THE DIFFERENT TREATMENT OPTIONS AVAILABLE TO YOU</h3>
+      <p>There are some therapies, both medicinal and non-medicinal, that can greatly contribute to your success. They will help you feel good physically, while you work on other aspects, such as your smoking habits.</p>
+      <a href="#" class="btn">Learn more</a>
+    </div>
+  </section>
+
+  <!-- ===== Smoking and Your Health ===== -->
+  <section class="section">
+    <h2>SMOKING AND YOUR HEALTH</h2>
+    <div class="info-grid">
+      <div class="info-card">
+        <img src="https://images.unsplash.com/photo-1499209974431-9dce6d43b9f2?auto=format&fit=crop&w=800&q=80" alt="Nicotine patch">
+        <h4>Nicotine withdrawal symptoms</h4>
+        <p>Learn more about the common nicotine withdrawal symptoms you can face when you stop smoking.</p>
+        <a href="#">Learn More</a>
+      </div>
+      <div class="info-card">
+        <img src="https://images.unsplash.com/photo-1572953109194-4e45b7d42e94?auto=format&fit=crop&w=800&q=80" alt="Vaping">
+        <h4>Vaping vs. smoking: what are the differences?</h4>
+        <p>Ever considered quitting smoking by buying an e-cigarette? Learn about the differences between the two and how to manage nicotine addiction.</p>
+        <a href="#">Learn More</a>
+      </div>
+      <div class="info-card">
+        <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&w=800&q=80" alt="Senior with oxygen">
+        <h4>COPD and Quitting Smoking</h4>
+        <p>If you have COPD and want to quit smoking, your pharmacist can help you. Find out how along with a few tips.</p>
+        <a href="#">Learn More</a>
+      </div>
+      <div class="info-card">
+        <img src="https://images.unsplash.com/photo-1579154204601-01588f351e67?auto=format&fit=crop&w=800&q=80" alt="Heart health">
+        <h4>Quitting Smoking & Heart Health</h4>
+        <p>It is a proven fact that quitting smoking is good for your heart. Discover a few reasons why and strategies to butt out for good.</p>
+        <a href="#">Learn More</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Other Services ===== -->
+  <section class="section">
+    <h2>Services in your pharmacy</h2>
+    <div class="services-grid">
+      <div class="service-box">
+        <i class="fas fa-comments"></i>
+        <h4>ADVICE ON OTC MEDICATION</h4>
+        <p>If you don’t know which over-the-counter medication to choose to relieve your symptoms, don’t be shy to ask your pharmacist!</p>
+        <a href="#" class="btn">Find your pharmacy</a>
+      </div>
+      <div class="service-box">
+        <i class="fas fa-lungs"></i>
+        <h4>RESPIRATORY HEALTH</h4>
+        <p>If you have asthma or are experiencing strep throat symptoms, talk to your pharmacist about tests to ensure your respiratory health is in order.</p>
+        <a href="#" class="btn">Find your pharmacy</a>
+      </div>
+      <div class="service-box">
+        <i class="fas fa-user-md"></i>
+        <h4>SMOKING CESSATION</h4>
+        <p>Your pharmacist can develop an action plan with you, suggesting the treatment that best suits your health and needs, while helping you through your withdrawal symptoms.</p>
+        <a href="#" class="btn">Find your pharmacy</a>
+      </div>
+    </div>
+
+    <p class="disclaimer">
+      * The information contained herein is provided for informational purposes only and is not intended to provide complete information on the subject matter or to replace the advice of a health professional. This information does not constitute medical consultation, diagnosis or opinion and should not be interpreted as such. Please consult your health care provider if you have any questions about your health, medications or treatment.
+    </p>
+  </section>
+
+  <!-- ===== Footer Placeholder ===== -->
+  <div id="footer-container"></div>
+
+  <script>
+    // Function to convert root-relative paths to relative paths
+    function fixPaths(container) {
+      if (!container) return;
+      
+      container.querySelectorAll('a[data-base-path]').forEach(link => {
+        const basePath = link.getAttribute('data-base-path');
+        if (basePath) {
+          // Calculate relative path from current location (2 levels deep: myhealth/wellness/)
+          if (basePath === 'index.html') {
+            link.href = '../../index.html';
+          } else if (basePath.startsWith('myhealth/wellness/')) {
+            // Same directory level
+            link.href = basePath.replace('myhealth/wellness/', '');
+          } else if (basePath.startsWith('myhealth/')) {
+            // One level up
+            link.href = '../' + basePath.replace('myhealth/', '');
+          } else {
+            link.href = '../' + basePath;
+          }
+        }
+      });
+      
+      // Also fix links without data-base-path that start with /
+      container.querySelectorAll('a[href^="/"]').forEach(link => {
+        if (!link.hasAttribute('data-base-path')) {
+          const href = link.getAttribute('href').substring(1);
+          if (href === 'index.html') {
+            link.href = '../../index.html';
+          } else if (href.startsWith('myhealth/wellness/')) {
+            link.href = href.replace('myhealth/wellness/', '');
+          } else if (href.startsWith('myhealth/')) {
+            link.href = '../' + href.replace('myhealth/', '');
+          } else {
+            link.href = '../' + href;
+          }
+        }
+      });
+    }
+
+    // Load shared header/footer
+    fetch("../../components/header.html")
+      .then(res => {
+        if (!res.ok) throw new Error('Failed to load header');
+        return res.text();
+      })
+      .then(html => {
+        const headerContainer = document.getElementById("header-container");
+        if (headerContainer) {
+          headerContainer.innerHTML = html;
+          fixPaths(headerContainer);
+        }
+      })
+      .catch(err => {
+        console.error('Error loading header:', err);
+        const headerContainer = document.getElementById("header-container");
+        if (headerContainer) {
+          headerContainer.innerHTML = '<p style="padding: 20px; color: red;">Error loading header. Please ensure you are running this from a web server.</p>';
+        }
+      });
+
+    fetch("../../components/footer.html")
+      .then(res => {
+        if (!res.ok) throw new Error('Failed to load footer');
+        return res.text();
+      })
+      .then(html => {
+        const footerContainer = document.getElementById("footer-container");
+        if (footerContainer) {
+          footerContainer.innerHTML = html;
+          fixPaths(footerContainer);
+        }
+      })
+      .catch(err => {
+        console.error('Error loading footer:', err);
+        const footerContainer = document.getElementById("footer-container");
+        if (footerContainer) {
+          footerContainer.innerHTML = '<p style="padding: 20px; color: red;">Error loading footer. Please ensure you are running this from a web server.</p>';
+        }
+      });
+  </script>
+
+  <script src="../../assets/script.js"></script>
+  <script src="../../assets/loader.js"></script>
+</body>
+</html>

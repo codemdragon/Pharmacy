@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Health | Guardian</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="index.css" /> <!-- optional if you moved your styles there -->
+  <link rel="stylesheet" href="../assets/style.css">
+
+  <style>
+    :root {
+      --primary: #0056b3;
+      --secondary: #28a745;
+      --accent: #ff6b00;
+      --light: #f8f9fa;
+      --dark: #343a40;
+      --text: #333;
+      --text-light: #6c757d;
+      --border: #dee2e6;
+      --shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      --transition: all 0.3s ease;
+    }
+
+    body {
+      font-family: 'Roboto', sans-serif;
+      color: var(--text);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    h1, h2, h3 {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 600;
+    }
+
+    /* ===== Banner ===== */
+    .myhealth-banner {
+      background: linear-gradient(135deg, var(--primary), #004494);
+      color: white;
+      text-align: center;
+      padding: 80px 20px;
+    }
+    .myhealth-banner h1 {
+      font-size: 2.5rem;
+      font-weight: 600;
+    }
+
+    /* ===== Section Blocks ===== */
+    .myhealth-content {
+      padding: 80px 0;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding-inline: 20px;
+    }
+
+    .health-block {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 40px;
+      margin-bottom: 80px;
+      flex-wrap: wrap;
+    }
+
+    .health-block.reverse {
+      flex-direction: row-reverse;
+    }
+
+    .health-img {
+      flex: 1;
+      min-height: 300px;
+      background-size: cover;
+      background-position: center;
+      border-radius: 12px;
+      box-shadow: var(--shadow);
+    }
+
+    .health-text {
+      flex: 1;
+    }
+
+    .health-text h2 {
+      color: var(--primary);
+      font-size: 1.8rem;
+      margin-bottom: 15px;
+    }
+
+    .health-text p {
+      color: var(--text-light);
+      margin-bottom: 15px;
+      line-height: 1.7;
+    }
+
+    .health-btn {
+      display: inline-block;
+      background: var(--accent);
+      color: white;
+      text-decoration: none;
+      padding: 12px 25px;
+      border-radius: 25px;
+      font-weight: 500;
+      transition: var(--transition);
+    }
+    .health-btn:hover {
+      background: #e55a00;
+      transform: translateY(-2px);
+    }
+
+    @media (max-width: 768px) {
+      .health-block,
+      .health-block.reverse {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ===== Header (copied directly from index.html) ===== -->
+  <header class="top-header">
+    <div class="container">
+      <div class="top-header-links">
+        <a href="#">Local Care</a>
+        <a href="#">Prescription Transfer</a>
+        <a href="#">Who We Are</a>
+        <a href="#">Email Subscription</a>
+        <a href="#">Careers</a>
+        <a href="#">Pharmacy Ownership</a>
+        <a href="#">Contact Us</a>
+        <a href="#">Refills</a>
+        <a href="#">Français</a>
+      </div>
+    </div>
+  </header>
+
+  <header class="main-header">
+      <div class="container">
+          <div class="logo">
+              <a href="../index.html" style="text-decoration: none; color: inherit; display: flex; align-items: center; gap: 10px;">
+                  <i class="fas fa-clinic-medical"></i>
+                  <h1>Guardian</h1>
+              </a>
+          </div>
+          
+          <button class="mobile-menu-btn">
+              <i class="fas fa-bars"></i>
+          </button>
+          
+          <div class="nav-container">
+              <nav class="nav-links">
+                  <div class="nav-item">
+                      <a href="seasonal.html">My Health</a>
+                      <div class="mega-menu">
+                          <div class="mega-menu-column">
+                              <h3>Seasonal</h3>
+                              <ul class="mega-menu-links">
+                                  <li><a href="seasonal.html" class="main-link">Seasonal Page <i class="fas fa-arrow-right"></i></a></li>
+                                  <li><a href="seasonal/cold-flu.html">Cold & Flu</a></li>
+                                  <li><a href="seasonal/allergies.html">Seasonal Allergies</a></li>
+                                  <li><a href="seasonal/suncare.html">Sun Care</a></li>
+                                  <li><a href="seasonal/travel_health.html">Travel Health</a></li>
+                              </ul>
+                          </div>
+                          <div class="mega-menu-column">
+                              <h3>Chronic Conditions</h3>
+                              <ul class="mega-menu-links">
+                                  <li><a href="chronic_conditions.html" class="main-link">Chronic Conditions Page <i class="fas fa-arrow-right"></i></a></li>
+                                  <li><a href="chronic_conditions/diabetes.html">Diabetes</a></li>
+                                  <li><a href="chronic_conditions/digestive_health.html">Digestive Health</a></li>
+                                  <li><a href="chronic_conditions/heart_health.html">Heart Health</a></li>
+                                  <li><a href="chronic_conditions/pain_managment.html">Pain Management</a></li>
+                                  <li><a href="chronic_conditions/respiratory_health.html">Respiratory Health</a></li>
+                                  <li><a href="#"><i class="fas fa-user-md"></i> Wellness Consultation</a></li>
+                              </ul>
+                          </div>
+                          <div class="mega-menu-column">
+                              <h3>Wellness</h3>
+                              <ul class="mega-menu-links">
+                                  <li><a href="wellness.html" class="main-link">Wellness Page <i class="fas fa-arrow-right"></i></a></li>
+                                  <li><a href="#">Comfort & Safety</a></li>
+                                  <li><a href="#">Food & Medication</a></li>
+                                  <li><a href="#">Mental Health</a></li>
+                                  <li><a href="#">Skin Health</a></li>
+                                  <li><a href="#">Smoking Cessation</a></li>
+                                  <li><a href="#">Vitamins and Natural Products</a></li>
+                                  <li><a href="#">Cannabis</a></li>
+                              </ul>
+                          </div>
+                          <div class="mega-menu-column">
+                              <h3>General Health</h3>
+                              <ul class="mega-menu-links">
+                                  <li><a href="#" class="main-link">General Health Page <i class="fas fa-arrow-right"></i></a></li>
+                                  <li><a href="#">Body Health</a></li>
+                                  <li><a href="#">Family Health</a></li>
+                                  <li><a href="#">Men's Health</a></li>
+                                  <li><a href="#">Women's Health</a></li>
+                              </ul>
+                          </div>
+                      </div>
+                  </div>
+                  
+                  <div class="nav-item">
+                      <a href="#">Pharmacy Services</a>
+                      <div class="mega-menu">
+                          <div class="mega-menu-column">
+                              <h3>Prescriptions</h3>
+                              <ul class="mega-menu-links">
+                                  <li><a href="#" class="main-link">Prescriptions Page <i class="fas fa-arrow-right"></i></a></li>
+                                  <li><a href="#">Common Conditions</a></li>
+                                  <li><a href="#">Long-Term Conditions</a></li>
+                                  <li><a href="#">Medication Safety</a></li>
+                                  <li><a href="#">Prescription Renewals</a></li>
+                              </ul>
+                          </div>
+                          <div class="mega-menu-column">
+                              <h3>Vaccinations</h3>
+                              <ul class="mega-menu-links">
+                                  <li><a href="#" class="main-link">Vaccinations Page <i class="fas fa-arrow-right"></i></a></li>
+                                  <li><a href="#">Vaccination against respiratory viruses</a></li>
+                                  <li><a href="#">Other vaccines</a></li>
+                                  <li><a href="#">Travel</a></li>
+                              </ul>
+                          </div>
+                          <div class="mega-menu-column">
+                              <h3>Assessments & Monitoring</h3>
+                              <ul class="mega-menu-links">
+                                  <li><a href="#" class="main-link">Assessments & Monitoring Page <i class="fas fa-arrow-right"></i></a></li>
+                                  <li><a href="#">Diabetes</a></li>
+                                  <li><a href="#">Heart</a></li>
+                                  <li><a href="#">Respiratory</a></li>
+                                  <li><a href="#"><i class="fas fa-pills"></i> Pill and medication</a></li>
+                              </ul>
+                          </div>
+                          <div class="mega-menu-column">
+                              <h3>Medication Customization</h3>
+                              <ul class="mega-menu-links">
+                                  <li><a href="#" class="main-link">Medication Customization Page <i class="fas fa-arrow-right"></i></a></li>
+                                  <li><a href="#">Therapy Adjustment</a></li>
+                                  <li><a href="#">Personalized Medication</a></li>
+                                  <li><a href="#">Personalized Packaging</a></li>
+                              </ul>
+                              <h3>Wellness Consultations</h3>
+                              <ul class="mega-menu-links">
+                                  <li><a href="#" class="main-link">Wellness Consultations Page <i class="fas fa-arrow-right"></i></a></li>
+                                  <li><a href="#">Travel</a></li>
+                                  <li><a href="#">Maternity & Pregnancy</a></li>
+                                  <li><a href="#">Smoking Cessation</a></li>
+                              </ul>
+                          </div>
+                      </div>
+                  </div>
+                  
+                  <a href="#">Products and Resources</a>
+                  <a href="#">Flyer</a>
+                  <a href="#">Where are We</a>
+              </nav>
+              
+              <div class="search-container">
+                  <input type="text" placeholder="Search...">
+                  <button><i class="fas fa-search"></i></button>
+              </div>
+          </div>
+      </div>
+  </header>
+
+  <!-- ===== My Health Banner ===== -->
+  <section class="myhealth-banner">
+    <h1>My Health: Wellness</h1>
+  </section>
+
+  <!-- ===== My Health Content ===== -->
+  <section class="myhealth-content">
+
+    <!-- Comfort & Safety -->
+    <div class="health-block reverse" id="comfort-safety">
+      <div class="health-text">
+        <h2>COMFORT & SAFETY</h2>
+        <p>Taking good care of your health is important at all ages, but perhaps even more so in later years. And if you are a caregiver, it's important that you fulfill your role without putting your own health at risk.</p>
+        <p>It's reassuring to know that comfort and safety are within reach and that your pharmacist can help.</p>
+        <a href="Wellness/comfort_safety.html" class="health-btn">Read more</a>
+      </div>
+      <div class="health-img" style="background-image:url('https://images.unsplash.com/photo-1576765608535-5f04d1e3f289?auto=format&fit=crop&w=1000&q=80');"></div>
+    </div>
+
+    <!-- Food & Medication -->
+    <div class="health-block" id="food-medication">
+      <div class="health-img" style="background-image:url('https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=1000&q=80');"></div>
+      <div class="health-text">
+        <h2>FOOD & MEDICATION</h2>
+        <p>With medication, there is cause to pose and rethink the way we eat and when. Food can interact with your medication in many ways, and when combined, can be source of some undesirable effects.</p>
+        <p>Your pharmacist can help you figure it all out, to get the most of your medication therapy with the best eating.</p>
+        <a href="Wellness/food_medication.html" class="health-btn">Read more</a>
+      </div>
+    </div>
+
+    <!-- Mental Health -->
+    <div class="health-block reverse" id="mental-health">
+      <div class="health-text">
+        <h2>MENTAL HEALTH</h2>
+        <p>1 in 3 Canadians will experience a mental health problem in their lifetime. Mental health disorders are challenging for people living with them as well as their loved ones, but these conditions can be overcome with appropriate treatment and help of your pharmacist.</p>
+        <a href="Wellness/mental_health.html" class="health-btn">Read more</a>
+      </div>
+      <div class="health-img" style="background-image:url('https://images.unsplash.com/photo-1473868476894-42eba8a71e5d?auto=format&fit=crop&w=1000&q=80');"></div>
+    </div>
+
+    <!-- Skin Health -->
+    <div class="health-block" id="skin-health">
+      <div class="health-img" style="background-image:url('https://images.unsplash.com/photo-1556228720-195a672e8a03?auto=format&fit=crop&w=1000&q=80');"></div>
+      <div class="health-text">
+        <h2>SKIN HEALTH</h2>
+        <p>There are a lot of different skin conditions and it may be difficult to recognize or to treat them efficiently.</p>
+        <p>When in doubt, don't hesitate to ask your pharmacist, he or she can give you advice on your individual needs.</p>
+        <a href="Wellness/skin_health.html" class="health-btn">Read more</a>
+      </div>
+    </div>
+
+    <!-- Smoking Cessation -->
+    <div class="health-block reverse" id="smoking-cessation">
+      <div class="health-text">
+        <h2>SMOKING CESSATION</h2>
+        <p>Even with all the information out there about the harmful impact of smoking, it can be hard to take action and quit. Find out how your pharmacist can help and get tips on how to achieve your goals.</p>
+        <a href="Wellness/smoking_cessation.html" class="health-btn">Read more</a>
+      </div>
+      <div class="health-img" style="background-image:url('https://images.unsplash.com/photo-1551690656952-34342bb7c2f2?auto=format&fit=crop&w=1000&q=80');"></div>
+    </div>
+
+    <!-- Vitamins, Minerals & Natural Products -->
+    <div class="health-block" id="vitamins">
+      <div class="health-img" style="background-image:url('https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?auto=format&fit=crop&w=1000&q=80');"></div>
+      <div class="health-text">
+        <h2>VITAMINS, MINERALS & NATURAL PRODUCTS</h2>
+        <p>No matter your age, your body needs vitamins and minerals to ensure all your vital functions. You will most likely meet your daily requirements by eating a healthy diet, but sometimes, a little boost doesn't hurt - and your pharmacist can guide you in choosing the right product for you.</p>
+        <a href="Wellness/vitamins_natural_products.html" class="health-btn">Read more</a>
+      </div>
+    </div>
+
+    <!-- Cannabis -->
+    <div class="health-block reverse" id="cannabis">
+      <div class="health-text">
+        <h2>CANNABIS, ITS EFFECTS & YOUR HEALTH</h2>
+        <p>The legalization of recreational cannabis has brought up many questions. Read below for more information on cannabis and how your pharmacist can help.</p>
+        <a href="Wellness/cannabis.html" class="health-btn">Read more</a>
+      </div>
+      <div class="health-img" style="background-image:url('https://images.unsplash.com/photo-1593020778132-44e34c0605f4?auto=format&fit=crop&w=1000&q=80');"></div>
+    </div>
+
+  </section>
+
+  <!-- ===== Footer (copied from index.html) ===== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-column">
+          <h3>Pharmacy Services</h3>
+          <ul class="footer-links">
+            <li><a href="#">Prescriptions</a></li>
+            <li><a href="#">Vaccinations</a></li>
+            <li><a href="#">Assessments & Monitoring</a></li>
+            <li><a href="#">Medication Customization</a></li>
+            <li><a href="#">Wellness Consultations</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-column">
+          <h3>Products and Resources</h3>
+          <ul class="footer-links">
+            <li><a href="#">Mobile apps</a></li>
+            <li><a href="#">Telemedicine Services</a></li>
+            <li><a href="#">Option+™ - Private Label</a></li>
+            <li><a href="#">Our Trusted Brands</a></li>
+            <li><a href="#">Loyalty Program</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-column">
+          <h3>Guardian, I.D.A. and Remedy'sRx</h3>
+          <ul class="footer-links">
+            <li><a href="#">Local Care</a></li>
+            <li><a href="#">Prescription Transfer</a></li>
+            <li><a href="#">Who We Are</a></li>
+            <li><a href="#">Email Subscription</a></li>
+            <li><a href="#">Careers</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-column">
+          <h3>Follow Us</h3>
+          <div class="social-links">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Guardian, I.D.A. and Remedy'sRx Pharmacy. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../assets/script.js"></script>
+  <script src="../assets/loader.js"></script>
+</body>
+</html>
