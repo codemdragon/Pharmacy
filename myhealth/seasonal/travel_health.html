@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Travel Health | Guardian, I.D.A. & Remedy'sRx</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../assets/style.css">
+  <script src="../../assets/script.js" defer></script>
+  
+
+  <style>
+    :root {
+      --primary: #0056b3;
+      --accent: #ff6b00;
+      --light: #f8f9fa;
+      --text: #333;
+      --text-light: #6c757d;
+      --shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    body {
+      font-family: 'Roboto', sans-serif;
+      color: var(--text);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    h1, h2, h3 {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 600;
+    }
+
+    /* Banner */
+    .banner {
+      background: linear-gradient(135deg, var(--primary), #004494);
+      color: #fff;
+      text-align: center;
+      padding: 80px 20px;
+    }
+    .banner h1 { font-size: 2.5rem; }
+
+    /* Layout */
+    .content {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 80px 20px;
+    }
+
+    .section-block {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 40px;
+      flex-wrap: wrap;
+      margin-bottom: 80px;
+    }
+
+    .section-block.reverse {
+      flex-direction: row-reverse;
+    }
+
+    .section-img {
+      flex: 1;
+      min-height: 320px;
+      background-size: cover;
+      background-position: center;
+      border-radius: 12px;
+      box-shadow: var(--shadow);
+    }
+
+    .section-text {
+      flex: 1;
+    }
+
+    .section-text h2 {
+      color: var(--primary);
+      margin-bottom: 15px;
+    }
+
+    .section-text p {
+      color: var(--text-light);
+      margin-bottom: 15px;
+    }
+
+    .btn {
+      display: inline-block;
+      background: var(--accent);
+      color: #fff;
+      padding: 10px 25px;
+      border-radius: 25px;
+      text-decoration: none;
+      transition: all 0.3s;
+    }
+
+    .btn:hover {
+      background: #e55a00;
+      transform: translateY(-2px);
+    }
+
+    /* Services box */
+    .services {
+      background: var(--light);
+      padding: 60px 20px;
+      border-radius: 12px;
+      box-shadow: var(--shadow);
+      margin-bottom: 80px;
+    }
+
+    .services h2 {
+      color: var(--primary);
+      margin-bottom: 15px;
+    }
+
+    .services ul {
+      margin-left: 20px;
+      color: var(--text-light);
+      margin-bottom: 15px;
+    }
+
+    /* Highlight box */
+    .highlight {
+      background: #fff5eb;
+      border-left: 6px solid var(--accent);
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: var(--shadow);
+      margin-bottom: 80px;
+    }
+
+    .highlight h2 {
+      color: var(--primary);
+      margin-bottom: 10px;
+    }
+
+    .highlight p {
+      color: var(--text-light);
+    }
+
+    /* Info Cards */
+    .info-section {
+      text-align: center;
+      margin-bottom: 80px;
+    }
+
+    .info-section h2 {
+      color: var(--primary);
+      margin-bottom: 10px;
+    }
+
+    .info-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 25px;
+      margin-top: 40px;
+    }
+
+    .info-card {
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: var(--shadow);
+      padding: 20px;
+      text-align: left;
+    }
+
+    .info-card img {
+      width: 100%;
+      height: 160px;
+      object-fit: cover;
+      border-radius: 10px;
+      margin-bottom: 15px;
+    }
+
+    .info-card h3 {
+      color: var(--primary);
+      margin-bottom: 10px;
+      font-size: 1.1rem;
+    }
+
+    .info-card p {
+      color: var(--text-light);
+      margin-bottom: 10px;
+      font-size: 0.9rem;
+    }
+
+    /* Pharmacy services */
+    .pharmacy-services {
+      margin-top: 60px;
+    }
+
+    .pharmacy-services h2 {
+      color: var(--primary);
+      margin-bottom: 30px;
+      text-align: center;
+    }
+
+    .pharmacy-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+    }
+
+    .pharmacy-card {
+      background: #fff;
+      padding: 25px;
+      border-radius: 12px;
+      box-shadow: var(--shadow);
+      text-align: center;
+    }
+
+    .pharmacy-card i {
+      font-size: 2rem;
+      color: var(--primary);
+      margin-bottom: 15px;
+    }
+
+    .pharmacy-card h3 {
+      color: var(--primary);
+      margin-bottom: 10px;
+      font-size: 1.2rem;
+    }
+
+    .pharmacy-card p {
+      color: var(--text-light);
+      margin-bottom: 15px;
+    }
+
+    .disclaimer {
+      font-size: 0.85rem;
+      color: var(--text-light);
+      margin-top: 60px;
+      line-height: 1.5;
+    }
+
+    @media (max-width: 768px) {
+      .section-block, .section-block.reverse {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <div id="header-container"></div>
+
+  <!-- Banner -->
+  <section class="banner">
+    <h1>TRAVEL HEALTH</h1>
+  </section>
+
+  <!-- Intro -->
+  <section class="content">
+    <div class="section-block reverse">
+      <div class="section-text">
+        <h2>Travel Health</h2>
+        <p>Whether you travel for fun or for work, taking a few simple measures could spare you from finding yourself in situations that may put the health of you or your family at risk.</p>
+        <p>Your pharmacist can help you getting ready for your trip.</p>
+        <a href="#" class="btn">Find a pharmacy</a>
+      </div>
+      <!-- Image of travelers or planning -->
+      <div class="section-img" style="background-image:url('https://picsum.photos/seed/travelintro/800/600');"></div>
+    </div>
+
+    <!-- Services -->
+    <div class="services">
+      <h2>SERVICES FROM YOUR PHARMACIST</h2>
+      <p>Several services* related to travel health are offered in pharmacy:</p>
+      <ul>
+        <li>Travel vaccines such as hepatitis & traveler's diarrhea.</li>
+        <li>Medication prescription for travelers.</li>
+        <li>Advice on over-the-counter medication.</li>
+        <li>Prescription list and review for customs.</li>
+        <li>Advice on insect stings and bites prevention (malaria, lyme, sand fleas, etc.)</li>
+      </ul>
+      <p><em>*These services are offered at participating pharmacies only.</em></p>
+    </div>
+
+    <!-- Highlight -->
+    <div class="highlight">
+      <h2>HOW TO PREVENT MALARIA</h2>
+      <p>Malaria is an infectious disease caused by a parasite that is possible to catch by a mosquito bite. There are however ways to protect yourself and your family from this infection.</p>
+      <a href="#" class="btn">Learn more about malaria</a>
+    </div>
+
+    <!-- Info Cards -->
+    <div class="info-section">
+      <h2>Be Ready for your Trip</h2>
+      <div class="info-grid">
+        <div class="info-card">
+          <img src="https://picsum.photos/seed/firstaid/800/600" alt="Travel Health Kit">
+          <h3>Travel Health Kit</h3>
+          <p>Find out how to prepare your health kit before you travel. Beyond the basic first aid kit, you may need non-prescription products and destination-specific items.</p>
+          <a href="#" class="btn">Learn More</a>
+        </div>
+        <div class="info-card">
+          <img src="https://picsum.photos/seed/pregnantbeach/800/600" alt="Travelling While Pregnant">
+          <h3>Travelling While Pregnant or Breastfeeding</h3>
+          <p>Discover our tips for before and during your trip to travel while breastfeeding your child or being pregnant.</p>
+          <a href="#" class="btn">Learn More</a>
+        </div>
+        <div class="info-card">
+          <img src="https://picsum.photos/seed/airport/800/600" alt="Travel Security">
+          <h3>Travel Security, Customs & Medication</h3>
+          <p>Learn how to plan ahead and deal with customs, security and border crossing inspections when you are travelling with medication or injections.</p>
+          <a href="#" class="btn">Learn More</a>
+        </div>
+        <div class="info-card">
+          <img src="https://picsum.photos/seed/stomachpain/800/600" alt="Traveler's Diarrhea">
+          <h3>Traveler’s Diarrhea</h3>
+          <p>Discover our tips to avoid traveler’s diarrhea and make the most of your vacation.</p>
+          <a href="#" class="btn">Learn More</a>
+        </div>
+        <div class="info-card">
+          <img src="https://picsum.photos/seed/mosquito/800/600" alt="Zika Virus">
+          <h3>Zika Virus</h3>
+          <p>Zika virus is a mosquito-borne illness that is especially of concern to pregnant women or women of childbearing potential due to the association with some birth defects.</p>
+          <a href="#" class="btn">Learn More</a>
+        </div>
+        <div class="info-card">
+          <img src="https://picsum.photos/seed/fever/800/600" alt="Dengue Fever Symptoms">
+          <h3>Dengue Fever Symptoms</h3>
+          <p>Dengue fever is one of the most common mosquito-borne viral diseases in travellers returning from international destinations.</p>
+          <a href="#" class="btn">Learn More</a>
+        </div>
+        <div class="info-card">
+          <img src="https://picsum.photos/seed/woods/800/600" alt="Lyme Disease">
+          <h3>How to Prevent Lyme Disease</h3>
+          <p>Symptoms, Causes & Treatment. Learn how to prevent Lyme disease, recognize symptoms, understand causes, and explore effective treatments to stay healthy and protected outdoors.</p>
+          <a href="#" class="btn">Learn More</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Pharmacy Services -->
+    <div class="pharmacy-services">
+      <h2>Services in your pharmacy</h2>
+      <div class="pharmacy-grid">
+        <div class="pharmacy-card">
+          <i class="fas fa-prescription-bottle"></i>
+          <h3>ADVICE ON OTC MEDICATION</h3>
+          <p>If you don’t know which over-the-counter medication to choose to relieve your symptoms, don’t be shy to ask your pharmacist!</p>
+          <a href="#" class="btn">Find your pharmacy</a>
+        </div>
+        <div class="pharmacy-card">
+          <i class="fas fa-syringe"></i>
+          <h3>TRAVEL VACCINATION</h3>
+          <p>Depending on your destination, some immunizations should be considered before and after your trip for maximum safety. Make sure to book an appointment several months in advance to ensure you are fully immunized.</p>
+          <a href="#" class="btn">Find your pharmacy</a>
+        </div>
+        <div class="pharmacy-card">
+          <i class="fas fa-suitcase-rolling"></i>
+          <h3>PERSONALIZED TRAVEL KIT</h3>
+          <p>Questions on mosquito repellent, sunscreen or rehydration solution? Your pharmacist can help you pick the best products for your personalized travel kit.</p>
+          <a href="#" class="btn">Find your pharmacy</a>
+        </div>
+      </div>
+      <p class="disclaimer">
+        * The information contained herein is provided for informational purposes only and is not intended to provide complete information on the subject matter or to replace the advice of a health professional. This information does not constitute medical consultation, diagnosis or opinion and should not be interpreted as such. Please consult your health care provider if you have any questions about your health, medications or treatment.
+      </p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <div id="footer-container"></div>
+
+  
+
+  
+</html>
+  <script src="../../assets/script.js"></script>
+  <script src="../../assets/loader.js"></script>
+  <script>
+    window.addEventListener('load', () => window.loadComponents('../../'));
+  </script>
+</body>
+</html>

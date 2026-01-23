@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Men's Health | Guardian, I.D.A. & Remedy'sRx</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../assets/style.css">
+  <script src="../../assets/script.js" defer></script>
+  
+
+  <style>
+    :root {
+      --primary: #0056b3;
+      --accent: #ff6b00;
+      --light: #f8f9fa;
+      --text: #333;
+      --text-light: #6c757d;
+      --shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    body {
+      font-family: 'Roboto', sans-serif;
+      color: var(--text);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    h1, h2, h3 {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 600;
+    }
+
+    /* Banner */
+    .banner {
+      background: linear-gradient(135deg, var(--primary), #004494);
+      color: #fff;
+      text-align: center;
+      padding: 80px 20px;
+    }
+    .banner h1 { font-size: 2.5rem; }
+
+    /* Section container */
+    .content {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 80px 20px;
+    }
+
+    /* Image + text block */
+    .section-block {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 40px;
+      flex-wrap: wrap;
+      margin-bottom: 80px;
+    }
+
+    .section-block.reverse {
+      flex-direction: row-reverse;
+    }
+
+    .section-img {
+      flex: 1;
+      min-height: 320px;
+      background-size: cover;
+      background-position: center;
+      border-radius: 12px;
+      box-shadow: var(--shadow);
+    }
+
+    .section-text {
+      flex: 1;
+    }
+
+    .section-text h2 {
+      color: var(--primary);
+      margin-bottom: 15px;
+    }
+
+    .section-text p {
+      color: var(--text-light);
+      margin-bottom: 15px;
+    }
+
+    .btn {
+      display: inline-block;
+      background: var(--accent);
+      color: #fff;
+      padding: 10px 25px;
+      border-radius: 25px;
+      text-decoration: none;
+      transition: all 0.3s;
+    }
+
+    .btn:hover {
+      background: #e55a00;
+      transform: translateY(-2px);
+    }
+
+    /* Services section */
+    .services {
+      background: var(--light);
+      padding: 60px 20px;
+      border-radius: 12px;
+      box-shadow: var(--shadow);
+      margin-bottom: 80px;
+    }
+
+    .services h2 {
+      color: var(--primary);
+      margin-bottom: 15px;
+    }
+
+    .services ul {
+      margin-left: 20px;
+      color: var(--text-light);
+      margin-bottom: 15px;
+    }
+
+    /* Info Cards */
+    .info-section {
+      text-align: center;
+      margin-bottom: 80px;
+    }
+
+    .info-section h2 {
+      color: var(--primary);
+      margin-bottom: 10px;
+    }
+
+    .info-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 25px;
+      margin-top: 40px;
+    }
+
+    .info-card {
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: var(--shadow);
+      padding: 20px;
+      text-align: left;
+    }
+
+    .info-card img {
+      width: 100%;
+      height: 160px;
+      object-fit: cover;
+      border-radius: 10px;
+      margin-bottom: 15px;
+    }
+
+    .info-card h3 {
+      color: var(--primary);
+      margin-bottom: 10px;
+      font-size: 1.1rem;
+    }
+
+    .info-card p {
+      color: var(--text-light);
+      margin-bottom: 10px;
+      font-size: 0.9rem;
+    }
+
+    /* Square service boxes */
+    .pharmacy-services {
+      margin-top: 60px;
+    }
+
+    .pharmacy-services h2 {
+      color: var(--primary);
+      margin-bottom: 30px;
+      text-align: center;
+    }
+
+    .pharmacy-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+    }
+
+    .pharmacy-card {
+      background: #fff;
+      padding: 25px;
+      border-radius: 12px;
+      box-shadow: var(--shadow);
+      text-align: center;
+    }
+
+    .pharmacy-card i {
+      font-size: 2rem;
+      color: var(--primary);
+      margin-bottom: 15px;
+    }
+
+    .pharmacy-card h3 {
+      color: var(--primary);
+      margin-bottom: 10px;
+      font-size: 1.2rem;
+    }
+
+    .pharmacy-card p {
+      color: var(--text-light);
+      margin-bottom: 15px;
+    }
+
+    .disclaimer {
+      font-size: 0.85rem;
+      color: var(--text-light);
+      margin-top: 60px;
+      line-height: 1.5;
+    }
+
+    @media (max-width: 768px) {
+      .section-block, .section-block.reverse {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <div id="header-container"></div>
+
+  <!-- Banner -->
+  <section class="banner">
+    <h1>MEN'S HEALTH</h1>
+  </section>
+
+  <!-- Intro -->
+  <section class="content">
+    <div class="section-block reverse">
+      <div class="section-text">
+        <h2>Men's Health</h2>
+        <p>Learn more about men’s health issues, debunk some persistent myths and see how you can prevent some conditions with healthy habits and support of your pharmacist.</p>
+        <a href="#" class="btn">Find a pharmacy</a>
+      </div>
+      <div class="section-img" style="background-image:url('https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8?auto=format&fit=crop&w=1000&q=80');"></div>
+    </div>
+
+    <!-- Services from Pharmacist -->
+    <div class="services">
+      <h2>SUPPORT FROM YOUR PHARMACIST</h2>
+      <p>Your pharmacist can help you and give you advice related to various health conditions common in men:</p>
+      <ul>
+        <li>Erectile dysfunction</li>
+        <li>Cardiovascular health</li>
+        <li>Prostate diseases</li>
+        <li>Mental Health</li>
+      </ul>
+      <p>Most pharmacists offer private consultations on site if you want to discuss private and confidential matters - just ask them!</p>
+    </div>
+
+    <!-- Testicular Cancer -->
+    <div class="services">
+      <h2>TESTICULAR CANCER</h2>
+      <p>Among all types of cancer, testicular cancer is the most common cancer among young Canadian men between the ages of 15 and 29. Fortunately, it is also the most treatable. Discover the importance of early detection.</p>
+      <a href="#" class="btn">Learn how to perform a self-exam</a>
+    </div>
+
+    <!-- Info Cards -->
+    <div class="info-section">
+      <h2>Conditions affecting men</h2>
+      <div class="info-grid">
+        <div class="info-card">
+          <img src="https://images.unsplash.com/photo-1571019688210-e6dbb3a2b2c?auto=format&fit=crop&w=800&q=80" alt="Erectile Dysfunction">
+          <h3>Erectile Dysfunction</h3>
+          <p>Some of the myths surrounding erectile dysfunction, erections and libido are hard to dispel. This article seeks to debunk 7 myths and concerns about erectile problems.</p>
+          <a href="#" class="btn">Learn More</a>
+        </div>
+        <div class="info-card">
+          <img src="https://images.unsplash.com/photo-1493836561566-baf8f5f1b144?auto=format&fit=crop&w=800&q=80" alt="Depressed Man">
+          <h3>Depression in Men</h3>
+          <p>Depression affects both men and women, regardless of age and socioeconomic status. Learn to recognize symptoms of depression in men and how it can be expressed differently.</p>
+          <a href="#" class="btn">Learn More</a>
+        </div>
+        <div class="info-card">
+          <img src="https://images.unsplash.com/photo-1517048676732-d963691d006?auto=format&fit=crop&w=800&q=80" alt="Man with Osteoporosis">
+          <h3>Osteoporosis in Men</h3>
+          <p>Osteoporosis is a disease that makes bones more susceptible to fracture. While we tend to think of it as a women’s disease, it also affects men, often with more serious consequences.</p>
+          <a href="#" class="btn">Learn More</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Pharmacy Services -->
+    <div class="pharmacy-services">
+      <h2>Services in your pharmacy</h2>
+      <div class="pharmacy-grid">
+        <div class="pharmacy-card">
+          <i class="fas fa-smoking-ban"></i>
+          <h3>SMOKING CESSATION</h3>
+          <p>Your pharmacist can develop an action plan with you, suggest nicotine replacement products and help you deal with withdrawal side effects.</p>
+          <a href="#" class="btn">Find your pharmacy</a>
+        </div>
+        <div class="pharmacy-card">
+          <i class="fas fa-brain"></i>
+          <h3>MENTAL HEALTH SUPPORT</h3>
+          <p>Your pharmacist offers private consultations to discuss your personal situation, assess your current medication, talk about alternative options and make sure your side effects are not disruptive.</p>
+          <a href="#" class="btn">Find your pharmacy</a>
+        </div>
+        <div class="pharmacy-card">
+          <i class="fas fa-heartbeat"></i>
+          <h3>HEART HEALTH</h3>
+          <p>If you are taking medication for a heart condition, your pharmacist can suggest some tests to determine if your blood pressure or cholesterol is well managed or to see if adjustments to your treatment are necessary.</p>
+          <a href="#" class="btn">Find your pharmacy</a>
+        </div>
+      </div>
+      <p class="disclaimer">
+        * The information contained herein is provided for informational purposes only and is not intended to provide complete information on the subject matter or to replace the advice of a health professional. This information does not constitute medical consultation, diagnosis or opinion and should not be interpreted as such. Please consult your health care provider if you have any questions about your health, medications or treatment.
+      </p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <div id="footer-container"></div>
+
+  
+
+  
+</html>
+  <script src="../../assets/script.js"></script>
+  <script src="../../assets/loader.js"></script>
+  <script>
+    window.addEventListener('load', () => window.loadComponents('../../'));
+  </script>
+</body>
+</html>

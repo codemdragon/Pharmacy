@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vitamins, Minerals & Natural Products | Guardian, I.D.A. & Remedy'sRx</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../assets/style.css">
+
+  <style>
+    :root {
+      --primary: #0056b3;
+      --accent: #ff6b00;
+      --light: #f8f9fa;
+      --text: #333;
+      --text-light: #6c757d;
+      --shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      --transition: all 0.3s ease;
+    }
+
+    body {
+      font-family: 'Roboto', sans-serif;
+      color: var(--text);
+      overflow-x: hidden;
+      line-height: 1.6;
+    }
+
+    h1, h2, h3 {
+      font-family: 'Poppins', sans-serif;
+    }
+
+    /* ===== Banner ===== */
+    .banner {
+      background: linear-gradient(135deg, var(--primary), #004494);
+      color: white;
+      text-align: center;
+      padding: 80px 20px;
+    }
+    .banner h1 {
+      font-size: 2.4rem;
+      font-weight: 600;
+    }
+
+    /* ===== Section Layout ===== */
+    .section {
+      max-width: 1100px;
+      margin: 80px auto;
+      padding: 0 20px;
+    }
+
+    .intro {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 40px;
+    }
+
+    .intro img {
+      flex: 1;
+      max-width: 480px;
+      border-radius: 12px;
+      box-shadow: var(--shadow);
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+    }
+
+    .intro-text {
+      flex: 1;
+    }
+
+    .intro-text h2 {
+      color: var(--primary);
+      margin-bottom: 15px;
+    }
+
+    .btn {
+      display: inline-block;
+      background: var(--accent);
+      color: white;
+      text-decoration: none;
+      padding: 12px 25px;
+      border-radius: 25px;
+      transition: var(--transition);
+      font-weight: 500;
+      border: none;
+      cursor: pointer;
+    }
+    .btn:hover {
+      background: #e55a00;
+      transform: translateY(-2px);
+    }
+
+    /* ===== Info sections ===== */
+    .info-box {
+      background: var(--light);
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: var(--shadow);
+      margin-top: 40px;
+    }
+    .info-box h3 {
+      color: var(--primary);
+      margin-bottom: 15px;
+      font-size: 1.5rem;
+    }
+
+    /* ===== More Info Grid ===== */
+    .info-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 25px;
+      margin-top: 40px;
+    }
+    .info-card {
+      background: #fff;
+      padding: 25px;
+      border-radius: 12px;
+      box-shadow: var(--shadow);
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
+    .info-card img {
+        width: 100%;
+        height: 160px;
+        object-fit: cover;
+        border-radius: 8px;
+        margin-bottom: 15px;
+    }
+    .info-card h4 {
+      color: var(--primary);
+      margin-bottom: 10px;
+    }
+    .info-card p {
+      color: var(--text-light);
+      margin-bottom: 15px;
+      flex-grow: 1;
+    }
+    .info-card a {
+      color: var(--accent);
+      font-weight: 500;
+      text-decoration: none;
+      align-self: flex-start;
+    }
+
+    /* ===== Other Services ===== */
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+      margin-top: 50px;
+    }
+    .service-box {
+      background: #fff;
+      padding: 25px;
+      text-align: center;
+      border-radius: 12px;
+      box-shadow: var(--shadow);
+    }
+    .service-box i {
+      font-size: 40px;
+      color: var(--primary);
+      margin-bottom: 15px;
+    }
+    .service-box h4 {
+      color: var(--primary);
+      margin-bottom: 10px;
+    }
+
+    .disclaimer {
+      font-size: 0.85rem;
+      color: var(--text-light);
+      margin-top: 50px;
+      border-top: 1px solid #ddd;
+      padding-top: 20px;
+      line-height: 1.5;
+    }
+
+    @media (max-width: 768px) {
+      .intro {
+        flex-direction: column;
+      }
+      .intro img {
+        max-width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ===== Header Placeholder ===== -->
+  <div id="header-container"></div>
+
+  <!-- ===== Page Banner ===== -->
+  <section class="banner">
+    <h1>VITAMINS, MINERALS & NATURAL PRODUCTS</h1>
+  </section>
+
+  <!-- ===== Intro Section ===== -->
+  <section class="section">
+    <div class="intro">
+      <div class="intro-text">
+        <h2>Vitamins, Minerals & Natural Products</h2>
+        <p>No matter your age, your body needs vitamins and minerals to ensure all your vital functions. You will most likely meet your daily requirements by eating a healthy diet, but sometimes, a little boost doesn’t hurt - and your pharmacist can guide you in choosing the right product for you.</p>
+        <a href="#" class="btn">Find your pharmacy</a>
+      </div>
+      <img src="https://images.unsplash.com/photo-1574323347407-f5e1ad6d020b?auto=format&fit=crop&w=1000&q=80" alt="Vitamins and natural products">
+    </div>
+  </section>
+
+  <!-- ===== Pharmacist Tips ===== -->
+  <section class="section">
+    <div class="info-box">
+      <h3>PHARMACIST TIPS</h3>
+      <p>Talk to your pharmacist if you consider taking vitamins and natural products. He or she will give you advice related to many health conditions:</p>
+      <ul>
+        <li>Pregnancy and menopause</li>
+        <li>Prevention of osteoporosis</li>
+        <li>Improvement of digestive health</li>
+        <li>Improvement of sleep quality</li>
+        <li>Moderation of potential interactions between medications, vitamins and natural products.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ===== Melatonin ===== -->
+  <section class="section">
+    <div class="info-box">
+      <h3>CAN MELATONIN IMPROVE SLEEP?</h3>
+      <p>Discover if it is safe to take melatonin to improve sleep, what are its benefits and how to improve bedtime routine.</p>
+      <a href="#" class="btn">Learn more</a>
+    </div>
+  </section>
+
+  <!-- ===== Getting the Facts Right ===== -->
+  <section class="section">
+    <h2>GETTING THE FACTS RIGHT</h2>
+    <p style="color: var(--text-light); margin-bottom: 30px;">Discover the real deal behind vitamins, mineral and natural products to make the best choice for you and your needs.</p>
+    <div class="info-grid">
+      <div class="info-card">
+        <img src="https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?auto=format&fit=crop&w=800&q=80" alt="Elderly couple studying vitamins">
+        <h4>Myths and Facts about Vitamins and Minerals</h4>
+        <p>Debunk common myths about vitamins and minerals. Read on to find out whether adding supplements to your diet is a good choice and has positive effects.</p>
+        <a href="#">Learn More</a>
+      </div>
+      <div class="info-card">
+        <img src="https://images.unsplash.com/photo-15196896859940-96e11f32a24a?auto=format&fit=crop&w=800&q=80" alt="Mother and son">
+        <h4>Avoid a lack of vitamin D</h4>
+        <p>Discover why experts recommend that most Canadian adults take a daily vitamin D supplement for osteoporosis prevention and bone health.</p>
+        <a href="#">Learn More</a>
+      </div>
+      <div class="info-card">
+        <img src="https://images.unsplash.com/photo-1587854692152-cbe660dbde88?auto=format&fit=crop&w=800&q=80" alt="Woman shopping for supplements">
+        <h4>The Right Multivitamin for You</h4>
+        <p>If you’re baffled by the array of supplements available at your pharmacy, read on to discover how to choose the right multivitamin for you and your needs.</p>
+        <a href="#">Learn More</a>
+      </div>
+      <div class="info-card">
+        <img src="https://images.unsplash.com/photo-1505576399279-565b52d4ac71?auto=format&fit=crop&w=800&q=80" alt="Fresh fruits and vegetables">
+        <h4>Vitamin or mineral deficiencies?</h4>
+        <p>Discover the main vitamin and mineral deficiencies caused by very poor diets or medical problems, and how vegans, vegetarians, seniors and women can be particularly at risk.</p>
+        <a href="#">Learn More</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Other Services ===== -->
+  <section class="section">
+    <h2>Services in your pharmacy</h2>
+    <div class="services-grid">
+      <div class="service-box">
+        <i class="fas fa-weight"></i>
+        <h4>Weight Management</h4>
+        <p>If you’re thinking about losing weight, your pharmacist can shed a light on helpful natural health products and make sure your medication doesn’t make you gain weight as a side effect.</p>
+        <a href="#" class="btn">Find your pharmacy</a>
+      </div>
+      <div class="service-box">
+        <i class="fas fa-flask"></i>
+        <h4>Customization</h4>
+        <p>If you are allergic to certain components of your medication or don't like the taste, your pharmacist can find allergy-free formulations as a substitution or add flavour to improve its taste.</p>
+        <a href="#" class="btn">Find your pharmacy</a>
+      </div>
+      <div class="service-box">
+        <i class="fas fa-file-prescription"></i>
+        <h4>Medication Review</h4>
+        <p>Sit down with your pharmacist for a medication review to determine if any harmful effects or interactions are caused by combining your medication together, if one of your medication can be removed from your therapy and if there is cheaper medication available.</p>
+        <a href="#" class="btn">Find your pharmacy</a>
+      </div>
+    </div>
+
+    <p class="disclaimer">
+      * The information contained herein is provided for informational purposes only and is not intended to provide complete information on the subject matter or to replace the advice of a health professional. This information does not constitute medical consultation, diagnosis or opinion and should not be interpreted as such. Please consult your health care provider if you have any questions about your health, medications or treatment.
+    </p>
+  </section>
+
+  <!-- ===== Footer Placeholder ===== -->
+  <div id="footer-container"></div>
+
+  
+
+  
+  
+
+  
+</html>
+  <script src="../../assets/script.js"></script>
+  <script src="../../assets/loader.js"></script>
+  <script>
+    window.addEventListener('load', () => window.loadComponents('../../'));
+  </script>
+</body>
+</html>

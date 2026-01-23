@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cannabis, Its Effects & Your Health | Guardian, I.D.A. & Remedy'sRx</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../assets/style.css">
+
+  <style>
+    :root {
+      --primary: #0056b3;
+      --accent: #ff6b00;
+      --light: #f8f9fa;
+      --text: #333;
+      --text-light: #6c757d;
+      --shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      --transition: all 0.3s ease;
+    }
+
+    body {
+      font-family: 'Roboto', sans-serif;
+      color: var(--text);
+      overflow-x: hidden;
+      line-height: 1.6;
+    }
+
+    h1, h2, h3 {
+      font-family: 'Poppins', sans-serif;
+    }
+
+    /* ===== Banner ===== */
+    .banner {
+      background: linear-gradient(135deg, var(--primary), #004494);
+      color: white;
+      text-align: center;
+      padding: 80px 20px;
+    }
+    .banner h1 {
+      font-size: 2.4rem;
+      font-weight: 600;
+    }
+
+    /* ===== Section Layout ===== */
+    .section {
+      max-width: 1100px;
+      margin: 80px auto;
+      padding: 0 20px;
+    }
+
+    .intro {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 40px;
+    }
+
+    .intro img {
+      flex: 1;
+      max-width: 480px;
+      border-radius: 12px;
+      box-shadow: var(--shadow);
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+    }
+
+    .intro-text {
+      flex: 1;
+    }
+
+    .intro-text h2 {
+      color: var(--primary);
+      margin-bottom: 15px;
+    }
+
+    .btn {
+      display: inline-block;
+      background: var(--accent);
+      color: white;
+      text-decoration: none;
+      padding: 12px 25px;
+      border-radius: 25px;
+      transition: var(--transition);
+      font-weight: 500;
+      border: none;
+      cursor: pointer;
+    }
+    .btn:hover {
+      background: #e55a00;
+      transform: translateY(-2px);
+    }
+
+    /* ===== Info sections ===== */
+    .info-box {
+      background: var(--light);
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: var(--shadow);
+      margin-top: 40px;
+    }
+    .info-box h3 {
+      color: var(--primary);
+      margin-bottom: 15px;
+      font-size: 1.5rem;
+    }
+
+    /* ===== More Info Grid ===== */
+    .info-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 25px;
+      margin-top: 40px;
+    }
+    .info-card {
+      background: #fff;
+      padding: 25px;
+      border-radius: 12px;
+      box-shadow: var(--shadow);
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
+    .info-card img {
+        width: 100%;
+        height: 160px;
+        object-fit: cover;
+        border-radius: 8px;
+        margin-bottom: 15px;
+    }
+    .info-card h4 {
+      color: var(--primary);
+      margin-bottom: 10px;
+    }
+    .info-card p {
+      color: var(--text-light);
+      margin-bottom: 15px;
+      flex-grow: 1;
+    }
+    .info-card a {
+      color: var(--accent);
+      font-weight: 500;
+      text-decoration: none;
+      align-self: flex-start;
+    }
+
+    /* ===== Other Services ===== */
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+      margin-top: 50px;
+    }
+    .service-box {
+      background: #fff;
+      padding: 25px;
+      text-align: center;
+      border-radius: 12px;
+      box-shadow: var(--shadow);
+    }
+    .service-box i {
+      font-size: 40px;
+      color: var(--primary);
+      margin-bottom: 15px;
+    }
+    .service-box h4 {
+      color: var(--primary);
+      margin-bottom: 10px;
+    }
+
+    .disclaimer {
+      font-size: 0.85rem;
+      color: var(--text-light);
+      margin-top: 50px;
+      border-top: 1px solid #ddd;
+      padding-top: 20px;
+      line-height: 1.5;
+    }
+
+    @media (max-width: 768px) {
+      .intro {
+        flex-direction: column;
+      }
+      .intro img {
+        max-width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ===== Header Placeholder ===== -->
+  <div id="header-container"></div>
+
+  <!-- ===== Page Banner ===== -->
+  <section class="banner">
+    <h1>CANNABIS, ITS EFFECTS & YOUR HEALTH</h1>
+  </section>
+
+  <!-- ===== Intro Section ===== -->
+  <section class="section">
+    <div class="intro">
+      <div class="intro-text">
+        <h2>Cannabis, Its Effects & Your Health</h2>
+        <p>The legalization of recreational cannabis has brought up many questions. Read below for more information on cannabis and how your pharmacist can help.</p>
+        <a href="#" class="btn">Find your pharmacy</a>
+      </div>
+      <img src="https://images.unsplash.com/photo-1532468290680-1eba917e51ed?auto=format&fit=crop&w=1000&q=80" alt="Cannabis plant">
+    </div>
+  </section>
+
+  <!-- ===== Pharmacist Tips ===== -->
+  <section class="section">
+    <div class="info-box">
+      <h3>PHARMACIST TIPS</h3>
+      <p>Your pharmacist is an essential member of your healthcare team. They can provide you with insight and relevant information to help you make decisions. They are there to guide you through your therapy choices without judgment or bias.</p>
+      <p>Your pharmacist has been managing your medication therapy for a long time. They naturally know it well and can advise on avoiding potential medication interactions and minimizing adverse effects.</p>
+      <p>Don’t hesitate to reach out to your local pharmacist on cannabis-related questions or concerns.</p>
+      <a href="#" class="btn">Learn More</a>
+    </div>
+  </section>
+
+  <!-- ===== Learn More About Cannabis ===== -->
+  <section class="section">
+    <h2>Learn More About Cannabis</h2>
+    <div class="info-grid">
+      <div class="info-card">
+        <img src="https://images.unsplash.com/photo-1593026024064-bd2bf2c6b5d?auto=format&fit=crop&w=800&q=80" alt="What is Cannabis">
+        <h4>What is Cannabis?</h4>
+        <p>The term “cannabis” is used to describe products derived from the whole cannabis plant or its extracts.</p>
+        <a href="#">Learn More</a>
+      </div>
+      <div class="info-card">
+        <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=800&q=80" alt="FAQ">
+        <h4>Frequently Asked Questions About Cannabis</h4>
+        <p>Following the recent legalization of recreational cannabis, here are a few things to keep in mind.</p>
+        <a href="#">Learn More</a>
+      </div>
+      <div class="info-card">
+        <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=800&q=80" alt="Medical vs Recreational">
+        <h4>Medical vs Recreational Cannabis</h4>
+        <p>Find out what is the difference between medical and recreational cannabis.</p>
+        <a href="#">Learn More</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Other Services ===== -->
+  <section class="section">
+    <h2>Services in your pharmacy</h2>
+    <div class="services-grid">
+      <div class="service-box">
+        <i class="fas fa-lungs"></i>
+        <h4>RESPIRATORY HEALTH</h4>
+        <p>If you have asthma or are experiencing strep throat symptoms, talk to your pharmacist about tests to ensure your respiratory health is in order.</p>
+        <a href="#" class="btn">Find your pharmacy</a>
+      </div>
+      <div class="service-box">
+        <i class="fas fa-file-prescription"></i>
+        <h4>MEDICATION REVIEW</h4>
+        <p>Sit down with your pharmacist for a medication review to determine if any harmful effects or interactions are caused by combining your medication together, if one of your medication can be removed from your therapy and if there is cheaper medication available.</p>
+        <a href="#" class="btn">Find your pharmacy</a>
+      </div>
+      <div class="service-box">
+        <i class="fas fa-user-md"></i>
+        <h4>WELLNESS CONSULTATION</h4>
+        <p>Your pharmacist truly believes in this. Personalized consultations are available to help you reach your wellness goals or help you navigate life-changing events in health.</p>
+        <a href="#" class="btn">Find your pharmacy</a>
+      </div>
+    </div>
+
+    <p class="disclaimer">
+      * The information contained herein is provided for informational purposes only and is not intended to provide complete information on the subject matter or to replace the advice of a health professional. This information does not constitute medical consultation, diagnosis or opinion and should not be interpreted as such. Please consult your health care provider if you have any questions about your health, medications or treatment.
+    </p>
+  </section>
+
+  <!-- ===== Footer Placeholder ===== -->
+  <div id="footer-container"></div>
+
+  
+
+  
+  
+
+  
+</html>
+  <script src="../../assets/script.js"></script>
+  <script src="../../assets/loader.js"></script>
+  <script>
+    window.addEventListener('load', () => window.loadComponents('../../'));
+  </script>
+</body>
+</html>

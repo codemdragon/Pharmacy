@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Health | Guardian</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="index.css" /> <!-- optional if you moved your styles there -->
+  <link rel="stylesheet" href="../assets/style.css">
+
+  <style>
+    :root {
+      --primary: #0056b3;
+      --secondary: #28a745;
+      --accent: #ff6b00;
+      --light: #f8f9fa;
+      --dark: #343a40;
+      --text: #333;
+      --text-light: #6c757d;
+      --border: #dee2e6;
+      --shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      --transition: all 0.3s ease;
+    }
+
+    body {
+      font-family: 'Roboto', sans-serif;
+      color: var(--text);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    h1,
+    h2,
+    h3 {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 600;
+    }
+
+    /* ===== Banner ===== */
+    .myhealth-banner {
+      background: linear-gradient(135deg, var(--primary), #004494);
+      color: white;
+      text-align: center;
+      padding: 80px 20px;
+    }
+
+    .myhealth-banner h1 {
+      font-size: 2.5rem;
+      font-weight: 600;
+    }
+
+    /* ===== Section Blocks ===== */
+    .myhealth-content {
+      padding: 80px 0;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding-inline: 20px;
+    }
+
+    .health-block {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 40px;
+      margin-bottom: 80px;
+      flex-wrap: wrap;
+    }
+
+    .health-block.reverse {
+      flex-direction: row-reverse;
+    }
+
+    .health-img {
+      flex: 1;
+      min-height: 300px;
+      background-size: cover;
+      background-position: center;
+      border-radius: 12px;
+      box-shadow: var(--shadow);
+    }
+
+    .health-text {
+      flex: 1;
+    }
+
+    .health-text h2 {
+      color: var(--primary);
+      font-size: 1.8rem;
+      margin-bottom: 15px;
+    }
+
+    .health-text p {
+      color: var(--text-light);
+      margin-bottom: 15px;
+      line-height: 1.7;
+    }
+
+    .health-btn {
+      display: inline-block;
+      background: var(--accent);
+      color: white;
+      text-decoration: none;
+      padding: 12px 25px;
+      border-radius: 25px;
+      font-weight: 500;
+      transition: var(--transition);
+    }
+
+    .health-btn:hover {
+      background: #e55a00;
+      transform: translateY(-2px);
+    }
+
+    @media (max-width: 768px) {
+
+      .health-block,
+      .health-block.reverse {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ===== Header (copied directly from index.html) ===== -->
+  <div id="header-container"></div>
+
+  
+  
+
+  <!-- ===== My Health Banner ===== -->
+  <section class="myhealth-banner">
+    <h1>My Health: General Health</h1>
+  </section>
+
+  <!-- ===== My Health Content ===== -->
+  <section class="myhealth-content">
+
+    <!-- Muscles, Joints and Bones -->
+    <div class="health-block reverse">
+      <div class="health-text">
+        <h2>MUSCLES, JOINTS AND BONES</h2>
+        <p>Your body is a complex machine made of different parts, each of them playing an important role. As for all
+          machines, care is needed to prevent normal wear.</p>
+        <p>Discover our pharmacist's tips to keep your body healthy and in top shape.</p>
+        <a href="general_health/body_health.html" class="health-btn">Read more</a>
+      </div>
+      <div class="health-img"
+        style="background-image:url('https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8?auto=format&fit=crop&w=1000&q=80');">
+      </div>
+    </div>
+
+    <!-- Family Health -->
+    <div class="health-block">
+      <div class="health-img"
+        style="background-image:url('https://images.unsplash.com/photo-1511895426328-dc871419a019?auto=format&fit=crop&w=1000&q=80');">
+      </div>
+      <div class="health-text">
+        <h2>FAMILY HEALTH</h2>
+        <p>Whether it's for your parents, your children, your partner or yourself, learn our tips to better manage your
+          family's health and how your pharmacist can help.</p>
+        <a href="general_health/family_health.html" class="health-btn">Read more</a>
+      </div>
+    </div>
+
+    <!-- Men's Health -->
+    <div class="health-block reverse">
+      <div class="health-text">
+        <h2>MEN'S HEALTH</h2>
+        <p>Learn more about men's health issues, debunk some persistent myths and see how you can prevent some
+          conditions with healthy habits and support of your pharmacist.</p>
+        <a href="general_health/mens_health.html" class="health-btn">Read more</a>
+      </div>
+      <div class="health-img"
+        style="background-image:url('https://images.unsplash.com/photo-1574680096145-d05b474e2f5?auto=format&fit=crop&w=1000&q=80');">
+      </div>
+    </div>
+
+    <!-- Women's Health -->
+    <div class="health-block">
+      <div class="health-img"
+        style="background-image:url('https://images.unsplash.com/photo-1531746020798-e6953c6f8e04?auto=format&fit=crop&w=1000&q=80');">
+      </div>
+      <div class="health-text">
+        <h2>WOMEN'S HEALTH</h2>
+        <p>From puberty to menopause, women's bodies change over the years and this has a direct impact on their health.
+        </p>
+        <p>Find several answers to your questions and find out how your pharmacist can guide you through these different
+          steps.</p>
+        <a href="general_health/womens_health.html" class="health-btn">Read more</a>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- ===== Footer (copied from index.html) ===== -->
+  <div id="footer-container"></div>
+
+  
+  
+
+  
+
+</html>
+  <script src="../assets/script.js"></script>
+  <script src="../assets/loader.js"></script>
+  <script>
+    window.addEventListener('load', () => window.loadComponents('../'));
+  </script>
+</body>
+</html>
