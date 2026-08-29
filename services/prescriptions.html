@@ -199,37 +199,44 @@
         }
 
         .service-list-card {
-            background-color: #4b5563;
+            background-color: white;
+            border: 1px solid #dee2e6;
             border-radius: 8px;
             padding: 25px 30px;
             display: flex;
             align-items: center;
             gap: 25px;
-            color: white;
-            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            color: #333;
+            transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
         }
 
         .service-list-card:hover {
             transform: translateY(-3px);
-            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+            border-color: #0056b3;
         }
 
         .service-list-icon {
             flex-shrink: 0;
-            width: 60px;
+            width: 70px;
+            height: 70px;
+            background-color: #f8f9fa;
+            border-radius: 50%;
             display: flex;
             justify-content: center;
+            align-items: center;
         }
         
         .service-list-icon img {
-            width: 50px;
+            width: 40px;
             height: auto;
-            filter: brightness(0) invert(1);
+            /* No inversion, keep original colored or dark icon */
         }
         
         .service-list-icon i {
-            font-size: 40px;
-            color: white;
+            font-size: 30px;
+            color: #0056b3;
         }
 
         .service-list-content {
@@ -240,11 +247,12 @@
             font-size: 1.3rem;
             margin-bottom: 10px;
             font-weight: 600;
+            color: #0056b3;
         }
 
         .service-list-content p {
             font-size: 0.95rem;
-            color: rgba(255, 255, 255, 0.9);
+            color: #555;
             line-height: 1.5;
             margin: 0;
         }
@@ -253,21 +261,23 @@
             flex-shrink: 0;
         }
 
-        .btn-white {
+        .btn-card-action {
             display: inline-block;
             background-color: white;
-            color: #333;
+            color: #0056b3;
+            border: 1px solid #0056b3;
             padding: 10px 20px;
             border-radius: 4px;
             text-decoration: none;
             font-weight: 500;
             font-size: 0.9rem;
-            transition: background-color 0.3s ease;
+            transition: all 0.3s ease;
             white-space: nowrap;
         }
 
-        .btn-white:hover {
-            background-color: #f0f0f0;
+        .btn-card-action:hover {
+            background-color: #0056b3;
+            color: white;
         }
 
         /* Suggested Services */
@@ -462,7 +472,7 @@
                             <p>Do you wish to transfer your prescriptions to your local Guardian, I.D.A. or Remedy'sRx pharmacy? Simply fill out our online form to send a transfer request. We'll take care of the rest!</p>
                         </div>
                         <div class="service-list-action">
-                            <a href="#" class="btn-white">Transfer my prescriptions</a>
+                            <a href="#" class="btn-card-action">Transfer my prescriptions</a>
                         </div>
                     </div>
 
@@ -475,7 +485,7 @@
                             <p>If you have a minor health problem (nausea during pregnancy, traveler's diarrhea, lice), you can turn to you pharmacist as a front line health professional. See what they can do for you right away: prescriptions, advice and much more.</p>
                         </div>
                         <div class="service-list-action">
-                            <a href="#" class="btn-white">Learn More</a>
+                            <a href="prescriptions/common_conditions.html" class="btn-card-action">Learn More</a>
                         </div>
                     </div>
 
@@ -488,7 +498,7 @@
                             <p>If you have a chronic condition and require regular medication, your pharmacist is here to facilitate your day to day. They can extend prescriptions and re-prescribe your medication, as well as show you tools to help you get the most out of your treatment.</p>
                         </div>
                         <div class="service-list-action">
-                            <a href="#" class="btn-white">Learn More</a>
+                            <a href="#" class="btn-card-action">Learn More</a>
                         </div>
                     </div>
 
@@ -501,7 +511,7 @@
                             <p>Cleaning your medicine cabinet? If you have any expired or unused medications, our pharmacists can dispose of it safely and in an environmentally friendly way. Take advantage of this complimentary service by simply visiting your nearest pharmacy.</p>
                         </div>
                         <div class="service-list-action">
-                            <a href="#" class="btn-white">Find your nearest pharmacy</a>
+                            <a href="#" class="btn-card-action">Find your nearest pharmacy</a>
                         </div>
                     </div>
 
@@ -514,7 +524,7 @@
                             <p>Medication should be always be taken according to your pharmacist's direction, to avoid incidents. See how you can use and dispose of your medication safely.</p>
                         </div>
                         <div class="service-list-action">
-                            <a href="#" class="btn-white">Learn More</a>
+                            <a href="#" class="btn-card-action">Learn More</a>
                         </div>
                     </div>
 
@@ -527,7 +537,7 @@
                             <p>To save time and never miss a dose, you can renew your prescription in advance using one of the following options your pharmacist has made available to you: the mobile app, online renewals, the medication synchronization service and many others.</p>
                         </div>
                         <div class="service-list-action">
-                            <a href="#" class="btn-white">Learn More</a>
+                            <a href="#" class="btn-card-action">Learn More</a>
                         </div>
                     </div>
 
