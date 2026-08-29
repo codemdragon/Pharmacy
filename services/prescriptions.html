@@ -2,597 +2,362 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Prescription Services | Guardian, I.D.A. and Remedy'sRx</title>
-    
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../assets/style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Prescription Services | Guardian, I.D.A. and Remedy'sRx</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="../assets/style.css">
 
-    <style>
-        /* General Page Styles */
-        body {
-            background-color: #fafafa;
-        }
+  <style>
+    :root {
+      --primary: #0056b3;
+      --secondary: #28a745;
+      --accent: #ff6b00;
+      --light: #f8f9fa;
+      --dark: #343a40;
+      --text: #333;
+      --text-light: #6c757d;
+      --border: #dee2e6;
+      --shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      --transition: all 0.3s ease;
+    }
 
-        /* Hero Section */
-        .prescription-hero {
-            background: linear-gradient(90deg, #ffffff 0%, #f4f4f4 50%, #e0e0e0 100%);
-            position: relative;
-            overflow: hidden;
-            padding: 60px 0;
-            min-height: 400px;
-            display: flex;
-            align-items: center;
-        }
-        
-        /* The grey sweeping shape background for the right side */
-        .prescription-hero::after {
-            content: '';
-            position: absolute;
-            top: -10%;
-            right: -5%;
-            width: 55%;
-            height: 120%;
-            background-color: #8fa0a8;
-            border-radius: 50% 0 0 50%;
-            z-index: 1;
-        }
+    body {
+      font-family: 'Roboto', sans-serif;
+      color: var(--text);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
 
-        .hero-container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            position: relative;
-            z-index: 2;
-        }
+    h1,
+    h2,
+    h3 {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 600;
+    }
 
-        .hero-text {
-            flex: 1;
-            max-width: 500px;
-        }
+    /* ===== Banner ===== */
+    .myhealth-banner {
+      background: linear-gradient(135deg, var(--primary), #004494);
+      color: white;
+      text-align: center;
+      padding: 80px 20px;
+    }
 
-        .title-with-icon {
-            display: flex;
-            align-items: flex-start;
-            gap: 15px;
-            margin-bottom: 20px;
-        }
+    .myhealth-banner h1 {
+      font-size: 2.5rem;
+      font-weight: 600;
+    }
 
-        .title-with-icon img {
-            width: 50px;
-            height: auto;
-        }
+    /* ===== Section Blocks ===== */
+    .myhealth-content {
+      padding: 80px 0;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding-inline: 20px;
+    }
 
-        .hero-text h1 {
-            font-size: 2.5rem;
-            color: #333;
-            line-height: 1.1;
-            margin: 0;
-            font-weight: 700;
-        }
+    .health-block {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 40px;
+      margin-bottom: 80px;
+      flex-wrap: wrap;
+    }
 
-        .hero-text p {
-            font-size: 1.1rem;
-            color: #555;
-            margin-bottom: 30px;
-        }
+    .health-block.reverse {
+      flex-direction: row-reverse;
+    }
 
-        .btn-dark {
-            display: inline-block;
-            background-color: #4b5563;
-            color: white;
-            padding: 12px 24px;
-            border-radius: 4px;
-            text-decoration: none;
-            font-weight: 600;
-            transition: background-color 0.3s ease;
-        }
+    .health-img {
+      flex: 1;
+      min-height: 300px;
+      background-size: cover;
+      background-position: center;
+      border-radius: 12px;
+      box-shadow: var(--shadow);
+    }
 
-        .btn-dark:hover {
-            background-color: #374151;
-        }
+    .health-text {
+      flex: 1;
+    }
 
-        .hero-image {
-            flex: 1;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
+    .health-text h2 {
+      color: var(--primary);
+      font-size: 1.8rem;
+      margin-bottom: 15px;
+    }
 
-        .hero-image img {
-            max-width: 90%;
-            height: auto;
-            /* Give it a slight floating effect if it's an illustration */
-            filter: drop-shadow(0px 10px 15px rgba(0,0,0,0.1));
-        }
+    .health-text p {
+      color: var(--text-light);
+      margin-bottom: 15px;
+      line-height: 1.7;
+    }
 
-        /* Breadcrumbs */
-        .breadcrumbs {
-            background-color: white;
-            padding: 15px 0;
-            font-size: 0.85rem;
-            color: #888;
-            border-bottom: 1px solid #eaeaea;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
-        
-        .breadcrumbs a {
-            color: #888;
-            text-decoration: none;
-        }
+    .health-btn {
+      display: inline-block;
+      background: var(--accent);
+      color: white;
+      text-decoration: none;
+      padding: 12px 25px;
+      border-radius: 25px;
+      font-weight: 500;
+      transition: var(--transition);
+    }
 
-        .breadcrumbs a:hover {
-            color: var(--primary);
-        }
+    .health-btn:hover {
+      background: #e55a00;
+      transform: translateY(-2px);
+    }
 
-        /* Beyond Medication */
-        .beyond-section {
-            text-align: center;
-            padding: 60px 20px;
-            max-width: 800px;
-            margin: 0 auto;
-        }
+    /* ===== Suggested Services (hover squares) ===== */
+    .suggested-services {
+      background: var(--light);
+      padding: 80px 20px;
+      text-align: center;
+    }
 
-        .beyond-section h2 {
-            font-size: 2rem;
-            color: #333;
-            margin-bottom: 20px;
-        }
+    .suggested-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
 
-        .beyond-section p {
-            font-size: 1.1rem;
-            color: #666;
-            margin-bottom: 40px;
-            line-height: 1.6;
-        }
+    .section-header {
+      margin-bottom: 40px;
+    }
 
-        .scroll-down-icon {
-            display: inline-flex;
-            justify-content: center;
-            align-items: center;
-            width: 40px;
-            height: 40px;
-            background-color: #4b5563;
-            color: white;
-            border-radius: 50%;
-            font-size: 1.2rem;
-        }
+    .section-header h2 {
+      color: var(--primary);
+      position: relative;
+      display: inline-block;
+    }
 
-        /* Services List Section */
-        .services-list-section {
-            padding: 40px 0 80px;
-            background-color: #fafafa;
-        }
+    .section-header h2::after {
+      content: '';
+      position: absolute;
+      width: 70px;
+      height: 3px;
+      background: var(--accent);
+      bottom: -10px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
 
-        .services-list-wrapper {
-            display: flex;
-            gap: 40px;
-            align-items: flex-start;
-        }
+    .section-header p {
+      color: var(--text-light);
+      margin-top: 20px;
+      font-size: 1.1rem;
+    }
 
-        .services-intro {
-            flex: 1;
-            position: sticky;
-            top: 100px;
-        }
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+      margin-bottom: 40px;
+    }
 
-        .services-intro h3 {
-            font-size: 1.8rem;
-            color: #333;
-            margin-bottom: 15px;
-        }
+    .service-card {
+      background: white;
+      padding: 30px 25px;
+      border-radius: 12px;
+      box-shadow: var(--shadow);
+      text-align: center;
+      transition: var(--transition);
+    }
 
-        .services-intro p {
-            color: #666;
-            font-size: 1rem;
-            line-height: 1.6;
-        }
+    .service-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+      border-bottom: 3px solid var(--accent);
+    }
 
-        .services-cards {
-            flex: 2;
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
-        }
+    .service-card i {
+      font-size: 2.5rem;
+      color: var(--primary);
+      margin-bottom: 15px;
+      display: inline-block;
+    }
 
-        .service-list-card {
-            background-color: white;
-            border: 1px solid #dee2e6;
-            border-radius: 8px;
-            padding: 25px 30px;
-            display: flex;
-            align-items: center;
-            gap: 25px;
-            color: #333;
-            transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-        }
+    .service-card h3 {
+      color: var(--primary);
+      margin-bottom: 10px;
+    }
 
-        .service-list-card:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 8px 16px rgba(0,0,0,0.1);
-            border-color: #0056b3;
-        }
+    .service-card p {
+      color: var(--text-light);
+      margin-bottom: 15px;
+      font-size: 0.95rem;
+    }
 
-        .service-list-icon {
-            flex-shrink: 0;
-            width: 70px;
-            height: 70px;
-            background-color: #f8f9fa;
-            border-radius: 50%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        
-        .service-list-icon img {
-            width: 40px;
-            height: auto;
-            /* No inversion, keep original colored or dark icon */
-        }
-        
-        .service-list-icon i {
-            font-size: 30px;
-            color: #0056b3;
-        }
+    .service-link {
+      display: inline-block;
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 500;
+      transition: var(--transition);
+    }
 
-        .service-list-content {
-            flex: 1;
-        }
+    .service-link:hover {
+      color: #e55a00;
+      transform: translateX(5px);
+    }
 
-        .service-list-content h4 {
-            font-size: 1.3rem;
-            margin-bottom: 10px;
-            font-weight: 600;
-            color: #0056b3;
-        }
+    @media (max-width: 768px) {
 
-        .service-list-content p {
-            font-size: 0.95rem;
-            color: #555;
-            line-height: 1.5;
-            margin: 0;
-        }
-
-        .service-list-action {
-            flex-shrink: 0;
-        }
-
-        .btn-card-action {
-            display: inline-block;
-            background-color: white;
-            color: #0056b3;
-            border: 1px solid #0056b3;
-            padding: 10px 20px;
-            border-radius: 4px;
-            text-decoration: none;
-            font-weight: 500;
-            font-size: 0.9rem;
-            transition: all 0.3s ease;
-            white-space: nowrap;
-        }
-
-        .btn-card-action:hover {
-            background-color: #0056b3;
-            color: white;
-        }
-
-        /* Suggested Services */
-        .suggested-services {
-            background-color: #f4f4f4;
-            padding: 80px 0;
-            text-align: center;
-        }
-
-        .suggested-services h2 {
-            font-size: 2rem;
-            color: #333;
-            margin-bottom: 10px;
-        }
-
-        .suggested-services > p {
-            color: #666;
-            margin-bottom: 50px;
-            font-size: 1.1rem;
-        }
-
-        .suggested-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 20px;
-            margin-bottom: 40px;
-        }
-
-        .suggested-card {
-            border-radius: 8px;
-            padding: 40px 30px;
-            color: white;
-            text-align: left;
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
-            min-height: 250px;
-            transition: transform 0.3s ease;
-        }
-        
-        .suggested-card:hover {
-            transform: translateY(-5px);
-        }
-
-        .suggested-card.green { background-color: #006f4f; }
-        .suggested-card.blue { background-color: #0056b3; }
-        .suggested-card.light-green { background-color: #7ab800; }
-
-        .suggested-icon i {
-            font-size: 3rem;
-            margin-bottom: 10px;
-        }
-        
-        .suggested-icon img {
-            width: 50px;
-            height: auto;
-            filter: brightness(0) invert(1);
-            margin-bottom: 10px;
-        }
-
-        .suggested-card h3 {
-            font-size: 1.4rem;
-            margin-bottom: 10px;
-        }
-
-        .suggested-card p {
-            font-size: 0.95rem;
-            opacity: 0.9;
-            line-height: 1.5;
-        }
-
-        .view-all-btn {
-            display: inline-block;
-            background-color: #4b5563;
-            color: white;
-            padding: 12px 30px;
-            border-radius: 4px;
-            text-decoration: none;
-            font-weight: 600;
-            transition: background-color 0.3s ease;
-        }
-
-        .view-all-btn:hover {
-            background-color: #374151;
-        }
-
-        /* Responsive Design */
-        @media (max-width: 992px) {
-            .services-list-wrapper {
-                flex-direction: column;
-            }
-            .services-intro {
-                position: static;
-                margin-bottom: 30px;
-            }
-            .service-list-card {
-                flex-direction: column;
-                text-align: center;
-                gap: 15px;
-            }
-            .suggested-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-
-        @media (max-width: 768px) {
-            .prescription-hero {
-                flex-direction: column;
-                text-align: center;
-                padding: 40px 20px;
-            }
-            .prescription-hero::after {
-                width: 100%;
-                height: 50%;
-                top: auto;
-                bottom: 0;
-                right: 0;
-                border-radius: 50% 50% 0 0;
-            }
-            .hero-container {
-                flex-direction: column;
-                gap: 40px;
-            }
-            .title-with-icon {
-                justify-content: center;
-            }
-            .hero-text {
-                max-width: 100%;
-            }
-        }
-    </style>
+      .health-block,
+      .health-block.reverse {
+        flex-direction: column;
+      }
+    }
+  </style>
 </head>
 
 <body>
-    <!-- Header Container -->
-    <div id="header-container"></div>
 
-    <!-- Hero Section -->
-    <section class="prescription-hero">
-        <div class="container hero-container">
-            <div class="hero-text">
-                <div class="title-with-icon">
-                    <img src="https://www.guardian-ida-remedysrx.ca/-/media/mckesson/services-section/branded-icons/gdn-ida/gdn-ida-svgs/ws_icon_svg_gdn-ida_prescriptions.svg?la=en" alt="Prescription Icon" class="hero-icon">
-                    <h1>PRESCRIPTION<br>SERVICES</h1>
-                </div>
-                <p>Contact your local pharmacy to find out if these services are available.</p>
-                <a href="#" class="btn-dark">Find your pharmacy</a>
-            </div>
-            <div class="hero-image">
-                <!-- Using a visually similar isometric illustration placeholder or pharmacy image -->
-                <img src="https://images.unsplash.com/photo-1585435557343-3b092031d5ad?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Pharmacy Services Illustration" style="border-radius: 12px; max-height: 300px; object-fit: cover;">
-            </div>
-        </div>
-    </section>
+  <!-- ===== Header ===== -->
+  <div id="header-container"></div>
 
-    <!-- Breadcrumbs -->
-    <div class="breadcrumbs">
-        <div class="container">
-            <a href="../index.html">HOME</a> &gt; 
-            <a href="#">PHARMACY SERVICES</a> &gt; 
-            <span>PRESCRIPTIONS</span>
-        </div>
+  <!-- ===== Banner ===== -->
+  <section class="myhealth-banner">
+    <h1>Pharmacy Services: Prescriptions</h1>
+  </section>
+
+  <!-- ===== Content ===== -->
+  <section class="myhealth-content">
+
+    <!-- Prescription Transfers -->
+    <div class="health-block reverse">
+      <div class="health-text">
+        <h2>Prescription Transfers</h2>
+        <p>Do you wish to transfer your prescriptions to your local Guardian, I.D.A. or Remedy'sRx pharmacy? Simply
+          fill out our online form to send a transfer request. We'll take care of the rest!</p>
+        <a href="#" class="health-btn">Transfer my prescriptions</a>
+      </div>
+      <div class="health-img"
+        style="background-image:url('https://images.unsplash.com/photo-1585435557343-3b092031d5ad?auto=format&fit=crop&w=1000&q=80');">
+      </div>
     </div>
 
-    <!-- Beyond Medication -->
-    <section class="beyond-section">
-        <h2>Beyond medication</h2>
-        <p>Your pharmacist does more than just prepare your prescriptions. They are with you every step of the way: whether you have a minor health issue or a chronic condition.</p>
-        <div class="scroll-down-icon">
-            <i class="fas fa-chevron-down"></i>
+    <!-- Medication for minor health problems -->
+    <div class="health-block">
+      <div class="health-img"
+        style="background-image:url('https://images.unsplash.com/photo-1584036561566-baf8f5f1b144?auto=format&fit=crop&w=1000&q=80');">
+      </div>
+      <div class="health-text">
+        <h2>Medication for Minor Health Problems</h2>
+        <p>If you have a minor health problem (nausea during pregnancy, traveler's diarrhea, lice), you can turn to
+          your pharmacist as a front line health professional. See what they can do for you right away:
+          prescriptions, advice and much more.</p>
+        <a href="prescriptions/common_conditions.html" class="health-btn">Learn more</a>
+      </div>
+    </div>
+
+    <!-- Medication for chronic conditions -->
+    <div class="health-block reverse">
+      <div class="health-text">
+        <h2>Medication for Chronic Conditions</h2>
+        <p>If you have a chronic condition and require regular medication, your pharmacist is here to facilitate your
+          day to day. They can extend prescriptions and re-prescribe your medication, as well as show you tools to
+          help you get the most out of your treatment.</p>
+        <a href="#" class="health-btn">Learn more</a>
+      </div>
+      <div class="health-img"
+        style="background-image:url('https://images.unsplash.com/photo-1555662365-652517a2d321?auto=format&fit=crop&w=1000&q=80');">
+      </div>
+    </div>
+
+    <!-- Medication Take Back -->
+    <div class="health-block">
+      <div class="health-img"
+        style="background-image:url('https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?auto=format&fit=crop&w=1000&q=80');">
+      </div>
+      <div class="health-text">
+        <h2>Medication Take Back</h2>
+        <p>Cleaning your medicine cabinet? If you have any expired or unused medications, our pharmacists can dispose
+          of it safely and in an environmentally friendly way. Take advantage of this complimentary service by simply
+          visiting your nearest pharmacy.</p>
+        <a href="#" class="health-btn">Find your nearest pharmacy</a>
+      </div>
+    </div>
+
+    <!-- Your medication and your safety -->
+    <div class="health-block reverse">
+      <div class="health-text">
+        <h2>Your Medication and Your Safety</h2>
+        <p>Medication should always be taken according to your pharmacist's direction, to avoid incidents. See how you
+          can use and dispose of your medication safely.</p>
+        <a href="#" class="health-btn">Learn more</a>
+      </div>
+      <div class="health-img"
+        style="background-image:url('https://images.unsplash.com/photo-1471864190281-a93a3070b6de?auto=format&fit=crop&w=1000&q=80');">
+      </div>
+    </div>
+
+    <!-- Prescription Renewals -->
+    <div class="health-block">
+      <div class="health-img"
+        style="background-image:url('https://images.unsplash.com/photo-1587854692152-cbe660dbde88?auto=format&fit=crop&w=1000&q=80');">
+      </div>
+      <div class="health-text">
+        <h2>Prescription Renewals</h2>
+        <p>To save time and never miss a dose, you can renew your prescription in advance using one of the following
+          options your pharmacist has made available to you: the mobile app, online renewals, the medication
+          synchronization service and many others.</p>
+        <a href="#" class="health-btn">Learn more</a>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- ===== Suggested Services ===== -->
+  <section class="suggested-services">
+    <div class="suggested-inner">
+      <div class="section-header">
+        <h2>Suggested Services For You</h2>
+        <p>Discover our wide range of services offered in a pharmacy near you</p>
+      </div>
+
+      <div class="services-grid">
+        <div class="service-card">
+          <i class="fas fa-heartbeat"></i>
+          <h3>Assessments &amp; Monitoring</h3>
+          <p>Your pharmacist can provide an assessment of your initial therapy and make sure it is the best option
+            for you.</p>
+          <a href="#" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
         </div>
-    </section>
 
-    <!-- Services List -->
-    <section class="services-list-section">
-        <div class="container">
-            <div class="services-list-wrapper">
-                
-                <div class="services-intro">
-                    <h3>Your pharmacist, your medication ally</h3>
-                    <p>Prescription services are at the core of what your pharmacist does. See how these services can benefit you.</p>
-                </div>
-
-                <div class="services-cards">
-                    
-                    <div class="service-list-card">
-                        <div class="service-list-icon">
-                            <img src="https://www.guardian-ida-remedysrx.ca/-/media/mckesson/services-section/new-svg-icons/ws_icons_svg_prescriptions.png?la=en" alt="Prescription Transfers">
-                        </div>
-                        <div class="service-list-content">
-                            <h4>Prescription Transfers</h4>
-                            <p>Do you wish to transfer your prescriptions to your local Guardian, I.D.A. or Remedy'sRx pharmacy? Simply fill out our online form to send a transfer request. We'll take care of the rest!</p>
-                        </div>
-                        <div class="service-list-action">
-                            <a href="#" class="btn-card-action">Transfer my prescriptions</a>
-                        </div>
-                    </div>
-
-                    <div class="service-list-card">
-                        <div class="service-list-icon">
-                            <img src="https://www.guardian-ida-remedysrx.ca/-/media/mckesson/services-section/new-svg-icons/ws_icons_svg_minor-conditions.png?la=en" alt="Medication for minor health problems">
-                        </div>
-                        <div class="service-list-content">
-                            <h4>Medication for minor health problems</h4>
-                            <p>If you have a minor health problem (nausea during pregnancy, traveler's diarrhea, lice), you can turn to you pharmacist as a front line health professional. See what they can do for you right away: prescriptions, advice and much more.</p>
-                        </div>
-                        <div class="service-list-action">
-                            <a href="prescriptions/common_conditions.html" class="btn-card-action">Learn More</a>
-                        </div>
-                    </div>
-
-                    <div class="service-list-card">
-                        <div class="service-list-icon">
-                            <img src="https://www.guardian-ida-remedysrx.ca/-/media/mckesson/services-section/new-svg-icons/ws_icons_svg_chronic-conditions.png?la=en" alt="Medication for chronic conditions">
-                        </div>
-                        <div class="service-list-content">
-                            <h4>Medication for chronic conditions</h4>
-                            <p>If you have a chronic condition and require regular medication, your pharmacist is here to facilitate your day to day. They can extend prescriptions and re-prescribe your medication, as well as show you tools to help you get the most out of your treatment.</p>
-                        </div>
-                        <div class="service-list-action">
-                            <a href="#" class="btn-card-action">Learn More</a>
-                        </div>
-                    </div>
-
-                    <div class="service-list-card">
-                        <div class="service-list-icon">
-                            <img src="https://www.guardian-ida-remedysrx.ca/-/media/mckesson/uniprix/pharmacy-services/icons/ux_icon_medication_customization_generic_100x100.svg?la=en" alt="Medication Take Back">
-                        </div>
-                        <div class="service-list-content">
-                            <h4>Medication Take Back</h4>
-                            <p>Cleaning your medicine cabinet? If you have any expired or unused medications, our pharmacists can dispose of it safely and in an environmentally friendly way. Take advantage of this complimentary service by simply visiting your nearest pharmacy.</p>
-                        </div>
-                        <div class="service-list-action">
-                            <a href="#" class="btn-card-action">Find your nearest pharmacy</a>
-                        </div>
-                    </div>
-
-                    <div class="service-list-card">
-                        <div class="service-list-icon">
-                            <img src="https://www.guardian-ida-remedysrx.ca/-/media/mckesson/services-section/new-svg-icons/ws_icons_svg_safety.png?la=en" alt="Your medication and your safety">
-                        </div>
-                        <div class="service-list-content">
-                            <h4>Your medication and your safety</h4>
-                            <p>Medication should be always be taken according to your pharmacist's direction, to avoid incidents. See how you can use and dispose of your medication safely.</p>
-                        </div>
-                        <div class="service-list-action">
-                            <a href="#" class="btn-card-action">Learn More</a>
-                        </div>
-                    </div>
-
-                    <div class="service-list-card">
-                        <div class="service-list-icon">
-                            <img src="https://www.guardian-ida-remedysrx.ca/-/media/mckesson/services-section/new-svg-icons/ws_icon_prescription-renewals_png_white.png?la=en" alt="Prescription Renewals">
-                        </div>
-                        <div class="service-list-content">
-                            <h4>Prescription Renewals</h4>
-                            <p>To save time and never miss a dose, you can renew your prescription in advance using one of the following options your pharmacist has made available to you: the mobile app, online renewals, the medication synchronization service and many others.</p>
-                        </div>
-                        <div class="service-list-action">
-                            <a href="#" class="btn-card-action">Learn More</a>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
+        <div class="service-card">
+          <i class="fas fa-leaf"></i>
+          <h3>Wellness Consultations</h3>
+          <p>For your pharmacist, your health is also their goal. You can turn to them for advice on how to reach
+            your wellness objectives.</p>
+          <a href="#" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
         </div>
-    </section>
 
-    <!-- Suggested Services -->
-    <section class="suggested-services">
-        <div class="container">
-            <h2>Suggested services for you</h2>
-            <p>Discover our wide range of services offered in a pharmacy near you</p>
-            
-            <div class="suggested-grid">
-                
-                <div class="suggested-card green">
-                    <div class="suggested-icon">
-                        <img src="https://www.guardian-ida-remedysrx.ca/-/media/mckesson/services-section/new-svg-icons/ws_icons_svg_monitoring.png?la=en" alt="Assessments & Monitoring">
-                    </div>
-                    <h3>Assessments & Monitoring</h3>
-                    <p>Your pharmacist can provide an assessment of your initial therapy and make sure it is the best option for you.</p>
-                </div>
-
-                <div class="suggested-card blue">
-                    <div class="suggested-icon">
-                        <img src="https://www.guardian-ida-remedysrx.ca/-/media/mckesson/services-section/new-svg-icons/ws_icons_svg_wellness.png?la=en" alt="Wellness Consultations">
-                    </div>
-                    <h3>Wellness Consultations</h3>
-                    <p>For your pharmacist, your health is also their goal. You can turn to them for advice on how to reach your wellness objectives and for private consultations to assess your personal situation.</p>
-                </div>
-
-                <div class="suggested-card light-green">
-                    <div class="suggested-icon">
-                        <img src="https://www.guardian-ida-remedysrx.ca/-/media/mckesson/services-section/new-svg-icons/ws_icons_svg_vaccines.png?la=en" alt="Vaccinations">
-                    </div>
-                    <h3>Vaccinations</h3>
-                    <p>When you need protection against the Flu, common diseases (Shingles, HPV or Tetanus) or tropical diseases if you are a traveler, turn to your pharmacist for information and advice.</p>
-                </div>
-
-            </div>
-
-            <a href="#" class="view-all-btn">View all services</a>
+        <div class="service-card">
+          <i class="fas fa-syringe"></i>
+          <h3>Vaccinations</h3>
+          <p>When you need protection against the Flu, common diseases (Shingles, HPV or Tetanus) or tropical
+            diseases if you are a traveler, turn to your pharmacist.</p>
+          <a href="#" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
         </div>
-    </section>
+      </div>
+    </div>
+  </section>
 
-    <!-- Footer Container -->
-    <div id="footer-container"></div>
+  <!-- ===== Footer ===== -->
+  <div id="footer-container"></div>
 
-    <!-- Scripts -->
-    <script src="../assets/script.js"></script>
-    <script src="../assets/loader.js"></script>
-    <script>
-        // Load header/footer pointing base path to root '../'
-        window.addEventListener('load', () => window.loadComponents('../'));
-    </script>
+  <!-- Scripts -->
+  <script src="../assets/script.js"></script>
+  <script src="../assets/loader.js"></script>
+  <script>
+    window.addEventListener('load', () => window.loadComponents('../'));
+  </script>
 </body>
+
 </html>
