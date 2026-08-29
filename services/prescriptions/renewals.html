@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Prescription Renewals | Guardian, I.D.A. and Remedy'sRx</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Roboto:wght@400;500&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="../../assets/style.css">
+
+  <style>
+    :root {
+      --primary: #0056b3;
+      --accent: #ff6b00;
+      --light: #f8f9fa;
+      --text: #333;
+      --text-light: #6c757d;
+      --shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      --transition: all 0.3s ease;
+    }
+
+    body {
+      font-family: 'Roboto', sans-serif;
+      color: var(--text);
+      overflow-x: hidden;
+      line-height: 1.6;
+    }
+
+    h1,
+    h2,
+    h3 {
+      font-family: 'Poppins', sans-serif;
+    }
+
+    /* ===== Banner ===== */
+    .banner {
+      background: linear-gradient(135deg, var(--primary), #004494);
+      color: white;
+      text-align: center;
+      padding: 80px 20px;
+    }
+
+    .banner h1 {
+      font-size: 2.4rem;
+      font-weight: 600;
+      animation: fadeInUp 1s ease;
+    }
+
+    /* ===== Section Layout ===== */
+    .section {
+      max-width: 1100px;
+      margin: 80px auto;
+      padding: 0 20px;
+    }
+
+    .intro {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 40px;
+    }
+
+    .intro img {
+      flex: 1;
+      width: 100%;
+      max-width: 480px;
+      border-radius: 12px;
+      box-shadow: var(--shadow);
+      animation: fadeIn 1.2s ease;
+    }
+
+    .intro-text {
+      flex: 1;
+    }
+
+    .intro-text h2 {
+      color: var(--primary);
+      margin-bottom: 15px;
+    }
+
+    .btn {
+      display: inline-block;
+      background: var(--accent);
+      color: white;
+      text-decoration: none;
+      padding: 12px 25px;
+      border-radius: 25px;
+      transition: var(--transition);
+      font-weight: 500;
+    }
+
+    .btn:hover {
+      background: #e55a00;
+      transform: translateY(-2px);
+    }
+
+    /* ===== Renewal Options Grid ===== */
+    .options-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 25px;
+      margin-top: 40px;
+    }
+
+    .option-card {
+      background: var(--light);
+      padding: 25px;
+      border-radius: 12px;
+      box-shadow: var(--shadow);
+      transition: var(--transition);
+      animation: fadeInUp 0.8s ease;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .option-card:nth-child(2) {
+      animation-delay: 0.1s;
+    }
+
+    .option-card:nth-child(3) {
+      animation-delay: 0.2s;
+    }
+
+    .option-card:nth-child(4) {
+      animation-delay: 0.3s;
+    }
+
+    .option-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+      border-bottom: 3px solid var(--accent);
+    }
+
+    .option-top {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      margin-bottom: 15px;
+    }
+
+    .step-badge {
+      width: 50px;
+      height: 50px;
+      flex-shrink: 0;
+      border-radius: 50%;
+      background: var(--primary);
+      color: white;
+      font-family: 'Poppins', sans-serif;
+      font-weight: 600;
+      font-size: 1.3rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .option-card h3 {
+      color: var(--primary);
+      font-size: 1.15rem;
+      margin-bottom: 0;
+    }
+
+    .option-card .tagline {
+      font-weight: 500;
+      color: var(--text);
+      margin-bottom: 10px;
+    }
+
+    .option-card p {
+      color: var(--text-light);
+      margin-bottom: 15px;
+      font-size: 0.95rem;
+    }
+
+    .option-card a {
+      color: var(--accent);
+      font-weight: 500;
+      text-decoration: none;
+      transition: var(--transition);
+      margin-top: auto;
+    }
+
+    .option-card a:hover {
+      color: #e55a00;
+      transform: translateX(5px);
+    }
+
+    /* ===== Tip box ===== */
+    .info-box {
+      background: var(--light);
+      padding: 25px;
+      border-radius: 10px;
+      box-shadow: var(--shadow);
+      margin-top: 40px;
+    }
+
+    .info-box h3 {
+      color: var(--primary);
+      margin-bottom: 10px;
+    }
+
+    .info-box h3 i {
+      color: var(--accent);
+      margin-right: 10px;
+    }
+
+    .info-box em {
+      color: var(--text-light);
+    }
+
+    /* ===== See all services ===== */
+    .all-services {
+      text-align: center;
+      margin-top: 60px;
+    }
+
+    .disclaimer {
+      font-size: 0.9rem;
+      color: var(--text-light);
+      margin-top: 50px;
+      border-top: 1px solid #ddd;
+      padding-top: 20px;
+    }
+
+    @media (max-width: 768px) {
+      .intro {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ===== Header Placeholder ===== -->
+  <div id="header-container"></div>
+
+  <!-- ===== Page Banner ===== -->
+  <section class="banner">
+    <h1>Prescription Renewals</h1>
+  </section>
+
+  <!-- ===== Intro Section ===== -->
+  <section class="section">
+    <div class="intro">
+      <div class="intro-text">
+        <h2>4 Ways to Renew your Medication</h2>
+        <p>You can renew your medication in advance to save time and never miss a dose. Your medication will be ready
+          at the time of your choosing and can even be delivered to your door.</p>
+        <p><strong>Discover the many options available and tailored to you.</strong></p>
+        <p>Contact your local pharmacy to find out if these services are available.</p>
+        <a href="#" class="btn">Find your pharmacy</a>
+      </div>
+      <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=1000&q=80"
+        alt="Renewing medication with your pharmacy">
+    </div>
+  </section>
+
+  <!-- ===== Renewal Options ===== -->
+  <section class="section">
+    <h2>Your Renewal Options</h2>
+
+    <div class="options-grid">
+      <div class="option-card">
+        <div class="option-top">
+          <div class="step-badge">1</div>
+          <h3>The Mobile Apps</h3>
+        </div>
+        <p class="tagline">Manage your meds, anytime, anywhere: simple, fast, efficient for regular medication
+          renewals.</p>
+        <p>From your created account, renew an existing prescription or take a picture of a new one to send to your
+          pharmacist. You can choose the date of pick-up or delivery. The mobile app is not linked to your pharmacy
+          record or history.</p>
+        <a href="#">Get started today <i class="fas fa-arrow-right"></i></a>
+      </div>
+
+      <div class="option-card">
+        <div class="option-top">
+          <div class="step-badge">2</div>
+          <h3>Online Renewals</h3>
+        </div>
+        <p class="tagline">Ideal for long-term drug therapies and chronic medication.</p>
+        <p>With our mobile app, you can renew your medication online, set automatic renewals and even create
+          reminders. You can view the list of all your medications and manage your family's as well. Ask your
+          pharmacist for more information.</p>
+        <a href="https://app.diemhealth.ca/" target="_blank" rel="noopener">Access online renewals <i
+            class="fas fa-arrow-right"></i></a>
+      </div>
+
+      <div class="option-card">
+        <div class="option-top">
+          <div class="step-badge">3</div>
+          <h3>Medication Synchronization</h3>
+        </div>
+        <p class="tagline">Multiple prescriptions? You can synchronize all of them at once.</p>
+        <p>This service is available for your own prescriptions and your family's. A member of the pharmacy staff will
+          contact you once your prescriptions are due to renew and will walk you through every step. Your pharmacist
+          takes care of everything.</p>
+        <a href="../prescriptions.html">See our services <i class="fas fa-arrow-right"></i></a>
+      </div>
+
+      <div class="option-card">
+        <div class="option-top">
+          <div class="step-badge">4</div>
+          <h3>Phone</h3>
+        </div>
+        <p class="tagline">Ideal for renewals on the spot.</p>
+        <p>You can renew your prescription directly on the phone. Dial your pharmacy's phone number and talk to a
+          member of the pharmacy staff or leave a message on the automized voicemail. At the pharmacy, ask a pharmacy
+          staff member to help.</p>
+        <a href="#">Contact your pharmacy <i class="fas fa-arrow-right"></i></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Tip - Prescription Transfers ===== -->
+  <section class="section">
+    <div class="info-box">
+      <h3><i class="fas fa-heart"></i>Tip - Prescription Transfers</h3>
+      <p>Switching pharmacies is easy! Simply provide us with the information of your current pharmacy and we'll do
+        the rest!</p>
+      <p><em>*Certain conditions apply</em></p>
+      <a href="../prescriptions.html" class="btn">Transfer my prescriptions</a>
+    </div>
+
+    <div class="all-services">
+      <a href="../prescriptions.html" class="btn">See all services</a>
+    </div>
+  </section>
+
+  <!-- ===== Disclaimer ===== -->
+  <section class="section">
+    <p class="disclaimer">
+      The pharmacy services presented in this section are offered by Guardian, I.D.A. and Remedy'sRx pharmacists. The
+      pharmacists are solely responsible for the professional activities carried out during the practice of pharmacy.
+      These services are offered in participating pharmacies only. Certain fees and conditions may apply.
+      <br><br>
+      * The information contained herein is provided for informational purposes only and is not intended to provide
+      complete information on the subject matter or to replace the advice of a health professional. This information
+      does not constitute medical consultation, diagnosis or opinion and should not be interpreted as such. Please
+      consult your health care provider if you have any questions about your health, medications or treatment.
+    </p>
+  </section>
+
+  <!-- ===== Footer Placeholder ===== -->
+  <div id="footer-container"></div>
+
+  <!-- Scripts -->
+  <script src="../../assets/script.js"></script>
+  <script src="../../assets/loader.js"></script>
+  <script>
+    window.addEventListener('load', () => window.loadComponents('../../'));
+  </script>
+</body>
+
+</html>
