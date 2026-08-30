@@ -1456,5 +1456,2201 @@
         }
       }
     }
+  },
+  "myHealthPages": {
+    "seasonal": {
+      "bannerTitle": "My Health: Seasonal",
+      "blocks": [
+        {
+          "heading": "Cold, Flu & Vaccination",
+          "text1": "While the common cold and flu are both viral infections with similar symptoms, the flu is a much more serious illness.",
+          "text2": "Discover our tips to recognize, prevent and manage cold and flu symptoms and learn more about your best weapon against the flu: vaccination.",
+          "btnLabel": "Find a participating pharmacy",
+          "btnHref": "myhealth/seasonal/cold-flu.html",
+          "img": "https://images.unsplash.com/photo-1584036561566-baf8f5f1b144?auto=format&fit=crop&w=1000&q=80"
+        },
+        {
+          "heading": "Seasonal Allergies",
+          "text1": "In Canada, allergens like pollen strike not only in Spring, but up to the first freeze. Fortunately, there are ways to protect yourself against seasonal allergies and your pharmacist can help you.",
+          "btnLabel": "Read more",
+          "btnHref": "myhealth/seasonal/allergies.html",
+          "img": "https://images.unsplash.com/photo-1584433144859-1fc4e2e43b5c?auto=format&fit=crop&w=1000&q=80"
+        },
+        {
+          "heading": "Sun Care",
+          "text1": "Despite all the awareness campaigns stressing the importance of protecting your skin from the sun, the number of skin cancer cases in Canada continues to rise. We can never say this enough: sun rays are harmful for your skin, always protect yourself against them.",
+          "btnLabel": "Read more",
+          "btnHref": "myhealth/seasonal/suncare.html",
+          "img": "https://images.unsplash.com/photo-1589883669355-9d5718d3b1cc?auto=format&fit=crop&w=1000&q=80"
+        },
+        {
+          "heading": "Travel Health",
+          "text1": "Whether you travel for fun or for work, taking a few simple measures could spare you from finding yourself in situations that may put the health of you or your family at risk.",
+          "text2": "Your pharmacist can help you getting ready for your trip.",
+          "btnLabel": "Read more",
+          "btnHref": "myhealth/seasonal/travel_health.html",
+          "img": "https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1?auto=format&fit=crop&w=1000&q=80"
+        }
+      ],
+      "pages": {
+        "cold-flu": {
+          "bannerTitle": "Cold, Flu & Vaccination",
+          "introHeading": "Cold, Flu & Vaccination",
+          "introPara1": "While the common cold and flu are both viral infections with similar symptoms, the flu is a much more serious illness.",
+          "introPara2": "Discover our tips to recognize, prevent and manage cold and flu symptoms and learn more about your best weapon against the flu: vaccination.",
+          "introImg": "https://images.unsplash.com/photo-1584036561566-baf8f5f1b144?auto=format&fit=crop&w=1000&q=80",
+          "introBtnLabel": "Find a participating pharmacy",
+          "introBtnHref": "#",
+          "sections": [
+            {
+              "cards": [],
+              "boxes": [
+                {
+                  "title": "Services from your Pharmacist",
+                  "text1": "Several services* related to cold and flu are offered in pharmacy:",
+                  "note": "*Available at participating locations only. Some conditions may apply.",
+                  "list": [
+                    "Symptom management and assessment",
+                    "Vaccinations and antiviral prescriptions in store",
+                    "Advice on over-the-counter medications"
+                  ]
+                }
+              ]
+            },
+            {
+              "cards": [],
+              "boxes": [
+                {
+                  "title": "People at Risk",
+                  "text1": "Even healthy adults are not immune to the flu. Vaccination to prevent the flu is especially important for people at higher risk of flu-related complications.",
+                  "linkLabel": "Find out who is at risk",
+                  "linkHref": "#"
+                }
+              ]
+            },
+            {
+              "cards": [
+                {
+                  "title": "Why Get a Flu Shot?",
+                  "text1": "Should you get the flu shot? Discover why vaccination matters and how it protects you.",
+                  "linkLabel": "Learn More",
+                  "linkHref": "#"
+                },
+                {
+                  "title": "Your Pharmacist Can Help",
+                  "text1": "Don’t hesitate to reach out to your pharmacist for any flu-related questions or advice.",
+                  "linkLabel": "Learn More",
+                  "linkHref": "#"
+                },
+                {
+                  "title": "Treating Flu Symptoms",
+                  "text1": "Feeling feverish? Find out how to manage flu symptoms effectively.",
+                  "linkLabel": "Learn More",
+                  "linkHref": "#"
+                },
+                {
+                  "title": "Flu: Protection Methods",
+                  "text1": "Here are 5 easy ways to protect yourself and your family from the flu.",
+                  "linkLabel": "Learn More",
+                  "linkHref": "#"
+                }
+              ],
+              "boxes": [],
+              "heading": "More Information About the Flu"
+            },
+            {
+              "cards": [
+                {
+                  "title": "General Vaccination",
+                  "text1": "Get vaccinated against Shingles, Tetanus, Pneumococcal disease and more at your local pharmacy.",
+                  "linkLabel": "Find your pharmacy",
+                  "linkHref": "#"
+                },
+                {
+                  "title": "Respiratory Health",
+                  "text1": "Experiencing asthma or strep symptoms? Your pharmacist can help ensure your respiratory health.",
+                  "linkLabel": "Find your pharmacy",
+                  "linkHref": "#"
+                },
+                {
+                  "title": "Travel Vaccination",
+                  "text1": "Before your trip, get the right immunizations for your safety and peace of mind.",
+                  "linkLabel": "Find your pharmacy",
+                  "linkHref": "#"
+                }
+              ],
+              "boxes": [],
+              "heading": "Other Services"
+            }
+          ],
+          "disclaimer": "* The information contained herein is provided for informational purposes only and is not intended to replace the advice of a health professional. Always consult your healthcare provider for guidance on your health and medications."
+        },
+        "allergies": {
+          "bannerTitle": "My Health: Seasonal Allergies",
+          "sections": [
+            {
+              "cards": [],
+              "boxes": [
+                {
+                  "title": "Seasonal Allergies",
+                  "text1": "In Canada, allergens like pollen strike not only in Spring, but up to the first freeze. Fortunately, there are ways to protect yourself against seasonal allergies and your pharmacist can help you.",
+                  "btnLabel": "Find a pharmacy",
+                  "btnHref": "#",
+                  "img": "https://images.unsplash.com/photo-1584433144859-1fc4e2e43b5c?auto=format&fit=crop&w=1000&q=80"
+                }
+              ]
+            },
+            {
+              "cards": [],
+              "boxes": [
+                {
+                  "title": "Services from your Pharmacist",
+                  "text1": "Several services* related to seasonal allergies are offered in pharmacy:",
+                  "list": [
+                    "Advice on over-the-counter medications to relieve allergy symptoms",
+                    "Prescription of medications for nasal allergies"
+                  ],
+                  "note": "*These services are offered at participating pharmacies only."
+                }
+              ]
+            },
+            {
+              "cards": [],
+              "boxes": [
+                {
+                  "title": "Common Cold or Hay Fever?",
+                  "text1": "Runny nose? Itchy eyes? Tickly throat? You may be suffering from hay fever. Read on to find out more about this very common allergy.",
+                  "btnLabel": "Learn more",
+                  "btnHref": "#",
+                  "img": "https://images.unsplash.com/photo-1606813908880-038fefc95604?auto=format&fit=crop&w=1000&q=80"
+                }
+              ]
+            },
+            {
+              "cards": [
+                {
+                  "image": "https://images.unsplash.com/photo-1557935728-3bcb0d3e8e5f?auto=format&fit=crop&w=800&q=80",
+                  "title": "Seasonal Allergy Peak Times",
+                  "text1": "Learn about the cause of seasonal allergies, when they appear, and how to reduce your exposure to allergens.",
+                  "linkLabel": "Learn More",
+                  "linkHref": "#"
+                },
+                {
+                  "image": "https://images.unsplash.com/photo-1588776814546-69b7c9d8c9f0?auto=format&fit=crop&w=800&q=80",
+                  "title": "Allergies: Causes, Symptoms, and Treatments",
+                  "text1": "Learn more about the most common allergies, what triggers them, and what you can do to treat them.",
+                  "linkLabel": "Learn More",
+                  "linkHref": "#"
+                },
+                {
+                  "image": "https://images.unsplash.com/photo-1605094662213-20fd224c0c2c?auto=format&fit=crop&w=800&q=80",
+                  "title": "Indoor Allergens",
+                  "text1": "Discover tips for reducing your exposure to indoor allergens like dust mites, mold, and animal dander.",
+                  "linkLabel": "Learn More",
+                  "linkHref": "#"
+                },
+                {
+                  "image": "https://images.unsplash.com/photo-1558369980-5d3a4a82d46e?auto=format&fit=crop&w=800&q=80",
+                  "title": "Outdoor Allergens",
+                  "text1": "Discover ways to reduce your exposure to outdoor allergens like pollen from trees, shrubs, grasses, and weeds.",
+                  "linkLabel": "Learn More",
+                  "linkHref": "#"
+                }
+              ],
+              "boxes": [],
+              "heading": "Fight Seasonal Allergies"
+            },
+            {
+              "cards": [
+                {
+                  "title": "Advice on OTC Medication",
+                  "text1": "If you don’t know which over-the-counter medication to choose to relieve your allergy symptoms, don’t be shy to ask your pharmacist!",
+                  "linkLabel": "Find your pharmacy",
+                  "linkHref": "#"
+                },
+                {
+                  "title": "Respiratory Health",
+                  "text1": "If you have asthma or are experiencing strep throat symptoms, talk to your pharmacist about tests to ensure your respiratory health is in order.",
+                  "linkLabel": "Find your pharmacy",
+                  "linkHref": "#"
+                },
+                {
+                  "title": "Medication Customization",
+                  "text1": "If you are allergic to certain components of your medication or don't like the taste, your pharmacist can find allergy-free formulations as a substitution or add flavour to improve its taste.",
+                  "linkLabel": "Find your pharmacy",
+                  "linkHref": "#"
+                }
+              ],
+              "boxes": [],
+              "heading": "Services in Your Pharmacy"
+            }
+          ],
+          "disclaimer": "* The information contained herein is provided for informational purposes only and is not intended to provide complete information on the subject matter or to replace the advice of a health professional. This information does not constitute medical consultation, diagnosis or opinion and should not be interpreted as such. Please consult your health care provider if you have any questions about your health, medications or treatment."
+        },
+        "suncare": {
+          "bannerTitle": "My Health: Sun Care",
+          "sections": [
+            {
+              "cards": [],
+              "boxes": [
+                {
+                  "title": "Sun Care",
+                  "text1": "Despite all the awareness campaigns stressing the importance of protecting your skin from the sun, the number of skin cancer cases in Canada continues to rise. We can never say this enough: sun rays are harmful for your skin, always protect yourself against them.",
+                  "btnLabel": "Find a pharmacy",
+                  "btnHref": "#",
+                  "img": "https://images.unsplash.com/photo-1504252060328-3f470a3a01c7?auto=format&fit=crop&w=1000&q=80"
+                }
+              ]
+            },
+            {
+              "cards": [],
+              "boxes": [
+                {
+                  "title": "Services from your Pharmacist",
+                  "text1": "Several services related to sun care are offered in pharmacy:",
+                  "list": [
+                    "Tips for choosing an effective sunscreen",
+                    "Advice on over-the-counter medications to relieve sunburns",
+                    "Tips for patients taking medications that make skin sensitive to sunlight"
+                  ]
+                }
+              ]
+            },
+            {
+              "cards": [
+                {
+                  "image": "https://images.unsplash.com/photo-1504198453319-5ce911bafcde?auto=format&fit=crop&w=800&q=80",
+                  "title": "Sun Protection 101",
+                  "text1": "Stay healthy under the sun and heat with our tips.",
+                  "linkLabel": "Learn More",
+                  "linkHref": "#"
+                },
+                {
+                  "image": "https://images.unsplash.com/photo-1600086828254-6b1b8a527418?auto=format&fit=crop&w=800&q=80",
+                  "title": "Baby Sun Protection",
+                  "text1": "Learn at what age your baby should use sunscreen and discover tips to help you protect their skin from the sun’s rays.",
+                  "linkLabel": "Learn More",
+                  "linkHref": "#"
+                },
+                {
+                  "image": "https://images.unsplash.com/photo-1522337660859-02fbefca4702?auto=format&fit=crop&w=800&q=80",
+                  "title": "Sunscreens",
+                  "text1": "Discover the characteristics of a good sunscreen to protect yourself against UVA and UVB sunrays.",
+                  "linkLabel": "Learn More",
+                  "linkHref": "#"
+                },
+                {
+                  "image": "https://images.unsplash.com/photo-1524253482453-3fed8d2fe12b?auto=format&fit=crop&w=800&q=80",
+                  "title": "Medication & Sunlight",
+                  "text1": "Some medications can increase skin sensitivity to sunlight and cause allergic reactions. Learn how to avoid them.",
+                  "linkLabel": "Learn More",
+                  "linkHref": "#"
+                },
+                {
+                  "image": "https://images.unsplash.com/photo-1597055181312-66224f9c1b0b?auto=format&fit=crop&w=800&q=80",
+                  "title": "Heatstrokes",
+                  "text1": "It is important to understand the risks associated with extreme heat and heatstroke for vulnerable people.",
+                  "linkLabel": "Learn More",
+                  "linkHref": "#"
+                }
+              ],
+              "boxes": [],
+              "heading": "Sun Protection 101"
+            },
+            {
+              "cards": [
+                {
+                  "title": "Advice on Products",
+                  "text1": "If you don’t know which sunscreen meets your needs best in terms of lifestyle and skin type, don’t be shy to ask your pharmacist!",
+                  "linkLabel": "Find your pharmacy",
+                  "linkHref": "#"
+                },
+                {
+                  "title": "Personalized Kit",
+                  "text1": "Questions on mosquito repellent, sunscreens or rehydration solutions? Your pharmacist can help you pick the best products for your personalized summer kit.",
+                  "linkLabel": "Find your pharmacy",
+                  "linkHref": "#"
+                },
+                {
+                  "title": "Medication Customization",
+                  "text1": "If you are allergic to certain components of your medication, your pharmacist can find allergy-free formulations as a substitution.",
+                  "linkLabel": "Find your pharmacy",
+                  "linkHref": "#"
+                }
+              ],
+              "boxes": [],
+              "heading": "Services in Your Pharmacy"
+            }
+          ],
+          "disclaimer": "* The information contained herein is provided for informational purposes only and is not intended to provide complete information on the subject matter or to replace the advice of a health professional. This information does not constitute medical consultation, diagnosis or opinion and should not be interpreted as such. Please consult your health care provider if you have any questions about your health, medications or treatment."
+        },
+        "travel_health": {
+          "bannerTitle": "TRAVEL HEALTH",
+          "sections": [
+            {
+              "cards": [],
+              "boxes": [
+                {
+                  "title": "Travel Health",
+                  "text1": "Whether you travel for fun or for work, taking a few simple measures could spare you from finding yourself in situations that may put the health of you or your family at risk.",
+                  "text2": "Your pharmacist can help you getting ready for your trip.",
+                  "btnLabel": "Find a pharmacy",
+                  "btnHref": "#",
+                  "img": "https://picsum.photos/seed/travelintro/800/600"
+                }
+              ]
+            },
+            {
+              "cards": [],
+              "boxes": [
+                {
+                  "title": "SERVICES FROM YOUR PHARMACIST",
+                  "text1": "Several services* related to travel health are offered in pharmacy:",
+                  "list": [
+                    "Travel vaccines such as hepatitis & traveler's diarrhea.",
+                    "Medication prescription for travelers.",
+                    "Advice on over-the-counter medication.",
+                    "Prescription list and review for customs.",
+                    "Advice on insect stings and bites prevention (malaria, lyme, sand fleas, etc.)"
+                  ],
+                  "note": "*These services are offered at participating pharmacies only."
+                }
+              ]
+            },
+            {
+              "cards": [
+                {
+                  "image": "https://picsum.photos/seed/firstaid/800/600",
+                  "title": "Travel Health Kit",
+                  "text1": "Find out how to prepare your health kit before you travel. Beyond the basic first aid kit, you may need non-prescription products and destination-specific items.",
+                  "linkLabel": "Learn More",
+                  "linkHref": "#"
+                },
+                {
+                  "image": "https://picsum.photos/seed/pregnantbeach/800/600",
+                  "title": "Travelling While Pregnant or Breastfeeding",
+                  "text1": "Discover our tips for before and during your trip to travel while breastfeeding your child or being pregnant.",
+                  "linkLabel": "Learn More",
+                  "linkHref": "#"
+                },
+                {
+                  "image": "https://picsum.photos/seed/airport/800/600",
+                  "title": "Travel Security, Customs & Medication",
+                  "text1": "Learn how to plan ahead and deal with customs, security and border crossing inspections when you are travelling with medication or injections.",
+                  "linkLabel": "Learn More",
+                  "linkHref": "#"
+                },
+                {
+                  "image": "https://picsum.photos/seed/stomachpain/800/600",
+                  "title": "Traveler’s Diarrhea",
+                  "text1": "Discover our tips to avoid traveler’s diarrhea and make the most of your vacation.",
+                  "linkLabel": "Learn More",
+                  "linkHref": "#"
+                },
+                {
+                  "image": "https://picsum.photos/seed/mosquito/800/600",
+                  "title": "Zika Virus",
+                  "text1": "Zika virus is a mosquito-borne illness that is especially of concern to pregnant women or women of childbearing potential due to the association with some birth defects.",
+                  "linkLabel": "Learn More",
+                  "linkHref": "#"
+                },
+                {
+                  "image": "https://picsum.photos/seed/fever/800/600",
+                  "title": "Dengue Fever Symptoms",
+                  "text1": "Dengue fever is one of the most common mosquito-borne viral diseases in travellers returning from international destinations.",
+                  "linkLabel": "Learn More",
+                  "linkHref": "#"
+                },
+                {
+                  "image": "https://picsum.photos/seed/woods/800/600",
+                  "title": "How to Prevent Lyme Disease",
+                  "text1": "Symptoms, Causes & Treatment. Learn how to prevent Lyme disease, recognize symptoms, understand causes, and explore effective treatments to stay healthy and protected outdoors.",
+                  "linkLabel": "Learn More",
+                  "linkHref": "#"
+                }
+              ],
+              "boxes": [],
+              "heading": "Be Ready for your Trip"
+            },
+            {
+              "cards": [
+                {
+                  "title": "ADVICE ON OTC MEDICATION",
+                  "text1": "If you don’t know which over-the-counter medication to choose to relieve your symptoms, don’t be shy to ask your pharmacist!",
+                  "linkLabel": "Find your pharmacy",
+                  "linkHref": "#"
+                },
+                {
+                  "title": "TRAVEL VACCINATION",
+                  "text1": "Depending on your destination, some immunizations should be considered before and after your trip for maximum safety. Make sure to book an appointment several months in advance to ensure you are fully immunized.",
+                  "linkLabel": "Find your pharmacy",
+                  "linkHref": "#"
+                },
+                {
+                  "title": "PERSONALIZED TRAVEL KIT",
+                  "text1": "Questions on mosquito repellent, sunscreen or rehydration solution? Your pharmacist can help you pick the best products for your personalized travel kit.",
+                  "linkLabel": "Find your pharmacy",
+                  "linkHref": "#"
+                }
+              ],
+              "boxes": [],
+              "heading": "Services in your pharmacy"
+            }
+          ],
+          "disclaimer": "* The information contained herein is provided for informational purposes only and is not intended to provide complete information on the subject matter or to replace the advice of a health professional. This information does not constitute medical consultation, diagnosis or opinion and should not be interpreted as such. Please consult your health care provider if you have any questions about your health, medications or treatment."
+        }
+      }
+    },
+    "chronic_conditions": {
+      "bannerTitle": "My Health: Chronic Conditions",
+      "blocks": [
+        {
+          "heading": "DIABETES",
+          "text1": "Diabetes is a chronic disease that can't be cured, but it can be treated and managed. Learn more about diabetes and discover how your pharmacist can help.",
+          "btnLabel": "Read more",
+          "btnHref": "myhealth/chronic_conditions/diabetes.html",
+          "img": "https://images.unsplash.com/photo-1555662365-652517a2d321?auto=format&fit=crop&w=1000&q=80"
+        },
+        {
+          "heading": "DIGESTIVE HEALTH",
+          "text1": "When our body is working in order, we rarely give the digestive system a second thought. Still, it often needs a bit of care to keep doing what it does best: fuel our body, day in and day out. Find out how your pharmacy can help!",
+          "btnLabel": "Read more",
+          "btnHref": "myhealth/chronic_conditions/digestive_health.html",
+          "img": "https://images.unsplash.com/photo-1490645935967-10de6ba17061?auto=format&fit=crop&w=1000&q=80"
+        },
+        {
+          "heading": "HEART HEALTH",
+          "text1": "According to Statistics Canada, heart disease is the second-leading cause of mortality in the country, accounting for nearly one in five deaths. It is therefore important to take care of your heart to live a long and healthy life. Your pharmacist can help you prevent complications and manage your cardiovascular health.",
+          "btnLabel": "Read more",
+          "btnHref": "myhealth/chronic_conditions/heart_health.html",
+          "img": "https://images.unsplash.com/photo-1628348068343-c6a848d2b6dd?auto=format&fit=crop&w=1000&q=80"
+        },
+        {
+          "heading": "PAIN MANAGEMENT",
+          "text1": "While pain is a very subjective experience and differs from one person to another, everyone agrees that pain is not a welcomed guest in their daily life. Effectively managing pain becomes a crucial aspect of maintaining a healthy lifestyle, and your pharmacist can be a supportive companion on this journey.",
+          "btnLabel": "Read more",
+          "btnHref": "myhealth/chronic_conditions/pain_managment.html",
+          "img": "https://images.unsplash.com/photo-1519824145371-296894a0daa9?auto=format&fit=crop&w=1000&q=80"
+        },
+        {
+          "heading": "RESPIRATORY HEALTH",
+          "text1": "Because our breathing is ongoing, we sometimes forget how it can impact our daily lives, for the better or for the worse.",
+          "text2": "Find out how your pharmacist can help if you have respiratory health issues, whether mild or chronic.",
+          "btnLabel": "Read more",
+          "btnHref": "myhealth/chronic_conditions/respiratory_health.html",
+          "img": "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=1000&q=80"
+        }
+      ],
+      "pages": {
+        "diabetes": {
+          "bannerTitle": "My Health: Diabetes",
+          "sections": [
+            {
+              "cards": [],
+              "boxes": [
+                {
+                  "title": "Diabetes",
+                  "text1": "Diabetes is a chronic disease that can’t be cured, but it can be treated and managed. Learn more about diabetes and discover how your pharmacist can help.",
+                  "btnLabel": "Find a pharmacy",
+                  "btnHref": "#",
+                  "img": "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=1000&q=80"
+                }
+              ]
+            },
+            {
+              "cards": [],
+              "boxes": [
+                {
+                  "title": "Services from your Pharmacist",
+                  "text1": "Several services* related to diabetes are offered in pharmacy:",
+                  "list": [
+                    "Blood glucose measurement.",
+                    "H1C testing for prediabetics and diabetics.",
+                    "Synchronization of prescription renewals."
+                  ],
+                  "note": "*These services are offered at participating stores only."
+                }
+              ]
+            },
+            {
+              "cards": [],
+              "boxes": [
+                {
+                  "title": "TYPE 2 DIABETES",
+                  "text1": "Most people with prediabetes will become diabetic if they don’t do anything about it. Prediabetes is a wake-up call! It is urgent that you make changes to your lifestyle to prevent, or at least delay, the onset of type 2 diabetes.",
+                  "btnLabel": "Learn how to prevent it",
+                  "btnHref": "#",
+                  "img": "https://images.unsplash.com/photo-1490645935967-10de6ba17061?auto=format&fit=crop&w=1000&q=80"
+                }
+              ]
+            },
+            {
+              "cards": [
+                {
+                  "image": "https://images.unsplash.com/photo-1516627145497-ae6968895b74?auto=format&fit=crop&w=800&q=80",
+                  "title": "Hypoglycemia",
+                  "text1": "When you have diabetes, how low is too low for your blood glucose levels?",
+                  "linkLabel": "Learn More",
+                  "linkHref": "#"
+                },
+                {
+                  "image": "https://images.unsplash.com/photo-1587854692152-cbe660dbde88?auto=format&fit=crop&w=800&q=80",
+                  "title": "Different Ways to Measure Glucose Levels",
+                  "text1": "Learn more about the different ways to measure glucose levels, and the pros and cons of each.",
+                  "linkLabel": "Learn More",
+                  "linkHref": "#"
+                },
+                {
+                  "image": "https://images.unsplash.com/photo-1532012197267-da84d127e765?auto=format&fit=crop&w=800&q=80",
+                  "title": "What is diabetes?",
+                  "text1": "Diabetes is a chronic disease caused by a problem with or a lack of insulin. Learn more about diabetes and how to manage it.",
+                  "linkLabel": "Learn More",
+                  "linkHref": "#"
+                },
+                {
+                  "image": "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?auto=format&fit=crop&w=800&q=80",
+                  "title": "Diabetes and Foot Care",
+                  "text1": "Taking good care of your feet helps detect and treat injuries that could lead to serious complications.",
+                  "linkLabel": "Learn More",
+                  "linkHref": "#"
+                }
+              ],
+              "boxes": [],
+              "heading": "What you need to know about diabetes"
+            },
+            {
+              "cards": [
+                {
+                  "title": "ADVICE ON OTC MEDICATION",
+                  "text1": "If you don’t know which over-the-counter medication to choose to relieve your symptoms, don’t be shy to ask your pharmacist!",
+                  "linkLabel": "Find your pharmacy",
+                  "linkHref": "#"
+                },
+                {
+                  "title": "TESTING AND MONITORING",
+                  "text1": "Whether you have prediabetes, diabetes or are newly diagnosed, many tests exist to ensure your glycemia is well under control and that your treatment is working well.",
+                  "linkLabel": "Find your pharmacy",
+                  "linkHref": "#"
+                },
+                {
+                  "title": "WEIGHT MANAGEMENT",
+                  "text1": "If you’re thinking about losing weight, your pharmacist can shed a light on helpful products and make sure your medication doesn’t make you gain weight as a side effect.",
+                  "linkLabel": "Find your pharmacy",
+                  "linkHref": "#"
+                }
+              ],
+              "boxes": [],
+              "heading": "Services in your pharmacy"
+            }
+          ],
+          "disclaimer": "* The information contained herein is provided for informational purposes only and is not intended to provide complete information on the subject matter or to replace the advice of a health professional. This information does not constitute medical consultation, diagnosis or opinion and should not be interpreted as such. Please consult your health care provider if you have any questions about your health, medications or treatment."
+        },
+        "digestive_health": {
+          "bannerTitle": "My Health: Digestive Health",
+          "sections": [
+            {
+              "cards": [],
+              "boxes": [
+                {
+                  "title": "DIGESTIVE HEALTH",
+                  "text1": "When our body is working in order, we rarely give the digestive system a second thought. Still, it often needs a bit of care to keep doing what it does best: fuel our body, day in and day out. Find out how your pharmacy can help!",
+                  "btnLabel": "Find your pharmacy",
+                  "btnHref": "#",
+                  "img": "https://images.unsplash.com/photo-1490645935967-10de6ba17061?auto=format&fit=crop&w=1000&q=80"
+                }
+              ]
+            },
+            {
+              "cards": [],
+              "boxes": [
+                {
+                  "title": "Services from your Pharmacist",
+                  "text1": "Several services* related to digestive health are offered in pharmacy:",
+                  "list": [
+                    "Advice on over-the-counter medications to help with digestive issues.",
+                    "Prescription of medications for gastric reflux, nausea and vomiting.",
+                    "Prescription of medications for diarrhea, constipation and hemorrhoids.",
+                    "Prescription of medications that protect the stomach when treatments cause irritation."
+                  ],
+                  "note": "*These services are offered at participating stores only."
+                }
+              ]
+            },
+            {
+              "cards": [],
+              "boxes": [
+                {
+                  "title": "ACID REFLUX: HOW TO AVOID IT?",
+                  "text1": "Several factors can contribute to “heartburn,” such as certain foods, stress and pregnancy. However, there are tips to prevent and relieve the symptoms of this condition.",
+                  "btnLabel": "Discover our tips",
+                  "btnHref": "#",
+                  "img": "https://images.unsplash.com/photo-1574323347407-f5e1ad6d020b?auto=format&fit=crop&w=1000&q=80"
+                }
+              ]
+            },
+            {
+              "cards": [
+                {
+                  "image": "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=800&q=80",
+                  "title": "Food Allergy or Food Intolerance?",
+                  "text1": "How to Tell Them Apart. Learn more about the difference between a food allergy and a food intolerance, as well as their symptoms and causes.",
+                  "linkLabel": "Learn More",
+                  "linkHref": "#"
+                },
+                {
+                  "image": "https://images.unsplash.com/photo-1494390248081-4e521a5940db?auto=format&fit=crop&w=800&q=80",
+                  "title": "Irritable Bowel Syndrome (IBS)",
+                  "text1": "Symptoms, Causes, & Treatment. Learn about irritable bowel syndrome symptoms, causes, and effective treatments. Discover how to manage and improve your digestive health today!",
+                  "linkLabel": "Learn More",
+                  "linkHref": "#"
+                },
+                {
+                  "image": "https://images.unsplash.com/photo-1606787366850-de6330128bfc?auto=format&fit=crop&w=800&q=80",
+                  "title": "Rehydration Solutions for Fluid Loss",
+                  "text1": "Learn about dehydration symptoms, dehydration reactions and the rehydration solutions needed to compensate for fluid loss.",
+                  "linkLabel": "Learn More",
+                  "linkHref": "#"
+                },
+                {
+                  "image": "https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?auto=format&fit=crop&w=800&q=80",
+                  "title": "Alcohol & medications: interactions",
+                  "text1": "Learn how alcohol can affect your health and why combining it with medication can be harmful.",
+                  "linkLabel": "Learn More",
+                  "linkHref": "#"
+                }
+              ],
+              "boxes": [],
+              "heading": "My Day-to-Day Digestive Health"
+            },
+            {
+              "cards": [
+                {
+                  "title": "ADVICE ON OTC MEDICATION",
+                  "text1": "If you don’t know which over-the-counter medication to choose to relieve your symptoms, don’t be shy to ask your pharmacist!",
+                  "linkLabel": "Find your pharmacy",
+                  "linkHref": "#"
+                },
+                {
+                  "title": "WEIGHT MANAGEMENT",
+                  "text1": "If you’re thinking about losing weight, your pharmacist can shed a light on helpful products and make sure your medication doesn’t make you gain weight as a side effect.",
+                  "linkLabel": "Find your pharmacy",
+                  "linkHref": "#"
+                },
+                {
+                  "title": "MEDICATION FOR CHRONIC CONDITIONS",
+                  "text1": "If you have a chronic condition and require regular medication, your pharmacist is here to facilitate your day to day. They can extend prescriptions and re-prescribe your medication, as well as show you tools to help you get the most out of your treatment.",
+                  "linkLabel": "Find your pharmacy",
+                  "linkHref": "#"
+                }
+              ],
+              "boxes": [],
+              "heading": "Services in your pharmacy"
+            }
+          ],
+          "disclaimer": "* The information contained herein is provided for informational purposes only and is not intended to provide complete information on the subject matter or to replace the advice of a health professional. This information does not constitute medical consultation, diagnosis or opinion and should not be interpreted as such. Please consult your health care provider if you have any questions about your health, medications or treatment."
+        },
+        "heart_health": {
+          "bannerTitle": "My Health: Heart Health",
+          "sections": [
+            {
+              "cards": [],
+              "boxes": [
+                {
+                  "title": "HEART HEALTH",
+                  "text1": "According to Statistics Canada, heart disease is the second-leading cause of mortality in the country, accounting for nearly one in five deaths. It is therefore important to take care of your heart to live a long and healthy life. Your pharmacist can help you prevent complications and manage your cardiovascular health.",
+                  "btnLabel": "Find your pharmacy",
+                  "btnHref": "#",
+                  "img": "https://images.unsplash.com/photo-1559757175-5700dde675bc?auto=format&fit=crop&w=1000&q=80"
+                }
+              ]
+            },
+            {
+              "cards": [],
+              "boxes": [
+                {
+                  "title": "Services from your Pharmacist",
+                  "text1": "Several services* related to cardiovascular health are offered in pharmacy:",
+                  "list": [
+                    "Medication adjustment",
+                    "Hypertension monitoring",
+                    "Prescription of certain tests: coagulation test (INR) and cholesterol measurement"
+                  ],
+                  "note": "*These services are offered at participating pharmacies only."
+                }
+              ]
+            },
+            {
+              "cards": [],
+              "boxes": [
+                {
+                  "title": "HYPERTENSION & SELF-MONITORING",
+                  "text1": "It can sometimes be difficult for people with high blood pressure to understand or feel the benefits of their treatment. Blood pressure readings are an important indication of whether the treatment for hypertension is working, and can help determine whether your treatment needs to be adjusted.",
+                  "btnLabel": "Find out more about self-monitoring",
+                  "btnHref": "#",
+                  "img": "https://images.unsplash.com/photo-1576091160550-21735dba66ef?auto=format&fit=crop&w=1000&q=80"
+                }
+              ]
+            },
+            {
+              "cards": [
+                {
+                  "image": "https://images.unsplash.com/photo-1579154204601-01588f351e67?auto=format&fit=crop&w=800&q=80",
+                  "title": "Heart Attack: Lifesavings steps you can take",
+                  "text1": "Discover the simple steps that can save your life in the event of a heart attack.",
+                  "linkLabel": "Learn More",
+                  "linkHref": "#"
+                },
+                {
+                  "image": "https://images.unsplash.com/photo-1511690656952-34342bb7c2f2?auto=format&fit=crop&w=800&q=80",
+                  "title": "Cholesterol: causes and management",
+                  "text1": "Learn more about cholesterol and what you can do to lower high cholesterol levels.",
+                  "linkLabel": "Learn More",
+                  "linkHref": "#"
+                },
+                {
+                  "image": "https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?auto=format&fit=crop&w=800&q=80",
+                  "title": "Taking Anticoagulants Effectively",
+                  "text1": "Find out pharmacist tips and considerations for anticoagulant treatment to be fully effective and prevent clots.",
+                  "linkLabel": "Learn More",
+                  "linkHref": "#"
+                },
+                {
+                  "image": "https://images.unsplash.com/photo-1551076805-e1869033e561?auto=format&fit=crop&w=800&q=80",
+                  "title": "Hypertension: symptoms, measurement, tips",
+                  "text1": "Although it doesn’t cause symptoms in most people, hypertension is a dangerous disease that affects one out of five Canadians. Learn how to control your blood pressure with medication and a healthy lifestyle.",
+                  "linkLabel": "Learn More",
+                  "linkHref": "#"
+                }
+              ],
+              "boxes": [],
+              "heading": "Your heart is keeping you alive"
+            },
+            {
+              "cards": [
+                {
+                  "title": "ADVICE ON OTC MEDICATION",
+                  "text1": "If you don’t know which over-the-counter medication to choose to relieve your symptoms, don’t be shy to ask your pharmacist!",
+                  "linkLabel": "Find your pharmacy",
+                  "linkHref": "#"
+                },
+                {
+                  "title": "HEART HEALTH",
+                  "text1": "If you are taking medication for your heart, your pharmacist could suggest some tests to determine if your blood pressure or your cholesterol are well managed.",
+                  "linkLabel": "Find your pharmacy",
+                  "linkHref": "#"
+                },
+                {
+                  "title": "MEDICATION CUSTOMIZATION",
+                  "text1": "For certain types of medication and conditions like COPD, your pharmacist can make sure that all your medications are combined into one.",
+                  "linkLabel": "Find your pharmacy",
+                  "linkHref": "#"
+                }
+              ],
+              "boxes": [],
+              "heading": "Services in your pharmacy"
+            }
+          ],
+          "disclaimer": "* The information contained herein is provided for informational purposes only and is not intended to provide complete information on the subject matter or to replace the advice of a health professional. This information does not constitute medical consultation, diagnosis or opinion and should not be interpreted as such. Please consult your health care provider if you have any questions about your health, medications or treatment."
+        },
+        "pain_managment": {
+          "bannerTitle": "My Health: Pain Management",
+          "sections": [
+            {
+              "cards": [],
+              "boxes": [
+                {
+                  "title": "PAIN MANAGEMENT",
+                  "text1": "While pain is a very subjective experience and differs from one person to another, everyone agrees that pain is not a welcomed guest in their daily life. Effectively managing pain becomes a crucial aspect of maintaining a healthy lifestyle, and your pharmacist can be a supportive companion on this journey.",
+                  "btnLabel": "Find your pharmacy",
+                  "btnHref": "#",
+                  "img": "https://images.unsplash.com/photo-1519824145371-296894a0daa9?auto=format&fit=crop&w=1000&q=80"
+                }
+              ]
+            },
+            {
+              "cards": [],
+              "boxes": [
+                {
+                  "title": "Services from your Pharmacist",
+                  "text1": "Several services* related to pain management are offered in pharmacy:",
+                  "list": [
+                    "Advice on over-the-counter medications to help with pain management.",
+                    "Therapy adjustment to relieve acute and chronic pain.",
+                    "Prescription of medications to relieve pain caused by periods."
+                  ],
+                  "note": "*These services are offered at participating stores only."
+                }
+              ]
+            },
+            {
+              "cards": [],
+              "boxes": [
+                {
+                  "title": "TREATING LOWER BACK PAIN",
+                  "text1": "Many things can cause low back pain. Sometimes, the exact cause of the pain is not known. When left untreated, it can become chronic and can have a significant impact on quality of life. That is why it is important to do something about it.",
+                  "btnLabel": "Learn more",
+                  "btnHref": "#",
+                  "img": "https://images.unsplash.com/photo-1544367563-12123d896889?auto=format&fit=crop&w=1000&q=80"
+                }
+              ]
+            },
+            {
+              "cards": [
+                {
+                  "image": "https://images.unsplash.com/photo-1587854692152-cbe660dbde88?auto=format&fit=crop&w=800&q=80",
+                  "title": "Rheumatoid Arthritis and Antirheumatic Drugs",
+                  "text1": "Find out about the medications commonly prescribed for the treatment of rheumatoid arthritis (RA) and how the pharmacist can help you take them correctly.",
+                  "linkLabel": "Learn More",
+                  "linkHref": "#"
+                },
+                {
+                  "image": "https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?auto=format&fit=crop&w=800&q=80",
+                  "title": "Treating Pain with Opioids",
+                  "text1": "Learn how to manage opioid use at home to achieve satisfactory relief while reducing the risks related to these medications.",
+                  "linkLabel": "Learn More",
+                  "linkHref": "#"
+                },
+                {
+                  "image": "https://images.unsplash.com/photo-1471864190281-a93a3070b6de?auto=format&fit=crop&w=800&q=80",
+                  "title": "Acetaminophen, NSAIDs & Overdose",
+                  "text1": "If you take prescription pain medication, you may be at risk of an accidental overdose if you are also taking an over-the-counter medication such as acetaminophen or nonsteroidal anti-inflammatory drugs.",
+                  "linkLabel": "Learn More",
+                  "linkHref": "#"
+                },
+                {
+                  "image": "https://images.unsplash.com/photo-1515523110800-9415d13b84a8?auto=format&fit=crop&w=800&q=80",
+                  "title": "Topical Pain Relievers",
+                  "text1": "For localized pain, a non-prescription topical pain reliever can be a convenient way to treat it. Ranging from creams to ointments, find out about the characteristics of the different products sold at pharmacies.",
+                  "linkLabel": "Learn More",
+                  "linkHref": "#"
+                }
+              ],
+              "boxes": [],
+              "heading": "Pain Management & Medication"
+            },
+            {
+              "cards": [
+                {
+                  "title": "ADVICE ON OTC MEDICATION",
+                  "text1": "If you don’t know which over-the-counter medication to choose to relieve your symptoms, don’t be shy to ask your pharmacist!",
+                  "linkLabel": "Find your pharmacy",
+                  "linkHref": "#"
+                },
+                {
+                  "title": "MEDICATION FOR CHRONIC CONDITIONS",
+                  "text1": "If you have a chronic condition and require regular medication, your pharmacist is here to facilitate your day to day. They can extend prescriptions and re-prescribe your medication, as well as show you tools to help you get the most out of your treatment.",
+                  "linkLabel": "Find your pharmacy",
+                  "linkHref": "#"
+                },
+                {
+                  "title": "MEDICATION CUSTOMIZATION",
+                  "text1": "Sticking to your medication isn’t always a walk in the park. Your pharmacist is here to make minor or major adjustments to your therapy or provide you with custom formulas and innovative packaging to make it all easier.",
+                  "linkLabel": "Find your pharmacy",
+                  "linkHref": "#"
+                }
+              ],
+              "boxes": [],
+              "heading": "Services in your pharmacy"
+            }
+          ],
+          "disclaimer": "* The information contained herein is provided for informational purposes only and is not intended to provide complete information on the subject matter or to replace the advice of a health professional. This information does not constitute medical consultation, diagnosis or opinion and should not be interpreted as such. Please consult your health care provider if you have any questions about your health, medications or treatment."
+        },
+        "respiratory_health": {
+          "bannerTitle": "My Health: Respiratory Health",
+          "sections": [
+            {
+              "cards": [],
+              "boxes": [
+                {
+                  "title": "RESPIRATORY HEALTH",
+                  "text1": "Because our breathing is ongoing, we sometimes forget how it can impact our daily lives, for the better or for the worse.",
+                  "text2": "Find out how your pharmacist can help if you have respiratory health issues, whether mild or chronic.",
+                  "btnLabel": "Find a pharmacy",
+                  "btnHref": "#",
+                  "img": "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=1000&q=80"
+                }
+              ]
+            },
+            {
+              "cards": [],
+              "boxes": [
+                {
+                  "title": "Services from your Pharmacist",
+                  "text1": "Several services* related to respiratory health are offered in pharmacy:",
+                  "list": [
+                    "Spirometry (assessment of lung function).",
+                    "Vaccination against flu, COVID-19, Respiratory syncytial virus (RSV) and pneumococcal infection.",
+                    "Advice for smoking cessation."
+                  ],
+                  "note": "*These services are offered at participating pharmacies only."
+                }
+              ]
+            },
+            {
+              "cards": [],
+              "boxes": [
+                {
+                  "title": "STREP THROAT",
+                  "text1": "Having sore throat, fever and pain when swallowing?",
+                  "text2": "You might have a strep throat infection. Learn how to prevent and treat it.",
+                  "btnLabel": "Learn more",
+                  "btnHref": "#",
+                  "img": "https://images.unsplash.com/photo-1579154204601-01588f351e67?auto=format&fit=crop&w=1000&q=80"
+                }
+              ]
+            },
+            {
+              "cards": [
+                {
+                  "image": "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=800&q=80",
+                  "title": "Pneumonia: Causes, Symptoms, and Treatment",
+                  "text1": "Gain comprehensive knowledge on pneumonia, including its causes, symptoms, and treatment options.",
+                  "linkLabel": "Learn More",
+                  "linkHref": "#"
+                },
+                {
+                  "image": "https://images.unsplash.com/photo-1584118624051-3e0c0003a9c2?auto=format&fit=crop&w=800&q=80",
+                  "title": "Control of Asthma",
+                  "text1": "People with asthma know that breathing is a gift and that a chronic respiratory disease can affect your well-being. Find out how to control asthma for a better quality of life.",
+                  "linkLabel": "Learn More",
+                  "linkHref": "#"
+                },
+                {
+                  "image": "https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?auto=format&fit=crop&w=800&q=80",
+                  "title": "Inhaled Medication",
+                  "text1": "Learn essential steps for using inhaled medication to ensure you get proper dosage, whether it is a metered-dose or dry powder inhaler.",
+                  "linkLabel": "Learn More",
+                  "linkHref": "#"
+                },
+                {
+                  "image": "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&w=800&q=80",
+                  "title": "Treating COPD",
+                  "text1": "Discover role of medication in treating COPD (chronic obstructive pulmonary disease) and how your pharmacist can help you get most out of your treatment.",
+                  "linkLabel": "Learn More",
+                  "linkHref": "#"
+                }
+              ],
+              "boxes": [],
+              "heading": "Learn More About Respiratory Health Conditions"
+            },
+            {
+              "cards": [
+                {
+                  "image": "https://images.unsplash.com/photo-1532012197267-da84d127e765?auto=format&fit=crop&w=800&q=80",
+                  "title": "Products to Help You Quit Smoking",
+                  "text1": "Learn more about the products that can help you tame nicotine craving, from over-the-counter products to prescription drugs.",
+                  "linkLabel": "Learn More",
+                  "linkHref": "#"
+                },
+                {
+                  "image": "https://images.unsplash.com/photo-1499209974431-9dce6d43b7d6?auto=format&fit=crop&w=800&q=80",
+                  "title": "Nicotine withdrawal symptoms",
+                  "text1": "Learn more about the common nicotine withdrawal symptoms you can face when you stop smoking.",
+                  "linkLabel": "Learn More",
+                  "linkHref": "#"
+                },
+                {
+                  "image": "https://images.unsplash.com/photo-1572953109213-3be62398eb95?auto=format&fit=crop&w=800&q=80",
+                  "title": "Vaping vs. smoking: what are the differences?",
+                  "text1": "Ever considered quitting smoking by buying an e-cigarette? Learn about differences between two and how to manage nicotine addiction.",
+                  "linkLabel": "Learn More",
+                  "linkHref": "#"
+                },
+                {
+                  "image": "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&w=800&q=80",
+                  "title": "COPD: Causes, Symptoms & Treatment",
+                  "text1": "Learn about COPD causes, symptoms, and treatments. Discover how to manage COPD effectively and improve your quality of life.",
+                  "linkLabel": "Learn More",
+                  "linkHref": "#"
+                }
+              ],
+              "boxes": [],
+              "heading": "SMOKING AND YOUR HEALTH"
+            },
+            {
+              "cards": [
+                {
+                  "title": "ADVICE ON OTC MEDICATION",
+                  "text1": "If you don’t know which over-the-counter medication to choose to relieve your allergy symptoms, don’t be shy to ask your pharmacist!",
+                  "linkLabel": "Find your pharmacy",
+                  "linkHref": "#"
+                },
+                {
+                  "title": "RESPIRATORY HEALTH",
+                  "text1": "If you have asthma or are experiencing strep throat symptoms, talk to your pharmacist about tests to ensure your respiratory health is in order.",
+                  "linkLabel": "Find your pharmacy",
+                  "linkHref": "#"
+                },
+                {
+                  "title": "MEDICATION CUSTOMIZATION",
+                  "text1": "If you are allergic to certain components of your medication or don't like the taste, your pharmacist can find allergy-free formulations as a substitution or add flavour to improve its taste.",
+                  "linkLabel": "Find your pharmacy",
+                  "linkHref": "#"
+                }
+              ],
+              "boxes": [],
+              "heading": "Services in your pharmacy"
+            }
+          ],
+          "disclaimer": "* The information contained herein is provided for informational purposes only and is not intended to provide complete information on the subject matter or to replace the advice of a health professional. This information does not constitute medical consultation, diagnosis or opinion and should not be interpreted as such. Please consult your health care provider if you have any questions about your health, medications or treatment."
+        }
+      }
+    },
+    "general_health": {
+      "bannerTitle": "My Health: General Health",
+      "blocks": [
+        {
+          "heading": "MUSCLES, JOINTS AND BONES",
+          "text1": "Your body is a complex machine made of different parts, each of them playing an important role. As for all machines, care is needed to prevent normal wear.",
+          "text2": "Discover our pharmacist's tips to keep your body healthy and in top shape.",
+          "btnLabel": "Read more",
+          "btnHref": "myhealth/general_health/body_health.html",
+          "img": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8?auto=format&fit=crop&w=1000&q=80"
+        },
+        {
+          "heading": "FAMILY HEALTH",
+          "text1": "Whether it's for your parents, your children, your partner or yourself, learn our tips to better manage your family's health and how your pharmacist can help.",
+          "btnLabel": "Read more",
+          "btnHref": "myhealth/general_health/family_health.html",
+          "img": "https://images.unsplash.com/photo-1511895426328-dc871419a019?auto=format&fit=crop&w=1000&q=80"
+        },
+        {
+          "heading": "MEN'S HEALTH",
+          "text1": "Learn more about men's health issues, debunk some persistent myths and see how you can prevent some conditions with healthy habits and support of your pharmacist.",
+          "btnLabel": "Read more",
+          "btnHref": "myhealth/general_health/mens_health.html",
+          "img": "https://images.unsplash.com/photo-1574680096145-d05b474e2f5?auto=format&fit=crop&w=1000&q=80"
+        },
+        {
+          "heading": "WOMEN'S HEALTH",
+          "text1": "From puberty to menopause, women's bodies change over the years and this has a direct impact on their health.",
+          "text2": "Find several answers to your questions and find out how your pharmacist can guide you through these different steps.",
+          "btnLabel": "Read more",
+          "btnHref": "myhealth/general_health/womens_health.html",
+          "img": "https://images.unsplash.com/photo-1531746020798-e6953c6f8e04?auto=format&fit=crop&w=1000&q=80"
+        }
+      ],
+      "pages": {
+        "body_health": {
+          "bannerTitle": "Body Health",
+          "sections": [
+            {
+              "cards": [],
+              "boxes": [
+                {
+                  "title": "MUSCLES, JOINTS AND BONES",
+                  "text1": "Your body is a complex machine made of different parts, each of them playing an important role. As for all machines, care is needed to prevent normal wear. Discover our pharmacist's tips to keep your body healthy and in top shape.",
+                  "btnLabel": "Find a pharmacy",
+                  "btnHref": "#",
+                  "img": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8?auto=format&fit=crop&w=1000&q=80"
+                }
+              ]
+            },
+            {
+              "cards": [],
+              "boxes": [
+                {
+                  "title": "PHARMACIST'S TIP",
+                  "text1": "Several services* related to body health are offered in pharmacy:",
+                  "list": [
+                    "Medication prescription and adjustment for pain management.",
+                    "Advice on vitamins and supplements to prevent osteoporosis.",
+                    "Advice on over-the-counter medications."
+                  ],
+                  "note": "*These services are offered at participating pharmacies only."
+                }
+              ]
+            },
+            {
+              "cards": [],
+              "boxes": [
+                {
+                  "title": "PREVENTION OF OSTEOPOROSIS",
+                  "text1": "We speak of osteoporosis when bones become more fragile. In affected people, bones gradually lost their density. They therefore fracture more easily.",
+                  "btnLabel": "Learn how to prevent it",
+                  "btnHref": "#",
+                  "img": "https://images.unsplash.com/photo-1571019688210-e6dbb3a2b2c?auto=format&fit=crop&w=1000&q=80"
+                }
+              ]
+            },
+            {
+              "cards": [
+                {
+                  "image": "https://images.unsplash.com/photo-1518611011118-696072e573a9?auto=format&fit=crop&w=800&q=80",
+                  "title": "Osteoarthritis & Pain",
+                  "text1": "There is no cure for osteoarthritis. However, it is possible to manage osteoarthritis pain better by incorporating a few strategies into your daily routine.",
+                  "linkLabel": "Learn More",
+                  "linkHref": "#"
+                },
+                {
+                  "image": "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=800&q=80",
+                  "title": "Rheumatoid Arthritis & Osteoarthritis",
+                  "text1": "Discover differences between two most common arthritic diseases in Canada: osteoarthritis (OA) and rheumatoid arthritis (RA).",
+                  "linkLabel": "Learn More",
+                  "linkHref": "#"
+                },
+                {
+                  "image": "https://images.unsplash.com/photo-1515523110800-9415d13b84a8?auto=format&fit=crop&w=800&q=80",
+                  "title": "Tips for Strong Bones",
+                  "text1": "Bones are living structures that are constantly regenerated. Discover seven tips to help your bones regenerate and stay healthy.",
+                  "linkLabel": "Learn More",
+                  "linkHref": "#"
+                },
+                {
+                  "image": "https://images.unsplash.com/photo-1587854692152-cbe660dbde88?auto=format&fit=crop&w=800&q=80",
+                  "title": "Rheumatoid Arthritis and Antirheumatic Drugs",
+                  "text1": "Find out about the medications commonly prescribed for the treatment of rheumatoid arthritis (RA) and how the pharmacist can help you take them correctly.",
+                  "linkLabel": "Learn More",
+                  "linkHref": "#"
+                }
+              ],
+              "boxes": [],
+              "heading": "KEEP YOUR BODY HEALTHY"
+            },
+            {
+              "cards": [
+                {
+                  "title": "SMOKING CESSATION",
+                  "text1": "Your pharmacist can develop an action plan with you, suggest nicotine replacement products and help you deal with withdrawal side effects.",
+                  "linkLabel": "Find your pharmacy",
+                  "linkHref": "#"
+                },
+                {
+                  "title": "COMPRESSION SOCKS",
+                  "text1": "There are many good reasons to use compression socks, whether you have poor blood circulation, want to soothe heavy and tired legs. Your pharmacist will help you choose the right model, size and material for the best fit possible.",
+                  "linkLabel": "Find your pharmacy",
+                  "linkHref": "#"
+                },
+                {
+                  "title": "ADVICE ON OTC MEDICATION",
+                  "text1": "If you don’t know which over-the-counter medication to choose to relieve your pain symptoms, don’t be shy to ask your pharmacist!",
+                  "linkLabel": "Find your pharmacy",
+                  "linkHref": "#"
+                }
+              ],
+              "boxes": [],
+              "heading": "Services in your pharmacy"
+            }
+          ],
+          "disclaimer": "* The information contained herein is provided for informational purposes only and is not intended to provide complete information on the subject matter or to replace the advice of a health professional. This information does not constitute medical consultation, diagnosis or opinion and should not be interpreted as such. Please consult your health care provider if you have any questions about your health, medications or treatment."
+        },
+        "family_health": {
+          "bannerTitle": "FAMILY HEALTH",
+          "sections": [
+            {
+              "cards": [],
+              "boxes": [
+                {
+                  "title": "Family Health",
+                  "text1": "Whether it’s for your parents, your children, your partner or yourself, learn our tips to better manage your family’s health and how your pharmacist can help.",
+                  "btnLabel": "Find a pharmacy",
+                  "btnHref": "#",
+                  "img": "https://images.unsplash.com/photo-1511895426328-dc871419a019?auto=format&fit=crop&w=1000&q=80"
+                }
+              ]
+            },
+            {
+              "cards": [],
+              "boxes": [
+                {
+                  "title": "SERVICES FROM YOUR PHARMACIST",
+                  "text1": "Several services* related to family health are offered in pharmacy:",
+                  "list": [
+                    "Vaccination for seniors: shingles and pneumococcal infections.",
+                    "Vaccination for children.",
+                    "Medication prescription against impetigo and GERD.",
+                    "Personalized medication: dosage form, flavor and custom dose."
+                  ],
+                  "note": "*These services are offered at participating stores only."
+                }
+              ]
+            },
+            {
+              "cards": [],
+              "boxes": [
+                {
+                  "title": "TAKING CARE OF OURSELVES SO WE CAN TAKE CARE OF OTHERS",
+                  "text1": "If you are one of the numerous individuals who act as a caregiver, it’s important that you take good care of your own health as well."
+                }
+              ]
+            },
+            {
+              "cards": [
+                {
+                  "image": "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=800&q=80",
+                  "title": "Medication Tips",
+                  "text1": "To get the most out of a treatment plan, it’s important to take medications as prescribed. However, you may sometimes run into some problems or have some questions. In such cases, you can count on your pharmacist to find solutions for you.",
+                  "linkLabel": "Learn More",
+                  "linkHref": "#"
+                },
+                {
+                  "image": "https://images.unsplash.com/photo-1584634630486-252411237d63?auto=format&fit=crop&w=800&q=80",
+                  "title": "Preventing Spread of Germs",
+                  "text1": "Whether it’s a cold, the flu, a tummy bug, or head lice, there are effective measures that can reduce the risk of transmitting infections to others.",
+                  "linkLabel": "Learn More",
+                  "linkHref": "#"
+                },
+                {
+                  "image": "https://images.unsplash.com/photo-1559757172-3690ef9f0d1a?auto=format&fit=crop&w=800&q=80",
+                  "title": "Taking medication correctly",
+                  "text1": "In order to get the desired benefits out of a treatment, it’s important to take medication correctly. Put your health first and follow our tips to ensure you get the most out of your treatment.",
+                  "linkLabel": "Learn More",
+                  "linkHref": "#"
+                },
+                {
+                  "image": "https://images.unsplash.com/photo-1544717305-27125fee0be1?auto=format&fit=crop&w=800&q=80",
+                  "title": "Caregivers",
+                  "text1": "Discover practical advice and resources to help caregivers stay healthy, manage stress, and find support—because caring for yourself is caring for others.",
+                  "linkLabel": "Learn More",
+                  "linkHref": "#"
+                },
+                {
+                  "image": "https://images.unsplash.com/photo-1503454533956-bb7b9b3e5f2?auto=format&fit=crop&w=800&q=80",
+                  "title": "Your Children’s Health",
+                  "text1": "When you follow the immunization schedule to protect your child and watch out for symptoms of other common infections, you generally don’t need to worry about childhood diseases. Learn more about vaccinations and how they protect your child.",
+                  "linkLabel": "Learn More",
+                  "linkHref": "#"
+                },
+                {
+                  "image": "https://images.unsplash.com/photo-1532012197267-da84d127e765?auto=format&fit=crop&w=800&q=80",
+                  "title": "Head Lice: Causes and Symptoms",
+                  "text1": "Discover the common causes and symptoms of head lice. Learn how to identify and treat lice infestations effectively. Stay informed and protect your family.",
+                  "linkLabel": "Learn More",
+                  "linkHref": "#"
+                },
+                {
+                  "image": "https://images.unsplash.com/photo-1576189426362-68c8a9c6308?auto=format&fit=crop&w=800&q=80",
+                  "title": "Flu: Protection Methods",
+                  "text1": "It is never too early to think about how to protect your family from illnesses like the flu. Here are 5 easy ways to avoid catching the flu.",
+                  "linkLabel": "Learn More",
+                  "linkHref": "#"
+                },
+                {
+                  "image": "https://images.unsplash.com/photo-1489493857454-1a9444344c4?auto=format&fit=crop&w=800&q=80",
+                  "title": "Attention Deficit Hyperactivity Disorder (ADHD)",
+                  "text1": "Learn about attention deficit hyperactivity disorder (ADHD) and the symptoms of this neurological disorder.",
+                  "linkLabel": "Learn More",
+                  "linkHref": "#"
+                }
+              ],
+              "boxes": [],
+              "heading": "Manage your family’s medications effectively!"
+            },
+            {
+              "cards": [
+                {
+                  "title": "PREGNANCY & MATERNITY",
+                  "text1": "Your pharmacist can help you through the whole process until the baby arrives. They will answer your questions related to medication and vitamins, as well as help you relieve pregnancy-related symptoms.",
+                  "linkLabel": "Find your pharmacy",
+                  "linkHref": "#"
+                },
+                {
+                  "title": "VACCINATION",
+                  "text1": "When you need protection against the Flu, common diseases (Shingles, HPV or Tetanus) or tropical diseases if you are a traveler, turn to your pharmacist for information and expertise.",
+                  "linkLabel": "Find your pharmacy",
+                  "linkHref": "#"
+                },
+                {
+                  "title": "MEDICATION CUSTOMIZATION",
+                  "text1": "To make medication taking easier and help you obtain the best results possible, you can customize your medication according to your personal preferences. See how your pharmacist can personalize your treatment to adapt it to your needs and lifestyle.",
+                  "linkLabel": "Find your pharmacy",
+                  "linkHref": "#"
+                }
+              ],
+              "boxes": [],
+              "heading": "Services in your pharmacy"
+            }
+          ],
+          "disclaimer": "* The information contained herein is provided for informational purposes only and is not intended to provide complete information on the subject matter or to replace the advice of a health professional. This information does not constitute medical consultation, diagnosis or opinion and should not be interpreted as such. Please consult your health care provider if you have any questions about your health, medications or treatment."
+        },
+        "mens_health": {
+          "bannerTitle": "MEN'S HEALTH",
+          "sections": [
+            {
+              "cards": [],
+              "boxes": [
+                {
+                  "title": "Men's Health",
+                  "text1": "Learn more about men’s health issues, debunk some persistent myths and see how you can prevent some conditions with healthy habits and support of your pharmacist.",
+                  "btnLabel": "Find a pharmacy",
+                  "btnHref": "#",
+                  "img": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8?auto=format&fit=crop&w=1000&q=80"
+                }
+              ]
+            },
+            {
+              "cards": [],
+              "boxes": [
+                {
+                  "title": "SUPPORT FROM YOUR PHARMACIST",
+                  "text1": "Your pharmacist can help you and give you advice related to various health conditions common in men:",
+                  "list": [
+                    "Erectile dysfunction",
+                    "Cardiovascular health",
+                    "Prostate diseases",
+                    "Mental Health"
+                  ]
+                }
+              ]
+            },
+            {
+              "cards": [],
+              "boxes": [
+                {
+                  "title": "TESTICULAR CANCER",
+                  "text1": "Among all types of cancer, testicular cancer is the most common cancer among young Canadian men between the ages of 15 and 29. Fortunately, it is also the most treatable. Discover the importance of early detection."
+                }
+              ]
+            },
+            {
+              "cards": [
+                {
+                  "image": "https://images.unsplash.com/photo-1571019688210-e6dbb3a2b2c?auto=format&fit=crop&w=800&q=80",
+                  "title": "Erectile Dysfunction",
+                  "text1": "Some of the myths surrounding erectile dysfunction, erections and libido are hard to dispel. This article seeks to debunk 7 myths and concerns about erectile problems.",
+                  "linkLabel": "Learn More",
+                  "linkHref": "#"
+                },
+                {
+                  "image": "https://images.unsplash.com/photo-1493836561566-baf8f5f1b144?auto=format&fit=crop&w=800&q=80",
+                  "title": "Depression in Men",
+                  "text1": "Depression affects both men and women, regardless of age and socioeconomic status. Learn to recognize symptoms of depression in men and how it can be expressed differently.",
+                  "linkLabel": "Learn More",
+                  "linkHref": "#"
+                },
+                {
+                  "image": "https://images.unsplash.com/photo-1517048676732-d963691d006?auto=format&fit=crop&w=800&q=80",
+                  "title": "Osteoporosis in Men",
+                  "text1": "Osteoporosis is a disease that makes bones more susceptible to fracture. While we tend to think of it as a women’s disease, it also affects men, often with more serious consequences.",
+                  "linkLabel": "Learn More",
+                  "linkHref": "#"
+                }
+              ],
+              "boxes": [],
+              "heading": "Conditions affecting men"
+            },
+            {
+              "cards": [
+                {
+                  "title": "SMOKING CESSATION",
+                  "text1": "Your pharmacist can develop an action plan with you, suggest nicotine replacement products and help you deal with withdrawal side effects.",
+                  "linkLabel": "Find your pharmacy",
+                  "linkHref": "#"
+                },
+                {
+                  "title": "MENTAL HEALTH SUPPORT",
+                  "text1": "Your pharmacist offers private consultations to discuss your personal situation, assess your current medication, talk about alternative options and make sure your side effects are not disruptive.",
+                  "linkLabel": "Find your pharmacy",
+                  "linkHref": "#"
+                },
+                {
+                  "title": "HEART HEALTH",
+                  "text1": "If you are taking medication for a heart condition, your pharmacist can suggest some tests to determine if your blood pressure or cholesterol is well managed or to see if adjustments to your treatment are necessary.",
+                  "linkLabel": "Find your pharmacy",
+                  "linkHref": "#"
+                }
+              ],
+              "boxes": [],
+              "heading": "Services in your pharmacy"
+            }
+          ],
+          "disclaimer": "* The information contained herein is provided for informational purposes only and is not intended to provide complete information on the subject matter or to replace the advice of a health professional. This information does not constitute medical consultation, diagnosis or opinion and should not be interpreted as such. Please consult your health care provider if you have any questions about your health, medications or treatment."
+        },
+        "womens_health": {
+          "bannerTitle": "WOMEN'S HEALTH",
+          "sections": [
+            {
+              "cards": [],
+              "boxes": [
+                {
+                  "title": "Women's Health",
+                  "text1": "From puberty to menopause, women's bodies change over the years and this has a direct impact on their health. Find several answers to your questions and find out how your pharmacist can guide you through these different steps.",
+                  "btnLabel": "Find a pharmacy",
+                  "btnHref": "#",
+                  "img": "https://images.unsplash.com/photo-1531746020798-e6953c6f8e04?auto=format&fit=crop&w=1000&q=80"
+                }
+              ]
+            },
+            {
+              "cards": [],
+              "boxes": [
+                {
+                  "title": "SERVICES FROM YOUR PHARMACIST",
+                  "text1": "Several services* related to women's health are offered in pharmacy:",
+                  "list": [
+                    "Evaluation and prescription for vaginal and urinary tract infections.",
+                    "Evaluation and prescription for yeast infections.",
+                    "Advice and follow-up on gestational diabetes.",
+                    "Relief for pregnancy-related symptoms.",
+                    "Advice on vitamins (for pregnancy and menopause)."
+                  ],
+                  "note": "*These services are offered at participating stores only."
+                }
+              ]
+            },
+            {
+              "cards": [],
+              "boxes": [
+                {
+                  "title": "5 TIPS TO HELP YOU SLEEP BETTER DURING PREGNANCY",
+                  "text1": "Pregnancy can disrupt your sleep pattern in various ways. Learn what’s interfering with your sleep and our suggestions to help you sleep better."
+                }
+              ]
+            },
+            {
+              "cards": [
+                {
+                  "image": "https://images.unsplash.com/photo-1483273340606-d1fa0b3b2f8?auto=format&fit=crop&w=800&q=80",
+                  "title": "PREMENSTRUAL SYNDROME",
+                  "text1": "For some women, the lead-up to their period is associated with uncomfortable physical and emotional symptoms. The good news is that good lifestyle choices can help alleviate premenstrual syndrome.",
+                  "linkLabel": "Learn More",
+                  "linkHref": "#"
+                },
+                {
+                  "image": "https://images.unsplash.com/photo-1544717305-27125fee0be1?auto=format&fit=crop&w=800&q=80",
+                  "title": "MENOPAUSE SYMPTOMS, STAGES AND TREATMENT",
+                  "text1": "Learn about menopause, its stages, and common symptoms. Discover key information to manage your health during this transition. Read more now!",
+                  "linkLabel": "Learn More",
+                  "linkHref": "#"
+                },
+                {
+                  "image": "https://images.unsplash.com/photo-1571019688210-e6dbb3a2b2c?auto=format&fit=crop&w=800&q=80",
+                  "title": "VAGINITIS",
+                  "text1": "Vaginitis is an inflammation of the vagina. Learn about the causes, symptoms, and treatment of this common, yet often misunderstood condition.",
+                  "linkLabel": "Learn More",
+                  "linkHref": "#"
+                },
+                {
+                  "image": "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&w=800&q=80",
+                  "title": "URINARY INCONTINENCE",
+                  "text1": "Urinary incontinence is a common disorder caused by many factors. Fortunately, there are ways to prevent the discomfort of urine leakage. Find out more about incontinence and how to treat it.",
+                  "linkLabel": "Learn More",
+                  "linkHref": "#"
+                }
+              ],
+              "boxes": [],
+              "heading": "COMMON HEALTH PROGRAM FOR WOMEN"
+            },
+            {
+              "cards": [
+                {
+                  "image": "https://images.unsplash.com/photo-1559757172-3690ef9f0d1a?auto=format&fit=crop&w=800&q=80",
+                  "title": "IS IT SAFE TO TAKE MELATONIN DURING PREGNANCY?",
+                  "text1": "Learn how melatonin can affect pregnant women and whether it is safe to take it during pregnancy.",
+                  "linkLabel": "Learn More",
+                  "linkHref": "#"
+                },
+                {
+                  "image": "https://images.unsplash.com/photo-1509115433652-5e9d6c6f8e04?auto=format&fit=crop&w=800&q=80",
+                  "title": "CHRONIC PAIN & PREGNANCY",
+                  "text1": "If you are pregnant or breastfeeding and need to take medication to relieve chronic pain, team up with your doctor and pharmacist to find a regimen that will give you adequate pain relief while being safe for your baby.",
+                  "linkLabel": "Learn More",
+                  "linkHref": "#"
+                },
+                {
+                  "image": "https://images.unsplash.com/photo-1506904766656-2a3b3b3e5f2?auto=format&fit=crop&w=800&q=80",
+                  "title": "TRAVELLING WHILE PREGNANT OR BREASTFEEDING",
+                  "text1": "Discover our tips for before and during your trip to travel while breastfeeding your child or being pregnant.",
+                  "linkLabel": "Learn More",
+                  "linkHref": "#"
+                }
+              ],
+              "boxes": [],
+              "heading": "MY HEALTH AND MY BABY'S WELLNESS"
+            },
+            {
+              "cards": [
+                {
+                  "title": "PREGNANCY & MATERNITY",
+                  "text1": "Your pharmacist can help you through the whole process until the baby arrives. They will answer your questions related to medication and vitamins, as well as help you relieve pregnancy-related symptoms.",
+                  "linkLabel": "Find your pharmacy",
+                  "linkHref": "#"
+                },
+                {
+                  "title": "COMPRESSION SOCKS",
+                  "text1": "There are many good reasons to use compression socks, whether you have poor blood circulation, want to soothe heavy and tired legs. Your pharmacist will help you choose the right model, size and material for the best fit possible.",
+                  "linkLabel": "Find your pharmacy",
+                  "linkHref": "#"
+                },
+                {
+                  "title": "WEIGHT LOSS",
+                  "text1": "If you’re thinking about losing weight, your pharmacist can shed a light on helpful products and make sure your medication doesn’t make you gain weight as a side effect.",
+                  "linkLabel": "Find your pharmacy",
+                  "linkHref": "#"
+                }
+              ],
+              "boxes": [],
+              "heading": "Services in your pharmacy"
+            }
+          ],
+          "disclaimer": "* The information contained herein is provided for informational purposes only and is not intended to provide complete information on the subject matter or to replace the advice of a health professional. This information does not constitute medical consultation, diagnosis or opinion and should not be interpreted as such. Please consult your health care provider if you have any questions about your health, medications or treatment."
+        }
+      }
+    },
+    "wellness": {
+      "bannerTitle": "My Health: Wellness",
+      "blocks": [
+        {
+          "heading": "COMFORT & SAFETY",
+          "text1": "Taking good care of your health is important at all ages, but perhaps even more so in later years. And if you are a caregiver, it's important that you fulfill your role without putting your own health at risk.",
+          "text2": "It's reassuring to know that comfort and safety are within reach and that your pharmacist can help.",
+          "btnLabel": "Read more",
+          "btnHref": "myhealth/Wellness/comfort_safety.html",
+          "img": "https://images.unsplash.com/photo-1576765608535-5f04d1e3f289?auto=format&fit=crop&w=1000&q=80"
+        },
+        {
+          "heading": "FOOD & MEDICATION",
+          "text1": "With medication, there is cause to pose and rethink the way we eat and when. Food can interact with your medication in many ways, and when combined, can be source of some undesirable effects.",
+          "text2": "Your pharmacist can help you figure it all out, to get the most of your medication therapy with the best eating.",
+          "btnLabel": "Read more",
+          "btnHref": "myhealth/Wellness/food_medication.html",
+          "img": "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=1000&q=80"
+        },
+        {
+          "heading": "MENTAL HEALTH",
+          "text1": "1 in 3 Canadians will experience a mental health problem in their lifetime. Mental health disorders are challenging for people living with them as well as their loved ones, but these conditions can be overcome with appropriate treatment and help of your pharmacist.",
+          "btnLabel": "Read more",
+          "btnHref": "myhealth/Wellness/mental_health.html",
+          "img": "https://images.unsplash.com/photo-1473868476894-42eba8a71e5d?auto=format&fit=crop&w=1000&q=80"
+        },
+        {
+          "heading": "SKIN HEALTH",
+          "text1": "There are a lot of different skin conditions and it may be difficult to recognize or to treat them efficiently.",
+          "text2": "When in doubt, don't hesitate to ask your pharmacist, he or she can give you advice on your individual needs.",
+          "btnLabel": "Read more",
+          "btnHref": "myhealth/Wellness/skin_health.html",
+          "img": "https://images.unsplash.com/photo-1556228720-195a672e8a03?auto=format&fit=crop&w=1000&q=80"
+        },
+        {
+          "heading": "SMOKING CESSATION",
+          "text1": "Even with all the information out there about the harmful impact of smoking, it can be hard to take action and quit. Find out how your pharmacist can help and get tips on how to achieve your goals.",
+          "btnLabel": "Read more",
+          "btnHref": "myhealth/Wellness/smoking_cessation.html",
+          "img": "https://images.unsplash.com/photo-1551690656952-34342bb7c2f2?auto=format&fit=crop&w=1000&q=80"
+        },
+        {
+          "heading": "VITAMINS, MINERALS & NATURAL PRODUCTS",
+          "text1": "No matter your age, your body needs vitamins and minerals to ensure all your vital functions. You will most likely meet your daily requirements by eating a healthy diet, but sometimes, a little boost doesn't hurt - and your pharmacist can guide you in choosing the right product for you.",
+          "btnLabel": "Read more",
+          "btnHref": "myhealth/Wellness/vitamins_natural_products.html",
+          "img": "https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?auto=format&fit=crop&w=1000&q=80"
+        },
+        {
+          "heading": "CANNABIS, ITS EFFECTS & YOUR HEALTH",
+          "text1": "The legalization of recreational cannabis has brought up many questions. Read below for more information on cannabis and how your pharmacist can help.",
+          "btnLabel": "Read more",
+          "btnHref": "myhealth/Wellness/cannabis.html",
+          "img": "https://images.unsplash.com/photo-1593020778132-44e34c0605f4?auto=format&fit=crop&w=1000&q=80"
+        }
+      ],
+      "pages": {
+        "cannabis": {
+          "bannerTitle": "CANNABIS, ITS EFFECTS & YOUR HEALTH",
+          "introHeading": "Cannabis, Its Effects & Your Health",
+          "introPara1": "The legalization of recreational cannabis has brought up many questions. Read below for more information on cannabis and how your pharmacist can help.",
+          "introImg": "https://images.unsplash.com/photo-1532468290680-1eba917e51ed?auto=format&fit=crop&w=1000&q=80",
+          "introBtnLabel": "Find your pharmacy",
+          "introBtnHref": "#",
+          "sections": [
+            {
+              "cards": [],
+              "boxes": [
+                {
+                  "title": "PHARMACIST TIPS",
+                  "text1": "Your pharmacist is an essential member of your healthcare team. They can provide you with insight and relevant information to help you make decisions. They are there to guide you through your therapy choices without judgment or bias.",
+                  "text2": "Your pharmacist has been managing your medication therapy for a long time. They naturally know it well and can advise on avoiding potential medication interactions and minimizing adverse effects.",
+                  "text3": "Don’t hesitate to reach out to your local pharmacist on cannabis-related questions or concerns.",
+                  "linkLabel": "Learn More",
+                  "linkHref": "#"
+                }
+              ]
+            },
+            {
+              "cards": [
+                {
+                  "title": "What is Cannabis?",
+                  "text1": "The term “cannabis” is used to describe products derived from the whole cannabis plant or its extracts.",
+                  "linkLabel": "Learn More",
+                  "linkHref": "#"
+                },
+                {
+                  "title": "Frequently Asked Questions About Cannabis",
+                  "text1": "Following the recent legalization of recreational cannabis, here are a few things to keep in mind.",
+                  "linkLabel": "Learn More",
+                  "linkHref": "#"
+                },
+                {
+                  "title": "Medical vs Recreational Cannabis",
+                  "text1": "Find out what is the difference between medical and recreational cannabis.",
+                  "linkLabel": "Learn More",
+                  "linkHref": "#"
+                }
+              ],
+              "boxes": [],
+              "heading": "Learn More About Cannabis"
+            },
+            {
+              "cards": [
+                {
+                  "title": "RESPIRATORY HEALTH",
+                  "text1": "If you have asthma or are experiencing strep throat symptoms, talk to your pharmacist about tests to ensure your respiratory health is in order.",
+                  "linkLabel": "Find your pharmacy",
+                  "linkHref": "#"
+                },
+                {
+                  "title": "MEDICATION REVIEW",
+                  "text1": "Sit down with your pharmacist for a medication review to determine if any harmful effects or interactions are caused by combining your medication together, if one of your medication can be removed from your therapy and if there is cheaper medication available.",
+                  "linkLabel": "Find your pharmacy",
+                  "linkHref": "#"
+                },
+                {
+                  "title": "WELLNESS CONSULTATION",
+                  "text1": "Your pharmacist truly believes in this. Personalized consultations are available to help you reach your wellness goals or help you navigate life-changing events in health.",
+                  "linkLabel": "Find your pharmacy",
+                  "linkHref": "#"
+                }
+              ],
+              "boxes": [],
+              "heading": "Services in your pharmacy"
+            }
+          ],
+          "disclaimer": "* The information contained herein is provided for informational purposes only and is not intended to provide complete information on the subject matter or to replace the advice of a health professional. This information does not constitute medical consultation, diagnosis or opinion and should not be interpreted as such. Please consult your health care provider if you have any questions about your health, medications or treatment."
+        },
+        "comfort_safety": {
+          "bannerTitle": "COMFORT & SAFETY",
+          "introHeading": "Comfort & Safety",
+          "introPara1": "Taking good care of your health is important at all ages, but perhaps even more so in later years. And if you are a caregiver, it's important that you fulfill your role without putting your own health at risk.",
+          "introPara2": "It’s reassuring to know that comfort and safety are within reach and that your pharmacist can help.",
+          "introImg": "https://images.unsplash.com/photo-1576765608535-5f04d1e3f289?auto=format&fit=crop&w=1000&q=80",
+          "introBtnLabel": "Find your pharmacy",
+          "introBtnHref": "#",
+          "sections": [
+            {
+              "cards": [],
+              "boxes": [
+                {
+                  "title": "PHARMACIST'S TIPS",
+                  "text1": "Available at your local pharmacy, mobility aid products are designed to help people maintain health, well-being and personal independence in their homes. Your pharmacy team is there to provide advice based on your specific needs!"
+                }
+              ]
+            },
+            {
+              "cards": [],
+              "boxes": [
+                {
+                  "title": "8 TIPS TO PREVENT FALLS AT HOME",
+                  "text1": "According to Statistics Canada, between 20% and 30% of older Canadians experience one or more falls each year. The risk of falling can be reduced by taking a few simple measures.",
+                  "linkLabel": "Learn how to prevent falls",
+                  "linkHref": "#"
+                }
+              ]
+            },
+            {
+              "cards": [
+                {
+                  "title": "Choosing a Walker",
+                  "text1": "When choosing a walker or a walking aid, it is essential to select one that’s suited to your needs. Discover the different kinds and advice.",
+                  "linkLabel": "Learn More",
+                  "linkHref": "#"
+                },
+                {
+                  "title": "Compression Socks",
+                  "text1": "Compression socks are used to treat or prevent various blood circulation problems in the legs. Discover how to get the most out of them.",
+                  "linkLabel": "Learn More",
+                  "linkHref": "#"
+                },
+                {
+                  "title": "Choosing a Cane",
+                  "text1": "A cane can be very helpful for supporting a weak leg or compensating for balance problems. Learn how to adjust and use it properly in this article.",
+                  "linkLabel": "Learn More",
+                  "linkHref": "#"
+                },
+                {
+                  "title": "Websites and Apps",
+                  "text1": "Learn how technology can help you monitor your treatments and keep you safe in your home.",
+                  "linkLabel": "Learn More",
+                  "linkHref": "#"
+                }
+              ],
+              "boxes": [],
+              "heading": "Tools and Technology to Keep You Safe"
+            },
+            {
+              "cards": [
+                {
+                  "title": "COMPRESSION SOCKS",
+                  "text1": "There are many good reasons to use compression socks, whether you have poor blood circulation or want to soothe heavy and tired legs. Your pharmacist will help you choose the right model, size and material for the best fit possible.",
+                  "linkLabel": "Find your pharmacy",
+                  "linkHref": "#"
+                },
+                {
+                  "title": "HEART HEALTH",
+                  "text1": "If you are taking medication for your heart, your pharmacist could suggest some tests to determine if your blood pressure or your cholesterol are well managed.",
+                  "linkLabel": "Find your pharmacy",
+                  "linkHref": "#"
+                },
+                {
+                  "title": "MEDICATION FOR CHRONIC CONDITIONS",
+                  "text1": "If you have a chronic condition and require regular medication, your pharmacist is here to facilitate your day to day. They can extend prescriptions and re-prescribe your medication, as well as show you tools to help you get the most out of your treatment.",
+                  "linkLabel": "Find your pharmacy",
+                  "linkHref": "#"
+                }
+              ],
+              "boxes": [],
+              "heading": "Services in your pharmacy"
+            }
+          ],
+          "disclaimer": "* The information contained herein is provided for informational purposes only and is not intended to provide complete information on the subject matter or to replace the advice of a health professional. This information does not constitute medical consultation, diagnosis or opinion and should not be interpreted as such. Please consult your health care provider if you have any questions about your health, medications or treatment."
+        },
+        "food_medication": {
+          "bannerTitle": "FOOD & MEDICATION",
+          "introHeading": "Food & Medication",
+          "introPara1": "With medication, there is cause to pose and rethink the way we eat and when. Food can interact with your medication in many ways, and when combined, can be source of some undesirable effects.",
+          "introPara2": "Your pharmacist can help you figure it all out, to get the most of your medication therapy with the best eating.",
+          "introImg": "https://images.unsplash.com/photo-1490645935967-10de6ba17061?auto=format&fit=crop&w=1000&q=80",
+          "introBtnLabel": "Find your pharmacy",
+          "introBtnHref": "#",
+          "sections": [
+            {
+              "cards": [],
+              "boxes": [
+                {
+                  "title": "PHARMACIST'S TIPS",
+                  "text1": "Never underestimate the effect of food on your treatment. When your pharmacist gives you specific instructions regarding food, be sure to follow them! Otherwise, your treatment may not be fully effective or may even lead to side effects that could have been avoided.",
+                  "text2": "Always check with your pharmacist!",
+                  "linkLabel": "See our services",
+                  "linkHref": "#"
+                }
+              ]
+            },
+            {
+              "cards": [],
+              "boxes": [
+                {
+                  "title": "5 FOOD CATEGORIES THAT INTERACT WITH YOUR MEDICATION",
+                  "text1": "Discover why it’s important not to pair your medication with certain foods like grapefruit, dairy products or even caffeine, and what happens if you do.",
+                  "linkLabel": "Learn More",
+                  "linkHref": "#"
+                }
+              ]
+            },
+            {
+              "cards": [
+                {
+                  "title": "Medication: with or without food?",
+                  "text1": "Discover how foods can have an impact on efficacy and effects of your medication, and why some medication must be taken on an empty stomach while others not.",
+                  "linkLabel": "Learn More",
+                  "linkHref": "#"
+                },
+                {
+                  "title": "The benefits of water",
+                  "text1": "Discover why water should be your drink of choice to quench your thirst, and how much you should drink per day.",
+                  "linkLabel": "Learn More",
+                  "linkHref": "#"
+                },
+                {
+                  "title": "How to treat and prevent diseases with diet",
+                  "text1": "A balanced diet is essential to staying healthy. It's also an integral part of your treatment and can act as a preventive measure for numerous diseases.",
+                  "linkLabel": "Learn More",
+                  "linkHref": "#"
+                },
+                {
+                  "title": "5 foods that interact with medication",
+                  "text1": "Discover why it’s important to be careful about consuming certain foods like grapefruit, dairy products, and foods rich in potassium if you take medication.",
+                  "linkLabel": "Learn More",
+                  "linkHref": "#"
+                }
+              ],
+              "boxes": [],
+              "heading": "Everything is connected"
+            },
+            {
+              "cards": [
+                {
+                  "title": "PRESCRIPTIONS",
+                  "text1": "Your pharmacist can prescribe medication for a minor health problem right away, provide advice on products or help you manage the medication you take for a chronic condition.",
+                  "linkLabel": "Find your pharmacy",
+                  "linkHref": "#"
+                },
+                {
+                  "title": "WEIGHT MANAGEMENT",
+                  "text1": "If you’re thinking about losing weight, your pharmacist can shed a light on helpful products and make sure your medication doesn’t make you gain weight as a side effect.",
+                  "linkLabel": "Find your pharmacy",
+                  "linkHref": "#"
+                },
+                {
+                  "title": "MEDICATION CUSTOMIZATION",
+                  "text1": "Sticking to your medication isn’t always a walk in the park. Your pharmacist is here to make minor or major adjustments to your therapy or provide you with custom formulas and innovative packaging to make it all easier.",
+                  "linkLabel": "Find your pharmacy",
+                  "linkHref": "#"
+                }
+              ],
+              "boxes": [],
+              "heading": "Services in your pharmacy"
+            }
+          ],
+          "disclaimer": "* The information contained herein is provided for informational purposes only and is not intended to provide complete information on the subject matter or to replace the advice of a health professional. This information does not constitute medical consultation, diagnosis or opinion and should not be interpreted as such. Please consult your health care provider if you have any questions about your health, medications or treatment."
+        },
+        "mental_health": {
+          "bannerTitle": "MENTAL HEALTH",
+          "introHeading": "Mental Health",
+          "introPara1": "1 in 3 Canadians will experience a mental health problem in their lifetime. Mental health disorders are challenging for people living with them as well as their loved ones, but these conditions can be overcome with appropriate treatment and help of your pharmacist.",
+          "introImg": "https://images.unsplash.com/photo-1493857671505-72967e2dc417?auto=format&fit=crop&w=1000&q=80",
+          "introBtnLabel": "Find your pharmacy",
+          "introBtnHref": "#",
+          "sections": [
+            {
+              "cards": [],
+              "boxes": [
+                {
+                  "title": "PHARMACIST TIPS",
+                  "text1": "Managing mental health conditions is challenging. It’s already hard enough to remember to take your medication on a regular basis on top of everything else. Let your pharmacist help you manage prescription renewals by synchronizing refill dates.",
+                  "text2": "Your pharmacist can also assist you in your role as caregiver, and can refer you to support networks, as needed."
+                }
+              ]
+            },
+            {
+              "cards": [],
+              "boxes": [
+                {
+                  "title": "ANXIETY OR PANIC ATTACK?",
+                  "text1": "We all, at some point in our lives, experience certain events that upset us to varying degrees and trigger a lot of anxiety. Sometimes you may feel so overwhelmed by your emotions that you lose control and experience a panic attack.",
+                  "linkLabel": "Learn how to differentiate them",
+                  "linkHref": "#"
+                }
+              ]
+            },
+            {
+              "cards": [
+                {
+                  "title": "Discontinuing Antidepressants",
+                  "text1": "Stopping your antidepressant treatment too soon increases the risk of relapse. Learn when and how to come off antidepressants.",
+                  "linkLabel": "Learn More",
+                  "linkHref": "#"
+                },
+                {
+                  "title": "Attention Deficit Hyperactivity Disorder (ADHD)",
+                  "text1": "Learn about attention deficit hyperactivity disorder (ADHD) and the symptoms of this neurological disorder.",
+                  "linkLabel": "Learn More",
+                  "linkHref": "#"
+                },
+                {
+                  "title": "Work-Family Balance",
+                  "text1": "Juggling work, family life, and other obligations can be stressful and exhausting. Discover a few ways to help you balance work and family.",
+                  "linkLabel": "Learn More",
+                  "linkHref": "#"
+                },
+                {
+                  "title": "Insomnia",
+                  "text1": "Certain pre-bedtime activities and habits can have a negative impact on your sleep. Learn all about good sleep hygiene to help prevent insomnia and difficulty sleeping.",
+                  "linkLabel": "Learn More",
+                  "linkHref": "#"
+                }
+              ],
+              "boxes": [],
+              "heading": "More Information About Mental Health"
+            },
+            {
+              "cards": [
+                {
+                  "title": "MENTAL HEALTH SUPPORT",
+                  "text1": "Your pharmacist offers private consultations to discuss your personal situation, assess your current medication, talk about alternative options and make sure your side effects are not disruptive.",
+                  "linkLabel": "Find your pharmacy",
+                  "linkHref": "#"
+                },
+                {
+                  "title": "MEDICATION ADJUSTMENT",
+                  "text1": "With some adjustments from your pharmacist, side effects can be minimized, harmful drug interactions can be limited and dosages can be decreased in a way that is not detrimental to your well-being.",
+                  "linkLabel": "Find your pharmacy",
+                  "linkHref": "#"
+                },
+                {
+                  "title": "MEDICATION LIST",
+                  "text1": "Having a list of your medication on hand in case of emergency, travel or a doctor appointment can be quite useful. Ask your pharmacist to prepare it.",
+                  "linkLabel": "Find your pharmacy",
+                  "linkHref": "#"
+                }
+              ],
+              "boxes": [],
+              "heading": "Services in your pharmacy"
+            }
+          ],
+          "disclaimer": "* The information contained herein is provided for informational purposes only and is not intended to provide complete information on the subject matter or to replace the advice of a health professional. This information does not constitute medical consultation, diagnosis or opinion and should not be interpreted as such. Please consult your health care provider if you have any questions about your health, medications or treatment."
+        },
+        "skin_health": {
+          "bannerTitle": "SKIN HEALTH",
+          "introHeading": "Skin Health",
+          "introPara1": "There are a lot of different skin conditions and it may be difficult to recognize or to treat them efficiently.",
+          "introPara2": "When in doubt, don’t hesitate to ask your pharmacist, he or she can give you advice on your individual needs.",
+          "introImg": "https://images.unsplash.com/photo-1556228578-0d85b1a4e574?auto=format&fit=crop&w=1000&q=80",
+          "introBtnLabel": "Find your pharmacy",
+          "introBtnHref": "#",
+          "sections": [
+            {
+              "cards": [],
+              "boxes": [
+                {
+                  "title": "SERVICES FROM YOUR PHARMACIST",
+                  "text1": "Several services* related to skin health are offered in pharmacy:",
+                  "note": "*These services are offered at participating pharmacies only.",
+                  "list": [
+                    "Vaccination and treatment against shingles.",
+                    "Medication prescription to treat cold sores, mouth ulcers and acne."
+                  ]
+                }
+              ]
+            },
+            {
+              "cards": [],
+              "boxes": [
+                {
+                  "title": "PREVENTION & TREATMENT OF SHINGLES",
+                  "text1": "If you’ve had chickenpox, you could be among the ones who contract shingles. Rapid treatment, especially within the first three days of getting shingles, can reduce the duration and severity of illness.",
+                  "linkLabel": "Learn to prevent and treat shingles",
+                  "linkHref": "#"
+                }
+              ]
+            },
+            {
+              "cards": [
+                {
+                  "title": "What’s the difference between psoriasis and eczema?",
+                  "text1": "Learn about the differences between psoriasis and eczema so you understand these skin conditions better.",
+                  "linkLabel": "Learn More",
+                  "linkHref": "#"
+                },
+                {
+                  "title": "How to get rid of acne?",
+                  "text1": "Acne needs to be treated as soon as it appears. Understand the causes of acne and follow our tips and advice to better control your acne.",
+                  "linkLabel": "Learn More",
+                  "linkHref": "#"
+                },
+                {
+                  "title": "Itchiness and irritation",
+                  "text1": "There are a lot of products that can be used to relieve or prevent minor skin conditions like itchiness and irritation.",
+                  "linkLabel": "Learn More",
+                  "linkHref": "#"
+                },
+                {
+                  "title": "Most Common Skin Rash Causes, Types, and Treatments",
+                  "text1": "Find out what causes skin rashes, including eczema and psoriasis, and discover effective ways to soothe these rashes.",
+                  "linkLabel": "Learn More",
+                  "linkHref": "#"
+                }
+              ],
+              "boxes": [],
+              "heading": "Preventing and Treating Skin Conditions"
+            },
+            {
+              "cards": [
+                {
+                  "title": "PRESCRIPTION RIGHT AWAY!",
+                  "text1": "Your pharmacist can prescribe medication on the spot for minor health conditions if your personal situation requires it.",
+                  "linkLabel": "Find your pharmacy",
+                  "linkHref": "#"
+                },
+                {
+                  "title": "ADVICE ON OTC MEDICATION",
+                  "text1": "If you don’t know which over-the-counter medication to choose to relieve your symptoms, don’t be shy to ask your pharmacist!",
+                  "linkLabel": "Find your pharmacy",
+                  "linkHref": "#"
+                },
+                {
+                  "title": "VACCINATION",
+                  "text1": "Did you know you can get vaccinated against Shingles? The virus that causes chickenpox stays in your body and can reactivate at any time during your life.",
+                  "linkLabel": "Find your pharmacy",
+                  "linkHref": "#"
+                }
+              ],
+              "boxes": [],
+              "heading": "Services in your pharmacy"
+            }
+          ],
+          "disclaimer": "* The information contained herein is provided for informational purposes only and is not intended to provide complete information on the subject matter or to replace the advice of a health professional. This information does not constitute medical consultation, diagnosis or opinion and should not be interpreted as such. Please consult your health care provider if you have any questions about your health, medications or treatment."
+        },
+        "smoking_cessation": {
+          "bannerTitle": "SMOKING CESSATION",
+          "introHeading": "Smoking Cessation",
+          "introPara1": "Even with all the information out there about the harmful impact of smoking, it can be hard to take action and quit. Find out how your pharmacist can help and get tips on how to achieve your goals.",
+          "introImg": "https://images.unsplash.com/photo-1551690656952-34342bb7c2f2?auto=format&fit=crop&w=1000&q=80",
+          "introBtnLabel": "Find your pharmacy",
+          "introBtnHref": "#",
+          "sections": [
+            {
+              "cards": [],
+              "boxes": [
+                {
+                  "title": "SERVICES FROM YOUR PHARMACIST",
+                  "text1": "Several services* related to smoking cessation are offered in pharmacy:",
+                  "note": "*These services are offered at participating pharmacies only.",
+                  "list": [
+                    "Prescription of medication to help quit smoking.",
+                    "Advice on over-the-counter medications related to smoking cessation."
+                  ]
+                }
+              ]
+            },
+            {
+              "cards": [],
+              "boxes": [
+                {
+                  "title": "THE DIFFERENT TREATMENT OPTIONS AVAILABLE TO YOU",
+                  "text1": "There are some therapies, both medicinal and non-medicinal, that can greatly contribute to your success. They will help you feel good physically, while you work on other aspects, such as your smoking habits.",
+                  "linkLabel": "Learn more",
+                  "linkHref": "#"
+                }
+              ]
+            },
+            {
+              "cards": [
+                {
+                  "title": "Nicotine withdrawal symptoms",
+                  "text1": "Learn more about the common nicotine withdrawal symptoms you can face when you stop smoking.",
+                  "linkLabel": "Learn More",
+                  "linkHref": "#"
+                },
+                {
+                  "title": "Vaping vs. smoking: what are the differences?",
+                  "text1": "Ever considered quitting smoking by buying an e-cigarette? Learn about the differences between the two and how to manage nicotine addiction.",
+                  "linkLabel": "Learn More",
+                  "linkHref": "#"
+                },
+                {
+                  "title": "COPD and Quitting Smoking",
+                  "text1": "If you have COPD and want to quit smoking, your pharmacist can help you. Find out how along with a few tips.",
+                  "linkLabel": "Learn More",
+                  "linkHref": "#"
+                },
+                {
+                  "title": "Quitting Smoking & Heart Health",
+                  "text1": "It is a proven fact that quitting smoking is good for your heart. Discover a few reasons why and strategies to butt out for good.",
+                  "linkLabel": "Learn More",
+                  "linkHref": "#"
+                }
+              ],
+              "boxes": [],
+              "heading": "SMOKING AND YOUR HEALTH"
+            },
+            {
+              "cards": [
+                {
+                  "title": "ADVICE ON OTC MEDICATION",
+                  "text1": "If you don’t know which over-the-counter medication to choose to relieve your symptoms, don’t be shy to ask your pharmacist!",
+                  "linkLabel": "Find your pharmacy",
+                  "linkHref": "#"
+                },
+                {
+                  "title": "RESPIRATORY HEALTH",
+                  "text1": "If you have asthma or are experiencing strep throat symptoms, talk to your pharmacist about tests to ensure your respiratory health is in order.",
+                  "linkLabel": "Find your pharmacy",
+                  "linkHref": "#"
+                },
+                {
+                  "title": "SMOKING CESSATION",
+                  "text1": "Your pharmacist can develop an action plan with you, suggesting the treatment that best suits your health and needs, while helping you through your withdrawal symptoms.",
+                  "linkLabel": "Find your pharmacy",
+                  "linkHref": "#"
+                }
+              ],
+              "boxes": [],
+              "heading": "Services in your pharmacy"
+            }
+          ],
+          "disclaimer": "* The information contained herein is provided for informational purposes only and is not intended to provide complete information on the subject matter or to replace the advice of a health professional. This information does not constitute medical consultation, diagnosis or opinion and should not be interpreted as such. Please consult your health care provider if you have any questions about your health, medications or treatment."
+        },
+        "vitamins_natural_products": {
+          "bannerTitle": "VITAMINS, MINERALS & NATURAL PRODUCTS",
+          "introHeading": "Vitamins, Minerals & Natural Products",
+          "introPara1": "No matter your age, your body needs vitamins and minerals to ensure all your vital functions. You will most likely meet your daily requirements by eating a healthy diet, but sometimes, a little boost doesn’t hurt - and your pharmacist can guide you in choosing the right product for you.",
+          "introImg": "https://images.unsplash.com/photo-1574323347407-f5e1ad6d020b?auto=format&fit=crop&w=1000&q=80",
+          "introBtnLabel": "Find your pharmacy",
+          "introBtnHref": "#",
+          "sections": [
+            {
+              "cards": [],
+              "boxes": [
+                {
+                  "title": "PHARMACIST TIPS",
+                  "text1": "Talk to your pharmacist if you consider taking vitamins and natural products. He or she will give you advice related to many health conditions:",
+                  "list": [
+                    "Pregnancy and menopause",
+                    "Prevention of osteoporosis",
+                    "Improvement of digestive health",
+                    "Improvement of sleep quality",
+                    "Moderation of potential interactions between medications, vitamins and natural products."
+                  ]
+                }
+              ]
+            },
+            {
+              "cards": [],
+              "boxes": [
+                {
+                  "title": "CAN MELATONIN IMPROVE SLEEP?",
+                  "text1": "Discover if it is safe to take melatonin to improve sleep, what are its benefits and how to improve bedtime routine.",
+                  "linkLabel": "Learn more",
+                  "linkHref": "#"
+                }
+              ]
+            },
+            {
+              "cards": [
+                {
+                  "title": "Myths and Facts about Vitamins and Minerals",
+                  "text1": "Debunk common myths about vitamins and minerals. Read on to find out whether adding supplements to your diet is a good choice and has positive effects.",
+                  "linkLabel": "Learn More",
+                  "linkHref": "#"
+                },
+                {
+                  "title": "Avoid a lack of vitamin D",
+                  "text1": "Discover why experts recommend that most Canadian adults take a daily vitamin D supplement for osteoporosis prevention and bone health.",
+                  "linkLabel": "Learn More",
+                  "linkHref": "#"
+                },
+                {
+                  "title": "The Right Multivitamin for You",
+                  "text1": "If you’re baffled by the array of supplements available at your pharmacy, read on to discover how to choose the right multivitamin for you and your needs.",
+                  "linkLabel": "Learn More",
+                  "linkHref": "#"
+                },
+                {
+                  "title": "Vitamin or mineral deficiencies?",
+                  "text1": "Discover the main vitamin and mineral deficiencies caused by very poor diets or medical problems, and how vegans, vegetarians, seniors and women can be particularly at risk.",
+                  "linkLabel": "Learn More",
+                  "linkHref": "#"
+                }
+              ],
+              "boxes": [],
+              "heading": "GETTING THE FACTS RIGHT"
+            },
+            {
+              "cards": [
+                {
+                  "title": "Weight Management",
+                  "text1": "If you’re thinking about losing weight, your pharmacist can shed a light on helpful natural health products and make sure your medication doesn’t make you gain weight as a side effect.",
+                  "linkLabel": "Find your pharmacy",
+                  "linkHref": "#"
+                },
+                {
+                  "title": "Customization",
+                  "text1": "If you are allergic to certain components of your medication or don't like the taste, your pharmacist can find allergy-free formulations as a substitution or add flavour to improve its taste.",
+                  "linkLabel": "Find your pharmacy",
+                  "linkHref": "#"
+                },
+                {
+                  "title": "Medication Review",
+                  "text1": "Sit down with your pharmacist for a medication review to determine if any harmful effects or interactions are caused by combining your medication together, if one of your medication can be removed from your therapy and if there is cheaper medication available.",
+                  "linkLabel": "Find your pharmacy",
+                  "linkHref": "#"
+                }
+              ],
+              "boxes": [],
+              "heading": "Services in your pharmacy"
+            }
+          ],
+          "disclaimer": "* The information contained herein is provided for informational purposes only and is not intended to provide complete information on the subject matter or to replace the advice of a health professional. This information does not constitute medical consultation, diagnosis or opinion and should not be interpreted as such. Please consult your health care provider if you have any questions about your health, medications or treatment."
+        }
+      }
+    }
   }
 }
