@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Maternity &amp; Pregnancy Services | Guardian MarkhaMack Pharmacy</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Roboto:wght@400;500&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="../../assets/style.css">
+
+  <style>
+    :root {
+      --primary: #0056b3;
+      --accent: #ff6b00;
+      --light: #f8f9fa;
+      --text: #333;
+      --text-light: #6c757d;
+      --shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      --transition: all 0.3s ease;
+    }
+
+    body {
+      font-family: 'Roboto', sans-serif;
+      color: var(--text);
+      overflow-x: hidden;
+      line-height: 1.6;
+    }
+
+    h1,
+    h2,
+    h3 {
+      font-family: 'Poppins', sans-serif;
+    }
+
+    /* ===== Banner ===== */
+    .banner {
+      background: linear-gradient(135deg, var(--primary), #004494);
+      color: white;
+      text-align: center;
+      padding: 80px 20px;
+    }
+
+    .banner h1 {
+      font-size: 2.4rem;
+      font-weight: 600;
+      animation: fadeInUp 1s ease;
+    }
+
+    .banner p {
+      max-width: 700px;
+      margin: 10px auto 0;
+      opacity: 0.9;
+    }
+
+    /* ===== Section Layout ===== */
+    .section {
+      max-width: 1100px;
+      margin: 80px auto;
+      padding: 0 20px;
+    }
+
+    .intro {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 40px;
+    }
+
+    .intro img {
+      flex: 1;
+      width: 100%;
+      max-width: 480px;
+      border-radius: 12px;
+      box-shadow: var(--shadow);
+      animation: fadeIn 1.2s ease;
+    }
+
+    .intro-text {
+      flex: 1;
+    }
+
+    .intro-text h2 {
+      color: var(--primary);
+      margin-bottom: 15px;
+    }
+
+    .intro-text p {
+      margin-bottom: 15px;
+    }
+
+    .cta-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+      margin-top: 20px;
+    }
+
+    .btn {
+      display: inline-block;
+      background: var(--accent);
+      color: white;
+      text-decoration: none;
+      padding: 12px 25px;
+      border-radius: 25px;
+      transition: var(--transition);
+      font-weight: 500;
+    }
+
+    .btn:hover {
+      background: #e55a00;
+      transform: translateY(-2px);
+    }
+
+    .btn-outline {
+      background: white;
+      color: var(--primary);
+      border: 2px solid var(--primary);
+    }
+
+    .btn-outline:hover {
+      background: var(--primary);
+      color: white;
+    }
+
+    /* ===== Service cards ===== */
+    .info-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 25px;
+      margin-top: 40px;
+    }
+
+    .info-card {
+      background: var(--light);
+      padding: 25px;
+      border-radius: 12px;
+      box-shadow: var(--shadow);
+      transition: var(--transition);
+      animation: fadeInUp 0.8s ease;
+    }
+
+    .info-card:nth-child(3n+2) {
+      animation-delay: 0.1s;
+    }
+
+    .info-card:nth-child(3n) {
+      animation-delay: 0.2s;
+    }
+
+    .info-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+      border-bottom: 3px solid var(--accent);
+    }
+
+    .info-card i {
+      font-size: 40px;
+      color: var(--primary);
+      margin-bottom: 15px;
+      display: inline-block;
+    }
+
+    .info-card h4 {
+      color: var(--primary);
+      margin-bottom: 10px;
+    }
+
+    .info-card p {
+      color: var(--text-light);
+      margin-bottom: 0;
+      font-size: 0.95rem;
+    }
+
+    /* ===== See all services ===== */
+    .all-services {
+      text-align: center;
+      margin-top: 60px;
+    }
+
+    .disclaimer {
+      font-size: 0.9rem;
+      color: var(--text-light);
+      margin-top: 50px;
+      border-top: 1px solid #ddd;
+      padding-top: 20px;
+    }
+
+    @media (max-width: 768px) {
+      .intro {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ===== Header Placeholder ===== -->
+  <div id="header-container"></div>
+
+  <!-- ===== Page Banner ===== -->
+  <section class="banner">
+    <h1>Maternity Services</h1>
+    <p>Maintain a healthy pregnancy and more — at Guardian MarkhaMack Pharmacy.</p>
+  </section>
+
+  <!-- ===== Intro ===== -->
+  <section class="section">
+    <div class="intro">
+      <div class="intro-text">
+        <h2>Maintain a healthy pregnancy and more</h2>
+        <p>Looking to get pregnant? Your pharmacist can accompany you through the whole process until the baby
+          arrives.</p>
+        <div class="cta-row">
+          <a href="tel:+19052943295" class="btn"><i class="fas fa-phone"></i> Call (905) 294-3295</a>
+          <a href="../../where_are_we.html" class="btn btn-outline"><i class="fas fa-map-marker-alt"></i> Where Are
+            We</a>
+        </div>
+      </div>
+      <img src="https://images.unsplash.com/photo-1511895426328-dc871419a019?auto=format&fit=crop&w=1000&q=80"
+        alt="Pregnancy and maternity support">
+    </div>
+  </section>
+
+  <!-- ===== Services ===== -->
+  <section class="section">
+    <h2>How we can help</h2>
+
+    <div class="info-grid">
+      <div class="info-card">
+        <i class="fas fa-tablets"></i>
+        <h4>Advice on Vitamins</h4>
+        <p>Folic acid plays an essential role in the development of your baby, even before the very first weeks of
+          life. Ideally, you should start taking a supplement at least three months before stopping contraception.
+          Talk to your pharmacist before choosing a product.</p>
+      </div>
+
+      <div class="info-card">
+        <i class="fas fa-prescription-bottle-medical"></i>
+        <h4>Advice on Medication</h4>
+        <p>Some medication should be avoided during pregnancy or if you are breastfeeding because they can be harmful
+          to the baby. Before taking any medication, talk to your pharmacist to know more about potential adverse
+          effects. If your little one is in need of OTC medication, your pharmacist can offer advice on the best way
+          to administer it.</p>
+      </div>
+
+      <div class="info-card">
+        <i class="fas fa-hand-holding-medical"></i>
+        <h4>Pregnancy-Related Symptoms</h4>
+        <p>Nausea and acid reflux are common side effects pregnant women may experience. While they're usually not
+          serious, they can be pretty unpleasant. Your pharmacist can help you manage your symptoms while ensuring
+          there are no risks for the baby.</p>
+      </div>
+
+      <div class="info-card">
+        <i class="fas fa-vial"></i>
+        <h4>Gestational Diabetes</h4>
+        <p>If you develop gestational diabetes during the course of your pregnancy and must take insulin to control
+          it, your pharmacist will show you how and give you tips on how to manage your condition, including advice
+          on how to monitor your blood glucose at home.</p>
+      </div>
+
+      <div class="info-card">
+        <i class="fas fa-baby"></i>
+        <h4>Breastfeeding</h4>
+        <p>If you are a new mother, you may need a breast pump. Fortunately, it is possible to rent this device and
+          all its accessories in participating pharmacies. Your pharmacist can also explain how to use it and how to
+          clean your breast pump equipment.</p>
+      </div>
+
+      <div class="info-card">
+        <i class="fas fa-truck"></i>
+        <h4>App and Home Deliveries</h4>
+        <p>Let your pharmacist come to you: use our app to get your prescriptions prepared ahead of time or to set up
+          home delivery services. This might be useful towards the end of your pregnancy or when your baby is home
+          with you.</p>
+      </div>
+    </div>
+
+    <div class="all-services">
+      <a href="../wellness_consultation.html" class="btn">See all services</a>
+    </div>
+  </section>
+
+  <!-- ===== Disclaimer ===== -->
+  <section class="section">
+    <p class="disclaimer">
+      The pharmacy services presented in this section are offered by Guardian, I.D.A. and Remedy'sRx pharmacists. The
+      pharmacists are solely responsible for the professional activities carried out during the practice of pharmacy.
+      These services are offered in participating pharmacies only. Certain fees and conditions may apply.
+      <br><br>
+      * The information contained herein is provided for informational purposes only and is not intended to provide
+      complete information on the subject matter or to replace the advice of a health professional. This information
+      does not constitute medical consultation, diagnosis or opinion and should not be interpreted as such. Please
+      consult your health care provider if you have any questions about your health, medications or treatment.
+    </p>
+  </section>
+
+  <!-- ===== Footer Placeholder ===== -->
+  <div id="footer-container"></div>
+
+  <!-- Scripts -->
+  <script src="../../assets/script.js"></script>
+  <script src="../../assets/loader.js"></script>
+  <script>
+    window.addEventListener('load', () => window.loadComponents('../../'));
+  </script>
+</body>
+
+</html>
