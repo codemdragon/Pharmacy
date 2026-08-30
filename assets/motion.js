@@ -59,7 +59,22 @@
     }
 
     function init() {
-        setupFooterReveal();
+        try {
+            setupFooterReveal();
+            runReveals();
+        } catch (e) {
+            /* absolute fail-safe: show everything rather than risk a blank page */
+            revealAllNow();
+        }
+    }
+
+    function revealAllNow() {
+        document.querySelectorAll('.mr:not(.revealed)').forEach(function (el) {
+            el.classList.add('revealed', 'done');
+        });
+    }
+
+    function runReveals() {
 
         /* Tag staggered grid children */
         GROUPS.forEach(function (sel) {
@@ -127,6 +142,18 @@
         });
 
         Array.prototype.forEach.call(all, function (el) { io.observe(el); });
+
+        /* SAFETY NET: if anything ever prevents an in-view element from
+           being revealed (observer hiccup, hidden parent, timer clash),
+           force-reveal anything visible in the viewport after 3.5s. */
+        setTimeout(function () {
+            document.querySelectorAll('.mr:not(.revealed)').forEach(function (el) {
+                var r = el.getBoundingClientRect();
+                if (r.top < window.innerHeight && r.bottom > 0) {
+                    el.classList.add('revealed', 'done');
+                }
+            });
+        }, 3500);
     }
 
     /* ===== Progressive reveal footer ====================================

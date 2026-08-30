@@ -361,6 +361,14 @@
         // Show loader immediately
         showLoader(loaderType);
 
+        // FAIL-SAFE: never let a stalled resource (slow image, font, CDN)
+        // keep the white loading screen up. Hard cap regardless of the
+        // load event, plus an early hide once DOM is ready.
+        setTimeout(hideLoader, 4000);
+        document.addEventListener('DOMContentLoaded', function () {
+            setTimeout(hideLoader, 1200);
+        });
+
         // Hide when page is fully loaded
         if (document.readyState === 'loading') {
             document.addEventListener('DOMContentLoaded', () => {
