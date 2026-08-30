@@ -176,5 +176,113 @@
     ],
     "bottomText": "© 2023 Guardian, I.D.A. and Remedy'sRx Pharmacy. All rights reserved.",
     "socialHeading": "Follow Us"
+  },
+  "home": {
+    "slides": [
+      {
+        "image": "https://images.unsplash.com/photo-1585435557343-3b092031d5ad?auto=format&fit=crop&w=1470&q=80",
+        "title": "Your Health, Our Priority",
+        "text": "Trusted pharmacy services for you and your family",
+        "btnLabel": "Learn More",
+        "btnHref": "services/prescriptions.html"
+      },
+      {
+        "image": "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?auto=format&fit=crop&w=1471&q=80",
+        "title": "Expert Health Advice",
+        "text": "Our pharmacists are here to answer your questions",
+        "btnLabel": "Consult Our Experts",
+        "btnHref": "services/wellness_consultation.html"
+      },
+      {
+        "image": "https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?auto=format&fit=crop&w=1630&q=80",
+        "title": "Convenient Prescription Services",
+        "text": "Easy refills and prescription transfers",
+        "btnLabel": "Transfer Your Prescription",
+        "btnHref": "services/prescriptions/renewals.html"
+      }
+    ],
+    "quality": {
+      "title": "Quality Guaranteed",
+      "sub": "On all our private label brands",
+      "text": "No need to sacrifice quality for price. We offer a full line of private label brands bringing you all the products you and your family needs – everyday. Ranging from facial tissues to your favourite snacks.",
+      "btnLabel": "Find out more",
+      "btnHref": "#"
+    },
+    "services": {
+      "heading": "Pharmacy Services",
+      "subheading": "Health Advice",
+      "cards": [
+        {
+          "image": "https://images.unsplash.com/photo-1584467735871-8db9ac8d0918?auto=format&fit=crop&w=1470&q=80",
+          "title": "Cold & Flu",
+          "text": "We've got pharmacist-approved advice to help you stay healthy and fight off cold & flu season with confidence.",
+          "linkLabel": "Learn more",
+          "linkHref": "myhealth/seasonal/cold-flu.html"
+        },
+        {
+          "image": "https://images.unsplash.com/photo-1532938911079-1b06ac7ceec7?auto=format&fit=crop&w=1332&q=80",
+          "title": "Diabetes",
+          "text": "Expert guidance and products to help manage diabetes and maintain a healthy lifestyle.",
+          "linkLabel": "Learn more",
+          "linkHref": "myhealth/chronic_conditions/diabetes.html"
+        },
+        {
+          "image": "https://images.unsplash.com/photo-1542736667-069246bdbc6d?auto=format&fit=crop&w=1470&q=80",
+          "title": "Digestive Health",
+          "text": "Products and advice to support your digestive health and overall wellness.",
+          "linkLabel": "Learn more",
+          "linkHref": "myhealth/chronic_conditions/digestive_health.html"
+        }
+      ],
+      "moreLabel": "Find more health advice",
+      "moreHref": "myhealth/seasonal.html"
+    },
+    "subscription": {
+      "title": "SUBSCRIBE TO OUR EMAILS",
+      "text": "Get access to health tips, contests, a FREE weekly wellness tracker, and more.",
+      "placeholder": "Email",
+      "btnLabel": "Subscribe"
+    }
+  },
+  "whoWeAre": {
+    "bannerTitle": "Who We Are",
+    "bannerSub": "Your local pharmacy® — independently owned, community driven.",
+    "introHeading": "Your local pharmacy®",
+    "introPara1": "Guardian, I.D.A., and Remedy'sRx pharmacies are independently owned and operated by local pharmacists who dedicate their practice to the best possible patient care — beyond just prescriptions.",
+    "introPara2": "With over 1,400 locations coast to coast, both in urban and rural areas, our independent pharmacies reflect the values of the communities they serve. Each pharmacy is unique, but they are all united in the pledge to uphold what being an independent pharmacy stands for — empowering patients to live a healthy life by providing unrivaled, compassionate, holistic health care.",
+    "introPara3": "Feeling better starts here.",
+    "introImg": "https://images.unsplash.com/photo-1625246333195-78d9c38ad449?auto=format&fit=crop&w=1000&q=80",
+    "ctaCallLabel": "Call (905) 294-3295",
+    "ctaWhereLabel": "Where Are We",
+    "localHeading": "Your Markham community pharmacy",
+    "localPara1": "Guardian MarkhaMack Pharmacy is proud to be part of this tradition — an independent, community pharmacy serving Markham from 9889 Highway 48. Our team gets to know you by name, takes the time to answer your questions, and cares for your whole family, from prescriptions and vaccinations to wellness consultations and health monitoring.",
+    "localPara2": "When you walk through our doors, you're not a number — you're a neighbour. That's what being your local pharmacy® means to us.",
+    "localImg": "https://images.unsplash.com/photo-1585435557343-3b092031d5ad?auto=format&fit=crop&w=1000&q=80",
+    "historyTitle": "Our history",
+    "timeline": [
+      {
+        "year": "1932",
+        "title": "I.D.A.",
+        "text": "The Independent Druggists' Alliance (I.D.A.) is established in Canada, providing exemplary care to patients."
+      },
+      {
+        "year": "1964",
+        "title": "Guardian",
+        "text": "The Guardian pharmacy banner is added, with the same unwavering commitment to the profession."
+      },
+      {
+        "year": "2006",
+        "title": "Remedy'sRx",
+        "text": "Remedy'sRx is founded with a commitment to building relationships with patients and offering personal attention unmatched by larger chains."
+      },
+      {
+        "year": "2015",
+        "title": "Together",
+        "text": "Remedy'sRx joins Guardian and I.D.A. — and together the three brands continue to grow as their independent owners create healthier communities from coast to coast."
+      }
+    ],
+    "mckessonHeading": "Part of the McKesson Canada Retail Banner Network",
+    "mckessonText": "While Guardian, I.D.A., and Remedy'sRx pharmacies are independently owned and operated, they are part of a family of banner brands under the McKesson Canada Retail Banner Network. McKesson Canada and its independent pharmacy owners are committed to their communities' better health, partnering with insurers, hospitals, physicians' offices, pharmacies, pharmaceutical companies and governments across the spectrum of care. To learn more, visit www.mckesson.ca.",
+    "disclaimer": "Guardian, I.D.A. and Remedy'sRx are banners of McKesson Canada. Pharmacies operating under these banners are independently owned and operated by pharmacists."
   }
 }

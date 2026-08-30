@@ -421,6 +421,8 @@ var AdminUI = {
 
     /* which admin section owns which content paths (for search jumps) */
     sectionForPath: function (path) {
+        if (path.indexOf('home.') === 0) return 'home';
+        if (path.indexOf('whoWeAre.') === 0) return 'who';
         if (path.indexOf('contactPage.') === 0) return 'contact';
         if (path.indexOf('locationPage.') === 0) return 'location';
         if (path.indexOf('store.hours') === 0 ||
@@ -458,6 +460,8 @@ var AdminUI = {
         panel.scrollTop = 0;
 
         if (tab === 'dashboard') this.renderDashboard();
+        else if (tab === 'home') this.renderHome();
+        else if (tab === 'who') this.renderWho();
         else if (tab === 'contact') this.renderContact();
         else if (tab === 'location') this.renderLocation();
         else if (tab === 'footer') this.renderFooter();
@@ -606,6 +610,100 @@ var AdminUI = {
                     <div class="how-step"><div class="num">3</div><h4>Push to Website</h4><p>Press the orange button and your changes go live on the website in about a minute.</p></div>
                 </div>
             </div>`;
+    },
+
+    /* ============ HOME ============ */
+    renderHome: function () {
+        var self = this;
+        var slides = '';
+        for (var i = 0; i < 3; i++) {
+            slides += this.card('fa-image', 'Slide ' + (i + 1), 'The big rotating banner on the homepage. Use a direct image link (a .jpg or .png URL).', `
+                ${this.fld('home.slides.' + i + '.image', 'Background image link', { hint: 'Paste a direct link to an image. Uploads arrive in a later update.' })}
+                ${this.fld('home.slides.' + i + '.title', 'Big heading')}
+                ${this.fld('home.slides.' + i + '.text', 'Small text')}
+                <div class="field-row">
+                    ${this.fld('home.slides.' + i + '.btnLabel', 'Button text')}
+                    ${this.fld('home.slides.' + i + '.btnHref', 'Button link', { hint: 'Where the button goes, e.g. services/prescriptions.html' })}
+                </div>`);
+        }
+
+        var cards = '';
+        for (var j = 0; j < 3; j++) {
+            cards += this.card('fa-square-poll-horizontal', 'Card ' + (j + 1), 'One of the three service cards under "Pharmacy Services".', `
+                ${this.fld('home.services.cards.' + j + '.image', 'Image link')}
+                ${this.fld('home.services.cards.' + j + '.title', 'Card title')}
+                ${this.fld('home.services.cards.' + j + '.text', 'Card text', { area: true, rows: 2 })}
+                <div class="field-row">
+                    ${this.fld('home.services.cards.' + j + '.linkLabel', 'Link text')}
+                    ${this.fld('home.services.cards.' + j + '.linkHref', 'Link')}
+                </div>`);
+        }
+
+        document.getElementById('panel').innerHTML =
+            this.card('fa-images', 'Homepage banner slides', 'The three slides rotate automatically on the homepage.', slides) +
+            this.card('fa-award', 'Quality banner', 'The "Quality Guaranteed" section.', `
+                <div class="field-row">
+                    ${this.fld('home.quality.title', 'Heading')}
+                    ${this.fld('home.quality.sub', 'Subtitle')}
+                </div>
+                ${this.fld('home.quality.text', 'Text', { area: true, rows: 3 })}
+                <div class="field-row">
+                    ${this.fld('home.quality.btnLabel', 'Button text')}
+                    ${this.fld('home.quality.btnHref', 'Button link')}
+                </div>`) +
+            this.card('fa-list', 'Services section', 'The heading and three cards in the middle of the homepage.', `
+                <div class="field-row">
+                    ${this.fld('home.services.heading', 'Heading')}
+                    ${this.fld('home.services.subheading', 'Subtitle')}
+                </div>`) + cards +
+            this.card('fa-envelope', 'Email signup', 'The blue subscribe box near the bottom of the homepage.', `
+                ${this.fld('home.subscription.title', 'Heading')}
+                ${this.fld('home.subscription.text', 'Text', { area: true, rows: 2 })}
+                <div class="field-row">
+                    ${this.fld('home.subscription.placeholder', 'Email box placeholder')}
+                    ${this.fld('home.subscription.btnLabel', 'Button text')}
+                </div>`);
+    },
+
+    /* ============ WHO WE ARE ============ */
+    renderWho: function () {
+        var timeline = '';
+        for (var i = 0; i < 4; i++) {
+            timeline += this.card('fa-clock-rotate-left', 'Milestone ' + (i + 1), 'One step of the history timeline.', `
+                <div class="field-row">
+                    ${this.fld('whoWeAre.timeline.' + i + '.year', 'Year')}
+                    ${this.fld('whoWeAre.timeline.' + i + '.title', 'Title')}
+                </div>
+                ${this.fld('whoWeAre.timeline.' + i + '.text', 'Text', { area: true, rows: 2 })}`);
+        }
+
+        document.getElementById('panel').innerHTML =
+            this.card('fa-flag', 'Banner', 'The blue banner at the top of the page.', `
+                <div class="field-row">
+                    ${this.fld('whoWeAre.bannerTitle', 'Title')}
+                    ${this.fld('whoWeAre.bannerSub', 'Subtitle')}
+                </div>`) +
+            this.card('fa-book-open', 'Intro story', 'The main story at the top of the page.', `
+                ${this.fld('whoWeAre.introHeading', 'Heading')}
+                ${this.fld('whoWeAre.introPara1', 'Paragraph 1', { area: true, rows: 3 })}
+                ${this.fld('whoWeAre.introPara2', 'Paragraph 2', { area: true, rows: 4 })}
+                ${this.fld('whoWeAre.introPara3', 'Paragraph 3 (short line)', { area: true, rows: 2 })}
+                ${this.fld('whoWeAre.introImg', 'Photo link')}
+                <div class="field-row">
+                    ${this.fld('whoWeAre.ctaCallLabel', 'Call button text')}
+                    ${this.fld('whoWeAre.ctaWhereLabel', 'Where Are We button text')}
+                </div>`) +
+            this.card('fa-store', 'Your Markham story', 'The section about this pharmacy specifically.', `
+                ${this.fld('whoWeAre.localHeading', 'Heading')}
+                ${this.fld('whoWeAre.localPara1', 'Paragraph 1', { area: true, rows: 4 })}
+                ${this.fld('whoWeAre.localPara2', 'Paragraph 2', { area: true, rows: 3 })}
+                ${this.fld('whoWeAre.localImg', 'Photo link')} `) +
+            this.card('fa-clock-rotate-left', 'History timeline', 'The four milestones with year badges.', timeline) +
+            this.card('fa-network-wired', 'McKesson section', 'The network box near the bottom.', `
+                ${this.fld('whoWeAre.mckessonHeading', 'Heading')}
+                ${this.fld('whoWeAre.mckessonText', 'Text', { area: true, rows: 5 })}`) +
+            this.card('fa-scale-small', 'Small print', 'The disclaimer line at the very bottom.', `
+                ${this.fld('whoWeAre.disclaimer', 'Disclaimer text', { area: true, rows: 2 })}`);
     },
 
     /* ============ CONTACT ============ */
@@ -796,7 +894,7 @@ var AdminUI = {
     },
 
     prettyPath: function (path) {
-        var words = { store: 'Store', phone: 'Phone', badge: 'Badge', email: 'Email', name: 'Name', addressLine1: 'Street address', addressLine2: 'City & postal', plusCode: 'Plus code', mapsUrl: 'Maps link', lat: 'Latitude', lng: 'Longitude', zoom: 'Zoom', hours: 'Hours', day: 'Day', time: 'Time', contactPage: 'Contact page', locationPage: 'Where Are We', bannerTitle: 'Banner title', bannerSub: 'Banner subtitle', formHeading: 'Form heading', formIntro: 'Form intro', formNote: 'Form note', formspreeId: 'Formspree ID', topics: 'Topics', footer: 'Footer', columns: 'Column', links: 'Links', heading: 'Heading', label: 'Text', href: 'Link', icon: 'Icon', social: 'Social', socialHeading: 'Follow us heading', bottomText: 'Copyright line' };
+        var words = { store: 'Store', phone: 'Phone', badge: 'Badge', email: 'Email', name: 'Name', addressLine1: 'Street address', addressLine2: 'City & postal', plusCode: 'Plus code', mapsUrl: 'Maps link', lat: 'Latitude', lng: 'Longitude', zoom: 'Zoom', hours: 'Hours', day: 'Day', time: 'Time', contactPage: 'Contact page', locationPage: 'Where Are We', bannerTitle: 'Banner title', bannerSub: 'Banner subtitle', formHeading: 'Form heading', formIntro: 'Form intro', formNote: 'Form note', formspreeId: 'Formspree ID', topics: 'Topics', footer: 'Footer', columns: 'Column', links: 'Links', heading: 'Heading', label: 'Text', href: 'Link', icon: 'Icon', social: 'Social', socialHeading: 'Follow us heading', bottomText: 'Copyright line', slides: 'Slides', title: 'Title', text: 'Text', image: 'Image URL', btnLabel: 'Button text', btnHref: 'Button link', quality: 'Quality banner', sub: 'Subtitle', services: 'Services section', cards: 'Cards', subheading: 'Subtitle', moreLabel: 'More-link text', moreHref: 'More-link target', linkLabel: 'Link text', linkHref: 'Link', subscription: 'Email signup', placeholder: 'Placeholder', whoWeAre: 'Who We Are', introHeading: 'Intro heading', introPara1: 'Paragraph 1', introPara2: 'Paragraph 2', introPara3: 'Paragraph 3', introImg: 'Intro image', ctaCallLabel: 'Call button text', ctaWhereLabel: 'Where button text', localHeading: 'Local heading', localPara1: 'Local paragraph 1', localPara2: 'Local paragraph 2', localImg: 'Local image', historyTitle: 'History heading', timeline: 'Timeline', year: 'Year', mckessonHeading: 'McKesson heading', mckessonText: 'McKesson text', bannerTitle: 'Banner title', bannerSub: 'Banner subtitle' };
         return path.split('.').map(function (seg) {
             if (/^\d+$/.test(seg)) return '#' + (parseInt(seg, 10) + 1);
             return words[seg] || seg;
