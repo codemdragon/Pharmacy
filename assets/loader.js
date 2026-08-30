@@ -492,4 +492,15 @@
     window.loadComponents = loadComponents;
     window.fixPaths = fixPaths; // Make available if needed manually
 
+    // --- Sitewide FR/EN translation helper ---
+    // Inject assets/translate.js relative to this file so every page
+    // (at any folder depth) gets the language toggle automatically.
+    (function () {
+        var cs = document.currentScript;
+        if (!cs || !cs.src) return;
+        var s = document.createElement('script');
+        s.src = new URL('translate.js', cs.src).toString();
+        document.head.appendChild(s);
+    })();
+
 })();
