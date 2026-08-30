@@ -316,7 +316,7 @@ var AdminCMS = {
 
         /* prepare metadata + derived values */
         this.draft.store = this.draft.store || {};
-        this.draft.store.phoneHref = (this.draft.store.phone || '').replace(/[^+0-9]/g '');
+        this.draft.store.phoneHref = (this.draft.store.phone || '').replace(/[^+0-9]/g, '');
         this.draft._meta = this.draft._meta || {};
         this.draft._meta.version = ((this.live && this.live._meta && this.live._meta.version) || 0) + 1;
         this.draft._meta.lastPushed = new Date().toISOString();
