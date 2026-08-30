@@ -30,21 +30,31 @@
 
     /* Blocks that reveal as one unit */
     var ITEMS = [
-        '.intro',                        /* sub-page intro (text + image) */
-        '.health-block',                 /* alternating category blocks */
         '.info-box',                     /* grey info sections */
         '.local-card',                   /* who we are */
         '.visit-card',                   /* vaccinations visit-us card */
-        '.form-card',                    /* contact form */
-        '.contact-wrapper .info-card',   /* contact store info */
-        '.location-wrapper',             /* where are we map + hours */
         '.quality-content',              /* home quality section */
         '.subscription-content',         /* home subscription section */
         '.section > h2'                  /* section headings */
     ];
 
-    function tag(el, delay) {
+    /* Directional entrances: slide in from the sides (16px, capped) */
+    var SIDE_L = [
+        '.intro > .intro-text',          /* sub-page intro text */
+        '.location-wrapper .map-section',/* where are we: map */
+        '.contact-wrapper .info-card'    /* contact: store info */
+    ];
+
+    var SIDE_R = [
+        '.intro > img',                  /* sub-page intro image */
+        '.location-wrapper .info-card',  /* where are we: hours card */
+        '.contact-wrapper .form-card'    /* contact: form */
+    ];
+
+    function tag(el, delay, side) {
+        if (el.classList.contains('mr')) return;
         el.classList.add('mr');
+        if (side) el.classList.add(side);
         if (delay) el.setAttribute('data-mr-delay', delay);
     }
 
@@ -58,11 +68,25 @@
             });
         });
 
+        /* Alternating category blocks: odd from the left, even from the right */
+        Array.prototype.forEach.call(
+            document.querySelectorAll('.health-block'),
+            function (el, i) {
+                tag(el, 0, i % 2 === 0 ? 'mr-side-l' : 'mr-side-r');
+            }
+        );
+
+        /* Directional pairs: left content first, right content follows in */
+        SIDE_L.forEach(function (sel) {
+            document.querySelectorAll(sel).forEach(function (el) { tag(el, 0, 'mr-side-l'); });
+        });
+        SIDE_R.forEach(function (sel) {
+            document.querySelectorAll(sel).forEach(function (el) { tag(el, 0.08, 'mr-side-r'); });
+        });
+
         /* Tag standalone blocks */
         ITEMS.forEach(function (sel) {
-            document.querySelectorAll(sel).forEach(function (el) {
-                if (!el.classList.contains('mr')) tag(el);
-            });
+            document.querySelectorAll(sel).forEach(function (el) { tag(el); });
         });
 
         var all = document.querySelectorAll('.mr');

@@ -252,6 +252,40 @@ h6 {
     position: relative;
 }
 
+/* ===== Mega-menu hover bridge (desktop only) =====
+   Invisible hover zones so the cursor can travel DIAGONALLY from a nav
+   heading into its mega-menu without the menu closing:
+   - nav-item gets wider sideways (padding + equal negative margin)
+   - ::before strip below the heading catches low diagonal exits
+   - mega-menu ::before extends its hover box 20px up into the header row */
+@media (min-width: 993px) {
+    .nav-container .nav-item {
+        padding-inline: 12px;
+        margin-inline: -12px;
+    }
+
+    .nav-container .nav-item::before {
+        content: '';
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 360px;
+        height: 18px;
+        /* invisible - hover bridge only */
+    }
+
+    .nav-container .mega-menu::before {
+        content: '';
+        position: absolute;
+        top: -20px;
+        left: 0;
+        right: 0;
+        height: 20px;
+        /* invisible - hover bridge only */
+    }
+}
+
 .nav-item:hover .mega-menu,
 .nav-item .mega-menu:hover {
     visibility: visible;

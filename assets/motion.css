@@ -44,6 +44,16 @@
     /* trust-badge style elastic scale-in */
 }
 
+.mr.mr-side-l {
+    transform: translateX(-16px);
+    /* side entrance - from the left */
+}
+
+.mr.mr-side-r {
+    transform: translateX(16px);
+    /* side entrance - from the right */
+}
+
 .mr.revealed {
     opacity: 1;
     transform: none;
@@ -88,9 +98,10 @@
     }
 }
 
-/* ===== Header: mega-menu structural entrance (desktop) ================ */
+/* ===== Header: mega-menu structural entrance (desktop) ================
+   IMPORTANT: preserve translateX(-50%) centering from style.css */
 .nav-container .mega-menu {
-    transform: translateY(-8px);
+    transform: translateX(-50%) translateY(-8px);
     transition:
         opacity var(--dur-standard) var(--ease-o),
         transform var(--dur-standard) var(--ease-o),
@@ -99,7 +110,7 @@
 
 .nav-container .nav-item:hover .mega-menu,
 .nav-container .nav-item .mega-menu:hover {
-    transform: translateY(0);
+    transform: translateX(-50%) translateY(0);
 }
 
 /* Mobile drawer: emphasized slide-in curve */
@@ -140,6 +151,31 @@
 
 .service-card:hover .service-img {
     transform: scale(1.04);
+}
+
+/* Alternating category blocks: gentle zoom on the image side */
+.health-img {
+    transition: transform 0.6s var(--ease-o);
+}
+
+.health-block:hover .health-img {
+    transform: scale(1.02);
+}
+
+/* ===== Arrow nudge: icons slide slightly on button/link hover ============ */
+.btn i,
+.health-btn i,
+.service-link i,
+.card-link i,
+.service-card .service-link i {
+    transition: transform var(--dur-quick) var(--ease-i);
+}
+
+.btn:hover i,
+.health-btn:hover i,
+.service-link:hover i,
+.card-link:hover i {
+    transform: translateX(4px);
 }
 
 /* ===== Accessibility: respect user motion preference =================== */
