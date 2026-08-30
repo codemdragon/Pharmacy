@@ -492,15 +492,26 @@
     window.loadComponents = loadComponents;
     window.fixPaths = fixPaths; // Make available if needed manually
 
-    // --- Sitewide FR/EN translation helper ---
-    // Inject assets/translate.js relative to this file so every page
-    // (at any folder depth) gets the language toggle automatically.
+    // --- Sitewide assets injected relative to this file ---
+    // (works from any folder depth on every page)
     (function () {
         var cs = document.currentScript;
         if (!cs || !cs.src) return;
-        var s = document.createElement('script');
-        s.src = new URL('translate.js', cs.src).toString();
-        document.head.appendChild(s);
+
+        // FR/EN translation toggle
+        var t = document.createElement('script');
+        t.src = new URL('translate.js', cs.src).toString();
+        document.head.appendChild(t);
+
+        // Central motion system (design tokens + reveal engine)
+        var css = document.createElement('link');
+        css.rel = 'stylesheet';
+        css.href = new URL('motion.css', cs.src).toString();
+        document.head.appendChild(css);
+
+        var m = document.createElement('script');
+        m.src = new URL('motion.js', cs.src).toString();
+        document.head.appendChild(m);
     })();
 
 })();
