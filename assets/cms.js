@@ -206,6 +206,16 @@
             });
         });
 
+        /* multiline text (disclaimers): blank line = paragraph break */
+        root.querySelectorAll('[data-cms-multi]').forEach(function (el) {
+            var v = resolve(data, el.getAttribute('data-cms-multi'));
+            if (v == null) return;
+            var escEl = function (t) {
+                return String(t).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+            };
+            el.innerHTML = String(v).split(/\n{2,}/).map(escEl).join('<br><br>');
+        });
+
         /* background images (divs styled with background-image) */
         root.querySelectorAll('[data-cms-bg]').forEach(function (el) {
             var v = resolve(data, el.getAttribute('data-cms-bg'));

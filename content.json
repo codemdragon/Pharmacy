@@ -353,7 +353,288 @@
           "linkLabel": "Learn More",
           "linkHref": "#"
         }
-      ]
+      ],
+      "pages": {
+        "common_conditions": {
+          "bannerTitle": "Support for Common Conditions",
+          "introHeading": "For short-term health conditions, we've got the solution.",
+          "introPara1": "Are you dealing with a minor or temporary health issue? Your local pharmacist is a valuable resource for treatment and relief.",
+          "introPara2": "Whether it's alleviating a common cold, managing seasonal allergies, or soothing a mild skin irritation, your pharmacist is there to support your path to better health with the services below.",
+          "introImg": "https://images.unsplash.com/photo-1625246333195-78d9c38ad449?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
+          "introBtnLabel": "Where Are We",
+          "introBtnHref": "where_are_we.html",
+          "sections": [
+            {
+              "cards": [],
+              "boxes": [
+                {
+                  "title": "Prescribing for Common Conditions",
+                  "text1": "Your pharmacist may be able to assess & prescribe medication for common conditions right in the pharmacy*.",
+                  "note": "*Conditions apply. Contact your local pharmacy to find out if these services are available.",
+                  "linkLabel": "Learn more",
+                  "linkHref": "#"
+                }
+              ]
+            },
+            {
+              "cards": [],
+              "boxes": [
+                {
+                  "title": "Ongoing Support & Advice",
+                  "text1": "Beyond just filling prescriptions, your local pharmacist can enhance your recovery by:",
+                  "list": [
+                    "demonstrating proper technique and best practices for using the medication",
+                    "providing education on hygiene practices or lifestyle changes to prevent re-occurrence",
+                    "advising to see a doctor if the condition doesn't improve with treatment",
+                    "ensuring you feel comfortable asking questions",
+                    "medication and allergy records for doctor appointments or travel"
+                  ],
+                  "linkLabel": "Where Are We",
+                  "linkHref": "where_are_we.html"
+                }
+              ]
+            },
+            {
+              "cards": [
+                {
+                  "title": "Prescription Transfers",
+                  "text1": "If you wish to transfer your prescriptions from another pharmacy to your local Guardian, I.D.A. or Remedy'sRx, simply fill out our online form and we do the rest.",
+                  "callLabel": "Call to transfer"
+                },
+                {
+                  "title": "Product Recommendations",
+                  "text1": "Your local pharmacist can recommend products and supplements that complement prescribed medications to alleviate symptoms of minor conditions, such as:",
+                  "list": [
+                    "Probiotics to prevent antibiotic-associated diarrhea",
+                    "Saline nasal spray for congestion",
+                    "Throat lozenges for throat irritation"
+                  ],
+                  "linkLabel": "Where Are We",
+                  "linkHref": "where_are_we.html"
+                }
+              ],
+              "boxes": [],
+              "heading": "Related Services"
+            },
+            {
+              "cards": [
+                {
+                  "title": "Prescription Renewals",
+                  "text1": "Renew your prescription in advance with the mobile app, online renewals or the medication synchronization service.",
+                  "linkLabel": "Learn more",
+                  "linkHref": "services/prescriptions.html"
+                },
+                {
+                  "title": "Medication Take Back",
+                  "text1": "Bring your expired or unused medications to your nearest pharmacy so they can be disposed of safely and in an environmentally friendly way.",
+                  "linkLabel": "Learn more",
+                  "linkHref": "services/prescriptions.html"
+                },
+                {
+                  "title": "Your Medication and Your Safety",
+                  "text1": "See how you can use and dispose of your medication safely, according to your pharmacist's direction.",
+                  "linkLabel": "Learn more",
+                  "linkHref": "services/prescriptions.html"
+                }
+              ],
+              "boxes": [],
+              "heading": "Other Services"
+            }
+          ],
+          "disclaimer": "The pharmacy services presented in this section are offered by Guardian, I.D.A. and Remedy'sRx pharmacists. The pharmacists are solely responsible for the professional activities carried out during the practice of pharmacy. These services are offered in participating pharmacies only. Certain fees and conditions may apply.\n\n* The information contained herein is provided for informational purposes only and is not intended to provide complete information on the subject matter or to replace the advice of a health professional. This information does not constitute medical consultation, diagnosis or opinion and should not be interpreted as such. Please consult your health care provider if you have any questions about your health, medications or treatment."
+        },
+        "long_term_conditions": {
+          "bannerTitle": "Support for Chronic Conditions",
+          "introHeading": "For chronic conditions, we've got the solution.",
+          "introPara1": "Do you have a chronic condition that requires long-term medication and support? Your local pharmacist can be your partner in care throughout your treatment journey.",
+          "introPara2": "Contact your local pharmacy to find out if these services are available.",
+          "introImg": "https://images.unsplash.com/photo-1555662365-652517a2d321?auto=format&fit=crop&w=1000&q=80",
+          "introBtnLabel": "Where Are We",
+          "introBtnHref": "where_are_we.html",
+          "sections": [
+            {
+              "cards": [],
+              "boxes": [
+                {
+                  "title": "Monitoring",
+                  "text1": "Your local pharmacist can play a crucial role in monitoring your medication and overall health. They can help you understand proper dosages, ensure medication adherence, and track medication effectiveness, so that you stay on the right track.",
+                  "text2": "You can benefit from services that support your chronic condition, including*:",
+                  "list": [
+                    "Chronic Disease Education",
+                    "Health screening",
+                    "Immunizations",
+                    "Lifestyle advice",
+                    "Refill reminders",
+                    "Prescription renewals",
+                    "Blister Packs",
+                    "and more"
+                  ],
+                  "linkLabel": "Where Are We",
+                  "linkHref": "where_are_we.html"
+                }
+              ]
+            },
+            {
+              "cards": [
+                {
+                  "title": "Pill-Packs",
+                  "text1": "Using a weekly, bi-weekly or monthly pill-pack can help you organize and take your medication exactly as prescribed. Ask your pharmacist if you can benefit from this service."
+                },
+                {
+                  "title": "Simplified Renewals",
+                  "text1": "If you need to renew your medication every month, have your pharmacist set up automatic renewals, so you don't forget. Come pick your medication up every time, at the same time during the month."
+                },
+                {
+                  "title": "Synchronization",
+                  "text1": "If you're on multiple medications or manage your family's, why not pick them all at once at the pharmacy once a month? Your pharmacist can synchronize your medication renewals at the same date."
+                }
+              ],
+              "boxes": [],
+              "heading": "Reminder Tools",
+              "intro": "With your busy lifestyle and schedule, remembering to take your medication may not rank high in your list of priorities. Fortunately, there are tools that can help you keep on track.",
+              "ctaLabel": "Where Are We",
+              "ctaHref": "where_are_we.html"
+            },
+            {
+              "cards": [],
+              "boxes": [
+                {
+                  "title": "Prescription Extension",
+                  "text1": "If your prescription is about to expire and you have your medical history on file, your pharmacist can extend it to save you time.*",
+                  "text2": "This ensures your medication therapy is never interrupted and gives you enough time to book an appointment with your healthcare professional.",
+                  "note": "*Some fees may apply. Ask your pharmacist for details.",
+                  "linkLabel": "Where Are We",
+                  "linkHref": "where_are_we.html"
+                }
+              ],
+              "ctaLabel": "See all services",
+              "ctaHref": "services/prescriptions.html"
+            }
+          ],
+          "disclaimer": "*The pharmacy services presented in this section are offered by Guardian, I.D.A. and Remedy'sRx pharmacists. The pharmacists are solely responsible for the professional activities carried out during the practice of pharmacy. These services are offered in participating pharmacies only. Certain fees and conditions may apply.\n\n** The information contained herein is provided for informational purposes only and is not intended to provide complete information on the subject matter or to replace the advice of a health professional. This information does not constitute medical consultation, diagnosis or opinion and should not be interpreted as such. Please consult your health care provider if you have any questions about your health, medications or treatment."
+        },
+        "medication_safety": {
+          "bannerTitle": "Medication Safety",
+          "introHeading": "Use and dispose of your medication safely",
+          "introPara1": "Medication should always be taken according to your prescriber's direction to avoid medication incidents.",
+          "introPara2": "Contact your local pharmacy to find out if these services are available.",
+          "introImg": "https://images.unsplash.com/photo-1587854692152-cbe660dbde88?auto=format&fit=crop&w=1000&q=80",
+          "introBtnLabel": "Where Are We",
+          "introBtnHref": "where_are_we.html",
+          "sections": [
+            {
+              "cards": [],
+              "boxes": [
+                {
+                  "title": "Returning your Medications Safely",
+                  "text1": "When was the last time you cleaned out your medicine cabinet? If you look hard enough, you may find expired or unused medications. These could include tablets purchased for prevention of illness during travel, unused pain medications, leftover cough syrup, or outdated birth control pills.",
+                  "text2": "Do not flush, pour down the sink or throw any of your medications in the garbage. Taking any of these actions can put you, your community and the environment at risk. Instead, visit your nearest pharmacy and let us dispose of them safely on your behalf."
+                }
+              ]
+            },
+            {
+              "cards": [],
+              "boxes": [
+                {
+                  "title": "Injections and Needles",
+                  "text1": "If your medication requires self-injection, your pharmacist can show you the right technique.",
+                  "text2": "You can also bring back sharp bins at your pharmacy for safe disposal."
+                }
+              ],
+              "ctaLabel": "See all services",
+              "ctaHref": "services/prescriptions.html"
+            },
+            {
+              "cards": [
+                {
+                  "badge": "1",
+                  "title": "Step 1",
+                  "text1": "Gather any unwanted or expired prescription medication, over-the-counter medication or natural health products."
+                },
+                {
+                  "badge": "2",
+                  "title": "Step 2",
+                  "text1": "Remove any personal or identifying information from the medication, if applicable. Do not mix medical sharps and medication."
+                },
+                {
+                  "badge": "3",
+                  "title": "Step 3",
+                  "text1": "Find your nearest pharmacy and drop by at your earliest convenience."
+                }
+              ],
+              "boxes": [],
+              "heading": "How to return medications",
+              "ctaLabel": "Where Are We",
+              "ctaHref": "where_are_we.html"
+            }
+          ],
+          "disclaimer": "The pharmacy services presented in this section are offered by Guardian, I.D.A. and Remedy'sRx pharmacists. The pharmacists are solely responsible for the professional activities carried out during the practice of pharmacy. These services are offered in participating pharmacies only. Certain fees and conditions may apply.\n\n* The information contained herein is provided for informational purposes only and is not intended to provide complete information on the subject matter or to replace the advice of a health professional. This information does not constitute medical consultation, diagnosis or opinion and should not be interpreted as such. Please consult your health care provider if you have any questions about your health, medications or treatment."
+        },
+        "renewals": {
+          "bannerTitle": "Prescription Renewals",
+          "introHeading": "4 Ways to Renew your Medication",
+          "introPara1": "You can renew your medication in advance to save time and never miss a dose. Your medication will be ready at the time of your choosing and can even be delivered to your door.",
+          "introPara2": "Discover the many options available and tailored to you.",
+          "introPara3": "Contact your local pharmacy to find out if these services are available.",
+          "introImg": "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=1000&q=80",
+          "introBtnLabel": "Where Are We",
+          "introBtnHref": "where_are_we.html",
+          "sections": [
+            {
+              "cards": [
+                {
+                  "badge": "1",
+                  "title": "The Mobile Apps",
+                  "tagline": "Manage your meds, anytime, anywhere: simple, fast, efficient for regular medication renewals.",
+                  "text1": "From your created account, renew an existing prescription or take a picture of a new one to send to your pharmacist. You can choose the date of pick-up or delivery. The mobile app is not linked to your pharmacy record or history.",
+                  "linkLabel": "Get started today",
+                  "linkHref": "#"
+                },
+                {
+                  "badge": "2",
+                  "title": "Online Renewals",
+                  "tagline": "Ideal for long-term drug therapies and chronic medication.",
+                  "text1": "With our mobile app, you can renew your medication online, set automatic renewals and even create reminders. You can view the list of all your medications and manage your family's as well. Ask your pharmacist for more information.",
+                  "linkLabel": "Access online renewals",
+                  "linkHref": "https://app.diemhealth.ca/"
+                },
+                {
+                  "badge": "3",
+                  "title": "Medication Synchronization",
+                  "tagline": "Multiple prescriptions? You can synchronize all of them at once.",
+                  "text1": "This service is available for your own prescriptions and your family's. A member of the pharmacy staff will contact you once your prescriptions are due to renew and will walk you through every step. Your pharmacist takes care of everything.",
+                  "linkLabel": "See our services",
+                  "linkHref": "services/prescriptions.html"
+                },
+                {
+                  "badge": "4",
+                  "title": "Phone",
+                  "tagline": "Ideal for renewals on the spot.",
+                  "text1": "You can renew your prescription directly on the phone. Dial your pharmacy's phone number and talk to a member of the pharmacy staff or leave a message on the automized voicemail. At the pharmacy, ask a pharmacy staff member to help.",
+                  "callLabel": "Contact your pharmacy"
+                }
+              ],
+              "boxes": [],
+              "heading": "Your Renewal Options"
+            },
+            {
+              "cards": [],
+              "boxes": [
+                {
+                  "title": "Tip - Prescription Transfers",
+                  "text1": "Switching pharmacies is easy! Simply provide us with the information of your current pharmacy and we'll do the rest!",
+                  "note": "*Certain conditions apply",
+                  "linkLabel": "Transfer my prescriptions",
+                  "linkHref": "services/prescriptions.html"
+                }
+              ],
+              "ctaLabel": "See all services",
+              "ctaHref": "services/prescriptions.html"
+            }
+          ],
+          "disclaimer": "The pharmacy services presented in this section are offered by Guardian, I.D.A. and Remedy'sRx pharmacists. The pharmacists are solely responsible for the professional activities carried out during the practice of pharmacy. These services are offered in participating pharmacies only. Certain fees and conditions may apply.\n\n* The information contained herein is provided for informational purposes only and is not intended to provide complete information on the subject matter or to replace the advice of a health professional. This information does not constitute medical consultation, diagnosis or opinion and should not be interpreted as such. Please consult your health care provider if you have any questions about your health, medications or treatment."
+        }
+      }
     },
     "vaccinations": {
       "bannerTitle": "Vaccination Services",
@@ -424,7 +705,222 @@
           "linkLabel": "Learn more",
           "linkHref": "services/vaccinations/other_vaccines.html"
         }
-      ]
+      ],
+      "pages": {
+        "other_vaccines": {
+          "bannerTitle": "Other Vaccines",
+          "bannerSub": "Vaccine-preventable diseases — check with your MarkhaMack pharmacist which vaccines are offered in store.",
+          "introHeading": "Vaccine-preventable diseases",
+          "introPara1": "Vaccination can minimize your risk of contracting several diseases, such as shingles, tetanus, hepatitis and certain childhood illnesses.",
+          "introPara2": "These vaccines are available for the general public. Check with your pharmacist if they are offered at our Markham location.",
+          "introImg": "https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?auto=format&fit=crop&w=1000&q=80",
+          "sections": [
+            {
+              "cards": [
+                {
+                  "title": "Flu",
+                  "text1": "Highly contagious infection of the respiratory tract caused by the influenza virus. Recommended every year.",
+                  "text2": "Recommended for: Everyone 6 months and older."
+                },
+                {
+                  "title": "COVID-19",
+                  "text1": "Infection caused by the constantly evolving SARS-CoV-2 coronavirus. Recommended every year.",
+                  "text2": "Recommended for: People aged 70 and over, or with a weakened immune system or chronic illness."
+                },
+                {
+                  "title": "Tetanus",
+                  "text1": "Caused by the bacterium Clostridium tetani, which can enter the body through a cut or bite wound.",
+                  "text2": "Recommended for: Everyone. *Availability varies by province"
+                },
+                {
+                  "title": "Hepatitis A & B",
+                  "text1": "Contagious liver infections caused by a virus. The chances of contracting the virus increase when traveling to certain parts of the world.",
+                  "text2": "Recommended for: Everyone."
+                },
+                {
+                  "title": "HPV",
+                  "text1": "Human papillomavirus (HPV) is a sexually-transmitted virus.",
+                  "text2": "Recommended for: Everyone, as of 3rd grade."
+                },
+                {
+                  "title": "Measles",
+                  "text1": "A serious and highly contagious disease, spread through the air when an infected person breathes, coughs, sneezes or speaks.",
+                  "text2": "Recommended for: Children aged 12 to 18 months and all those who have never been vaccinated. *Availability varies by province"
+                },
+                {
+                  "title": "Whooping Cough",
+                  "text1": "Also known as pertussis, a highly contagious disease that causes severe, uncontrollable coughing fits.",
+                  "text2": "Recommended for: Infants aged 2 months and over, and pregnant women. *Availability varies by province"
+                },
+                {
+                  "title": "Pneumococcal Infections",
+                  "text1": "Infections caused by the Streptococcus pneumonia bacteria.",
+                  "text2": "Recommended for: People with a chronic illness or over 65."
+                },
+                {
+                  "title": "Shingles",
+                  "text1": "Shingles happen when the virus that causes chickenpox stays in your body and can reactivate at any time during your life.",
+                  "text2": "Recommended for: Ages 18+ for those at increased risk, and ages 50+."
+                },
+                {
+                  "title": "RSV",
+                  "text1": "The respiratory syncytial virus (RSV) is a seasonal virus that circulates from fall to spring.",
+                  "text2": "Recommended for: People aged 60 and over."
+                }
+              ],
+              "boxes": [],
+              "heading": "Vaccines available",
+              "ctaLabel": "See all services",
+              "ctaHref": "services/vaccinations.html"
+            }
+          ],
+          "disclaimer": "The pharmacy services presented in this section are offered by Guardian, I.D.A. and Remedy'sRx pharmacists. The pharmacists are solely responsible for the professional activities carried out during the practice of pharmacy. These services are offered in participating pharmacies only. Certain fees and conditions may apply.\n\n* The information contained herein is provided for informational purposes only and is not intended to provide complete information on the subject matter or to replace the advice of a health professional. This information does not constitute medical consultation, diagnosis or opinion and should not be interpreted as such. Please consult your health care provider if you have any questions about your health, medications or treatment."
+        },
+        "respiratory_viruses": {
+          "bannerTitle": "Vaccination against Respiratory Viruses",
+          "bannerSub": "Vaccination helps you stay healthy and limit the spread of infections — and helps protect your loved ones from serious complications.",
+          "introHeading": "Stay protected, all season long",
+          "introPara1": "Vaccination against respiratory viruses helps you stay healthy and limit the spread of infections. By getting vaccinated, you can also help protect your loved ones from serious complications.",
+          "introPara2": "Talk to your MarkhaMack pharmacist today to schedule your vaccination.",
+          "introImg": "https://images.unsplash.com/photo-1584036561566-baf8f5f1b144?auto=format&fit=crop&w=1000&q=80",
+          "sections": [
+            {
+              "cards": [
+                {
+                  "title": "Flu",
+                  "text1": "Flu is a highly contagious infection of the respiratory tract caused by the influenza virus. As the virus evolves constantly, it is recommended that you get vaccinated every year.",
+                  "text2": "Recommended for: Everyone 6 months of age and older; people with a chronic illness, people aged 75 and over, and pregnant women."
+                },
+                {
+                  "title": "COVID-19",
+                  "text1": "COVID-19 is an infection caused by the constantly evolving SARS-CoV-2 coronavirus. It is therefore recommended that you get vaccinated every year.",
+                  "text2": "Recommended for: People aged 70 and over, or with a weakened immune system or a chronic illness (e.g. diabetes, heart disease)."
+                },
+                {
+                  "title": "RSV",
+                  "text1": "The respiratory syncytial virus (RSV) is a seasonal virus that circulates from fall to spring, affecting the respiratory system.",
+                  "text2": "Recommended for: People aged 60 and over."
+                },
+                {
+                  "title": "Pneumococcus Infections",
+                  "text1": "These infections are caused by the Streptococcus pneumonia bacteria.",
+                  "text2": "Recommended for: People with a chronic illness or over 65."
+                }
+              ],
+              "boxes": [],
+              "heading": "Vaccines against respiratory viruses",
+              "intro": "The following vaccines against respiratory viruses are available to the public. Ask your pharmacist if these vaccines are offered in store."
+            },
+            {
+              "cards": [
+                {
+                  "badge": "1",
+                  "text1": "The flu is much more serious than the common cold and can lead to health complications."
+                },
+                {
+                  "badge": "2",
+                  "text1": "The flu virus changes every year and so does the vaccine. For the best protection, you should get vaccinated every year."
+                },
+                {
+                  "badge": "3",
+                  "text1": "Not everyone is well equipped to overcome the flu. Avoid spreading the flu to your loved ones with a flu shot."
+                },
+                {
+                  "badge": "4",
+                  "text1": "It's easy! Just visit your local pharmacy."
+                }
+              ],
+              "boxes": [
+                {
+                  "title": "The flu is a serious infection",
+                  "text1": "The flu is a highly contagious infection that causes symptoms such as fever, cough, muscle aches and severe fatigue. For a healthy person, the flu will cause a lot of discomfort but will usually resolve without complications. For people with health issues, however, the flu can lead to hospitalization or even death. For these people, getting vaccinated every year is a good way to protect themselves against the flu."
+                }
+              ]
+            },
+            {
+              "cards": [],
+              "boxes": [
+                {
+                  "title": "Who is most at risk?",
+                  "text1": "Everyone can get the flu, including healthy adults. In fact, every year, 5-20% of adults will catch the virus. However, some people are at higher risk of flu related complications:",
+                  "list": [
+                    "People over 65 years old and children under 5 years old",
+                    "Pregnant women and those planning to become pregnant",
+                    "Residents of long-time care facilities",
+                    "People with chronic diseases such as diabetes"
+                  ]
+                }
+              ],
+              "ctaLabel": "See all services",
+              "ctaHref": "services/vaccinations.html"
+            }
+          ],
+          "disclaimer": "The pharmacy services presented in this section are offered by Guardian, I.D.A. and Remedy'sRx pharmacists. The pharmacists are solely responsible for the professional activities carried out during the practice of pharmacy. These services are offered in participating pharmacies only. Certain fees and conditions may apply.\n\n* The information contained herein is provided for informational purposes only and is not intended to provide complete information on the subject matter or to replace the advice of a health professional. This information does not constitute medical consultation, diagnosis or opinion and should not be interpreted as such. Please consult your health care provider if you have any questions about your health, medications or treatment."
+        },
+        "travel_vaccines": {
+          "bannerTitle": "Travel Vaccines",
+          "bannerSub": "Your MarkhaMack pharmacist and the planning of your next trip.",
+          "introHeading": "Before you take off, get covered",
+          "introPara1": "If you are planning to travel, it is important to check vaccination recommendations or requirements, as these vary from country to country.",
+          "introPara2": "Pharmacists who offer travel vaccination services can prescribe or administer the required vaccines.",
+          "introPara3": "They can also check that you are up to date with your basic vaccinations and prescribe a booster shot when necessary.",
+          "introPara4": "Consult your pharmacist at least 6 weeks before your departure date to make sure you have the necessary vaccinations and advice.",
+          "introImg": "https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1?auto=format&fit=crop&w=1000&q=80",
+          "sections": [
+            {
+              "cards": [
+                {
+                  "title": "Cholera / Traveller's Diarrhea",
+                  "list": [
+                    "You visit rural areas with limited access to potable water or where it may not be easy to apply recommended hygiene measures",
+                    "You are at risk of complications due to any health issues you have"
+                  ]
+                },
+                {
+                  "title": "Japanese Encephalitis",
+                  "list": [
+                    "You are planning a trip to a rural area of Asia or Australia"
+                  ]
+                },
+                {
+                  "title": "Yellow Fever",
+                  "list": [
+                    "You are planning a trip to Africa or South America",
+                    "You may require proof of vaccination to enter a country"
+                  ]
+                },
+                {
+                  "title": "Typhoid",
+                  "list": [
+                    "You are planning a trip to Asia",
+                    "You are planning a trip to Africa, the Middle East, or Latin America (especially for long-term stays), where you will visit rural areas or be in close contact with the local population"
+                  ]
+                },
+                {
+                  "title": "Rabies",
+                  "list": [
+                    "You could be in contact with bats",
+                    "You plan to work abroad, and your job involves contact with animals (e.g. animal conservation agent or volunteer in an animal shelter)"
+                  ]
+                },
+                {
+                  "title": "Hepatitis A & B",
+                  "list": [
+                    "You will be visiting rural areas with limited access to potable water or where it may not be easy to apply recommended hygiene measures or health standards",
+                    "You will engage in activities that place you at risk of infection"
+                  ]
+                }
+              ],
+              "boxes": [],
+              "heading": "Vaccines Available",
+              "intro": "Be sure to check whether you need any vaccines at least six weeks before your departure date, as some vaccines require more than one dose.",
+              "ctaLabel": "See all services",
+              "ctaHref": "services/vaccinations.html"
+            }
+          ],
+          "disclaimer": "The pharmacy services presented in this section are offered by Guardian, I.D.A. and Remedy'sRx pharmacists. The pharmacists are solely responsible for the professional activities carried out during the practice of pharmacy. These services are offered in participating pharmacies only. Certain fees and conditions may apply.\n\n* The information contained herein is provided for informational purposes only and is not intended to provide complete information on the subject matter or to replace the advice of a health professional. This information does not constitute medical consultation, diagnosis or opinion and should not be interpreted as such. Please consult your health care provider if you have any questions about your health, medications or treatment."
+        }
+      }
     },
     "assessments_monitoring": {
       "bannerTitle": "Assessments & Monitoring Services",
@@ -477,7 +973,104 @@
           "linkLabel": "All Vaccination Services",
           "linkHref": "services/vaccinations.html"
         }
-      ]
+      ],
+      "pages": {
+        "diabetes": {
+          "bannerTitle": "Testing & Monitoring for Diabetes",
+          "bannerSub": "To keep an eye on your diabetes — at Guardian MarkhaMack Pharmacy.",
+          "introHeading": "To keep an eye on your diabetes",
+          "introPara1": "Whether you have prediabetes, diabetes or are newly diagnosed, many tests exist to ensure your blood sugar is well under control and that your treatment is working well.",
+          "introImg": "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=1000&q=80",
+          "sections": [
+            {
+              "cards": [
+                {
+                  "title": "A1C Test",
+                  "text1": "For pre-diabetics and diabetics, A1C is an important test that indicates if your diabetes is well managed, over a short period of time. This finger prick blood test takes 5 minutes and can be done at any time. Taking this test will help you adjust your treatment to avoid diabetes-related complications."
+                },
+                {
+                  "title": "Blood Sugar Readings",
+                  "text1": "You can get your blood sugar readings at your pharmacy. It only requires a quick needle prick on your fingertip. You can then discuss your results with your pharmacist and learn about the best practices to get accurate readings."
+                },
+                {
+                  "title": "Self-Monitoring Education",
+                  "text1": "Monitoring your blood glucose is an important part of managing your diabetes. If you wish to use a blood glucose monitor at home, your pharmacist can suggest the best one for your needs and explain how you can use it."
+                }
+              ],
+              "boxes": [],
+              "heading": "Available at our pharmacy",
+              "ctaLabel": "See all services",
+              "ctaHref": "services/assessments_monitoring.html"
+            }
+          ],
+          "disclaimer": "The pharmacy services presented in this section are offered by Guardian, I.D.A. and Remedy'sRx pharmacists. The pharmacists are solely responsible for the professional activities carried out during the practice of pharmacy. These services are offered in participating pharmacies only. Certain fees and conditions may apply.\n\n* The information contained herein is provided for informational purposes only and is not intended to provide complete information on the subject matter or to replace the advice of a health professional. This information does not constitute medical consultation, diagnosis or opinion and should not be interpreted as such. Please consult your health care provider if you have any questions about your health, medications or treatment."
+        },
+        "heart_health": {
+          "bannerTitle": "Testing & Monitoring for Cardiovascular Health",
+          "bannerSub": "To keep an eye on your heart — at Guardian MarkhaMack Pharmacy.",
+          "introHeading": "To keep an eye on your cardiovascular health",
+          "introPara1": "If you are taking medication for your heart, your pharmacist could suggest some tests to determine if your blood pressure or your cholesterol is well managed or to see if adjustments to your treatment are necessary.",
+          "introImg": "https://images.unsplash.com/photo-1576091160550-21735dba66ef?auto=format&fit=crop&w=1000&q=80",
+          "sections": [
+            {
+              "cards": [
+                {
+                  "title": "Hypertension Monitoring",
+                  "text1": "You can get your blood pressure readings done in participating pharmacies using their on-site devices. These results can then be added to your personal health record. With this data, your pharmacist can ensure your medication is doing what it should and that your blood pressure is within normal ranges."
+                },
+                {
+                  "title": "Self-Monitoring Education",
+                  "text1": "If you'd rather take your blood pressure in the comfort of your home, you can rely on blood pressure monitors. Your pharmacist can suggest the best practices to get accurate readings and recommend devices that will meet your needs."
+                },
+                {
+                  "title": "Anticoagulant Treatment Monitoring (INR)",
+                  "text1": "If you are taking warfarin or anticoagulants, blood tests are necessary to ensure that your anti-clotting medication is on target. Your pharmacist can prescribe this test as needed and adjust your medication. You do not need to have a heart condition to get this test."
+                },
+                {
+                  "title": "Cholesterol Monitoring",
+                  "text1": "Getting your cholesterol levels checked is an important step of preventing heart-related diseases and stroke, especially since there are usually no symptoms associated with high cholesterol. Your pharmacist can prescribe this simple blood test if needed and make sure your cholesterol medication is working as it should."
+                }
+              ],
+              "boxes": [],
+              "heading": "Available at our pharmacy",
+              "ctaLabel": "See all services",
+              "ctaHref": "services/assessments_monitoring.html"
+            }
+          ],
+          "disclaimer": "The pharmacy services presented in this section are offered by Guardian, I.D.A. and Remedy'sRx pharmacists. The pharmacists are solely responsible for the professional activities carried out during the practice of pharmacy. These services are offered in participating pharmacies only. Certain fees and conditions may apply.\n\n* The information contained herein is provided for informational purposes only and is not intended to provide complete information on the subject matter or to replace the advice of a health professional. This information does not constitute medical consultation, diagnosis or opinion and should not be interpreted as such. Please consult your health care provider if you have any questions about your health, medications or treatment."
+        },
+        "respiratory_health": {
+          "bannerTitle": "Testing & Monitoring for Respiratory Health",
+          "bannerSub": "To keep an eye on your respiratory health — at Guardian MarkhaMack Pharmacy.",
+          "introHeading": "To keep an eye on your respiratory health",
+          "introPara1": "If you have asthma or are experiencing strep throat symptoms, talk to your pharmacist about these tests to ensure your respiratory health is in order.",
+          "introImg": "https://images.unsplash.com/photo-1579154204601-01588f351e67?auto=format&fit=crop&w=1000&q=80",
+          "sections": [
+            {
+              "cards": [
+                {
+                  "title": "Spirometry",
+                  "text1": "Spirometry is a simple test that measures how much air flows in and out your lungs. This test can help diagnose certain lung diseases like asthma and chronic obstructive pulmonary diseases. This test will also confirm if your treatment is working well and if your condition is under control."
+                },
+                {
+                  "title": "Rapid Strep Throat Testing",
+                  "text1": "If you are experiencing symptoms related to a strep throat infection, a nurse will perform this screening test on site to ensure:",
+                  "text2": "Refer to your pharmacist to have your prescription taken care of then.",
+                  "list": [
+                    "That a bacteria is causing the infection",
+                    "That antibiotics will be effective"
+                  ]
+                }
+              ],
+              "boxes": [],
+              "heading": "Available at our pharmacy",
+              "ctaLabel": "See all services",
+              "ctaHref": "services/assessments_monitoring.html"
+            }
+          ],
+          "disclaimer": "The pharmacy services presented in this section are offered by Guardian, I.D.A. and Remedy'sRx pharmacists. The pharmacists are solely responsible for the professional activities carried out during the practice of pharmacy. These services are offered in participating pharmacies only. Certain fees and conditions may apply.\n\n* The information contained herein is provided for informational purposes only and is not intended to provide complete information on the subject matter or to replace the advice of a health professional. This information does not constitute medical consultation, diagnosis or opinion and should not be interpreted as such. Please consult your health care provider if you have any questions about your health, medications or treatment."
+        }
+      }
     },
     "medication_customization": {
       "bannerTitle": "Medication Customization Services",
@@ -540,7 +1133,109 @@
           "linkLabel": "All Vaccination Services",
           "linkHref": "services/vaccinations.html"
         }
-      ]
+      ],
+      "pages": {
+        "personalized_medication": {
+          "bannerTitle": "Personalized Medication",
+          "bannerSub": "Sticking to your medication isn't always easy — we can help, at Guardian MarkhaMack Pharmacy.",
+          "introHeading": "Sticking to your medication isn't always easy",
+          "introPara1": "See how your pharmacist can provide your medication according to your personal preferences.",
+          "introImg": "https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?auto=format&fit=crop&w=1000&q=80",
+          "sections": [
+            {
+              "cards": [
+                {
+                  "title": "Dosage Form",
+                  "text1": "You prefer liquids over pills? Your pharmacist can turn your pills into a liquid formula if possible."
+                },
+                {
+                  "title": "Flavour",
+                  "text1": "Some medication tastes bad, but it doesn't have to be that way. Your pharmacist can add a flavour to improve the taste. This can go a long way, especially with children."
+                },
+                {
+                  "title": "Pill Size",
+                  "text1": "If your pills are hard to swallow because of their size, ask your pharmacist if they can find a smaller alternative to make things easier."
+                },
+                {
+                  "title": "Allergy-Free Formula",
+                  "text1": "If you are allergic to certain components of your medication, your pharmacist can find allergy-free formulations as a substitution."
+                },
+                {
+                  "title": "Custom Dose",
+                  "text1": "Your pharmacist can adjust your medication dosage to your needs or preference in order to minimize side effects and optimize results."
+                },
+                {
+                  "title": "1 \"Pill\" For All",
+                  "text1": "For certain types of medication and conditions (diabetes, hypertension, COPD and asthma), your pharmacist can make sure that some of your medications are combined into one."
+                }
+              ],
+              "boxes": [],
+              "heading": "Your options",
+              "ctaLabel": "See all services",
+              "ctaHref": "services/medication_customization.html"
+            }
+          ],
+          "disclaimer": "The pharmacy services presented in this section are offered by Guardian, I.D.A. and Remedy'sRx pharmacists. The pharmacists are solely responsible for the professional activities carried out during the practice of pharmacy. These services are offered in participating pharmacies only. Certain fees and conditions may apply.\n\n* The information contained herein is provided for informational purposes only and is not intended to provide complete information on the subject matter or to replace the advice of a health professional. This information does not constitute medical consultation, diagnosis or opinion and should not be interpreted as such. Please consult your health care provider if you have any questions about your health, medications or treatment."
+        },
+        "personalized_packaging": {
+          "bannerTitle": "Personalized Packaging",
+          "bannerSub": "Your medication should work for you — the packaging too. At Guardian MarkhaMack Pharmacy.",
+          "introHeading": "Your medication should work for you",
+          "introPara1": "That applies to the packaging too. Request packaging that meets your needs and preferences.",
+          "introImg": "https://images.unsplash.com/photo-1557935728-3bcb0d3e8e5f?auto=format&fit=crop&w=1000&q=80",
+          "sections": [
+            {
+              "cards": [
+                {
+                  "title": "Large-Type Prescription Labels",
+                  "text1": "If you find prescription labels hard to read, ask for our large-type labels to help you read them easily.",
+                  "note": "*In participating pharmacies only"
+                },
+                {
+                  "title": "Easy-to-Open Medication Bottles",
+                  "text1": "If you find it difficult to open your medication bottle, you can ask your pharmacist to provide easy-to-open containers, with lids adapted to seniors and people with poor motor skills."
+                }
+              ],
+              "boxes": [],
+              "heading": "Your options",
+              "ctaLabel": "See all services",
+              "ctaHref": "services/medication_customization.html"
+            }
+          ],
+          "disclaimer": "The pharmacy services presented in this section are offered by Guardian, I.D.A. and Remedy'sRx pharmacists. The pharmacists are solely responsible for the professional activities carried out during the practice of pharmacy. These services are offered in participating pharmacies only. Certain fees and conditions may apply.\n\n* The information contained herein is provided for informational purposes only and is not intended to provide complete information on the subject matter or to replace the advice of a health professional. This information does not constitute medical consultation, diagnosis or opinion and should not be interpreted as such. Please consult your health care provider if you have any questions about your health, medications or treatment."
+        },
+        "therapy_adjustment": {
+          "bannerTitle": "Medication Adjustment Services",
+          "bannerSub": "Your therapy is constantly evolving — at Guardian MarkhaMack Pharmacy.",
+          "introHeading": "Your therapy is constantly evolving",
+          "introPara1": "Your medication therapy should be comfortable and suited to your lifestyle. If your medication is the source of undesired effects and interferes with your everyday life, talk to your pharmacist. They may be able to make it more manageable.",
+          "introImg": "https://images.unsplash.com/photo-1471864190281-a93a3070b6de?auto=format&fit=crop&w=1000&q=80",
+          "sections": [
+            {
+              "cards": [],
+              "boxes": [
+                {
+                  "title": "Prescription Adjustment & Substitution",
+                  "text1": "With some adjustments from your pharmacist, side effects can be minimized, harmful drug interactions can be limited and dosages can be decreased in a way that is not detrimental to your well-being.",
+                  "text2": "If your medication is out of stock, your pharmacist can make sure that your therapy is uninterrupted by making substitutions accordingly."
+                },
+                {
+                  "title": "Medication Review",
+                  "text1": "Sit down with your pharmacist for a medication review to determine if:",
+                  "list": [
+                    "Any harmful effects or interactions are caused by combining your medication together",
+                    "One of your medications can be removed from your therapy",
+                    "There is a cheaper medication available"
+                  ]
+                }
+              ],
+              "ctaLabel": "See all services",
+              "ctaHref": "services/medication_customization.html"
+            }
+          ],
+          "disclaimer": "The pharmacy services presented in this section are offered by Guardian, I.D.A. and Remedy'sRx pharmacists. The pharmacists are solely responsible for the professional activities carried out during the practice of pharmacy. These services are offered in participating pharmacies only. Certain fees and conditions may apply.\n\n* The information contained herein is provided for informational purposes only and is not intended to provide complete information on the subject matter or to replace the advice of a health professional. This information does not constitute medical consultation, diagnosis or opinion and should not be interpreted as such. Please consult your health care provider if you have any questions about your health, medications or treatment."
+        }
+      }
     },
     "wellness_consultation": {
       "bannerTitle": "Wellness Consultation Services",
@@ -614,7 +1309,152 @@
           "linkLabel": "All Medication Customization Services",
           "linkHref": "services/medication_customization.html"
         }
-      ]
+      ],
+      "pages": {
+        "maternity_pregnancy": {
+          "bannerTitle": "Maternity Services",
+          "bannerSub": "Maintain a healthy pregnancy and more — at Guardian MarkhaMack Pharmacy.",
+          "introHeading": "Maintain a healthy pregnancy and more",
+          "introPara1": "Looking to get pregnant? Your pharmacist can accompany you through the whole process until the baby arrives.",
+          "introImg": "https://images.unsplash.com/photo-1511895426328-dc871419a019?auto=format&fit=crop&w=1000&q=80",
+          "sections": [
+            {
+              "cards": [
+                {
+                  "title": "Advice on Vitamins",
+                  "text1": "Folic acid plays an essential role in the development of your baby, even before the very first weeks of life. Ideally, you should start taking a supplement at least three months before stopping contraception. Talk to your pharmacist before choosing a product."
+                },
+                {
+                  "title": "Advice on Medication",
+                  "text1": "Some medication should be avoided during pregnancy or if you are breastfeeding because they can be harmful to the baby. Before taking any medication, talk to your pharmacist to know more about potential adverse effects. If your little one is in need of OTC medication, your pharmacist can offer advice on the best way to administer it."
+                },
+                {
+                  "title": "Pregnancy-Related Symptoms",
+                  "text1": "Nausea and acid reflux are common side effects pregnant women may experience. While they're usually not serious, they can be pretty unpleasant. Your pharmacist can help you manage your symptoms while ensuring there are no risks for the baby."
+                },
+                {
+                  "title": "Gestational Diabetes",
+                  "text1": "If you develop gestational diabetes during the course of your pregnancy and must take insulin to control it, your pharmacist will show you how and give you tips on how to manage your condition, including advice on how to monitor your blood glucose at home."
+                },
+                {
+                  "title": "Breastfeeding",
+                  "text1": "If you are a new mother, you may need a breast pump. Fortunately, it is possible to rent this device and all its accessories in participating pharmacies. Your pharmacist can also explain how to use it and how to clean your breast pump equipment."
+                },
+                {
+                  "title": "App and Home Deliveries",
+                  "text1": "Let your pharmacist come to you: use our app to get your prescriptions prepared ahead of time or to set up home delivery services. This might be useful towards the end of your pregnancy or when your baby is home with you."
+                }
+              ],
+              "boxes": [],
+              "heading": "How we can help",
+              "ctaLabel": "See all services",
+              "ctaHref": "services/wellness_consultation.html"
+            }
+          ],
+          "disclaimer": "The pharmacy services presented in this section are offered by Guardian, I.D.A. and Remedy'sRx pharmacists. The pharmacists are solely responsible for the professional activities carried out during the practice of pharmacy. These services are offered in participating pharmacies only. Certain fees and conditions may apply.\n\n* The information contained herein is provided for informational purposes only and is not intended to provide complete information on the subject matter or to replace the advice of a health professional. This information does not constitute medical consultation, diagnosis or opinion and should not be interpreted as such. Please consult your health care provider if you have any questions about your health, medications or treatment."
+        },
+        "smoking_cessation": {
+          "bannerTitle": "Smoking Cessation Services",
+          "bannerSub": "Your smoking cessation action plan — with Guardian MarkhaMack Pharmacy.",
+          "introHeading": "Your smoking cessation action plan",
+          "introPara1": "Do you wish to stop smoking? Your pharmacist can provide advice and guide you through this journey. Here's an action plan that you can follow with your pharmacist:",
+          "introImg": "https://images.unsplash.com/photo-1551690656952-34342bb7c2f2?auto=format&fit=crop&w=1000&q=80",
+          "sections": [
+            {
+              "cards": [
+                {
+                  "badge": "1",
+                  "title": "Choose a starting point",
+                  "text1": "We all have to start somewhere, so pick a starting date and set achievable goals.",
+                  "text2": "Tell your friends and family and ask them for support."
+                },
+                {
+                  "badge": "2",
+                  "title": "Meet your pharmacist",
+                  "text1": "Your pharmacist will:",
+                  "list": [
+                    "Determine how dependent you are on nicotine",
+                    "Help you understand your main smoking habits and identify your triggers",
+                    "Ask you about your previous attempts to quit smoking to make sure you don't fall back into the same bad habits"
+                  ]
+                },
+                {
+                  "badge": "3",
+                  "title": "Follow a personalized treatment",
+                  "text1": "If needed, your pharmacist can prescribe a tailored solution, including:",
+                  "list": [
+                    "Nicotine replacement products used for replacing the nicotine from cigarettes (patches, chewing gum and lozenges)"
+                  ]
+                },
+                {
+                  "badge": "4",
+                  "title": "Reward yourself",
+                  "text1": "You should reward yourself when you're progressing.",
+                  "text2": "Many benefits of a smoke-free life can be felt in the long-term, but some benefits are almost instant as well. So keep on going!"
+                }
+              ],
+              "boxes": [],
+              "heading": "The plan",
+              "ctaLabel": "See all services",
+              "ctaHref": "services/wellness_consultation.html"
+            }
+          ],
+          "disclaimer": "The pharmacy services presented in this section are offered by Guardian, I.D.A. and Remedy'sRx pharmacists. The pharmacists are solely responsible for the professional activities carried out during the practice of pharmacy. These services are offered in participating pharmacies only. Certain fees and conditions may apply.\n\n* The information contained herein is provided for informational purposes only and is not intended to provide complete information on the subject matter or to replace the advice of a health professional. This information does not constitute medical consultation, diagnosis or opinion and should not be interpreted as such. Please consult your health care provider if you have any questions about your health, medications or treatment."
+        },
+        "travel_health": {
+          "bannerTitle": "Travel Health Services",
+          "bannerSub": "Traveling is for everyone — at Guardian MarkhaMack Pharmacy.",
+          "introHeading": "Traveling is for everyone",
+          "introPara1": "Whether you are hoping to prevent discomfort during your trip, or have a chronic condition that requires medication, your pharmacist has many services that can help. Advise your pharmacist of your travel plans as early as possible to fully benefit from personalized advice.",
+          "introImg": "https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1?auto=format&fit=crop&w=1000&q=80",
+          "sections": [
+            {
+              "cards": [
+                {
+                  "title": "Medication Adjustment for Time Zones",
+                  "text1": "If you are crossing multiple time zones and need to take your medication at a specific time, your pharmacist can make the necessary adjustments to ensure your treatment is uninterrupted."
+                },
+                {
+                  "title": "Over-the-Counter Medication Recommendation",
+                  "text1": "Some products are useful to have on hand abroad. From heartburn, allergies or headaches, make sure you have what you need to treat minor health issues."
+                },
+                {
+                  "title": "Medication Renewals",
+                  "text1": "You should have enough medication for the duration of your trip, and a bit more just in case of delays. Renew your prescriptions before departure to ensure you don't run out.",
+                  "note": "*Certain conditions apply"
+                },
+                {
+                  "title": "Medication Prescriptions for Travelers",
+                  "text1": "Your pharmacist can prescribe medication against Traveler's Diarrhea, Malaria and Altitude Sickness depending on your needs and destination."
+                },
+                {
+                  "title": "Prescription List & Review for Customs",
+                  "text1": "Get a list of all your medication to clear customs easily and a medication review to ensure all your medications are up to date and safe."
+                },
+                {
+                  "title": "Travel Vaccines",
+                  "text1": "Depending on your destination, some immunizations should be considered before and sometimes after your trip for maximum safety.",
+                  "linkLabel": "Learn more",
+                  "linkHref": "services/vaccinations/travel_vaccines.html"
+                },
+                {
+                  "title": "Advice for Travelers with Specific Needs",
+                  "text1": "Travelling while pregnant or with a chronic condition can be intimidating. Ask your pharmacist to recommend which medication and supplies to bring along."
+                },
+                {
+                  "title": "Personalized Travel Kit",
+                  "text1": "Questions on mosquito repellent, sunscreen or rehydration solution? Your pharmacist can help you pick the best products for your personalized travel kit."
+                }
+              ],
+              "boxes": [],
+              "heading": "How we can help",
+              "ctaLabel": "See all services",
+              "ctaHref": "services/wellness_consultation.html"
+            }
+          ],
+          "disclaimer": "The pharmacy services presented in this section are offered by Guardian, I.D.A. and Remedy'sRx pharmacists. The pharmacists are solely responsible for the professional activities carried out during the practice of pharmacy. These services are offered in participating pharmacies only. Certain fees and conditions may apply.\n\n* The information contained herein is provided for informational purposes only and is not intended to provide complete information on the subject matter or to replace the advice of a health professional. This information does not constitute medical consultation, diagnosis or opinion and should not be interpreted as such. Please consult your health care provider if you have any questions about your health, medications or treatment."
+        }
+      }
     }
   }
 }

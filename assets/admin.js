@@ -678,18 +678,96 @@ var AdminUI = {
 
     renderServices: function () {
         var hub = this._svcHub || 'prescriptions';
+        var page = this._svcPage || '';
         var pills = this.SVC_HUBS.map(function (h) {
-            return '<button class="pill' + (h.key === hub ? ' active' : '') + '" onclick="AdminUI.renderServiceHub(\'' + h.key + '\')">' +
+            return '<button class="pill' + (h.key === hub && !page ? ' active' : '') + '" onclick="AdminUI.renderServiceHub(\'' + h.key + '\')">' +
                 '<i class="fas ' + h.icon + '"></i> ' + h.name + '</button>';
         }).join('');
+
+        var pagesObj = AdminCMS.get('servicesPages.' + hub + '.pages') || {};
+        var pagePills = '<button class="pill' + (page === '' ? ' active' : '') + '" onclick="AdminUI.renderServiceHub(\'' + hub + '\')"><i class="fas fa-house"></i> Main page</button>';
+        Object.keys(pagesObj).forEach(function (slug) {
+            var t = (pagesObj[slug] && pagesObj[slug].bannerTitle) || slug;
+            pagePills += '<button class="pill' + (page === slug ? ' active' : '') + '" onclick="AdminUI.renderServicePage(\'' + hub + '\',\'' + slug + '\')">' + escHtml(t) + '</button>';
+        });
+
         document.getElementById('panel').innerHTML =
             '<div class="pill-row">' + pills + '</div>' +
-            this.svcHubCards(hub);
+            '<h4 class="section-heading" style="margin:2px 0 8px">Pages in this section</h4>' +
+            '<div class="pill-row">' + pagePills + '</div>' +
+            (page ? this.svcPageCards(hub, page) : this.svcHubCards(hub));
     },
 
     renderServiceHub: function (key) {
         this._svcHub = key;
+        this._svcPage = '';
         this.renderServices();
+    },
+
+    renderServicePage: function (hub, slug) {
+        this._svcHub = hub;
+        this._svcPage = slug;
+        this.renderServices();
+    },
+
+    CARD_LBL: { badge: 'Step number', title: 'Title', tagline: 'Tagline', text1: 'Paragraph 1', text2: 'Paragraph 2', text3: 'Paragraph 3', text4: 'Paragraph 4', note: 'Small note', linkLabel: 'Link text', linkHref: 'Link', linkLabel2: 'Link 2 text', linkHref2: 'Link 2', callLabel: 'Call button text' },
+
+    cardFields: function (prefix, card) {
+        var order = ['badge', 'title', 'tagline', 'text1', 'text2', 'text3', 'text4', 'note', 'linkLabel', 'linkHref', 'linkLabel2', 'linkHref2', 'callLabel'];
+        var h = '';
+        order.forEach(function (k) {
+            if (card[k] == null) return;
+            h += AdminUI.fld(prefix + '.' + k, AdminUI.CARD_LBL[k] || k, { area: /^text|^note/.test(k), rows: 2 });
+        });
+        if (Array.isArray(card.list)) {
+            card.list.forEach(function (item, li) {
+                h += AdminUI.fld(prefix + '.list.' + li, 'Bullet ' + (li + 1), { area: true, rows: 2 });
+            });
+        }
+        return h;
+    },
+
+    svcPageCards: function (hub, slug) {
+        var k = 'servicesPages.' + hub + '.pages.' + slug;
+        var d = AdminCMS.get(k) || {};
+        var html = this.card('fa-flag', 'Page banner', 'The blue banner at the top of the page.', `
+            ${this.fld(k + '.bannerTitle', 'Title')}
+            ${d.bannerSub != null ? this.fld(k + '.bannerSub', 'Subtitle') : ''}`);
+
+        var intro = this.fld(k + '.introHeading', 'Heading');
+        for (var p = 1; d['introPara' + p] != null; p++) {
+            intro += this.fld(k + '.introPara' + p, 'Paragraph ' + p, { area: true, rows: 2 });
+        }
+        if (d.introImg != null) intro += this.fld(k + '.introImg', 'Photo link');
+        if (d.introBtnLabel != null) {
+            intro += '<div class="field-row">' + this.fld(k + '.introBtnLabel', 'Button text') + this.fld(k + '.introBtnHref', 'Button link') + '</div>';
+        }
+        html += this.card('fa-book-open', 'Intro', 'The first text block under the banner.', intro);
+
+        var self = this;
+        (d.sections || []).forEach(function (sec, si) {
+            var sp = k + '.sections.' + si;
+            var body = '';
+            if (sec.heading != null) body += self.fld(sp + '.heading', 'Section heading');
+            if (sec.intro != null) body += self.fld(sp + '.intro', 'Section intro', { area: true, rows: 2 });
+            (sec.boxes || []).forEach(function (box, bi) {
+                body += '<div class="field-group">' + self.cardFields(sp + '.boxes.' + bi, box) + '</div>';
+            });
+            (sec.cards || []).forEach(function (c, ci) {
+                var label = 'Card ' + (ci + 1) + (c.title ? ' - ' + c.title : '');
+                body += '<div class="field-group"><h5 class="mini-h">' + escHtml(label) + '</h5>' + self.cardFields(sp + '.cards.' + ci, c) + '</div>';
+            });
+            if (sec.ctaLabel != null) {
+                body += '<div class="field-row">' + self.fld(sp + '.ctaLabel', 'Bottom button text') + self.fld(sp + '.ctaHref', 'Bottom button link') + '</div>';
+            }
+            var title = sec.heading ? sec.heading : ('Section ' + (si + 1));
+            html += self.card('fa-layer-group', escHtml(title), 'A block of content on this page.', body);
+        });
+
+        if (d.disclaimer != null) {
+            html += this.card('fa-scale-small', 'Small print', 'The grey fine-print at the bottom. Leave a blank line between paragraphs.', this.fld(k + '.disclaimer', 'Disclaimer', { area: true, rows: 5 }));
+        }
+        return html;
     },
 
     svcHubCards: function (hub) {
@@ -1000,7 +1078,7 @@ var AdminUI = {
     },
 
     prettyPath: function (path) {
-        var words = { store: 'Store', phone: 'Phone', badge: 'Badge', email: 'Email', name: 'Name', addressLine1: 'Street address', addressLine2: 'City & postal', plusCode: 'Plus code', mapsUrl: 'Maps link', lat: 'Latitude', lng: 'Longitude', zoom: 'Zoom', hours: 'Hours', day: 'Day', time: 'Time', contactPage: 'Contact page', locationPage: 'Where Are We', bannerTitle: 'Banner title', bannerSub: 'Banner subtitle', formHeading: 'Form heading', formIntro: 'Form intro', formNote: 'Form note', formspreeId: 'Formspree ID', topics: 'Topics', footer: 'Footer', columns: 'Column', links: 'Links', heading: 'Heading', label: 'Text', href: 'Link', icon: 'Icon', social: 'Social', socialHeading: 'Follow us heading', bottomText: 'Copyright line', slides: 'Slides', title: 'Title', text: 'Text', image: 'Image URL', btnLabel: 'Button text', btnHref: 'Button link', quality: 'Quality banner', sub: 'Subtitle', services: 'Services section', cards: 'Cards', subheading: 'Subtitle', moreLabel: 'More-link text', moreHref: 'More-link target', linkLabel: 'Link text', linkHref: 'Link', subscription: 'Email signup', placeholder: 'Placeholder', whoWeAre: 'Who We Are', servicesPages: 'Services', blocks: 'Photo sections', img: 'Photo link', suggestedHeading: 'Suggested heading', suggestedSub: 'Suggested subtitle', suggestedCards: 'Suggested cards', vaccines: 'Vaccine list', vaccinesHeading: 'Vaccine section heading', vaccinesIntro: 'Vaccine section intro', vaccinesNote: 'Vaccine note', familyHeading: 'Family section heading', familyIntro: 'Family section intro', familyCards: 'Family cards', infoBoxes: 'Good-to-know boxes', prescriptions: 'Prescriptions', vaccinations: 'Vaccinations', assessments_monitoring: 'Assessments & Monitoring', medication_customization: 'Medication Customization', wellness_consultation: 'Wellness Consultation', introHeading: 'Intro heading', introPara1: 'Paragraph 1', introPara2: 'Paragraph 2', introPara3: 'Paragraph 3', introImg: 'Intro image', ctaCallLabel: 'Call button text', ctaWhereLabel: 'Where button text', localHeading: 'Local heading', localPara1: 'Local paragraph 1', localPara2: 'Local paragraph 2', localImg: 'Local image', historyTitle: 'History heading', timeline: 'Timeline', year: 'Year', mckessonHeading: 'McKesson heading', mckessonText: 'McKesson text', bannerTitle: 'Banner title', bannerSub: 'Banner subtitle' };
+        var words = { store: 'Store', phone: 'Phone', badge: 'Badge', email: 'Email', name: 'Name', addressLine1: 'Street address', addressLine2: 'City & postal', plusCode: 'Plus code', mapsUrl: 'Maps link', lat: 'Latitude', lng: 'Longitude', zoom: 'Zoom', hours: 'Hours', day: 'Day', time: 'Time', contactPage: 'Contact page', locationPage: 'Where Are We', bannerTitle: 'Banner title', bannerSub: 'Banner subtitle', formHeading: 'Form heading', formIntro: 'Form intro', formNote: 'Form note', formspreeId: 'Formspree ID', topics: 'Topics', footer: 'Footer', columns: 'Column', links: 'Links', heading: 'Heading', label: 'Text', href: 'Link', icon: 'Icon', social: 'Social', socialHeading: 'Follow us heading', bottomText: 'Copyright line', slides: 'Slides', title: 'Title', text: 'Text', image: 'Image URL', btnLabel: 'Button text', btnHref: 'Button link', quality: 'Quality banner', sub: 'Subtitle', services: 'Services section', cards: 'Cards', subheading: 'Subtitle', moreLabel: 'More-link text', moreHref: 'More-link target', linkLabel: 'Link text', linkHref: 'Link', subscription: 'Email signup', placeholder: 'Placeholder', whoWeAre: 'Who We Are', servicesPages: 'Services', blocks: 'Photo sections', img: 'Photo link', suggestedHeading: 'Suggested heading', suggestedSub: 'Suggested subtitle', suggestedCards: 'Suggested cards', vaccines: 'Vaccine list', vaccinesHeading: 'Vaccine section heading', vaccinesIntro: 'Vaccine section intro', vaccinesNote: 'Vaccine note', familyHeading: 'Family section heading', familyIntro: 'Family section intro', familyCards: 'Family cards', infoBoxes: 'Good-to-know boxes', pages: 'Pages', sections: 'Sections', heading: 'Heading', intro: 'Intro text', cards: 'Cards', boxes: 'Boxes', ctaLabel: 'Bottom button text', ctaHref: 'Bottom button link', tagline: 'Tagline', badge: 'Step number', note: 'Small note', list: 'Bullet list', text1: 'Paragraph 1', text2: 'Paragraph 2', text3: 'Paragraph 3', text4: 'Paragraph 4', disclaimer: 'Disclaimer', introBtnLabel: 'Button text', introBtnHref: 'Button link', callLabel: 'Call button text', renewals: 'Renewals', common_conditions: 'Common Conditions', long_term_conditions: 'Long-term Conditions', medication_safety: 'Medication Safety', other_vaccines: 'Other Vaccines', respiratory_viruses: 'Respiratory Viruses', travel_vaccines: 'Travel Vaccines', diabetes: 'Diabetes', heart_health: 'Heart Health', respiratory_health: 'Respiratory Health', personalized_medication: 'Personalized Medication', personalized_packaging: 'Personalized Packaging', therapy_adjustment: 'Therapy Adjustment', maternity_pregnancy: 'Maternity & Pregnancy', smoking_cessation: 'Smoking Cessation', travel_health: 'Travel Health', prescriptions: 'Prescriptions', vaccinations: 'Vaccinations', assessments_monitoring: 'Assessments & Monitoring', medication_customization: 'Medication Customization', wellness_consultation: 'Wellness Consultation', introHeading: 'Intro heading', introPara1: 'Paragraph 1', introPara2: 'Paragraph 2', introPara3: 'Paragraph 3', introImg: 'Intro image', ctaCallLabel: 'Call button text', ctaWhereLabel: 'Where button text', localHeading: 'Local heading', localPara1: 'Local paragraph 1', localPara2: 'Local paragraph 2', localImg: 'Local image', historyTitle: 'History heading', timeline: 'Timeline', year: 'Year', mckessonHeading: 'McKesson heading', mckessonText: 'McKesson text', bannerTitle: 'Banner title', bannerSub: 'Banner subtitle' };
         return path.split('.').map(function (seg) {
             if (/^\d+$/.test(seg)) return '#' + (parseInt(seg, 10) + 1);
             return words[seg] || seg;
@@ -1008,7 +1086,11 @@ var AdminUI = {
     },
 
     goto: function (section, path) {
-        if (path.indexOf('servicesPages.') === 0) this._svcHub = path.split('.')[1];
+        if (path.indexOf('servicesPages.') === 0) {
+            var pp = path.split('.');
+            this._svcHub = pp[1];
+            this._svcPage = (pp[2] === 'pages') ? (pp[3] || '') : '';
+        }
         this.switchTab(section);
         requestAnimationFrame(function () {
             requestAnimationFrame(function () {
