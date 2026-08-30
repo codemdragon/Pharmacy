@@ -178,6 +178,103 @@
     transform: translateX(4px);
 }
 
+/* ===== Progressive reveal footer =======================================
+   Footer sits sticky at the bottom, BEHIND an opaque page shell; scrolling
+   slides the page up to uncover it. No height math needed - the footer's
+   own in-flow slot defines the reveal distance.
+   Requires overflow-x: clip (set in style.css) so sticky keeps working. */
+@media (prefers-reduced-motion: no-preference) {
+    #footer-container {
+        position: sticky;
+        bottom: 0;
+        z-index: -1;
+    }
+
+    /* Guarantee every top-level block is opaque so the footer can't leak
+       through gutters. :where() = zero specificity -> any page/section
+       background rule still wins. */
+    :where(body>*:not(#overlay, .side-nav, #universal-loader, #footer-container, script, style)) {
+        background-color: #fff;
+    }
+}
+
+/* ===== Premium chrome: scrollbar, selection, focus ===================== */
+html {
+    scrollbar-width: thin;
+    scrollbar-color: var(--primary) #eef1f4;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #eef1f4;
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, var(--primary), #004494);
+    border-radius: 8px;
+    border: 2px solid #eef1f4;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--accent);
+}
+
+::selection {
+    background: rgba(255, 107, 0, 0.85);
+    color: #fff;
+}
+
+:focus-visible {
+    outline: 3px solid rgba(0, 86, 179, 0.4);
+    outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    html {
+        scroll-behavior: smooth;
+    }
+}
+
+/* ===== Back-to-top floating button ==================================== */
+.back-to-top {
+    position: fixed;
+    right: 22px;
+    bottom: 22px;
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    border: none;
+    background: var(--primary);
+    color: #fff;
+    font-size: 1.05rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 6px 18px rgba(0, 86, 179, 0.35);
+    z-index: 900;
+    opacity: 0;
+    transform: translateY(12px);
+    pointer-events: none;
+    transition:
+        opacity var(--dur-standard) var(--ease-io),
+        transform var(--dur-standard) var(--ease-io),
+        background var(--dur-quick) var(--ease-i);
+}
+
+.back-to-top.visible {
+    opacity: 1;
+    transform: none;
+    pointer-events: auto;
+}
+
+.back-to-top:hover {
+    background: var(--accent);
+}
+
 /* ===== Accessibility: respect user motion preference =================== */
 @media (prefers-reduced-motion: reduce) {
 

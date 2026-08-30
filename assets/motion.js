@@ -132,4 +132,25 @@
     } else {
         init();
     }
+
+    /* ===== Back-to-top button (rAF-throttled scroll listener) ========= */
+    var btt = document.createElement('button');
+    btt.className = 'back-to-top';
+    btt.setAttribute('aria-label', 'Back to top');
+    btt.innerHTML = '<i class="fas fa-arrow-up"></i>';
+    document.body.appendChild(btt);
+
+    var ticking = false;
+    window.addEventListener('scroll', function () {
+        if (ticking) return;
+        ticking = true;
+        requestAnimationFrame(function () {
+            btt.classList.toggle('visible', window.scrollY > 500);
+            ticking = false;
+        });
+    }, { passive: true });
+
+    btt.addEventListener('click', function () {
+        window.scrollTo({ top: 0, behavior: reduced ? 'auto' : 'smooth' });
+    });
 })();
