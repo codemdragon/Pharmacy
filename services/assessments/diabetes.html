@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Testing &amp; Monitoring for Diabetes | Guardian MarkhaMack Pharmacy</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Roboto:wght@400;500&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="../../assets/style.css">
+
+  <style>
+    :root {
+      --primary: #0056b3;
+      --accent: #ff6b00;
+      --light: #f8f9fa;
+      --text: #333;
+      --text-light: #6c757d;
+      --shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      --transition: all 0.3s ease;
+    }
+
+    body {
+      font-family: 'Roboto', sans-serif;
+      color: var(--text);
+      overflow-x: hidden;
+      line-height: 1.6;
+    }
+
+    h1,
+    h2,
+    h3 {
+      font-family: 'Poppins', sans-serif;
+    }
+
+    /* ===== Banner ===== */
+    .banner {
+      background: linear-gradient(135deg, var(--primary), #004494);
+      color: white;
+      text-align: center;
+      padding: 80px 20px;
+    }
+
+    .banner h1 {
+      font-size: 2.4rem;
+      font-weight: 600;
+      animation: fadeInUp 1s ease;
+    }
+
+    .banner p {
+      max-width: 700px;
+      margin: 10px auto 0;
+      opacity: 0.9;
+    }
+
+    /* ===== Section Layout ===== */
+    .section {
+      max-width: 1100px;
+      margin: 80px auto;
+      padding: 0 20px;
+    }
+
+    .intro {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 40px;
+    }
+
+    .intro img {
+      flex: 1;
+      width: 100%;
+      max-width: 480px;
+      border-radius: 12px;
+      box-shadow: var(--shadow);
+      animation: fadeIn 1.2s ease;
+    }
+
+    .intro-text {
+      flex: 1;
+    }
+
+    .intro-text h2 {
+      color: var(--primary);
+      margin-bottom: 15px;
+    }
+
+    .intro-text p {
+      margin-bottom: 15px;
+    }
+
+    .cta-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+      margin-top: 20px;
+    }
+
+    .btn {
+      display: inline-block;
+      background: var(--accent);
+      color: white;
+      text-decoration: none;
+      padding: 12px 25px;
+      border-radius: 25px;
+      transition: var(--transition);
+      font-weight: 500;
+    }
+
+    .btn:hover {
+      background: #e55a00;
+      transform: translateY(-2px);
+    }
+
+    .btn-outline {
+      background: white;
+      color: var(--primary);
+      border: 2px solid var(--primary);
+    }
+
+    .btn-outline:hover {
+      background: var(--primary);
+      color: white;
+    }
+
+    /* ===== Test cards ===== */
+    .info-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 25px;
+      margin-top: 40px;
+    }
+
+    .info-card {
+      background: var(--light);
+      padding: 25px;
+      border-radius: 12px;
+      box-shadow: var(--shadow);
+      transition: var(--transition);
+      animation: fadeInUp 0.8s ease;
+    }
+
+    .info-card:nth-child(2) {
+      animation-delay: 0.1s;
+    }
+
+    .info-card:nth-child(3) {
+      animation-delay: 0.2s;
+    }
+
+    .info-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+      border-bottom: 3px solid var(--accent);
+    }
+
+    .info-card i {
+      font-size: 40px;
+      color: var(--primary);
+      margin-bottom: 15px;
+      display: inline-block;
+    }
+
+    .info-card h4 {
+      color: var(--primary);
+      margin-bottom: 10px;
+    }
+
+    .info-card p {
+      color: var(--text-light);
+      margin-bottom: 0;
+      font-size: 0.95rem;
+    }
+
+    /* ===== See all services ===== */
+    .all-services {
+      text-align: center;
+      margin-top: 60px;
+    }
+
+    .disclaimer {
+      font-size: 0.9rem;
+      color: var(--text-light);
+      margin-top: 50px;
+      border-top: 1px solid #ddd;
+      padding-top: 20px;
+    }
+
+    @media (max-width: 768px) {
+      .intro {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ===== Header Placeholder ===== -->
+  <div id="header-container"></div>
+
+  <!-- ===== Page Banner ===== -->
+  <section class="banner">
+    <h1>Testing &amp; Monitoring for Diabetes</h1>
+    <p>To keep an eye on your diabetes — at Guardian MarkhaMack Pharmacy.</p>
+  </section>
+
+  <!-- ===== Intro ===== -->
+  <section class="section">
+    <div class="intro">
+      <div class="intro-text">
+        <h2>To keep an eye on your diabetes</h2>
+        <p>Whether you have prediabetes, diabetes or are newly diagnosed, many tests exist to ensure your blood sugar
+          is well under control and that your treatment is working well.</p>
+        <div class="cta-row">
+          <a href="tel:+19052943295" class="btn"><i class="fas fa-phone"></i> Call (905) 294-3295</a>
+          <a href="../../where_are_we.html" class="btn btn-outline"><i class="fas fa-map-marker-alt"></i> Where Are
+            We</a>
+        </div>
+      </div>
+      <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=1000&q=80"
+        alt="Diabetes testing and monitoring">
+    </div>
+  </section>
+
+  <!-- ===== Services ===== -->
+  <section class="section">
+    <h2>Available at our pharmacy</h2>
+
+    <div class="info-grid">
+      <div class="info-card">
+        <i class="fas fa-vial"></i>
+        <h4>A1C Test</h4>
+        <p>For pre-diabetics and diabetics, A1C is an important test that indicates if your diabetes is well managed,
+          over a short period of time. This finger prick blood test takes 5 minutes and can be done at any time.
+          Taking this test will help you adjust your treatment to avoid diabetes-related complications.</p>
+      </div>
+
+      <div class="info-card">
+        <i class="fas fa-tint"></i>
+        <h4>Blood Sugar Readings</h4>
+        <p>You can get your blood sugar readings at your pharmacy. It only requires a quick needle prick on your
+          fingertip. You can then discuss your results with your pharmacist and learn about the best practices to get
+          accurate readings.</p>
+      </div>
+
+      <div class="info-card">
+        <i class="fas fa-clipboard-check"></i>
+        <h4>Self-Monitoring Education</h4>
+        <p>Monitoring your blood glucose is an important part of managing your diabetes. If you wish to use a blood
+          glucose monitor at home, your pharmacist can suggest the best one for your needs and explain how you can
+          use it.</p>
+      </div>
+    </div>
+
+    <div class="all-services">
+      <a href="../assessments_monitoring.html" class="btn">See all services</a>
+    </div>
+  </section>
+
+  <!-- ===== Disclaimer ===== -->
+  <section class="section">
+    <p class="disclaimer">
+      The pharmacy services presented in this section are offered by Guardian, I.D.A. and Remedy'sRx pharmacists. The
+      pharmacists are solely responsible for the professional activities carried out during the practice of pharmacy.
+      These services are offered in participating pharmacies only. Certain fees and conditions may apply.
+      <br><br>
+      * The information contained herein is provided for informational purposes only and is not intended to provide
+      complete information on the subject matter or to replace the advice of a health professional. This information
+      does not constitute medical consultation, diagnosis or opinion and should not be interpreted as such. Please
+      consult your health care provider if you have any questions about your health, medications or treatment.
+    </p>
+  </section>
+
+  <!-- ===== Footer Placeholder ===== -->
+  <div id="footer-container"></div>
+
+  <!-- Scripts -->
+  <script src="../../assets/script.js"></script>
+  <script src="../../assets/loader.js"></script>
+  <script>
+    window.addEventListener('load', () => window.loadComponents('../../'));
+  </script>
+</body>
+
+</html>
