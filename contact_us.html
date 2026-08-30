@@ -276,8 +276,8 @@
 
   <!-- ===== Page Banner ===== -->
   <section class="banner">
-    <h1>Contact Us</h1>
-    <p>Questions, refills or feedback — the Guardian MarkhaMack team is here to help.</p>
+    <h1 data-cms="contactPage.bannerTitle">Contact Us</h1>
+    <p data-cms="contactPage.bannerSub">Questions, refills or feedback — the Guardian MarkhaMack team is here to help.</p>
   </section>
 
   <!-- ===== Contact Section ===== -->
@@ -286,13 +286,13 @@
 
       <!-- Store info -->
       <div class="info-card">
-        <h2>Guardian MarkhaMack Pharmacy</h2>
+        <h2 data-cms="store.name">Guardian MarkhaMack Pharmacy</h2>
 
         <div class="info-item">
           <i class="fas fa-map-marker-alt"></i>
           <div>
             <div class="label">Address</div>
-            <div class="value">9889 ON-48 #7,<br>Markham, ON L6E 0B7</div>
+            <div class="value"><span data-cms="store.addressLine1">9889 ON-48 #7</span>,<br><span data-cms="store.addressLine2">Markham, ON L6E 0B7</span></div>
           </div>
         </div>
 
@@ -300,7 +300,7 @@
           <i class="fas fa-phone"></i>
           <div>
             <div class="label">Phone</div>
-            <div class="value"><a href="tel:+19052943295">+1 (905) 294-3295</a></div>
+            <div class="value"><a href="tel:+19052943295" data-cms-tel="store.phoneHref"><span data-cms="store.phone">+1 (905) 294-3295</span></a></div>
           </div>
         </div>
 
@@ -308,10 +308,8 @@
           <i class="fas fa-clock"></i>
           <div>
             <div class="label">Store Hours</div>
-            <div class="value">
-              Monday – Friday: 10:00 AM – 8:00 PM<br>
-              Saturday: 10:00 AM – 3:00 PM<br>
-              Sunday: Closed
+            <div class="value" data-cms="store.hoursSummary">
+              Monday – Friday: 10:00 AM – 8:00 PM • Saturday: 10:00 AM – 3:00 PM • Sunday: Closed
             </div>
           </div>
         </div>
@@ -321,11 +319,11 @@
           <div>
             <div class="label">Directions</div>
             <div class="value"><a href="https://maps.app.goo.gl/gFvvRHCLYUA9Cpq28" target="_blank"
-                rel="noopener">Open in Google Maps</a></div>
+                rel="noopener" data-cms-href="store.mapsUrl">Open in Google Maps</a></div>
           </div>
         </div>
 
-        <a href="tel:+19052943295" class="call-btn"><i class="fas fa-phone"></i> Call Now</a>
+        <a href="tel:+19052943295" class="call-btn" data-cms-tel="store.phoneHref"><i class="fas fa-phone"></i> Call Now</a>
       </div>
 
       <!-- Formspree contact form -->
@@ -336,11 +334,11 @@
            3. Done - submissions arrive in your email inbox.
            ===================================================================== -->
       <div class="form-card">
-        <h2>Send us a message</h2>
-        <p>Fill out the form below and we'll get back to you as soon as possible. For urgent requests, please call the
+        <h2 data-cms="contactPage.formHeading">Send us a message</h2>
+        <p data-cms="contactPage.formIntro">Fill out the form below and we'll get back to you as soon as possible. For urgent requests, please call the
           pharmacy directly.</p>
 
-        <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" class="contact-form">
+        <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" class="contact-form" data-cms-action="contactPage.formspreeId">
 
           <!-- Optional: pre-fills the email subject line -->
           <input type="hidden" name="_subject" value="Guardian MarkhaMack - Contact Form" />
@@ -363,7 +361,7 @@
 
           <div class="form-group">
             <label for="topic">What can we help you with? *</label>
-            <select id="topic" name="topic" required>
+            <select id="topic" name="topic" required data-cms-options="contactPage.topics">
               <option value="" disabled selected>Choose a topic...</option>
               <option value="General Question">General Question</option>
               <option value="Prescription Refill">Prescription Refill</option>
@@ -382,7 +380,7 @@
 
           <button type="submit" class="submit-btn"><i class="fas fa-paper-plane"></i> Send Message</button>
 
-          <p class="form-note">Please do not include sensitive personal health information in this form.</p>
+          <p class="form-note" data-cms="contactPage.formNote">Please do not include sensitive personal health information in this form.</p>
         </form>
       </div>
 

@@ -1,0 +1,180 @@
+{
+  "_meta": {
+    "version": 1,
+    "lastPushed": null,
+    "pushedBy": null,
+    "note": "This file powers the website's editable content. Edit it safely via admin.html - or by hand if you know what you are doing."
+  },
+  "store": {
+    "name": "Guardian MarkhaMack Pharmacy",
+    "badge": "Open Now",
+    "phone": "+1 (905) 294-3295",
+    "phoneHref": "+19052943295",
+    "email": "",
+    "addressLine1": "9889 ON-48 #7",
+    "addressLine2": "Markham, ON L6E 0B7",
+    "plusCode": "WP4M+M7 Markham, Ontario, Canada",
+    "mapsUrl": "https://maps.app.goo.gl/gFvvRHCLYUA9Cpq28",
+    "lat": 43.921,
+    "lng": -79.259,
+    "zoom": 15,
+    "hours": [
+      {
+        "day": "Monday",
+        "time": "10:00 AM - 8:00 PM"
+      },
+      {
+        "day": "Tuesday",
+        "time": "10:00 AM - 8:00 PM"
+      },
+      {
+        "day": "Wednesday",
+        "time": "10:00 AM - 8:00 PM"
+      },
+      {
+        "day": "Thursday",
+        "time": "10:00 AM - 8:00 PM"
+      },
+      {
+        "day": "Friday",
+        "time": "10:00 AM - 8:00 PM"
+      },
+      {
+        "day": "Saturday",
+        "time": "10:00 AM - 3:00 PM"
+      },
+      {
+        "day": "Sunday",
+        "time": "Closed"
+      }
+    ]
+  },
+  "locationPage": {
+    "bannerTitle": "Where Are We",
+    "bannerSub": "Guardian MarkhaMack Pharmacy - Your trusted local healthcare partner"
+  },
+  "contactPage": {
+    "bannerTitle": "Contact Us",
+    "bannerSub": "Questions, refills or feedback — the Guardian MarkhaMack team is here to help.",
+    "formHeading": "Send us a message",
+    "formIntro": "Fill out the form below and we'll get back to you as soon as possible. For urgent requests, please call the pharmacy directly.",
+    "topics": [
+      "General Question",
+      "Prescription Refill",
+      "Prescription Transfer",
+      "Vaccination Appointment",
+      "Wellness Consultation",
+      "Medication Question",
+      "Feedback"
+    ],
+    "formspreeId": "YOUR_FORM_ID",
+    "formNote": "Please do not include sensitive personal health information in this form."
+  },
+  "footer": {
+    "columns": [
+      {
+        "heading": "Pharmacy Services",
+        "links": [
+          {
+            "label": "Prescriptions",
+            "href": "services/prescriptions.html"
+          },
+          {
+            "label": "Vaccinations",
+            "href": "services/vaccinations.html"
+          },
+          {
+            "label": "Assessments & Monitoring",
+            "href": "services/assessments_monitoring.html"
+          },
+          {
+            "label": "Medication Customization",
+            "href": "services/medication_customization.html"
+          },
+          {
+            "label": "Wellness Consultations",
+            "href": "services/wellness_consultation.html"
+          }
+        ]
+      },
+      {
+        "heading": "Products and Resources",
+        "links": [
+          {
+            "label": "Mobile apps",
+            "href": "#"
+          },
+          {
+            "label": "Telemedicine Services",
+            "href": "#"
+          },
+          {
+            "label": "Option+™ - Private Label",
+            "href": "#"
+          },
+          {
+            "label": "Our Trusted Brands",
+            "href": "#"
+          },
+          {
+            "label": "Loyalty Program",
+            "href": "#"
+          }
+        ]
+      },
+      {
+        "heading": "Guardian, I.D.A. and Remedy'sRx",
+        "links": [
+          {
+            "label": "Local Care",
+            "href": "#"
+          },
+          {
+            "label": "Prescription Transfer",
+            "href": "services/prescriptions.html"
+          },
+          {
+            "label": "Who We Are",
+            "href": "who_we_are.html"
+          },
+          {
+            "label": "Email Subscription",
+            "href": "#"
+          },
+          {
+            "label": "Careers",
+            "href": "#"
+          },
+          {
+            "label": "Contact Us",
+            "href": "contact_us.html"
+          }
+        ]
+      }
+    ],
+    "social": [
+      {
+        "icon": "fab fa-facebook-f",
+        "label": "Facebook",
+        "href": "#"
+      },
+      {
+        "icon": "fab fa-twitter",
+        "label": "Twitter",
+        "href": "#"
+      },
+      {
+        "icon": "fab fa-instagram",
+        "label": "Instagram",
+        "href": "#"
+      },
+      {
+        "icon": "fab fa-linkedin-in",
+        "label": "LinkedIn",
+        "href": "#"
+      }
+    ],
+    "bottomText": "© 2023 Guardian, I.D.A. and Remedy'sRx Pharmacy. All rights reserved.",
+    "socialHeading": "Follow Us"
+  }
+}

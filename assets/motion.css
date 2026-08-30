@@ -179,22 +179,23 @@
 }
 
 /* ===== Progressive reveal footer =======================================
-   Footer sits sticky at the bottom, BEHIND an opaque page shell; scrolling
-   slides the page up to uncover it. No height math needed - the footer's
-   own in-flow slot defines the reveal distance.
-   Requires overflow-x: clip (set in style.css) so sticky keeps working. */
+   Fixed technique: motion.js wraps all page content in ONE opaque
+   .content-shell (so sectioned pages have no see-through gaps). The
+   footer is sticky at the bottom, behind the shell. body.has-shell is
+   only set when the wrap succeeds, so no-JS / reduced-motion pages
+   keep a normal static footer. */
 @media (prefers-reduced-motion: no-preference) {
-    #footer-container {
+
+    body.has-shell #footer-container {
         position: sticky;
         bottom: 0;
-        z-index: -1;
     }
 
-    /* Guarantee every top-level block is opaque so the footer can't leak
-       through gutters. :where() = zero specificity -> any page/section
-       background rule still wins. */
-    :where(body>*:not(#overlay, .side-nav, #universal-loader, #footer-container, script, style)) {
-        background-color: #fff;
+    body.has-shell .content-shell {
+        position: relative;
+        z-index: 1;
+        /* opaque bg is set inline by motion.js (matches each page's body
+           background, falling back to white) */
     }
 }
 

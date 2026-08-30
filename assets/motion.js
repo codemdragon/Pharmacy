@@ -59,6 +59,8 @@
     }
 
     function init() {
+        setupFooterReveal();
+
         /* Tag staggered grid children */
         GROUPS.forEach(function (sel) {
             document.querySelectorAll(sel).forEach(function (group) {
@@ -125,6 +127,46 @@
         });
 
         Array.prototype.forEach.call(all, function (el) { io.observe(el); });
+    }
+
+    /* ===== Progressive reveal footer ====================================
+       Wraps every top-level content node in one opaque .content-shell so
+       the sticky footer can sit behind the page WITHOUT showing through
+       the gaps between sections (margins) on sectioned pages. */
+    function setupFooterReveal() {
+        if (reduced) return;
+        var footer = document.getElementById('footer-container');
+        if (!footer || document.body.classList.contains('has-shell')) return;
+
+        var SKIP_IDS = { 'footer-container': 1, 'overlay': 1, 'universal-loader': 1 };
+        var SKIP_TAGS = { SCRIPT: 1, STYLE: 1, LINK: 1, NOSCRIPT: 1, META: 1 };
+
+        var shell = document.createElement('div');
+        shell.className = 'content-shell';
+
+        var inserted = false;
+        Array.prototype.slice.call(document.body.children).forEach(function (node) {
+            if (node === shell) return;
+            if (SKIP_TAGS[node.tagName]) return;
+            if (node.id && SKIP_IDS[node.id]) return;
+            if (node.classList && (node.classList.contains('side-nav') ||
+                node.classList.contains('back-to-top'))) return;
+
+            if (!inserted) {
+                document.body.insertBefore(shell, node);
+                inserted = true;
+            }
+            shell.appendChild(node); /* moving nodes keeps their listeners */
+        });
+
+        if (!inserted) return;
+
+        /* Opaque shell matching the page's own background (white fallback) */
+        var bg = getComputedStyle(document.body).backgroundColor;
+        shell.style.backgroundColor = (!bg || bg === 'rgba(0, 0, 0, 0)' || bg === 'transparent')
+            ? '#fff' : bg;
+
+        document.body.classList.add('has-shell');
     }
 
     if (document.readyState === 'loading') {

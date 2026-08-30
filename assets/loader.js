@@ -512,6 +512,11 @@
         var m = document.createElement('script');
         m.src = new URL('motion.js', cs.src).toString();
         document.head.appendChild(m);
+
+        // CMS runtime (hydrates data-cms tagged elements from content.json)
+        var cms = document.createElement('script');
+        cms.src = new URL('cms.js', cs.src).toString();
+        document.head.appendChild(cms);
     })();
 
 })();
