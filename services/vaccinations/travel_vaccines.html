@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Medication Safety | Guardian, I.D.A. and Remedy'sRx</title>
+  <title>Travel Vaccines | Guardian MarkhaMack Pharmacy</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Roboto:wght@400;500&display=swap"
     rel="stylesheet">
@@ -48,6 +48,12 @@
       animation: fadeInUp 1s ease;
     }
 
+    .banner p {
+      max-width: 700px;
+      margin: 10px auto 0;
+      opacity: 0.9;
+    }
+
     /* ===== Section Layout ===== */
     .section {
       max-width: 1100px;
@@ -80,6 +86,17 @@
       margin-bottom: 15px;
     }
 
+    .intro-text p {
+      margin-bottom: 15px;
+    }
+
+    .cta-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+      margin-top: 20px;
+    }
+
     .btn {
       display: inline-block;
       background: var(--accent);
@@ -96,7 +113,18 @@
       transform: translateY(-2px);
     }
 
-    /* ===== Info sections ===== */
+    .btn-outline {
+      background: white;
+      color: var(--primary);
+      border: 2px solid var(--primary);
+    }
+
+    .btn-outline:hover {
+      background: var(--primary);
+      color: white;
+    }
+
+    /* ===== Key points ===== */
     .info-box {
       background: var(--light);
       padding: 25px;
@@ -115,15 +143,16 @@
       margin-right: 10px;
     }
 
-    .info-box p {
-      margin-bottom: 10px;
-    }
-
-    .info-box .warning {
+    .info-box ul {
+      margin: 10px 0 10px 20px;
       color: var(--text-light);
     }
 
-    /* ===== Steps Grid ===== */
+    .info-box ul li {
+      margin-bottom: 8px;
+    }
+
+    /* ===== Vaccine cards ===== */
     .info-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -141,11 +170,23 @@
     }
 
     .info-card:nth-child(2) {
-      animation-delay: 0.15s;
+      animation-delay: 0.08s;
     }
 
     .info-card:nth-child(3) {
-      animation-delay: 0.3s;
+      animation-delay: 0.16s;
+    }
+
+    .info-card:nth-child(4) {
+      animation-delay: 0.24s;
+    }
+
+    .info-card:nth-child(5) {
+      animation-delay: 0.32s;
+    }
+
+    .info-card:nth-child(6) {
+      animation-delay: 0.4s;
     }
 
     .info-card:hover {
@@ -154,34 +195,36 @@
       border-bottom: 3px solid var(--accent);
     }
 
-    .step-badge {
-      width: 50px;
-      height: 50px;
-      border-radius: 50%;
-      background: var(--primary);
-      color: white;
-      font-family: 'Poppins', sans-serif;
-      font-weight: 600;
-      font-size: 1.3rem;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+    .info-card i {
+      font-size: 40px;
+      color: var(--primary);
       margin-bottom: 15px;
+      display: inline-block;
     }
 
     .info-card h4 {
       color: var(--primary);
       margin-bottom: 10px;
+      font-size: 1.05rem;
     }
 
-    .info-card p {
+    .info-card ul {
+      margin: 0 0 0 20px;
       color: var(--text-light);
-      margin-bottom: 0;
+      font-size: 0.95rem;
     }
 
-    .grid-cta {
-      text-align: center;
-      margin-top: 40px;
+    .info-card ul li {
+      margin-bottom: 8px;
+    }
+
+    .info-card .rec-label {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      color: var(--accent);
+      font-weight: 600;
+      margin-bottom: 8px;
     }
 
     /* ===== See all services ===== */
@@ -213,78 +256,107 @@
 
   <!-- ===== Page Banner ===== -->
   <section class="banner">
-    <h1>Medication Safety</h1>
+    <h1>Travel Vaccines</h1>
+    <p>Your MarkhaMack pharmacist and the planning of your next trip.</p>
   </section>
 
   <!-- ===== Intro Section ===== -->
   <section class="section">
     <div class="intro">
       <div class="intro-text">
-        <h2>Use and dispose of your medication safely</h2>
-        <p>Medication should always be taken according to your prescriber's direction to avoid medication incidents.
-        </p>
-        <p>Contact your local pharmacy to find out if these services are available.</p>
-        <a href="../../where_are_we.html" class="btn">Where Are We</a>
+        <h2>Before you take off, get covered</h2>
+        <p>If you are planning to travel, it is important to check vaccination recommendations or requirements, as
+          these vary from country to country.</p>
+        <p><strong>Pharmacists who offer travel vaccination services can prescribe or administer the required
+            vaccines.</strong></p>
+        <p><strong>They can also check that you are up to date with your basic vaccinations and prescribe a booster
+            shot when necessary.</strong></p>
+        <p><strong>Consult your pharmacist at least 6 weeks before your departure date</strong> to make sure you have
+          the necessary vaccinations and advice.</p>
+        <div class="cta-row">
+          <a href="tel:+19052943295" class="btn"><i class="fas fa-phone"></i> Call (905) 294-3295</a>
+          <a href="../../where_are_we.html" class="btn btn-outline"><i class="fas fa-map-marker-alt"></i> Where Are
+            We</a>
+        </div>
       </div>
-      <img src="https://images.unsplash.com/photo-1587854692152-cbe660dbde88?auto=format&fit=crop&w=1000&q=80"
-        alt="Pharmacist reviewing medication">
+      <img src="https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1?auto=format&fit=crop&w=1000&q=80"
+        alt="Travel health and vaccination">
     </div>
   </section>
 
-  <!-- ===== Returning your Medications Safely ===== -->
+  <!-- ===== Vaccines Available ===== -->
   <section class="section">
-    <div class="info-box">
-      <h3><i class="fas fa-recycle"></i>Returning your Medications Safely</h3>
-      <p>When was the last time you cleaned out your medicine cabinet? If you look hard enough, you may find expired
-        or unused medications. These could include tablets purchased for prevention of illness during travel, unused
-        pain medications, leftover cough syrup, or outdated birth control pills.</p>
-      <p class="warning"><strong>Do not flush, pour down the sink or throw any of your medications in the
-          garbage.</strong> Taking any of these actions can put you, your community and the environment at risk.
-        Instead, visit your nearest pharmacy and let us dispose of them safely on your behalf.</p>
-    </div>
-  </section>
-
-  <!-- ===== Injections and Needles ===== -->
-  <section class="section">
-    <div class="info-box">
-      <h3><i class="fas fa-syringe"></i>Injections and Needles</h3>
-      <p>If your medication requires self-injection, your pharmacist can show you the right technique.</p>
-      <p>You can also bring back sharp bins at your pharmacy for safe disposal.</p>
-    </div>
-
-    <div class="all-services">
-      <a href="../prescriptions.html" class="btn">See all services</a>
-    </div>
-  </section>
-
-  <!-- ===== How to return medications ===== -->
-  <section class="section">
-    <h2>How to return medications</h2>
+    <h2>Vaccines Available</h2>
+    <p>Be sure to check whether you need any vaccines <strong>at least six weeks before your departure date</strong>,
+      as some vaccines require more than one dose.</p>
 
     <div class="info-grid">
       <div class="info-card">
-        <div class="step-badge">1</div>
-        <h4>Step 1</h4>
-        <p>Gather any unwanted or expired prescription medication, over-the-counter medication or natural health
-          products.</p>
+        <i class="fas fa-droplet"></i>
+        <h4>Cholera / Traveller's Diarrhea</h4>
+        <div class="rec-label">Recommended if</div>
+        <ul>
+          <li>You visit rural areas with limited access to potable water or where it may not be easy to apply
+            recommended hygiene measures</li>
+          <li>You are at risk of complications due to any health issues you have</li>
+        </ul>
       </div>
 
       <div class="info-card">
-        <div class="step-badge">2</div>
-        <h4>Step 2</h4>
-        <p>Remove any personal or identifying information from the medication, if applicable. <strong>Do not mix
-            medical sharps and medication.</strong></p>
+        <i class="fas fa-mosquito"></i>
+        <h4>Japanese Encephalitis</h4>
+        <div class="rec-label">Recommended if</div>
+        <ul>
+          <li>You are planning a trip to a rural area of Asia or Australia</li>
+        </ul>
       </div>
 
       <div class="info-card">
-        <div class="step-badge">3</div>
-        <h4>Step 3</h4>
-        <p>Find your nearest pharmacy and drop by at your earliest convenience.</p>
+        <i class="fas fa-passport"></i>
+        <h4>Yellow Fever</h4>
+        <div class="rec-label">Recommended if</div>
+        <ul>
+          <li>You are planning a trip to Africa or South America</li>
+          <li>You may require proof of vaccination to enter a country</li>
+        </ul>
+      </div>
+
+      <div class="info-card">
+        <i class="fas fa-utensils"></i>
+        <h4>Typhoid</h4>
+        <div class="rec-label">Recommended if</div>
+        <ul>
+          <li>You are planning a trip to Asia</li>
+          <li>You are planning a trip to Africa, the Middle East, or Latin America (especially for long-term stays),
+            where you will visit rural areas or be in close contact with the local population</li>
+        </ul>
+      </div>
+
+      <div class="info-card">
+        <i class="fas fa-paw"></i>
+        <h4>Rabies</h4>
+        <div class="rec-label">Recommended if</div>
+        <ul>
+          <li>You could be in contact with bats</li>
+          <li>You plan to work abroad, and your job involves contact with animals (e.g. animal conservation agent or
+            volunteer in an animal shelter)</li>
+        </ul>
+      </div>
+
+      <div class="info-card">
+        <i class="fas fa-liver"></i>
+        <h4>Hepatitis A &amp; B</h4>
+        <div class="rec-label">Recommended if</div>
+        <ul>
+          <li>You will be visiting rural areas with limited access to potable water or where it may not be easy to
+            apply recommended hygiene measures or health standards</li>
+          <li>You will engage in activities that place you at risk of infection</li>
+        </ul>
       </div>
     </div>
 
-    <div class="grid-cta">
-      <a href="../../where_are_we.html" class="btn">Where Are We</a>
+    <div class="all-services">
+      <a href="../vaccinations.html" class="btn">See all services</a>
     </div>
   </section>
 
