@@ -816,6 +816,12 @@ var AdminUI = {
                 <p>Uploaded images are stored with the website today. Later this will switch to a faster image service (Cloudinary) - nothing you need to do.</p>
             </div>
             <div class="settings-card">
+                <h4><i class="fas fa-paper-plane" style="color:var(--primary)"></i> Contact form delivery (Formspree)</h4>
+                <p>The message box on the Contact page hands messages to a free Formspree account, which emails them to the pharmacy.</p>
+                ${this.fld('contactPage.formspreeId', 'Your Formspree form ID', { hint: 'Create a free form at formspree.io, copy the ID it shows you (a short code like "mqkvzzab"), paste it here, then Push to Website. Until a real ID is set, the contact form cannot deliver messages.' })}
+                <a class="btn-ghost" href="https://formspree.io" target="_blank" rel="noopener"><i class="fas fa-arrow-up-right-from-square"></i> Open formspree.io (new tab)</a>
+            </div>
+            <div class="settings-card">
                 <h4><i class="fas fa-shield-halved" style="color:var(--warn)"></i> Danger zone</h4>
                 <p>Sign out and remove the access key from this browser.</p>
                 <button class="danger-btn" onclick="AdminAuth.logout()"><i class="fas fa-right-from-bracket"></i> Sign out</button>

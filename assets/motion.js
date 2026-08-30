@@ -143,17 +143,29 @@
 
         Array.prototype.forEach.call(all, function (el) { io.observe(el); });
 
-        /* SAFETY NET: if anything ever prevents an in-view element from
-           being revealed (observer hiccup, hidden parent, timer clash),
-           force-reveal anything visible in the viewport after 3.5s. */
-        setTimeout(function () {
+        /* SAFETY NET: if anything ever prevents an element from being
+           revealed (observer hiccup, hidden parent, timer clash, browser
+           quirk), force-reveal anything actually visible in the viewport.
+           Runs on several timers AND on every scroll/resize frame, so a
+           section can never sit invisible behind its own background. */
+        function sweep() {
             document.querySelectorAll('.mr:not(.revealed)').forEach(function (el) {
                 var r = el.getBoundingClientRect();
                 if (r.top < window.innerHeight && r.bottom > 0) {
                     el.classList.add('revealed', 'done');
                 }
             });
-        }, 3500);
+        }
+        [1500, 3500, 8000, 15000].forEach(function (t) { setTimeout(sweep, t); });
+
+        var sweepQueued = false;
+        function queueSweep() {
+            if (sweepQueued) return;
+            sweepQueued = true;
+            requestAnimationFrame(function () { sweep(); sweepQueued = false; });
+        }
+        window.addEventListener('scroll', queueSweep, { passive: true });
+        window.addEventListener('resize', queueSweep, { passive: true });
     }
 
     /* ===== Progressive reveal footer ====================================
