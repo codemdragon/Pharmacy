@@ -304,8 +304,8 @@
 
   <!-- ===== Page Banner ===== -->
   <section class="banner">
-    <h1>Vaccination Services</h1>
-    <p>Get vaccinated at Guardian MarkhaMack Pharmacy — administered by our pharmacists in a friendly and convenient
+    <h1 data-cms="servicesPages.vaccinations.bannerTitle">Vaccination Services</h1>
+    <p data-cms="servicesPages.vaccinations.bannerSub">Get vaccinated at Guardian MarkhaMack Pharmacy — administered by our pharmacists in a friendly and convenient
       setting.</p>
   </section>
 
@@ -313,17 +313,17 @@
   <section class="section">
     <div class="intro">
       <div class="intro-text">
-        <h2>Get vaccinated here, with care.</h2>
-        <p>Vaccination is one of the most effective ways to protect yourself and your family against common diseases.
+        <h2 data-cms="servicesPages.vaccinations.introHeading">Get vaccinated here, with care.</h2>
+        <p data-cms="servicesPages.vaccinations.introPara1">Vaccination is one of the most effective ways to protect yourself and your family against common diseases.
           Our pharmacists offer a wide range of vaccination services for children and adults.</p>
-        <p>Whether you're updating your vaccine booklet or preparing for flu season, your MarkhaMack pharmacist is
+        <p data-cms="servicesPages.vaccinations.introPara2">Whether you're updating your vaccine booklet or preparing for flu season, your MarkhaMack pharmacist is
           there to help guide you and administer the vaccines so you can focus on what matters most.</p>
         <div class="cta-row">
-          <a href="tel:+19052943295" class="btn"><i class="fas fa-phone"></i> Call (905) 294-3295</a>
+          <a href="tel:+19052943295" class="btn" data-cms-tel="store.phoneHref"><i class="fas fa-phone"></i> Call <span data-cms="store.phone">(905) 294-3295</span></a>
           <a href="../where_are_we.html" class="btn btn-outline"><i class="fas fa-map-marker-alt"></i> Where Are We</a>
         </div>
       </div>
-      <img src="https://images.unsplash.com/photo-1585435557343-3b092031d5ad?auto=format&fit=crop&w=1000&q=80"
+      <img data-cms-src="servicesPages.vaccinations.introImg" src="https://images.unsplash.com/photo-1585435557343-3b092031d5ad?auto=format&fit=crop&w=1000&q=80"
         alt="Pharmacist preparing a vaccine">
     </div>
   </section>
@@ -335,29 +335,28 @@
         <i class="fas fa-map-marker-alt"></i>
         <div>
           <div class="label">Visit Us</div>
-          <div class="value">9889 ON-48 #7,<br>Markham, ON L6E 0B7</div>
+          <div class="value"><span data-cms="store.addressLine1">9889 ON-48 #7,</span><br><span data-cms="store.addressLine2">Markham, ON L6E 0B7</span></div>
         </div>
       </div>
       <div class="visit-item">
         <i class="fas fa-clock"></i>
         <div>
           <div class="label">Pharmacy Hours</div>
-          <div class="value">Mon–Fri: 10 AM – 8 PM<br>Sat: 10 AM – 3 PM &nbsp;•&nbsp; Sun: Closed</div>
+          <div class="value"><span data-cms-hours-summary>Mon–Fri: 10 AM – 8 PM · Sat: 10 AM – 3 PM · Sun: Closed</span></div>
         </div>
       </div>
       <div class="visit-item">
         <i class="fas fa-phone"></i>
         <div>
           <div class="label">Book / Ask Us</div>
-          <div class="value"><a href="tel:+19052943295">+1 (905) 294-3295</a></div>
+          <div class="value"><a data-cms="store.phone" data-cms-tel="store.phoneHref">(905) 294-3295</a></div>
         </div>
       </div>
       <div class="visit-item">
         <i class="fas fa-directions"></i>
         <div>
           <div class="label">Directions</div>
-          <div class="value"><a href="https://maps.app.goo.gl/gFvvRHCLYUA9Cpq28" target="_blank"
-              rel="noopener">Open in Google Maps</a></div>
+          <div class="value"><a href="https://maps.app.goo.gl/gFvvRHCLYUA9Cpq28" target="_blank" rel="noopener" data-cms-href="store.mapsUrl">Open in Google Maps</a></div>
         </div>
       </div>
     </div>
@@ -365,11 +364,11 @@
 
   <!-- ===== Vaccines Available (Ontario) ===== -->
   <section class="section">
-    <h2>Vaccines available at our Markham pharmacy</h2>
-    <p>Vaccine availability and funding varies by province and location*. These are the vaccines available in
+    <h2 data-cms="servicesPages.vaccinations.vaccinesHeading">Vaccines available at our Markham pharmacy</h2>
+<p data-cms="servicesPages.vaccinations.vaccinesIntro">Vaccine availability and funding varies by province and location*. These are the vaccines available in
       Ontario:</p>
 
-    <div class="vaccine-grid">
+    <div class="vaccine-grid" data-cms-vaccines="servicesPages.vaccinations.vaccines">
       <div class="vaccine-card">
         <i class="fas fa-virus"></i>
         <h4>Influenza (Flu)</h4>
@@ -408,38 +407,38 @@
       </div>
     </div>
 
-    <p class="section-note">For more information, speak to your pharmacist.</p>
+    <p <p class="section-note" data-cms="servicesPages.vaccinations.vaccinesNote">For more information, speak to your pharmacist.</p>
   </section>
 
   <!-- ===== Protection for your whole family ===== -->
   <section class="section">
-    <h2>Protection for your whole family</h2>
-    <p>Learn more about vaccines that help shield you against common diseases:</p>
+    <h2 data-cms="servicesPages.vaccinations.familyHeading">Protection for your whole family</h2>
+<p data-cms="servicesPages.vaccinations.familyIntro">Learn more about vaccines that help shield you against common diseases:</p>
 
     <div class="info-grid">
       <div class="info-card">
-        <i class="fas fa-syringe"></i>
-        <h4>Flu, COVID-19 &amp; Other Respiratory Viruses</h4>
-        <p>Vaccination can protect you against different respiratory viruses (flu, COVID-19, respiratory syncytial
+<i class="fas fa-syringe"></i>
+<h4 data-cms="servicesPages.vaccinations.familyCards.0.title">Flu, COVID-19 &amp; Other Respiratory Viruses</h4>
+<p data-cms="servicesPages.vaccinations.familyCards.0.text">Vaccination can protect you against different respiratory viruses (flu, COVID-19, respiratory syncytial
           virus (RSV) and pneumococcus). Some vaccines are recommended every year, others only after a certain age.</p>
-        <a href="vaccinations/respiratory_viruses.html">Learn more <i class="fas fa-arrow-right"></i></a>
+<a href="vaccinations/respiratory_viruses.html" class="info-link" data-cms-href="servicesPages.vaccinations.familyCards.0.linkHref"><span data-cms="servicesPages.vaccinations.familyCards.0.linkLabel">Learn more</span> <i class="fas fa-arrow-right"></i></a>
       </div>
 
       <div class="info-card">
-        <i class="fas fa-plane-departure"></i>
-        <h4>Travel Vaccines</h4>
-        <p>Depending on your destination, some immunizations should be considered before and after your trip for
+<i class="fas fa-plane-departure"></i>
+<h4 data-cms="servicesPages.vaccinations.familyCards.1.title">Travel Vaccines</h4>
+<p data-cms="servicesPages.vaccinations.familyCards.1.text">Depending on your destination, some immunizations should be considered before and after your trip for
           maximum safety. Make sure to book an appointment at least 6 weeks in advance to ensure you are fully
           immunized.</p>
-        <a href="vaccinations/travel_vaccines.html">Learn more <i class="fas fa-arrow-right"></i></a>
+<a href="vaccinations/travel_vaccines.html" class="info-link" data-cms-href="servicesPages.vaccinations.familyCards.1.linkHref"><span data-cms="servicesPages.vaccinations.familyCards.1.linkLabel">Learn more</span> <i class="fas fa-arrow-right"></i></a>
       </div>
 
       <div class="info-card">
-        <i class="fas fa-kit-medical"></i>
-        <h4>Other Diseases</h4>
-        <p>Vaccination can minimize your risk of contracting several diseases, such as shingles, tetanus, hepatitis
+<i class="fas fa-kit-medical"></i>
+<h4 data-cms="servicesPages.vaccinations.familyCards.2.title">Other Diseases</h4>
+<p data-cms="servicesPages.vaccinations.familyCards.2.text">Vaccination can minimize your risk of contracting several diseases, such as shingles, tetanus, hepatitis
           and certain childhood illnesses.</p>
-        <a href="vaccinations/other_vaccines.html">Learn more <i class="fas fa-arrow-right"></i></a>
+<a href="vaccinations/other_vaccines.html" class="info-link" data-cms-href="servicesPages.vaccinations.familyCards.2.linkHref"><span data-cms="servicesPages.vaccinations.familyCards.2.linkLabel">Learn more</span> <i class="fas fa-arrow-right"></i></a>
       </div>
     </div>
   </section>

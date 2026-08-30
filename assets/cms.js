@@ -188,6 +188,24 @@
             });
         });
 
+        /* vaccine/chip grids rebuilt from {icon, name} lists */
+        root.querySelectorAll('[data-cms-vaccines]').forEach(function (el) {
+            var items = resolve(data, el.getAttribute('data-cms-vaccines'));
+            if (!Array.isArray(items) || !items.length) return;
+            el.innerHTML = '';
+            items.forEach(function (it) {
+                var card = document.createElement('div');
+                card.className = 'vaccine-card';
+                var ic = document.createElement('i');
+                ic.className = 'fas ' + String((it && it.icon) || 'fa-syringe').replace(/[^a-z0-9 -]/g, '');
+                var h = document.createElement('h4');
+                h.textContent = esc(it && it.name != null ? it.name : it || '');
+                card.appendChild(ic);
+                card.appendChild(h);
+                el.appendChild(card);
+            });
+        });
+
         /* background images (divs styled with background-image) */
         root.querySelectorAll('[data-cms-bg]').forEach(function (el) {
             var v = resolve(data, el.getAttribute('data-cms-bg'));

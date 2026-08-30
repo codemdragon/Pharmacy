@@ -851,6 +851,40 @@
       margin-left: auto;
     }
 
+    .pill-row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin: 0 0 20px;
+    }
+
+    .pill {
+        border: 1px solid var(--border);
+        background: #fff;
+        color: var(--text);
+        border-radius: 999px;
+        padding: 8px 15px;
+        font-size: 0.85rem;
+        font-family: inherit;
+        cursor: pointer;
+        transition: all 0.15s ease;
+    }
+
+    .pill i {
+        margin-right: 5px;
+    }
+
+    .pill:hover {
+        border-color: var(--primary);
+        color: var(--primary);
+    }
+
+    .pill.active {
+        background: var(--primary);
+        border-color: var(--primary);
+        color: #fff;
+    }
+
     .mini-btn {
       width: 28px;
       height: 28px;
@@ -1103,7 +1137,7 @@
           <i class="fas fa-heart-pulse"></i> My Health <span class="soon">soon</span>
         </button>
         <button class="nav-item" data-tab="services" onclick="AdminUI.switchTab('services')">
-          <i class="fas fa-prescription"></i> Pharmacy Services <span class="soon">soon</span>
+          <i class="fas fa-prescription"></i> Pharmacy Services
         </button>
         <button class="nav-item" data-tab="location" onclick="AdminUI.switchTab('location')">
           <i class="fas fa-map-marker-alt"></i> Where Are We

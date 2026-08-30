@@ -284,5 +284,337 @@
     "mckessonHeading": "Part of the McKesson Canada Retail Banner Network",
     "mckessonText": "While Guardian, I.D.A., and Remedy'sRx pharmacies are independently owned and operated, they are part of a family of banner brands under the McKesson Canada Retail Banner Network. McKesson Canada and its independent pharmacy owners are committed to their communities' better health, partnering with insurers, hospitals, physicians' offices, pharmacies, pharmaceutical companies and governments across the spectrum of care. To learn more, visit www.mckesson.ca.",
     "disclaimer": "Guardian, I.D.A. and Remedy'sRx are banners of McKesson Canada. Pharmacies operating under these banners are independently owned and operated by pharmacists."
+  },
+  "servicesPages": {
+    "prescriptions": {
+      "bannerTitle": "Pharmacy Services: Prescriptions",
+      "blocks": [
+        {
+          "heading": "Prescription Transfers",
+          "text": "Do you wish to transfer your prescriptions to your local Guardian, I.D.A. or Remedy'sRx pharmacy? Simply fill out our online form to send a transfer request. We'll take care of the rest!",
+          "btnLabel": "Call to transfer",
+          "btnHref": "tel:+19052943295",
+          "img": "https://images.unsplash.com/photo-1585435557343-3b092031d5ad?auto=format&fit=crop&w=1000&q=80"
+        },
+        {
+          "heading": "Medication for Minor Health Problems",
+          "text": "If you have a minor health problem (nausea during pregnancy, traveler's diarrhea, lice), you can turn to your pharmacist as a front line health professional. See what they can do for you right away: prescriptions, advice and much more.",
+          "btnLabel": "Learn more",
+          "btnHref": "services/prescriptions/common_conditions.html",
+          "img": "https://images.unsplash.com/photo-1584036561566-baf8f5f1b144?auto=format&fit=crop&w=1000&q=80"
+        },
+        {
+          "heading": "Medication for Chronic Conditions",
+          "text": "If you have a chronic condition and require regular medication, your pharmacist is here to facilitate your day to day. They can extend prescriptions and re-prescribe your medication, as well as show you tools to help you get the most out of your treatment.",
+          "btnLabel": "Learn more",
+          "btnHref": "services/prescriptions/long_term_conditions.html",
+          "img": "https://images.unsplash.com/photo-1555662365-652517a2d321?auto=format&fit=crop&w=1000&q=80"
+        },
+        {
+          "heading": "Medication Take Back",
+          "text": "Cleaning your medicine cabinet? If you have any expired or unused medications, our pharmacists can dispose of it safely and in an environmentally friendly way. Take advantage of this complimentary service by simply visiting your nearest pharmacy.",
+          "btnLabel": "Where Are We",
+          "btnHref": "where_are_we.html",
+          "img": "https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?auto=format&fit=crop&w=1000&q=80"
+        },
+        {
+          "heading": "Your Medication and Your Safety",
+          "text": "Medication should always be taken according to your pharmacist's direction, to avoid incidents. See how you can use and dispose of your medication safely.",
+          "btnLabel": "Learn more",
+          "btnHref": "services/prescriptions/medication_safety.html",
+          "img": "https://images.unsplash.com/photo-1471864190281-a93a3070b6de?auto=format&fit=crop&w=1000&q=80"
+        },
+        {
+          "heading": "Prescription Renewals",
+          "text": "To save time and never miss a dose, you can renew your prescription in advance using one of the following options your pharmacist has made available to you: the mobile app, online renewals, the medication synchronization service and many others.",
+          "btnLabel": "Learn more",
+          "btnHref": "services/prescriptions/renewals.html",
+          "img": "https://images.unsplash.com/photo-1587854692152-cbe660dbde88?auto=format&fit=crop&w=1000&q=80"
+        }
+      ],
+      "suggestedHeading": "Suggested Services For You",
+      "suggestedSub": "Discover our wide range of services offered in a pharmacy near you",
+      "suggestedCards": [
+        {
+          "title": "Assessments & Monitoring",
+          "text": "Your pharmacist can provide an assessment of your initial therapy and make sure it is the best option for you.",
+          "linkLabel": "Learn More",
+          "linkHref": "#"
+        },
+        {
+          "title": "Wellness Consultations",
+          "text": "For your pharmacist, your health is also their goal. You can turn to them for advice on how to reach your wellness objectives.",
+          "linkLabel": "Learn More",
+          "linkHref": "#"
+        },
+        {
+          "title": "Vaccinations",
+          "text": "When you need protection against the Flu, common diseases (Shingles, HPV or Tetanus) or tropical diseases if you are a traveler, turn to your pharmacist.",
+          "linkLabel": "Learn More",
+          "linkHref": "#"
+        }
+      ]
+    },
+    "vaccinations": {
+      "bannerTitle": "Vaccination Services",
+      "bannerSub": "Get vaccinated at Guardian MarkhaMack Pharmacy — administered by our pharmacists in a friendly and convenient setting.",
+      "introHeading": "Get vaccinated here, with care.",
+      "introPara1": "Vaccination is one of the most effective ways to protect yourself and your family against common diseases. Our pharmacists offer a wide range of vaccination services for children and adults.",
+      "introPara2": "Whether you're updating your vaccine booklet or preparing for flu season, your MarkhaMack pharmacist is there to help guide you and administer the vaccines so you can focus on what matters most.",
+      "introImg": "https://images.unsplash.com/photo-1585435557343-3b092031d5ad?auto=format&fit=crop&w=1000&q=80",
+      "vaccines": [
+        {
+          "icon": "fa-virus",
+          "name": "Influenza (Flu)"
+        },
+        {
+          "icon": "fa-viruses",
+          "name": "COVID-19"
+        },
+        {
+          "icon": "fa-lungs",
+          "name": "RSV"
+        },
+        {
+          "icon": "fa-shield-virus",
+          "name": "Pneumococcal (Pneumonia)"
+        },
+        {
+          "icon": "fa-brain",
+          "name": "Meningococcal (Meningitis)"
+        },
+        {
+          "icon": "fa-liver",
+          "name": "Hepatitis A & B"
+        },
+        {
+          "icon": "fa-hand-dots",
+          "name": "Varicella (Chickenpox)"
+        },
+        {
+          "icon": "fa-virus-slash",
+          "name": "Herpes Zoster (Shingles)"
+        },
+        {
+          "icon": "fa-dna",
+          "name": "Human Papillomavirus (HPV)"
+        }
+      ],
+      "vaccinesNote": "For more information, speak to your pharmacist.",
+      "vaccinesHeading": "Vaccines available at our Markham pharmacy",
+      "vaccinesIntro": "Vaccine availability and funding varies by province and location*. These are the vaccines available in Ontario:",
+      "familyHeading": "Protection for your whole family",
+      "familyIntro": "Learn more about vaccines that help shield you against common diseases:",
+      "familyCards": [
+        {
+          "title": "Flu, COVID-19 & Other Respiratory Viruses",
+          "text": "Vaccination can protect you against different respiratory viruses (flu, COVID-19, respiratory syncytial virus (RSV) and pneumococcus). Some vaccines are recommended every year, others only after a certain age.",
+          "linkLabel": "Learn more",
+          "linkHref": "services/vaccinations/respiratory_viruses.html"
+        },
+        {
+          "title": "Travel Vaccines",
+          "text": "Depending on your destination, some immunizations should be considered before and after your trip for maximum safety. Make sure to book an appointment at least 6 weeks in advance to ensure you are fully immunized.",
+          "linkLabel": "Learn more",
+          "linkHref": "services/vaccinations/travel_vaccines.html"
+        },
+        {
+          "title": "Other Diseases",
+          "text": "Vaccination can minimize your risk of contracting several diseases, such as shingles, tetanus, hepatitis and certain childhood illnesses.",
+          "linkLabel": "Learn more",
+          "linkHref": "services/vaccinations/other_vaccines.html"
+        }
+      ]
+    },
+    "assessments_monitoring": {
+      "bannerTitle": "Assessments & Monitoring Services",
+      "bannerSub": "Always keeping an eye on your progress — at Guardian MarkhaMack Pharmacy.",
+      "introHeading": "Your pharmacist can guide you",
+      "introPara1": "As your partner in health, your pharmacist is not one to simply sit back on good results. They will review your current medication and treatment to further optimize your health outcomes — giving you the right tools to take your health into your own hands.",
+      "introPara2": "Your pharmacist can prescribe and execute certain tests to make sure your treatment is working for you, and help you keep your condition in check with monitoring tools and advice.",
+      "introImg": "https://images.unsplash.com/photo-1559757175-5700dde675bc?auto=format&fit=crop&w=1000&q=80",
+      "blocks": [
+        {
+          "heading": "Diabetes",
+          "text": "Whether you have prediabetes, diabetes or are newly diagnosed, many tests exist to ensure your blood sugar is well under control and that your treatment is working well.",
+          "btnLabel": "Learn more",
+          "btnHref": "services/assessments/diabetes.html",
+          "img": "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=1000&q=80"
+        },
+        {
+          "heading": "Heart Health",
+          "text": "If you are taking medication for a heart condition, your pharmacist can suggest some tests to determine if your blood pressure or cholesterol is well managed or to see if adjustments to your treatment are necessary.",
+          "btnLabel": "Learn more",
+          "btnHref": "services/assessments/heart_health.html",
+          "img": "https://images.unsplash.com/photo-1576091160550-21735dba66ef?auto=format&fit=crop&w=1000&q=80"
+        },
+        {
+          "heading": "Respiratory Health",
+          "text": "If you have asthma or are experiencing strep throat symptoms, talk to your pharmacist about tests to ensure your respiratory health is in order.",
+          "btnLabel": "Learn more",
+          "btnHref": "services/assessments/respiratory_health.html",
+          "img": "https://images.unsplash.com/photo-1579154204601-01588f351e67?auto=format&fit=crop&w=1000&q=80"
+        }
+      ],
+      "suggestedHeading": "Suggested Services For You",
+      "suggestedSub": "Discover our wide range of services offered at our Markham pharmacy",
+      "suggestedCards": [
+        {
+          "title": "Prescriptions",
+          "text": "As your partner in health, your pharmacist can prescribe medication for certain minor health problems right away and help you manage any of the medication you are taking.",
+          "linkLabel": "All Prescription Services",
+          "linkHref": "services/prescriptions.html"
+        },
+        {
+          "title": "Wellness Consultations",
+          "text": "For your pharmacist, your health is also their goal. Turn to them for advice on how to reach your wellness objectives and for private consultations.",
+          "linkLabel": "All Wellness Consultation Services",
+          "linkHref": "services/wellness_consultation.html"
+        },
+        {
+          "title": "Vaccinations",
+          "text": "When you need protection against the Flu, common diseases or tropical diseases if you travel, turn to your pharmacist for information and advice.",
+          "linkLabel": "All Vaccination Services",
+          "linkHref": "services/vaccinations.html"
+        }
+      ]
+    },
+    "medication_customization": {
+      "bannerTitle": "Medication Customization Services",
+      "bannerSub": "Medication, your way — at Guardian MarkhaMack Pharmacy.",
+      "introHeading": "Your medication should work for you",
+      "introPara1": "Sticking to your medication isn't always a walk in the park. Your pharmacist is here to make minor or major adjustments to your therapy or provide you with custom formulas and innovative packaging to make it all easier.",
+      "introPara2": "When it comes to medication, you can choose how it is given and presented to you. Here's what your pharmacist can do.",
+      "introImg": "https://images.unsplash.com/photo-1587854692152-cbe660dbde88?auto=format&fit=crop&w=1000&q=80",
+      "blocks": [
+        {
+          "heading": "Therapy Adjustments",
+          "text": "If you have been taking medication for a while, your pharmacist can adjust your therapy to fit with your needs and lifestyle even more.",
+          "btnLabel": "Learn more",
+          "btnHref": "services/medication_customization/therapy_adjustment.html",
+          "img": "https://images.unsplash.com/photo-1471864190281-a93a3070b6de?auto=format&fit=crop&w=1000&q=80"
+        },
+        {
+          "heading": "Customized Medication",
+          "text": "When it comes to medication, the one-size-fits-all approach does not always cut it. Some medication are available in different formats, sizes, flavours and custom dosages based on your personal preferences.",
+          "btnLabel": "Learn more",
+          "btnHref": "services/medication_customization/personalized_medication.html",
+          "img": "https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?auto=format&fit=crop&w=1000&q=80"
+        },
+        {
+          "heading": "Customized Packaging",
+          "text": "Like your medication, packaging can also correspond to your needs and situation. Your pharmacist can print larger labels and make sure your bottle is easy to open if you have poor motor skills.",
+          "btnLabel": "Learn more",
+          "btnHref": "services/medication_customization/personalized_packaging.html",
+          "img": "https://images.unsplash.com/photo-1557935728-3bcb0d3e8e5f?auto=format&fit=crop&w=1000&q=80"
+        }
+      ],
+      "infoBoxes": [
+        {
+          "heading": "Compounding",
+          "text": "Certain particular health conditions require specific medications, such as a mixture of several medicated creams, which can be prepared at the pharmacy."
+        },
+        {
+          "heading": "Substituting a brand-name drug with a generic drug",
+          "text": "Don't hesitate to ask your pharmacist if a generic version of a prescribed drug exists. A generic drug is pharmaceutically equivalent to a brand-name drug: it contains the same active medicinal ingredients, in the same quantities, in a comparable dosage form."
+        }
+      ],
+      "suggestedHeading": "Suggested Services For You",
+      "suggestedSub": "Discover our wide range of services offered at our Markham pharmacy",
+      "suggestedCards": [
+        {
+          "title": "Assessments & Monitoring",
+          "text": "Your pharmacist can provide an assessment of your initial therapy and make sure it is the best option for you.",
+          "linkLabel": "All Assessment & Monitoring Services",
+          "linkHref": "services/assessments_monitoring.html"
+        },
+        {
+          "title": "Wellness Consultations",
+          "text": "For your pharmacist, your health is also their goal. Turn to them for advice on how to reach your wellness objectives and for private consultations.",
+          "linkLabel": "All Wellness Consultation Services",
+          "linkHref": "services/wellness_consultation.html"
+        },
+        {
+          "title": "Vaccinations",
+          "text": "When you need protection against the Flu, common diseases or tropical diseases if you travel, turn to your pharmacist for information and advice.",
+          "linkLabel": "All Vaccination Services",
+          "linkHref": "services/vaccinations.html"
+        }
+      ]
+    },
+    "wellness_consultation": {
+      "bannerTitle": "Wellness Consultation Services",
+      "bannerSub": "Healthy body, healthy mind — at Guardian MarkhaMack Pharmacy.",
+      "introHeading": "Need support? Look no further.",
+      "introPara1": "Your pharmacist truly believes in this. Personalized consultations are available to help you reach your wellness goals or help you navigate life-changing events in health.",
+      "introPara2": "Book a private consultation with your pharmacist to assess your personal situation.",
+      "introImg": "https://images.unsplash.com/photo-1493857671505-72967e2dc417?auto=format&fit=crop&w=1000&q=80",
+      "blocks": [
+        {
+          "heading": "Pregnancy and Maternity",
+          "text": "Looking to get pregnant? Your pharmacist can help you through the whole process until the baby arrives. They will answer your questions related to medication and vitamins, as well as help you relieve pregnancy-related symptoms. They also have breastfeeding equipment to rent.",
+          "btnLabel": "Learn more",
+          "btnHref": "services/wellness_consultation/maternity_pregnancy.html",
+          "img": "https://images.unsplash.com/photo-1531746020798-e6953c6f8e04?auto=format&fit=crop&w=1000&q=80"
+        },
+        {
+          "heading": "Weight Loss",
+          "text": "If you're thinking about losing weight, your pharmacist can shed a light on helpful products and make sure your medication doesn't make you gain weight as a side effect.",
+          "btnLabel": "Ask us about it",
+          "btnHref": "tel:+19052943295",
+          "img": "https://images.unsplash.com/photo-1490645935967-10de6ba17061?auto=format&fit=crop&w=1000&q=80"
+        },
+        {
+          "heading": "Travel Health",
+          "text": "Your pharmacist is the key to a healthy trip. All your needs are covered for you to leave with a peace of mind: vaccination depending on your destination, tips on how to travel with medication, advice on essential items to always have on hand.",
+          "btnLabel": "Learn more",
+          "btnHref": "services/wellness_consultation/travel_health.html",
+          "img": "https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1?auto=format&fit=crop&w=1000&q=80"
+        },
+        {
+          "heading": "Compression Socks",
+          "text": "There are many good reasons to use compression socks, whether you have poor blood circulation, want to soothe heavy and tired legs or are planning to take a long flight. Your pharmacist will help you choose the right model, size and material for the best fit possible.",
+          "btnLabel": "Ask us about it",
+          "btnHref": "tel:+19052943295",
+          "img": "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?auto=format&fit=crop&w=1000&q=80"
+        },
+        {
+          "heading": "Smoking Cessation",
+          "text": "To stop smoking is not easy. You're not alone; your pharmacist can develop an action plan with you. They can suggest nicotine replacement products (patches, chewing gums, lozenges) and help you deal with withdrawal side effects.",
+          "btnLabel": "Learn more",
+          "btnHref": "services/wellness_consultation/smoking_cessation.html",
+          "img": "https://images.unsplash.com/photo-1551690656952-34342bb7c2f2?auto=format&fit=crop&w=1000&q=80"
+        },
+        {
+          "heading": "Mental Health Support",
+          "text": "Your pharmacist offers private consultations to discuss your personal progress. They will assess your current medication, talk about alternative options and make sure your side effects are not disruptive. They can act as a bridge between you and your doctor, so you can focus on your recovery.",
+          "btnLabel": "Book a consultation",
+          "btnHref": "tel:+19052943295",
+          "img": "https://images.unsplash.com/photo-1493857671505-72967e2dc417?auto=format&fit=crop&w=1000&q=80"
+        }
+      ],
+      "suggestedHeading": "Suggested Services For You",
+      "suggestedSub": "Discover our wide range of services offered at our Markham pharmacy",
+      "suggestedCards": [
+        {
+          "title": "Prescriptions",
+          "text": "As your partner in health, your pharmacist can prescribe medication for a minor health problem right away and help you manage the medication you take for a chronic condition.",
+          "linkLabel": "All Prescription Services",
+          "linkHref": "services/prescriptions.html"
+        },
+        {
+          "title": "Assessments & Monitoring",
+          "text": "Your pharmacist can provide an assessment of your initial therapy and make sure it is the best option for you.",
+          "linkLabel": "All Assessment & Monitoring Services",
+          "linkHref": "services/assessments_monitoring.html"
+        },
+        {
+          "title": "Medication Customization",
+          "text": "Customize your medication according to your personal preferences — formats, dosages, flavours and packaging adapted to your needs and lifestyle.",
+          "linkLabel": "All Medication Customization Services",
+          "linkHref": "services/medication_customization.html"
+        }
+      ]
+    }
   }
 }

@@ -423,6 +423,7 @@ var AdminUI = {
     sectionForPath: function (path) {
         if (path.indexOf('home.') === 0) return 'home';
         if (path.indexOf('whoWeAre.') === 0) return 'who';
+        if (path.indexOf('servicesPages.') === 0) return 'services';
         if (path.indexOf('contactPage.') === 0) return 'contact';
         if (path.indexOf('locationPage.') === 0) return 'location';
         if (path.indexOf('store.hours') === 0 ||
@@ -461,6 +462,7 @@ var AdminUI = {
 
         if (tab === 'dashboard') this.renderDashboard();
         else if (tab === 'home') this.renderHome();
+        else if (tab === 'services') this.renderServices();
         else if (tab === 'who') this.renderWho();
         else if (tab === 'contact') this.renderContact();
         else if (tab === 'location') this.renderLocation();
@@ -663,6 +665,104 @@ var AdminUI = {
                     ${this.fld('home.subscription.placeholder', 'Email box placeholder')}
                     ${this.fld('home.subscription.btnLabel', 'Button text')}
                 </div>`);
+    },
+
+    /* ============ PHARMACY SERVICES ============ */
+    SVC_HUBS: [
+        { key: 'prescriptions', name: 'Prescriptions', icon: 'fa-prescription' },
+        { key: 'vaccinations', name: 'Vaccinations', icon: 'fa-syringe' },
+        { key: 'assessments_monitoring', name: 'Assessments & Monitoring', icon: 'fa-heart-pulse' },
+        { key: 'medication_customization', name: 'Medication Customization', icon: 'fa-mortar-pestle' },
+        { key: 'wellness_consultation', name: 'Wellness Consultation', icon: 'fa-leaf' }
+    ],
+
+    renderServices: function () {
+        var hub = this._svcHub || 'prescriptions';
+        var pills = this.SVC_HUBS.map(function (h) {
+            return '<button class="pill' + (h.key === hub ? ' active' : '') + '" onclick="AdminUI.renderServiceHub(\'' + h.key + '\')">' +
+                '<i class="fas ' + h.icon + '"></i> ' + h.name + '</button>';
+        }).join('');
+        document.getElementById('panel').innerHTML =
+            '<div class="pill-row">' + pills + '</div>' +
+            this.svcHubCards(hub);
+    },
+
+    renderServiceHub: function (key) {
+        this._svcHub = key;
+        this.renderServices();
+    },
+
+    svcHubCards: function (hub) {
+        var k = 'servicesPages.' + hub;
+        var html = this.card('fa-flag', 'Page banner', 'The blue banner at the top of the page.', `
+            ${this.fld(k + '.bannerTitle', 'Title')}
+            ${AdminCMS.get(k + '.bannerSub') != null ? this.fld(k + '.bannerSub', 'Subtitle') : ''}`);
+
+        if (AdminCMS.get(k + '.introHeading') != null) {
+            html += this.card('fa-book-open', 'Intro', 'The first text block under the banner. The phone button always uses the number from Where Are We.', `
+                ${this.fld(k + '.introHeading', 'Heading')}
+                ${this.fld(k + '.introPara1', 'Paragraph 1', { area: true, rows: 3 })}
+                ${AdminCMS.get(k + '.introPara2') != null ? this.fld(k + '.introPara2', 'Paragraph 2', { area: true, rows: 3 }) : ''}
+                ${this.fld(k + '.introImg', 'Photo link')}`);
+        }
+
+        var blocks = AdminCMS.get(k + '.blocks') || [];
+        for (var i = 0; i < blocks.length; i++) {
+            html += this.card('fa-layer-group', 'Section ' + (i + 1) + (blocks[i] && blocks[i].heading ? ' - ' + blocks[i].heading : ''),
+                'One of the photo-and-text rows on this page.', `
+                ${this.fld(k + '.blocks.' + i + '.heading', 'Heading')}
+                ${this.fld(k + '.blocks.' + i + '.text', 'Text', { area: true, rows: 3 })}
+                <div class="field-row">
+                    ${this.fld(k + '.blocks.' + i + '.btnLabel', 'Button text')}
+                    ${this.fld(k + '.blocks.' + i + '.btnHref', 'Button link')}
+                </div>
+                ${this.fld(k + '.blocks.' + i + '.img', 'Photo link')}`);
+        }
+
+        var boxes = AdminCMS.get(k + '.infoBoxes') || [];
+        for (var b = 0; b < boxes.length; b++) {
+            html += this.card('fa-circle-info', 'Good to know ' + (b + 1), 'One of the grey info boxes.', `
+                ${this.fld(k + '.infoBoxes.' + b + '.heading', 'Heading')}
+                ${this.fld(k + '.infoBoxes.' + b + '.text', 'Text', { area: true, rows: 3 })}`);
+        }
+
+        if (hub === 'vaccinations') {
+            html += this.card('fa-store', 'Visit us box', 'This box always shows the address, hours, phone and map link from the Where Are We section - no need to edit it here.', '');
+            html += this.card('fa-syringe', 'Vaccines available', 'The grid of vaccine tiles. Add or remove vaccines with the buttons - each tile keeps its little icon.', `
+                ${this.fld(k + '.vaccinesHeading', 'Section heading')}
+                ${this.fld(k + '.vaccinesIntro', 'Section intro', { area: true, rows: 2 })}
+                ${this.listEditor(k + '.vaccines', 'Add a vaccine', [{ key: 'name', label: 'Vaccine name' }], { icon: 'fa-syringe', name: 'New vaccine' })}
+                ${this.fld(k + '.vaccinesNote', 'Small note under the grid')}`);
+            var fam = AdminCMS.get(k + '.familyCards') || [];
+            var famHtml = this.fld(k + '.familyHeading', 'Section heading') + this.fld(k + '.familyIntro', 'Section intro', { area: true, rows: 2 });
+            for (var f = 0; f < fam.length; f++) {
+                famHtml += this.fld(k + '.familyCards.' + f + '.title', 'Card ' + (f + 1) + ' title') +
+                    this.fld(k + '.familyCards.' + f + '.text', 'Card ' + (f + 1) + ' text', { area: true, rows: 3 }) +
+                    '<div class="field-row">' +
+                    this.fld(k + '.familyCards.' + f + '.linkLabel', 'Card ' + (f + 1) + ' link text') +
+                    this.fld(k + '.familyCards.' + f + '.linkHref', 'Card ' + (f + 1) + ' link') +
+                    '</div>';
+            }
+            html += this.card('fa-people-roof', 'Protection for your family', 'The three cards about flu, travel and other disease protection.', famHtml);
+        }
+
+        if (AdminCMS.get(k + '.suggestedHeading') != null) {
+            var sug = '<div class="field-row">' +
+                this.fld(k + '.suggestedHeading', 'Heading') +
+                this.fld(k + '.suggestedSub', 'Subtitle') + '</div>';
+            var sc = AdminCMS.get(k + '.suggestedCards') || [];
+            for (var c = 0; c < sc.length; c++) {
+                sug += this.fld(k + '.suggestedCards.' + c + '.title', 'Card ' + (c + 1) + ' title') +
+                    this.fld(k + '.suggestedCards.' + c + '.text', 'Card ' + (c + 1) + ' text', { area: true, rows: 2 }) +
+                    '<div class="field-row">' +
+                    this.fld(k + '.suggestedCards.' + c + '.linkLabel', 'Card ' + (c + 1) + ' link text') +
+                    this.fld(k + '.suggestedCards.' + c + '.linkHref', 'Card ' + (c + 1) + ' link') +
+                    '</div>';
+            }
+            html += this.card('fa-lightbulb', 'Suggested services', 'The three cards at the bottom of the page.', sug);
+        }
+
+        return html;
     },
 
     /* ============ WHO WE ARE ============ */
@@ -900,7 +1000,7 @@ var AdminUI = {
     },
 
     prettyPath: function (path) {
-        var words = { store: 'Store', phone: 'Phone', badge: 'Badge', email: 'Email', name: 'Name', addressLine1: 'Street address', addressLine2: 'City & postal', plusCode: 'Plus code', mapsUrl: 'Maps link', lat: 'Latitude', lng: 'Longitude', zoom: 'Zoom', hours: 'Hours', day: 'Day', time: 'Time', contactPage: 'Contact page', locationPage: 'Where Are We', bannerTitle: 'Banner title', bannerSub: 'Banner subtitle', formHeading: 'Form heading', formIntro: 'Form intro', formNote: 'Form note', formspreeId: 'Formspree ID', topics: 'Topics', footer: 'Footer', columns: 'Column', links: 'Links', heading: 'Heading', label: 'Text', href: 'Link', icon: 'Icon', social: 'Social', socialHeading: 'Follow us heading', bottomText: 'Copyright line', slides: 'Slides', title: 'Title', text: 'Text', image: 'Image URL', btnLabel: 'Button text', btnHref: 'Button link', quality: 'Quality banner', sub: 'Subtitle', services: 'Services section', cards: 'Cards', subheading: 'Subtitle', moreLabel: 'More-link text', moreHref: 'More-link target', linkLabel: 'Link text', linkHref: 'Link', subscription: 'Email signup', placeholder: 'Placeholder', whoWeAre: 'Who We Are', introHeading: 'Intro heading', introPara1: 'Paragraph 1', introPara2: 'Paragraph 2', introPara3: 'Paragraph 3', introImg: 'Intro image', ctaCallLabel: 'Call button text', ctaWhereLabel: 'Where button text', localHeading: 'Local heading', localPara1: 'Local paragraph 1', localPara2: 'Local paragraph 2', localImg: 'Local image', historyTitle: 'History heading', timeline: 'Timeline', year: 'Year', mckessonHeading: 'McKesson heading', mckessonText: 'McKesson text', bannerTitle: 'Banner title', bannerSub: 'Banner subtitle' };
+        var words = { store: 'Store', phone: 'Phone', badge: 'Badge', email: 'Email', name: 'Name', addressLine1: 'Street address', addressLine2: 'City & postal', plusCode: 'Plus code', mapsUrl: 'Maps link', lat: 'Latitude', lng: 'Longitude', zoom: 'Zoom', hours: 'Hours', day: 'Day', time: 'Time', contactPage: 'Contact page', locationPage: 'Where Are We', bannerTitle: 'Banner title', bannerSub: 'Banner subtitle', formHeading: 'Form heading', formIntro: 'Form intro', formNote: 'Form note', formspreeId: 'Formspree ID', topics: 'Topics', footer: 'Footer', columns: 'Column', links: 'Links', heading: 'Heading', label: 'Text', href: 'Link', icon: 'Icon', social: 'Social', socialHeading: 'Follow us heading', bottomText: 'Copyright line', slides: 'Slides', title: 'Title', text: 'Text', image: 'Image URL', btnLabel: 'Button text', btnHref: 'Button link', quality: 'Quality banner', sub: 'Subtitle', services: 'Services section', cards: 'Cards', subheading: 'Subtitle', moreLabel: 'More-link text', moreHref: 'More-link target', linkLabel: 'Link text', linkHref: 'Link', subscription: 'Email signup', placeholder: 'Placeholder', whoWeAre: 'Who We Are', servicesPages: 'Services', blocks: 'Photo sections', img: 'Photo link', suggestedHeading: 'Suggested heading', suggestedSub: 'Suggested subtitle', suggestedCards: 'Suggested cards', vaccines: 'Vaccine list', vaccinesHeading: 'Vaccine section heading', vaccinesIntro: 'Vaccine section intro', vaccinesNote: 'Vaccine note', familyHeading: 'Family section heading', familyIntro: 'Family section intro', familyCards: 'Family cards', infoBoxes: 'Good-to-know boxes', prescriptions: 'Prescriptions', vaccinations: 'Vaccinations', assessments_monitoring: 'Assessments & Monitoring', medication_customization: 'Medication Customization', wellness_consultation: 'Wellness Consultation', introHeading: 'Intro heading', introPara1: 'Paragraph 1', introPara2: 'Paragraph 2', introPara3: 'Paragraph 3', introImg: 'Intro image', ctaCallLabel: 'Call button text', ctaWhereLabel: 'Where button text', localHeading: 'Local heading', localPara1: 'Local paragraph 1', localPara2: 'Local paragraph 2', localImg: 'Local image', historyTitle: 'History heading', timeline: 'Timeline', year: 'Year', mckessonHeading: 'McKesson heading', mckessonText: 'McKesson text', bannerTitle: 'Banner title', bannerSub: 'Banner subtitle' };
         return path.split('.').map(function (seg) {
             if (/^\d+$/.test(seg)) return '#' + (parseInt(seg, 10) + 1);
             return words[seg] || seg;
@@ -908,6 +1008,7 @@ var AdminUI = {
     },
 
     goto: function (section, path) {
+        if (path.indexOf('servicesPages.') === 0) this._svcHub = path.split('.')[1];
         this.switchTab(section);
         requestAnimationFrame(function () {
             requestAnimationFrame(function () {
