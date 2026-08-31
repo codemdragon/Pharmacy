@@ -67,7 +67,7 @@
     }
 
     document.addEventListener('click', function (e) {
-        var link = e.target.closest ? e.target.closest('#lang-toggle') : null;
+        var link = e.target.closest ? e.target.closest('#lang-toggle, .lang-toggle') : null;
         if (!link) return;
         e.preventDefault();
         toggle();
@@ -75,8 +75,9 @@
 
     /* --- Keep the link label in sync (header is injected async) --- */
     function syncLabel() {
-        var link = document.getElementById('lang-toggle');
-        if (link) link.textContent = currentLang() === 'fr' ? 'English' : 'Français';
+        var labels = currentLang() === 'fr' ? 'English' : 'Français';
+        var links = document.querySelectorAll('#lang-toggle, .lang-toggle');
+        Array.prototype.forEach.call(links, function (link) { link.textContent = labels; });
     }
 
     window.addEventListener('headerLoaded', syncLabel);
