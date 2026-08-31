@@ -68,7 +68,13 @@
       "Feedback"
     ],
     "formspreeId": "YOUR_FORM_ID",
-    "formNote": "Please do not include sensitive personal health information in this form."
+    "formNote": "Please do not include sensitive personal health information in this form.",
+    "infoIcons": {
+      "location": "fas fa-map-marker-alt",
+      "phone": "fas fa-phone",
+      "email": "fas fa-envelope",
+      "hours": "fas fa-clock"
+    }
   },
   "footer": {
     "columns": [
@@ -3652,5 +3658,25 @@
         }
       }
     }
+  },
+  "loadingPage": {
+    "logoText": "Guardian Pharmacy",
+    "logoIcon": "fas fa-clinic-medical",
+    "spinnerMessage": "Loading...",
+    "spinnerSub": "Please wait while we load your content",
+    "dotsMessages": [
+      "Loading your content",
+      "Processing your request",
+      "Almost ready"
+    ],
+    "dotsSub": "This will only take a moment",
+    "progressMessage": "Loading page content",
+    "progressSub": "Please wait while we gather your information",
+    "fullMessages": [
+      "Preparing your experience",
+      "Loading page elements",
+      "Finalizing your request"
+    ],
+    "fullSub": "Thank you for your patience"
   }
 }

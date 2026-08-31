@@ -15,9 +15,9 @@
         const logoHTML = `
             <div class="loader-logo">
                 <div class="logo-circle">
-                    <i class="fas fa-clinic-medical"></i>
+                    <i class="fas fa-clinic-medical" data-cms-icon="loadingPage.logoIcon"></i>
                 </div>
-                <h3>Guardian Pharmacy</h3>
+                <h3 data-cms="loadingPage.logoText">Guardian Pharmacy</h3>
             </div>
         `;
 
@@ -31,8 +31,8 @@
                         <div class="spinner-ring"></div>
                         <div class="spinner-ring"></div>
                     </div>
-                    <div class="loading-message">Loading...</div>
-                    <div class="loading-submessage">Please wait while we load your content</div>
+                    <div class="loading-message" data-cms="loadingPage.spinnerMessage">Loading...</div>
+                    <div class="loading-submessage" data-cms="loadingPage.spinnerSub">Please wait while we load your content</div>
                 `;
                 break;
             case LOADER_TYPES.DOTS:
@@ -43,11 +43,11 @@
                         <div class="dot"></div>
                     </div>
                     <div class="loading-message">
-                        <span class="message-rotator message-1">Loading your content</span>
-                        <span class="message-rotator message-2">Processing your request</span>
-                        <span class="message-rotator message-3">Almost ready</span>
+                        <span class="message-rotator message-1" data-cms="loadingPage.dotsMessages.0">Loading your content</span>
+                        <span class="message-rotator message-2" data-cms="loadingPage.dotsMessages.1">Processing your request</span>
+                        <span class="message-rotator message-3" data-cms="loadingPage.dotsMessages.2">Almost ready</span>
                     </div>
-                    <div class="loading-submessage">This will only take a moment</div>
+                    <div class="loading-submessage" data-cms="loadingPage.dotsSub">This will only take a moment</div>
                 `;
                 break;
             case LOADER_TYPES.PROGRESS:
@@ -55,8 +55,8 @@
                     <div class="progress-loader">
                         <div class="progress-bar"></div>
                     </div>
-                    <div class="loading-message">Loading page content</div>
-                    <div class="loading-submessage">Please wait while we gather your information</div>
+                    <div class="loading-message" data-cms="loadingPage.progressMessage">Loading page content</div>
+                    <div class="loading-submessage" data-cms="loadingPage.progressSub">Please wait while we gather your information</div>
                 `;
                 break;
             case LOADER_TYPES.FULL:
@@ -75,11 +75,11 @@
                         <div class="progress-bar"></div>
                     </div>
                     <div class="loading-message">
-                        <span class="message-rotator message-1">Preparing your experience</span>
-                        <span class="message-rotator message-2">Loading page elements</span>
-                        <span class="message-rotator message-3">Finalizing your request</span>
+                        <span class="message-rotator message-1" data-cms="loadingPage.fullMessages.0">Preparing your experience</span>
+                        <span class="message-rotator message-2" data-cms="loadingPage.fullMessages.1">Loading page elements</span>
+                        <span class="message-rotator message-3" data-cms="loadingPage.fullMessages.2">Finalizing your request</span>
                     </div>
-                    <div class="loading-submessage">Thank you for your patience</div>
+                    <div class="loading-submessage" data-cms="loadingPage.fullSub">Thank you for your patience</div>
                 `;
                 break;
         }

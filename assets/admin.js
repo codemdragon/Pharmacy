@@ -213,6 +213,42 @@ var AdminCMS = {
         }).catch(function () { cb('network', null); });
     },
 
+    /* upload a base64 image to the website's uploads folder */
+    ghPutRaw: function (path, b64, message, cb) {
+        fetch('https://api.github.com/repos/' + REPO + '/contents/' + path + '?ref=' + BRANCH, {
+            headers: { 'Authorization': 'Bearer ' + ghToken, 'Accept': 'application/vnd.github+json' }
+        }).then(function (res) {
+            return res.status === 404 ? null : res.json();
+        }).then(function (json) {
+            var body = { message: message, branch: BRANCH, content: b64 };
+            if (json && json.sha) body.sha = json.sha;
+            return fetch('https://api.github.com/repos/' + REPO + '/contents/' + path, {
+                method: 'PUT',
+                headers: {
+                    'Authorization': 'Bearer ' + ghToken,
+                    'Accept': 'application/vnd.github+json',
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(body)
+            });
+        }).then(function (res) {
+            if (!res.ok) return cb('HTTP ' + res.status);
+            cb(null);
+        }).catch(function () { cb('network'); });
+    },
+
+    uploadImage: function (dataUrl, fileName, cb) {
+        if (!ghToken) return cb('not connected');
+        var comma = dataUrl.indexOf(',');
+        var b64 = dataUrl.slice(comma + 1);
+        if (b64.length > 5500000) return cb('too big');
+        var safe = fileName.toLowerCase().replace(/[^a-z0-9.]+/g, '-').replace(/^-+|-+$/g, '');
+        var path = 'uploads/' + Date.now() + '-' + safe;
+        this.ghPutRaw(path, b64, 'Add photo ' + safe, function (err) {
+            cb(err, err ? null : path);
+        });
+    },
+
     ghPutJson: function (path, obj, message, cb) {
         var self = this;
         fetch('https://api.github.com/repos/' + REPO + '/contents/' + path + '?ref=' + BRANCH, {
@@ -425,6 +461,7 @@ var AdminUI = {
         if (path.indexOf('whoWeAre.') === 0) return 'who';
         if (path.indexOf('servicesPages.') === 0) return 'services';
         if (path.indexOf('myHealthPages.') === 0) return 'myhealth';
+        if (path.indexOf('loadingPage.') === 0) return 'loading';
         if (path.indexOf('contactPage.') === 0) return 'contact';
         if (path.indexOf('locationPage.') === 0) return 'location';
         if (path.indexOf('store.hours') === 0 ||
@@ -469,8 +506,12 @@ var AdminUI = {
         else if (tab === 'contact') this.renderContact();
         else if (tab === 'location') this.renderLocation();
         else if (tab === 'footer') this.renderFooter();
+        else if (tab === 'loading') this.renderLoading();
         else if (tab === 'settings') this.renderSettings();
         else this.renderComingSoon(tab);
+
+        var self = this;
+        requestAnimationFrame(function () { self.paintAllPreviews(); });
     },
 
     rerenderTab: function () {
@@ -495,6 +536,126 @@ var AdminUI = {
             (opts.hint ? '<p class="hint">' + opts.hint + '</p>' : '') + '</div>';
     },
 
+    /* image field: link box + live preview + upload button */
+    imgFld: function (path, label, opts) {
+        opts = opts || {};
+        var v = AdminCMS.get(path);
+        if (v == null) v = '';
+        var id = 'prev-' + path.replace(/[^a-z0-9]/g, '');
+        return '<div class="form-field"><label>' + label + '</label>' +
+            '<div class="img-fld">' +
+            '<div class="img-preview" id="' + id + '" data-prev="' + path + '"></div>' +
+            '<input class="fld" type="text" value="' + escAttr(v) + '" data-path="' + path + '" ' +
+            'oninput="AdminCMS.set(\'' + path + '\', this.value); AdminUI.paintPreview(\'' + path + '\')">' +
+            '<button type="button" class="btn-ghost" onclick="AdminUI.pickFile(\'' + path + '\')"><i class="fas fa-upload"></i> Upload a photo</button>' +
+            '<input type="file" accept="image/*" style="display:none" id="file-' + id + '" onchange="AdminUI.doUpload(\'' + path + '\', this)">' +
+            '</div>' +
+            (opts.hint ? '<p class="hint">' + opts.hint + '</p>' : '') + '</div>';
+    },
+
+    previewUrl: function (v) {
+        if (!v) return '';
+        if (v.indexOf('uploads/') === 0) {
+            return 'https://raw.githubusercontent.com/' + REPO + '/' + BRANCH + '/' + v;
+        }
+        return v;
+    },
+
+    paintPreview: function (path) {
+        var el = document.querySelector('[data-prev="' + path + '"]');
+        if (!el) return;
+        var url = this.previewUrl(AdminCMS.get(path));
+        if (url) {
+            el.style.backgroundImage = 'url("' + url + '")';
+            el.innerHTML = '';
+        } else {
+            el.style.backgroundImage = 'none';
+            el.innerHTML = '<i class="fas fa-image"></i>';
+        }
+    },
+
+    paintAllPreviews: function () {
+        var self = this;
+        document.querySelectorAll('[data-prev]').forEach(function (el) {
+            self.paintPreview(el.getAttribute('data-prev'));
+        });
+    },
+
+    pickFile: function (path) {
+        var id = 'file-prev-' + path.replace(/[^a-z0-9]/g, '');
+        var inp = document.getElementById(id);
+        if (inp) inp.click();
+    },
+
+    doUpload: function (path, input) {
+        var self = this;
+        var file = input.files && input.files[0];
+        input.value = '';
+        if (!file) return;
+        if (!ghToken) { this.toast('Connect the panel first (top left) before uploading.', true); return; }
+        this.toast('Uploading "' + file.name + '" to the website storage...');
+        var reader = new FileReader();
+        reader.onload = function () {
+            AdminCMS.uploadImage(reader.result, file.name, function (err, sitePath) {
+                if (err) {
+                    self.toast(err === 'too big' ? 'That photo is too large - please use one under 4 MB.' : 'Upload did not go through (' + err + '). Try again.', true);
+                    return;
+                }
+                AdminCMS.set(path, sitePath);
+                var field = document.querySelector('[data-path="' + path + '"]');
+                if (field) field.value = sitePath;
+                self.paintPreview(path);
+                self.toast('Photo added. Remember to press Push to Website to show it.');
+            });
+        };
+        reader.readAsDataURL(file);
+    },
+
+    /* icon picker */
+    iconFld: function (path, label) {
+        var v = AdminCMS.get(path) || '';
+        return '<div class="form-field"><label>' + label + '</label>' +
+            '<button type="button" class="btn-ghost icon-current" onclick="AdminUI.openIconPicker(\'' + path + '\')">' +
+            '<i class="' + escAttr(v) + '"></i> <span>Change icon</span></button></div>';
+    },
+
+    openIconPicker: function (path) {
+        var self = this;
+        var old = document.getElementById('icon-picker');
+        if (old) old.remove();
+        var overlay = document.createElement('div');
+        overlay.id = 'icon-picker';
+        overlay.className = 'picker-overlay';
+        var grid = ICON_CHOICES.map(function (ic) {
+            return '<button type="button" class="icon-cell" data-cls="' + escAttr(ic) + '" title="' + escAttr(ic) + '">' +
+                '<i class="' + ic + '"></i></button>';
+        }).join('');
+        overlay.innerHTML = '<div class="picker-box">' +
+            '<div class="picker-head"><input class="fld" id="icon-search" placeholder="Search icons..." oninput="AdminUI.filterIcons()">' +
+            '<button type="button" class="mini-btn" onclick="document.getElementById(\'icon-picker\').remove()"><i class="fas fa-xmark"></i></button></div>' +
+            '<div class="icon-grid" id="icon-grid">' + grid + '</div></div>';
+        document.body.appendChild(overlay);
+        overlay.addEventListener('click', function (e) {
+            if (e.target === overlay) overlay.remove();
+        });
+        overlay.querySelectorAll('.icon-cell').forEach(function (btn) {
+            btn.addEventListener('click', function () {
+                AdminCMS.set(path, btn.getAttribute('data-cls'));
+                overlay.remove();
+                self.rerenderTab();
+                self.toast('Icon updated.');
+            });
+        });
+    },
+
+    filterIcons: function () {
+        var q = (document.getElementById('icon-search').value || '').toLowerCase();
+        document.querySelectorAll('#icon-grid .icon-cell').forEach(function (btn) {
+            var cls = btn.getAttribute('data-cls') || '';
+            btn.style.display = cls.indexOf(q) !== -1 ? '' : 'none';
+        });
+    },
+
     numFld: function (path, label, opts) {
         opts = opts || {};
         var v = AdminCMS.get(path);
@@ -515,6 +676,9 @@ var AdminUI = {
             var inputs = fields.map(function (f) {
                 var ip = isPlain ? path + '.' + i : path + '.' + i + '.' + f.key;
                 var v = isPlain ? item : (item ? item[f.key] : '');
+                if (f.type === 'icon') {
+                    return '<button type="button" class="mini-btn wide" data-path="' + ip + '" onclick="AdminUI.openIconPicker(\'' + ip + '\')"><i class="' + escAttr(v == null ? '' : v) + '"></i> Pick</button>';
+                }
                 if (f.type === 'select') {
                     var opts = f.options.map(function (o) {
                         return '<option value="' + escAttr(o[0]) + '"' + (v === o[0] ? ' selected' : '') + '>' + escHtml(o[1]) + '</option>';
@@ -622,7 +786,7 @@ var AdminUI = {
         var slides = '';
         for (var i = 0; i < 3; i++) {
             slides += this.card('fa-image', 'Slide ' + (i + 1), 'The big rotating banner on the homepage. Use a direct image link (a .jpg or .png URL).', `
-                ${this.fld('home.slides.' + i + '.image', 'Background image link', { hint: 'Paste a direct link to an image. Uploads arrive in a later update.' })}
+                ${this.imgFld('home.slides.' + i + '.image', 'Background photo')}
                 ${this.fld('home.slides.' + i + '.title', 'Big heading')}
                 ${this.fld('home.slides.' + i + '.text', 'Small text')}
                 <div class="field-row">
@@ -634,7 +798,7 @@ var AdminUI = {
         var cards = '';
         for (var j = 0; j < 3; j++) {
             cards += this.card('fa-square-poll-horizontal', 'Card ' + (j + 1), 'One of the three service cards under "Pharmacy Services".', `
-                ${this.fld('home.services.cards.' + j + '.image', 'Image link')}
+                ${this.imgFld('home.services.cards.' + j + '.image', 'Photo')}
                 ${this.fld('home.services.cards.' + j + '.title', 'Card title')}
                 ${this.fld('home.services.cards.' + j + '.text', 'Card text', { area: true, rows: 2 })}
                 <div class="field-row">
@@ -732,6 +896,10 @@ var AdminUI = {
         var h = '';
         order.forEach(function (k) {
             if (card[k] == null) return;
+            if (k === 'image' || k === 'img') {
+                h += AdminUI.imgFld(prefix + '.' + k, AdminUI.CARD_LBL[k]);
+                return;
+            }
             h += AdminUI.fld(prefix + '.' + k, AdminUI.CARD_LBL[k] || k, { area: /^text|^note/.test(k), rows: 2 });
         });
         if (Array.isArray(card.list)) {
@@ -754,7 +922,7 @@ var AdminUI = {
             for (var p = 1; d['introPara' + p] != null; p++) {
                 intro += this.fld(k + '.introPara' + p, 'Paragraph ' + p, { area: true, rows: 2 });
             }
-            if (d.introImg != null) intro += this.fld(k + '.introImg', 'Photo link');
+            if (d.introImg != null) intro += this.imgFld(k + '.introImg', 'Photo');
             if (d.introBtnLabel != null) {
                 intro += '<div class="field-row">' + this.fld(k + '.introBtnLabel', 'Button text') + this.fld(k + '.introBtnHref', 'Button link') + '</div>';
             }
@@ -799,7 +967,7 @@ var AdminUI = {
                 ${this.fld(k + '.introHeading', 'Heading')}
                 ${this.fld(k + '.introPara1', 'Paragraph 1', { area: true, rows: 3 })}
                 ${AdminCMS.get(k + '.introPara2') != null ? this.fld(k + '.introPara2', 'Paragraph 2', { area: true, rows: 3 }) : ''}
-                ${this.fld(k + '.introImg', 'Photo link')}`);
+                ${this.imgFld(k + '.introImg', 'Photo')}`);
         }
 
         var blocks = AdminCMS.get(k + '.blocks') || [];
@@ -820,7 +988,7 @@ var AdminUI = {
                     ${this.fld(k + '.blocks.' + i + '.btnLabel', 'Button text')}
                     ${this.fld(k + '.blocks.' + i + '.btnHref', 'Button link')}
                 </div>
-                ${this.fld(k + '.blocks.' + i + '.img', 'Photo link')}`);
+                ${this.imgFld(k + '.blocks.' + i + '.img', 'Photo')}`);
         }
 
         var boxes = AdminCMS.get(k + '.infoBoxes') || [];
@@ -892,7 +1060,7 @@ var AdminUI = {
                 ${this.fld('whoWeAre.introPara1', 'Paragraph 1', { area: true, rows: 3 })}
                 ${this.fld('whoWeAre.introPara2', 'Paragraph 2', { area: true, rows: 4 })}
                 ${this.fld('whoWeAre.introPara3', 'Paragraph 3 (short line)', { area: true, rows: 2 })}
-                ${this.fld('whoWeAre.introImg', 'Photo link')}
+                ${this.imgFld('whoWeAre.introImg', 'Photo')}
                 <div class="field-row">
                     ${this.fld('whoWeAre.ctaCallLabel', 'Call button text')}
                     ${this.fld('whoWeAre.ctaWhereLabel', 'Where Are We button text')}
@@ -901,7 +1069,7 @@ var AdminUI = {
                 ${this.fld('whoWeAre.localHeading', 'Heading')}
                 ${this.fld('whoWeAre.localPara1', 'Paragraph 1', { area: true, rows: 4 })}
                 ${this.fld('whoWeAre.localPara2', 'Paragraph 2', { area: true, rows: 3 })}
-                ${this.fld('whoWeAre.localImg', 'Photo link')} `) +
+                ${this.imgFld('whoWeAre.localImg', 'Photo')} `) +
             this.card('fa-clock-rotate-left', 'History timeline', 'The four milestones with year badges.', timeline) +
             this.card('fa-network-wired', 'McKesson section', 'The network box near the bottom.', `
                 ${this.fld('whoWeAre.mckessonHeading', 'Heading')}
@@ -931,6 +1099,15 @@ var AdminUI = {
                 ${this.fld('contactPage.formNote', 'Small note under the button', { area: true, rows: 2 })}
                 ${this.fld('contactPage.formspreeId', 'Formspree form ID', { hint: 'Create a free form at <a href="https://formspree.io" target="_blank" rel="noopener">formspree.io</a>, then paste the ID here (it looks like "xwkgabcd"). Until then the form button will not send.' })}
             `) +
+            this.card('fa-shapes', 'Little icons', 'The small pictures next to Visit Us, Call, Email and Hours on the Contact page.', `
+                <div class="field-row">
+                    ${this.iconFld('contactPage.infoIcons.location', 'Visit Us icon')}
+                    ${this.iconFld('contactPage.infoIcons.phone', 'Phone icon')}
+                </div>
+                <div class="field-row">
+                    ${this.iconFld('contactPage.infoIcons.email', 'Email icon')}
+                    ${this.iconFld('contactPage.infoIcons.hours', 'Hours icon')}
+                </div>`) +
             this.card('fa-list-check', 'Contact form topics', 'The options in the "What can we help you with?" dropdown.', this.listEditor('contactPage.topics', 'Add a topic', [{ label: 'Topic' }], 'New topic'));
         document.getElementById('panel').innerHTML = html;
     },
@@ -992,11 +1169,39 @@ var AdminUI = {
                 ${this.fld('footer.bottomText', 'Copyright line', { area: true, rows: 2 })}
             `) + colHtml +
             this.card('fa-hashtag', 'Social links', 'Your social profiles shown as icon buttons.', this.listEditor('footer.social', 'Add a social link', [
-                { key: 'icon', label: 'Icon', type: 'select', options: SOCIAL_ICONS },
+                { key: 'icon', label: 'Icon', type: 'icon' },
                 { key: 'label', label: 'Name' },
                 { key: 'href', label: 'Link' }
             ], { icon: 'fab fa-facebook-f', label: 'Facebook', href: '#' }));
         document.getElementById('panel').innerHTML = html;
+    },
+
+    /* ============ LOADING SCREENS ============ */
+    renderLoading: function () {
+        document.getElementById('panel').innerHTML =
+            this.card('fa-circle-dot', 'Loading screen logo', 'The little logo shown while a page is loading.', `
+                ${this.fld('loadingPage.logoText', 'Name under the logo')}
+                ${this.iconFld('loadingPage.logoIcon', 'Logo icon')}`) +
+            this.card('fa-spinner', 'Spinner pages', 'Shown on small condition pages.', `
+                <div class="field-row">
+                    ${this.fld('loadingPage.spinnerMessage', 'Main message')}
+                    ${this.fld('loadingPage.spinnerSub', 'Small message')}
+                </div>`) +
+            this.card('fa-ellipsis', 'Dots pages', 'Shown on detail pages. The three messages take turns.', `
+                ${this.fld('loadingPage.dotsMessages.0', 'Message 1')}
+                ${this.fld('loadingPage.dotsMessages.1', 'Message 2')}
+                ${this.fld('loadingPage.dotsMessages.2', 'Message 3')}
+                ${this.fld('loadingPage.dotsSub', 'Small message')}`) +
+            this.card('fa-bars-staggered', 'Progress pages', 'Shown on main category pages.', `
+                <div class="field-row">
+                    ${this.fld('loadingPage.progressMessage', 'Main message')}
+                    ${this.fld('loadingPage.progressSub', 'Small message')}
+                </div>`) +
+            this.card('fa-star', 'Home page loading screen', 'The big one shown on the homepage.', `
+                ${this.fld('loadingPage.fullMessages.0', 'Message 1')}
+                ${this.fld('loadingPage.fullMessages.1', 'Message 2')}
+                ${this.fld('loadingPage.fullMessages.2', 'Message 3')}
+                ${this.fld('loadingPage.fullSub', 'Small message')}`);
     },
 
     /* ============ SETTINGS ============ */
@@ -1104,7 +1309,7 @@ var AdminUI = {
     },
 
     prettyPath: function (path) {
-        var words = { store: 'Store', phone: 'Phone', badge: 'Badge', email: 'Email', name: 'Name', addressLine1: 'Street address', addressLine2: 'City & postal', plusCode: 'Plus code', mapsUrl: 'Maps link', lat: 'Latitude', lng: 'Longitude', zoom: 'Zoom', hours: 'Hours', day: 'Day', time: 'Time', contactPage: 'Contact page', locationPage: 'Where Are We', bannerTitle: 'Banner title', bannerSub: 'Banner subtitle', formHeading: 'Form heading', formIntro: 'Form intro', formNote: 'Form note', formspreeId: 'Formspree ID', topics: 'Topics', footer: 'Footer', columns: 'Column', links: 'Links', heading: 'Heading', label: 'Text', href: 'Link', icon: 'Icon', social: 'Social', socialHeading: 'Follow us heading', bottomText: 'Copyright line', slides: 'Slides', title: 'Title', text: 'Text', image: 'Image URL', btnLabel: 'Button text', btnHref: 'Button link', quality: 'Quality banner', sub: 'Subtitle', services: 'Services section', cards: 'Cards', subheading: 'Subtitle', moreLabel: 'More-link text', moreHref: 'More-link target', linkLabel: 'Link text', linkHref: 'Link', subscription: 'Email signup', placeholder: 'Placeholder', whoWeAre: 'Who We Are', servicesPages: 'Services', blocks: 'Photo sections', img: 'Photo link', suggestedHeading: 'Suggested heading', suggestedSub: 'Suggested subtitle', suggestedCards: 'Suggested cards', vaccines: 'Vaccine list', vaccinesHeading: 'Vaccine section heading', vaccinesIntro: 'Vaccine section intro', vaccinesNote: 'Vaccine note', familyHeading: 'Family section heading', familyIntro: 'Family section intro', familyCards: 'Family cards', infoBoxes: 'Good-to-know boxes', myHealthPages: 'My Health', seasonal: 'Seasonal', chronic_conditions: 'Chronic Conditions', general_health: 'General Health', wellness: 'Wellness', 'cold-flu': 'Cold & Flu', allergies: 'Allergies', suncare: 'Sun Care', cannabis: 'Cannabis', comfort_safety: 'Comfort & Safety', food_medication: 'Food & Medication', mental_health: 'Mental Health', skin_health: 'Skin Health', vitamins_natural_products: 'Vitamins & Natural Products', digestive_health: 'Digestive Health', pain_managment: 'Pain Management', body_health: 'Body Health', family_health: 'Family Health', mens_health: "Men's Health", womens_health: "Women's Health", btnLabel: 'Button text', btnHref: 'Button link', pages: 'Pages', sections: 'Sections', heading: 'Heading', intro: 'Intro text', cards: 'Cards', boxes: 'Boxes', ctaLabel: 'Bottom button text', ctaHref: 'Bottom button link', tagline: 'Tagline', badge: 'Step number', note: 'Small note', list: 'Bullet list', text1: 'Paragraph 1', text2: 'Paragraph 2', text3: 'Paragraph 3', text4: 'Paragraph 4', disclaimer: 'Disclaimer', introBtnLabel: 'Button text', introBtnHref: 'Button link', callLabel: 'Call button text', renewals: 'Renewals', common_conditions: 'Common Conditions', long_term_conditions: 'Long-term Conditions', medication_safety: 'Medication Safety', other_vaccines: 'Other Vaccines', respiratory_viruses: 'Respiratory Viruses', travel_vaccines: 'Travel Vaccines', diabetes: 'Diabetes', heart_health: 'Heart Health', respiratory_health: 'Respiratory Health', personalized_medication: 'Personalized Medication', personalized_packaging: 'Personalized Packaging', therapy_adjustment: 'Therapy Adjustment', maternity_pregnancy: 'Maternity & Pregnancy', smoking_cessation: 'Smoking Cessation', travel_health: 'Travel Health', prescriptions: 'Prescriptions', vaccinations: 'Vaccinations', assessments_monitoring: 'Assessments & Monitoring', medication_customization: 'Medication Customization', wellness_consultation: 'Wellness Consultation', introHeading: 'Intro heading', introPara1: 'Paragraph 1', introPara2: 'Paragraph 2', introPara3: 'Paragraph 3', introImg: 'Intro image', ctaCallLabel: 'Call button text', ctaWhereLabel: 'Where button text', localHeading: 'Local heading', localPara1: 'Local paragraph 1', localPara2: 'Local paragraph 2', localImg: 'Local image', historyTitle: 'History heading', timeline: 'Timeline', year: 'Year', mckessonHeading: 'McKesson heading', mckessonText: 'McKesson text', bannerTitle: 'Banner title', bannerSub: 'Banner subtitle' };
+        var words = { store: 'Store', phone: 'Phone', badge: 'Badge', email: 'Email', name: 'Name', addressLine1: 'Street address', addressLine2: 'City & postal', plusCode: 'Plus code', mapsUrl: 'Maps link', lat: 'Latitude', lng: 'Longitude', zoom: 'Zoom', hours: 'Hours', day: 'Day', time: 'Time', contactPage: 'Contact page', locationPage: 'Where Are We', bannerTitle: 'Banner title', bannerSub: 'Banner subtitle', formHeading: 'Form heading', formIntro: 'Form intro', formNote: 'Form note', formspreeId: 'Formspree ID', topics: 'Topics', footer: 'Footer', columns: 'Column', links: 'Links', heading: 'Heading', label: 'Text', href: 'Link', icon: 'Icon', social: 'Social', socialHeading: 'Follow us heading', bottomText: 'Copyright line', slides: 'Slides', title: 'Title', text: 'Text', image: 'Image URL', btnLabel: 'Button text', btnHref: 'Button link', quality: 'Quality banner', sub: 'Subtitle', services: 'Services section', cards: 'Cards', subheading: 'Subtitle', moreLabel: 'More-link text', moreHref: 'More-link target', linkLabel: 'Link text', linkHref: 'Link', subscription: 'Email signup', placeholder: 'Placeholder', whoWeAre: 'Who We Are', servicesPages: 'Services', blocks: 'Photo sections', img: 'Photo link', suggestedHeading: 'Suggested heading', suggestedSub: 'Suggested subtitle', suggestedCards: 'Suggested cards', vaccines: 'Vaccine list', vaccinesHeading: 'Vaccine section heading', vaccinesIntro: 'Vaccine section intro', vaccinesNote: 'Vaccine note', familyHeading: 'Family section heading', familyIntro: 'Family section intro', familyCards: 'Family cards', infoBoxes: 'Good-to-know boxes', myHealthPages: 'My Health', seasonal: 'Seasonal', chronic_conditions: 'Chronic Conditions', general_health: 'General Health', wellness: 'Wellness', 'cold-flu': 'Cold & Flu', allergies: 'Allergies', suncare: 'Sun Care', cannabis: 'Cannabis', comfort_safety: 'Comfort & Safety', food_medication: 'Food & Medication', mental_health: 'Mental Health', skin_health: 'Skin Health', vitamins_natural_products: 'Vitamins & Natural Products', digestive_health: 'Digestive Health', pain_managment: 'Pain Management', body_health: 'Body Health', family_health: 'Family Health', mens_health: "Men's Health", womens_health: "Women's Health", btnLabel: 'Button text', btnHref: 'Button link', pages: 'Pages', sections: 'Sections', heading: 'Heading', intro: 'Intro text', cards: 'Cards', boxes: 'Boxes', ctaLabel: 'Bottom button text', ctaHref: 'Bottom button link', tagline: 'Tagline', badge: 'Step number', note: 'Small note', list: 'Bullet list', text1: 'Paragraph 1', text2: 'Paragraph 2', text3: 'Paragraph 3', text4: 'Paragraph 4', disclaimer: 'Disclaimer', introBtnLabel: 'Button text', introBtnHref: 'Button link', callLabel: 'Call button text', renewals: 'Renewals', common_conditions: 'Common Conditions', long_term_conditions: 'Long-term Conditions', medication_safety: 'Medication Safety', other_vaccines: 'Other Vaccines', respiratory_viruses: 'Respiratory Viruses', travel_vaccines: 'Travel Vaccines', diabetes: 'Diabetes', heart_health: 'Heart Health', respiratory_health: 'Respiratory Health', personalized_medication: 'Personalized Medication', personalized_packaging: 'Personalized Packaging', therapy_adjustment: 'Therapy Adjustment', maternity_pregnancy: 'Maternity & Pregnancy', smoking_cessation: 'Smoking Cessation', travel_health: 'Travel Health', prescriptions: 'Prescriptions', vaccinations: 'Vaccinations', assessments_monitoring: 'Assessments & Monitoring', medication_customization: 'Medication Customization', wellness_consultation: 'Wellness Consultation', introHeading: 'Intro heading', introPara1: 'Paragraph 1', introPara2: 'Paragraph 2', introPara3: 'Paragraph 3', introImg: 'Intro image', ctaCallLabel: 'Call button text', ctaWhereLabel: 'Where button text', localHeading: 'Local heading', localPara1: 'Local paragraph 1', localPara2: 'Local paragraph 2', localImg: 'Local image', historyTitle: 'History heading', timeline: 'Timeline', year: 'Year', mckessonHeading: 'McKesson heading', mckessonText: 'McKesson text', bannerTitle: 'Banner title', bannerSub: 'Banner subtitle', loadingPage: 'Loading screens', logoText: 'Logo text', logoIcon: 'Logo icon', spinnerMessage: 'Spinner message', spinnerSub: 'Spinner small message', dotsMessages: 'Dots messages', dotsSub: 'Dots small message', progressMessage: 'Progress message', progressSub: 'Progress small message', fullMessages: 'Home messages', fullSub: 'Home small message', infoIcons: 'Icons', location: 'Location' };
         return path.split('.').map(function (seg) {
             if (/^\d+$/.test(seg)) return '#' + (parseInt(seg, 10) + 1);
             return words[seg] || seg;
@@ -1172,6 +1377,23 @@ var AdminUI = {
         this._toastTimer = setTimeout(function () { t.classList.remove('show'); }, 3600);
     }
 };
+
+/* curated icon set for the visual picker (Font Awesome 6) */
+var ICON_CHOICES = [
+    'fas fa-map-marker-alt', 'fas fa-phone', 'fas fa-envelope', 'fas fa-clock', 'fas fa-globe', 'fas fa-house',
+    'fas fa-directions', 'fas fa-calendar-days', 'fas fa-mobile-screen', 'fas fa-print', 'fas fa-fax', 'fas fa-comment-medical',
+    'fas fa-user-doctor', 'fas fa-user-nurse', 'fas fa-briefcase-medical', 'fas fa-kit-medical', 'fas fa-prescription-bottle-medical', 'fas fa-pills',
+    'fas fa-capsules', 'fas fa-syringe', 'fas fa-vial', 'fas fa-vials', 'fas fa-thermometer-half', 'fas fa-stethoscope',
+    'fas fa-heart-pulse', 'fas fa-heart', 'fas fa-lungs', 'fas fa-brain', 'fas fa-tooth', 'fas fa-eye',
+    'fas fa-baby', 'fas fa-person-pregnant', 'fas fa-people-roof', 'fas fa-hand-holding-medical', 'fas fa-disease', 'fas fa-virus',
+    'fas fa-viruses', 'fas fa-shield-virus', 'fas fa-bacteria', 'fas fa-dna', 'fas fa-microscope', 'fas fa-clinic-medical',
+    'fas fa-truck-medical', 'fas fa-truck-fast', 'fas fa-box-open', 'fas fa-mortar-pestle', 'fas fa-leaf', 'fas fa-apple-whole',
+    'fas fa-dumbbell', 'fas fa-bed', 'fas fa-spa', 'fas fa-sun', 'fas fa-cloud-sun', 'fas fa-umbrella-beach',
+    'fas fa-snowflake', 'fas fa-plane-departure', 'fas fa-passport', 'fas fa-smoking', 'fas fa-ban-smoking', 'fas fa-wine-glass',
+    'fas fa-star', 'fas fa-check', 'fas fa-circle-info', 'fas fa-bell', 'fas fa-gift', 'fas fa-magnifying-glass',
+    'fas fa-arrow-right', 'fas fa-arrow-up', 'fas fa-download', 'fas fa-upload', 'fas fa-camera', 'fas fa-image',
+    'fab fa-facebook-f', 'fab fa-x-twitter', 'fab fa-instagram', 'fab fa-youtube', 'fab fa-linkedin-in', 'fab fa-tiktok'
+];
 
 var SOCIAL_ICONS = [
     ['fab fa-facebook-f', 'Facebook'],

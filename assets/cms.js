@@ -219,13 +219,19 @@
         /* background images (divs styled with background-image) */
         root.querySelectorAll('[data-cms-bg]').forEach(function (el) {
             var v = resolve(data, el.getAttribute('data-cms-bg'));
-            if (v != null && v !== '') el.style.backgroundImage = 'url("' + esc(v) + '")';
+            if (v != null && v !== '') el.style.backgroundImage = 'url("' + href(v) + '")';
         });
 
         /* img src */
         root.querySelectorAll('[data-cms-src]').forEach(function (el) {
             var v = resolve(data, el.getAttribute('data-cms-src'));
             if (v != null && v !== '') el.setAttribute('src', href(v));
+        });
+
+        /* icons (Font Awesome class names, e.g. "fas fa-phone") */
+        root.querySelectorAll('[data-cms-icon]').forEach(function (el) {
+            var v = resolve(data, el.getAttribute('data-cms-icon'));
+            if (v != null && v !== '') el.className = String(v).replace(/[^a-z0-9 -]/g, '');
         });
 
         /* input placeholders */
