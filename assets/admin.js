@@ -532,8 +532,9 @@ var AdminUI = {
             input = '<input class="fld" type="' + (opts.type || 'text') + '" value="' + escAttr(v) + '" data-path="' + path + '" ' +
                 'oninput="AdminCMS.set(\'' + path + '\', this.value)">';
         }
+        var tip = opts.area ? '<p class="hint">Formatting: **bold**, *italic*, [text](link)</p>' : '';
         return '<div class="form-field"><label>' + label + '</label>' + input +
-            (opts.hint ? '<p class="hint">' + opts.hint + '</p>' : '') + '</div>';
+            (opts.hint ? '<p class="hint">' + opts.hint + '</p>' : '') + tip + '</div>';
     },
 
     /* image field: link box + live preview + upload button */

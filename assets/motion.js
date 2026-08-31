@@ -35,7 +35,11 @@
         '.visit-card',                   /* vaccinations visit-us card */
         '.quality-content',              /* home quality section */
         '.subscription-content',         /* home subscription section */
-        '.section > h2'                  /* section headings */
+        '.section > h2',                 /* section headings */
+        '.services > h2',                /* myhealth service lists */
+        '.info-section > h2',            /* myhealth card sections */
+        '.pharmacy-services > h2',       /* myhealth pharmacy grids */
+        '.section-header'                /* heading + subtitle blocks */
     ];
 
     /* Directional entrances: slide in from the sides (16px, capped) */
@@ -105,6 +109,26 @@
         ITEMS.forEach(function (sel) {
             document.querySelectorAll(sel).forEach(function (el) { tag(el); });
         });
+
+        /* Standalone photos settle into place with a soft zoom */
+        ['.intro > img', '.health-img', '.section-img'].forEach(function (sel) {
+            document.querySelectorAll(sel).forEach(function (el) { tag(el, 0.05, 'mr-img'); });
+        });
+
+        /* Page banners enter as a pair, subtitle follows the title */
+        document.querySelectorAll('.banner h1, .myhealth-banner h1').forEach(function (el) { tag(el, 0); });
+        document.querySelectorAll('.banner p, .myhealth-banner p').forEach(function (el) { tag(el, 0.12); });
+
+        /* Home hero: heading, text and button cascade on load */
+        var hero = document.querySelector('.carousel-content');
+        if (hero) {
+            Array.prototype.forEach.call(hero.querySelectorAll('h2, p, .carousel-btn'), function (el, i) {
+                tag(el, 0.08 + i * 0.12);
+            });
+        }
+
+        /* Timeline year badges pop in after their card */
+        document.querySelectorAll('.year-badge').forEach(function (el) { tag(el, 0.12, 'mr-scale'); });
 
         var all = document.querySelectorAll('.mr');
 

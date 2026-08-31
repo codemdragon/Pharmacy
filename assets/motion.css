@@ -44,6 +44,11 @@
     /* trust-badge style elastic scale-in */
 }
 
+.mr.mr-img {
+    transform: scale(1.08);
+    /* photos settle into place with a soft zoom */
+}
+
 .mr.mr-side-l {
     transform: translateX(-16px);
     /* side entrance - from the left */

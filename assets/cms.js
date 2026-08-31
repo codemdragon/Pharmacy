@@ -42,6 +42,21 @@
         return String(s == null ? '' : s);
     }
 
+    /* tiny inline markdown: **bold**, *italic*, _italic_, [text](link) */
+    function mdInline(t) {
+        var v = String(t == null ? '' : t);
+        v = v.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+        v = v.replace(/\[([^\]\[]+)\]\(([^)\s]+)\)/g, function (m, txt, url) {
+            var h = href(url);
+            var ext = /^https?:/i.test(url) ? ' target="_blank" rel="noopener"' : '';
+            return '<a href="' + h + '"' + ext + '>' + txt + '</a>';
+        });
+        v = v.replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>');
+        v = v.replace(/(^|[^*\w])\*([^*\s][^*]*?)\*(?!\*)/g, '$1<em>$2</em>');
+        v = v.replace(/(^|[^_\w])_([^_\s][^_]*?)_(?!\w)/g, '$1<em>$2</em>');
+        return v;
+    }
+
     /* site path -> works from any page depth; absolute/tel/mailto/# pass through */
     function href(value) {
         var v = esc(value);
@@ -76,7 +91,7 @@
         /* plain text */
         root.querySelectorAll('[data-cms]').forEach(function (el) {
             var v = resolve(data, el.getAttribute('data-cms'));
-            if (v != null) el.textContent = esc(v);
+            if (v != null) el.innerHTML = mdInline(v);
         });
 
         /* links */
@@ -210,10 +225,7 @@
         root.querySelectorAll('[data-cms-multi]').forEach(function (el) {
             var v = resolve(data, el.getAttribute('data-cms-multi'));
             if (v == null) return;
-            var escEl = function (t) {
-                return String(t).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
-            };
-            el.innerHTML = String(v).split(/\n{2,}/).map(escEl).join('<br><br>');
+            el.innerHTML = String(v).split(/\n{2,}/).map(mdInline).join('<br><br>');
         });
 
         /* background images (divs styled with background-image) */
