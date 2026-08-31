@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vaccination Services | Guardian MarkhaMack Pharmacy</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Roboto:wght@400;500&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="../assets/style.css">
+
+  <style>
+    :root {
+      --primary: #0056b3;
+      --accent: #ff6b00;
+      --light: #f8f9fa;
+      --text: #333;
+      --text-light: #6c757d;
+      --shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      --transition: all 0.3s ease;
+    }
+
+    body {
+      font-family: 'Roboto', sans-serif;
+      color: var(--text);
+      overflow-x: hidden;
+      line-height: 1.6;
+    }
+
+    h1,
+    h2,
+    h3 {
+      font-family: 'Poppins', sans-serif;
+    }
+
+    /* ===== Banner ===== */
+    .banner {
+      background: linear-gradient(135deg, var(--primary), #004494);
+      color: white;
+      text-align: center;
+      padding: 80px 20px;
+    }
+
+    .banner h1 {
+      font-size: 2.4rem;
+      font-weight: 600;
+      animation: fadeInUp 1s ease;
+    }
+
+    .banner p {
+      max-width: 700px;
+      margin: 10px auto 0;
+      opacity: 0.9;
+    }
+
+    /* ===== Section Layout ===== */
+    .section {
+      max-width: 1100px;
+      margin: 80px auto;
+      padding: 0 20px;
+    }
+
+    .intro {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 40px;
+    }
+
+    .intro img {
+      flex: 1;
+      width: 100%;
+      max-width: 480px;
+      border-radius: 12px;
+      box-shadow: var(--shadow);
+      animation: fadeIn 1.2s ease;
+    }
+
+    .intro-text {
+      flex: 1;
+    }
+
+    .intro-text h2 {
+      color: var(--primary);
+      margin-bottom: 15px;
+    }
+
+    .intro-text p {
+      margin-bottom: 15px;
+    }
+
+    .cta-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+      margin-top: 20px;
+    }
+
+    .btn {
+      display: inline-block;
+      background: var(--accent);
+      color: white;
+      text-decoration: none;
+      padding: 12px 25px;
+      border-radius: 25px;
+      transition: var(--transition);
+      font-weight: 500;
+    }
+
+    .btn:hover {
+      background: #e55a00;
+      transform: translateY(-2px);
+    }
+
+    .btn-outline {
+      background: white;
+      color: var(--primary);
+      border: 2px solid var(--primary);
+    }
+
+    .btn-outline:hover {
+      background: var(--primary);
+      color: white;
+    }
+
+    /* ===== Visit Us / Branch Card ===== */
+    .visit-card {
+      background: var(--light);
+      border-radius: 12px;
+      box-shadow: var(--shadow);
+      padding: 30px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 25px;
+      animation: fadeInUp 0.8s ease;
+    }
+
+    .visit-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 15px;
+    }
+
+    .visit-item i {
+      font-size: 1.4rem;
+      color: var(--primary);
+      margin-top: 4px;
+    }
+
+    .visit-item .label {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      color: var(--text-light);
+      font-weight: 600;
+      margin-bottom: 4px;
+    }
+
+    .visit-item .value {
+      font-weight: 500;
+    }
+
+    .visit-item a {
+      color: var(--primary);
+      text-decoration: none;
+      transition: var(--transition);
+    }
+
+    .visit-item a:hover {
+      color: var(--accent);
+    }
+
+    /* ===== Vaccine Grid (Ontario) ===== */
+    .vaccine-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 20px;
+      margin-top: 40px;
+    }
+
+    .vaccine-card {
+      background: white;
+      padding: 25px 15px;
+      border-radius: 12px;
+      box-shadow: var(--shadow);
+      text-align: center;
+      transition: var(--transition);
+      animation: fadeInUp 0.8s ease;
+    }
+
+    .vaccine-card:nth-child(3n+2) {
+      animation-delay: 0.1s;
+    }
+
+    .vaccine-card:nth-child(3n) {
+      animation-delay: 0.2s;
+    }
+
+    .vaccine-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+      border-bottom: 3px solid var(--accent);
+    }
+
+    .vaccine-card i {
+      font-size: 2rem;
+      color: var(--primary);
+      margin-bottom: 12px;
+      display: inline-block;
+    }
+
+    .vaccine-card h4 {
+      color: var(--primary);
+      font-size: 0.95rem;
+      margin-bottom: 0;
+    }
+
+    .section-note {
+      font-size: 0.9rem;
+      color: var(--text-light);
+      margin-top: 25px;
+    }
+
+    /* ===== Family cards ===== */
+    .info-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 25px;
+      margin-top: 40px;
+    }
+
+    .info-card {
+      background: var(--light);
+      padding: 25px;
+      border-radius: 12px;
+      box-shadow: var(--shadow);
+      transition: var(--transition);
+      animation: fadeInUp 0.8s ease;
+    }
+
+    .info-card:nth-child(2) {
+      animation-delay: 0.1s;
+    }
+
+    .info-card:nth-child(3) {
+      animation-delay: 0.2s;
+    }
+
+    .info-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+      border-bottom: 3px solid var(--accent);
+    }
+
+    .info-card i {
+      font-size: 40px;
+      color: var(--primary);
+      margin-bottom: 15px;
+      display: inline-block;
+    }
+
+    .info-card h4 {
+      color: var(--primary);
+      margin-bottom: 10px;
+    }
+
+    .info-card p {
+      color: var(--text-light);
+      margin-bottom: 15px;
+    }
+
+    .info-card a {
+      color: var(--accent);
+      font-weight: 500;
+      text-decoration: none;
+      transition: var(--transition);
+    }
+
+    .info-card a:hover {
+      color: #e55a00;
+    }
+
+    .disclaimer {
+      font-size: 0.9rem;
+      color: var(--text-light);
+      margin-top: 50px;
+      border-top: 1px solid #ddd;
+      padding-top: 20px;
+    }
+
+    @media (max-width: 768px) {
+      .intro {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ===== Header Placeholder ===== -->
+  <div id="header-container"></div>
+
+  <!-- ===== Page Banner ===== -->
+  <section class="banner">
+    <h1 data-cms="servicesPages.vaccinations.bannerTitle">Vaccination Services</h1>
+    <p data-cms="servicesPages.vaccinations.bannerSub">Get vaccinated at Guardian MarkhaMack Pharmacy — administered by our pharmacists in a friendly and convenient
+      setting.</p>
+  </section>
+
+  <!-- ===== Intro Section ===== -->
+  <section class="section">
+    <div class="intro">
+      <div class="intro-text">
+        <h2 data-cms="servicesPages.vaccinations.introHeading">Get vaccinated here, with care.</h2>
+        <p data-cms="servicesPages.vaccinations.introPara1">Vaccination is one of the most effective ways to protect yourself and your family against common diseases.
+          Our pharmacists offer a wide range of vaccination services for children and adults.</p>
+        <p data-cms="servicesPages.vaccinations.introPara2">Whether you're updating your vaccine booklet or preparing for flu season, your MarkhaMack pharmacist is
+          there to help guide you and administer the vaccines so you can focus on what matters most.</p>
+        <div class="cta-row">
+          <a href="tel:+19052943295" class="btn" data-cms-tel="store.phoneHref"><i class="fas fa-phone"></i> Call <span data-cms="store.phone">(905) 294-3295</span></a>
+          <a href="../where_are_we.html" class="btn btn-outline"><i class="fas fa-map-marker-alt"></i> Where Are We</a>
+        </div>
+      </div>
+      <img data-cms-src="servicesPages.vaccinations.introImg" src="https://images.unsplash.com/photo-1585435557343-3b092031d5ad?auto=format&fit=crop&w=1000&q=80"
+        alt="Pharmacist preparing a vaccine">
+    </div>
+  </section>
+
+  <!-- ===== Visit Us ===== -->
+  <section class="section">
+    <div class="visit-card">
+      <div class="visit-item">
+        <i class="fas fa-map-marker-alt"></i>
+        <div>
+          <div class="label">Visit Us</div>
+          <div class="value"><span data-cms="store.addressLine1">9889 ON-48 #7,</span><br><span data-cms="store.addressLine2">Markham, ON L6E 0B7</span></div>
+        </div>
+      </div>
+      <div class="visit-item">
+        <i class="fas fa-clock"></i>
+        <div>
+          <div class="label">Pharmacy Hours</div>
+          <div class="value"><span data-cms-hours-summary>Mon–Fri: 10 AM – 8 PM · Sat: 10 AM – 3 PM · Sun: Closed</span></div>
+        </div>
+      </div>
+      <div class="visit-item">
+        <i class="fas fa-phone"></i>
+        <div>
+          <div class="label">Book / Ask Us</div>
+          <div class="value"><a data-cms="store.phone" data-cms-tel="store.phoneHref">(905) 294-3295</a></div>
+        </div>
+      </div>
+      <div class="visit-item">
+        <i class="fas fa-directions"></i>
+        <div>
+          <div class="label">Directions</div>
+          <div class="value"><a href="https://maps.app.goo.gl/gFvvRHCLYUA9Cpq28" target="_blank" rel="noopener" data-cms-href="store.mapsUrl">Open in Google Maps</a></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Vaccines Available (Ontario) ===== -->
+  <section class="section">
+    <h2 data-cms="servicesPages.vaccinations.vaccinesHeading">Vaccines available at our Markham pharmacy</h2>
+<p data-cms="servicesPages.vaccinations.vaccinesIntro">Vaccine availability and funding varies by province and location*. These are the vaccines available in
+      Ontario:</p>
+
+    <div class="vaccine-grid" data-cms-vaccines="servicesPages.vaccinations.vaccines">
+      <div class="vaccine-card">
+        <i class="fas fa-virus"></i>
+        <h4>Influenza (Flu)</h4>
+      </div>
+      <div class="vaccine-card">
+        <i class="fas fa-viruses"></i>
+        <h4>COVID-19</h4>
+      </div>
+      <div class="vaccine-card">
+        <i class="fas fa-lungs"></i>
+        <h4>RSV</h4>
+      </div>
+      <div class="vaccine-card">
+        <i class="fas fa-shield-virus"></i>
+        <h4>Pneumococcal (Pneumonia)</h4>
+      </div>
+      <div class="vaccine-card">
+        <i class="fas fa-brain"></i>
+        <h4>Meningococcal (Meningitis)</h4>
+      </div>
+      <div class="vaccine-card">
+        <i class="fas fa-liver"></i>
+        <h4>Hepatitis A &amp; B</h4>
+      </div>
+      <div class="vaccine-card">
+        <i class="fas fa-hand-dots"></i>
+        <h4>Varicella (Chickenpox)</h4>
+      </div>
+      <div class="vaccine-card">
+        <i class="fas fa-virus-slash"></i>
+        <h4>Herpes Zoster (Shingles)</h4>
+      </div>
+      <div class="vaccine-card">
+        <i class="fas fa-dna"></i>
+        <h4>Human Papillomavirus (HPV)</h4>
+      </div>
+    </div>
+
+    <p <p class="section-note" data-cms="servicesPages.vaccinations.vaccinesNote">For more information, speak to your pharmacist.</p>
+  </section>
+
+  <!-- ===== Protection for your whole family ===== -->
+  <section class="section">
+    <h2 data-cms="servicesPages.vaccinations.familyHeading">Protection for your whole family</h2>
+<p data-cms="servicesPages.vaccinations.familyIntro">Learn more about vaccines that help shield you against common diseases:</p>
+
+    <div class="info-grid">
+      <div class="info-card">
+<i class="fas fa-syringe"></i>
+<h4 data-cms="servicesPages.vaccinations.familyCards.0.title">Flu, COVID-19 &amp; Other Respiratory Viruses</h4>
+<p data-cms="servicesPages.vaccinations.familyCards.0.text">Vaccination can protect you against different respiratory viruses (flu, COVID-19, respiratory syncytial
+          virus (RSV) and pneumococcus). Some vaccines are recommended every year, others only after a certain age.</p>
+<a href="vaccinations/respiratory_viruses.html" class="info-link" data-cms-href="servicesPages.vaccinations.familyCards.0.linkHref"><span data-cms="servicesPages.vaccinations.familyCards.0.linkLabel">Learn more</span> <i class="fas fa-arrow-right"></i></a>
+      </div>
+
+      <div class="info-card">
+<i class="fas fa-plane-departure"></i>
+<h4 data-cms="servicesPages.vaccinations.familyCards.1.title">Travel Vaccines</h4>
+<p data-cms="servicesPages.vaccinations.familyCards.1.text">Depending on your destination, some immunizations should be considered before and after your trip for
+          maximum safety. Make sure to book an appointment at least 6 weeks in advance to ensure you are fully
+          immunized.</p>
+<a href="vaccinations/travel_vaccines.html" class="info-link" data-cms-href="servicesPages.vaccinations.familyCards.1.linkHref"><span data-cms="servicesPages.vaccinations.familyCards.1.linkLabel">Learn more</span> <i class="fas fa-arrow-right"></i></a>
+      </div>
+
+      <div class="info-card">
+<i class="fas fa-kit-medical"></i>
+<h4 data-cms="servicesPages.vaccinations.familyCards.2.title">Other Diseases</h4>
+<p data-cms="servicesPages.vaccinations.familyCards.2.text">Vaccination can minimize your risk of contracting several diseases, such as shingles, tetanus, hepatitis
+          and certain childhood illnesses.</p>
+<a href="vaccinations/other_vaccines.html" class="info-link" data-cms-href="servicesPages.vaccinations.familyCards.2.linkHref"><span data-cms="servicesPages.vaccinations.familyCards.2.linkLabel">Learn more</span> <i class="fas fa-arrow-right"></i></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Disclaimer ===== -->
+  <section class="section">
+    <p class="disclaimer">
+      * Individual vaccine products included in publicly funded programs may vary by province. Some vaccines may be
+      offered free of charge based on eligibility, while others may require private purchase. Ask your pharmacist for
+      more information.
+      <br><br>
+      The pharmacy services presented in this section are offered by Guardian, I.D.A. and Remedy'sRx pharmacists. The
+      pharmacists are solely responsible for the professional activities carried out during the practice of pharmacy.
+      These services are offered in participating pharmacies only. Certain fees and conditions may apply.
+      <br><br>
+      ** The information contained herein is provided for informational purposes only and is not intended to provide
+      complete information on the subject matter or to replace the advice of a health professional. This information
+      does not constitute medical consultation, diagnosis or opinion and should not be interpreted as such. Please
+      consult your health care provider if you have any questions about your health, medications or treatment.
+    </p>
+  </section>
+
+  <!-- ===== Footer Placeholder ===== -->
+  <div id="footer-container"></div>
+
+  <!-- Scripts -->
+  <script src="../assets/script.js"></script>
+  <script src="../assets/loader.js"></script>
+  <script>
+    window.addEventListener('load', () => window.loadComponents('../'));
+  </script>
+</body>
+
+</html>

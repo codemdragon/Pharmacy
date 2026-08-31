@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Medication Customization Services | Guardian MarkhaMack Pharmacy</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Roboto:wght@400;500&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="../assets/style.css">
+
+  <style>
+    :root {
+      --primary: #0056b3;
+      --accent: #ff6b00;
+      --light: #f8f9fa;
+      --text: #333;
+      --text-light: #6c757d;
+      --shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      --transition: all 0.3s ease;
+    }
+
+    body {
+      font-family: 'Roboto', sans-serif;
+      color: var(--text);
+      overflow-x: hidden;
+      line-height: 1.6;
+    }
+
+    h1,
+    h2,
+    h3 {
+      font-family: 'Poppins', sans-serif;
+    }
+
+    /* ===== Banner ===== */
+    .banner {
+      background: linear-gradient(135deg, var(--primary), #004494);
+      color: white;
+      text-align: center;
+      padding: 80px 20px;
+    }
+
+    .banner h1 {
+      font-size: 2.4rem;
+      font-weight: 600;
+      animation: fadeInUp 1s ease;
+    }
+
+    .banner p {
+      max-width: 700px;
+      margin: 10px auto 0;
+      opacity: 0.9;
+    }
+
+    /* ===== Section Layout ===== */
+    .section {
+      max-width: 1100px;
+      margin: 80px auto;
+      padding: 0 20px;
+    }
+
+    .intro {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 40px;
+    }
+
+    .intro img {
+      flex: 1;
+      width: 100%;
+      max-width: 480px;
+      border-radius: 12px;
+      box-shadow: var(--shadow);
+      animation: fadeIn 1.2s ease;
+    }
+
+    .intro-text {
+      flex: 1;
+    }
+
+    .intro-text h2 {
+      color: var(--primary);
+      margin-bottom: 15px;
+    }
+
+    .intro-text p {
+      margin-bottom: 15px;
+    }
+
+    .cta-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+      margin-top: 20px;
+    }
+
+    .btn {
+      display: inline-block;
+      background: var(--accent);
+      color: white;
+      text-decoration: none;
+      padding: 12px 25px;
+      border-radius: 25px;
+      transition: var(--transition);
+      font-weight: 500;
+    }
+
+    .btn:hover {
+      background: #e55a00;
+      transform: translateY(-2px);
+    }
+
+    .btn-outline {
+      background: white;
+      color: var(--primary);
+      border: 2px solid var(--primary);
+    }
+
+    .btn-outline:hover {
+      background: var(--primary);
+      color: white;
+    }
+
+    /* ===== Alternating blocks ===== */
+    .content {
+      padding: 20px 0 60px;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding-inline: 20px;
+    }
+
+    .health-block {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 40px;
+      margin-bottom: 80px;
+      flex-wrap: wrap;
+    }
+
+    .health-block.reverse {
+      flex-direction: row-reverse;
+    }
+
+    .health-img {
+      flex: 1;
+      min-height: 300px;
+      background-size: cover;
+      background-position: center;
+      border-radius: 12px;
+      box-shadow: var(--shadow);
+    }
+
+    .health-text {
+      flex: 1;
+    }
+
+    .health-text h2 {
+      color: var(--primary);
+      font-size: 1.8rem;
+      margin-bottom: 15px;
+    }
+
+    .health-text p {
+      color: var(--text-light);
+      margin-bottom: 15px;
+      line-height: 1.7;
+    }
+
+    .health-btn {
+      display: inline-block;
+      background: var(--accent);
+      color: white;
+      text-decoration: none;
+      padding: 12px 25px;
+      border-radius: 25px;
+      font-weight: 500;
+      transition: var(--transition);
+    }
+
+    .health-btn:hover {
+      background: #e55a00;
+      transform: translateY(-2px);
+    }
+
+    /* ===== Info sections ===== */
+    .info-box {
+      background: var(--light);
+      padding: 25px;
+      border-radius: 10px;
+      box-shadow: var(--shadow);
+      margin-top: 40px;
+    }
+
+    .info-box h3 {
+      color: var(--primary);
+      margin-bottom: 10px;
+    }
+
+    .info-box h3 i {
+      color: var(--accent);
+      margin-right: 10px;
+    }
+
+    /* ===== Suggested services (hover squares) ===== */
+    .suggested-services {
+      background: var(--light);
+      padding: 80px 20px;
+      text-align: center;
+    }
+
+    .suggested-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .section-header {
+      margin-bottom: 40px;
+    }
+
+    .section-header h2 {
+      color: var(--primary);
+      position: relative;
+      display: inline-block;
+    }
+
+    .section-header h2::after {
+      content: '';
+      position: absolute;
+      width: 70px;
+      height: 3px;
+      background: var(--accent);
+      bottom: -10px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    .section-header p {
+      color: var(--text-light);
+      margin-top: 20px;
+      font-size: 1.1rem;
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+    }
+
+    .service-card {
+      background: white;
+      padding: 30px 25px;
+      border-radius: 12px;
+      box-shadow: var(--shadow);
+      text-align: center;
+      transition: var(--transition);
+    }
+
+    .service-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+      border-bottom: 3px solid var(--accent);
+    }
+
+    .service-card i {
+      font-size: 2.5rem;
+      color: var(--primary);
+      margin-bottom: 15px;
+      display: inline-block;
+    }
+
+    .service-card h3 {
+      color: var(--primary);
+      margin-bottom: 10px;
+    }
+
+    .service-card p {
+      color: var(--text-light);
+      margin-bottom: 15px;
+      font-size: 0.95rem;
+    }
+
+    .service-link {
+      display: inline-block;
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 500;
+      transition: var(--transition);
+    }
+
+    .service-link:hover {
+      color: #e55a00;
+      transform: translateX(5px);
+    }
+
+    .disclaimer {
+      font-size: 0.9rem;
+      color: var(--text-light);
+      max-width: 1100px;
+      margin: 60px auto 0;
+      padding: 0 20px;
+    }
+
+    @media (max-width: 768px) {
+
+      .health-block,
+      .health-block.reverse {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ===== Header Placeholder ===== -->
+  <div id="header-container"></div>
+
+  <!-- ===== Page Banner ===== -->
+  <section class="banner">
+    <h1 data-cms="servicesPages.medication_customization.bannerTitle">Medication Customization Services</h1>
+    <p data-cms="servicesPages.medication_customization.bannerSub">Medication, your way — at Guardian MarkhaMack Pharmacy.</p>
+  </section>
+
+  <!-- ===== Intro ===== -->
+  <section class="section">
+    <div class="intro">
+      <div class="intro-text">
+        <h2 data-cms="servicesPages.medication_customization.introHeading">Your medication should work for you</h2>
+        <p data-cms="servicesPages.medication_customization.introPara1">Sticking to your medication isn't always a walk in the park. Your pharmacist is here to make minor or major
+          adjustments to your therapy or provide you with custom formulas and innovative packaging to make it all
+          easier.</p>
+        <p data-cms="servicesPages.medication_customization.introPara2">When it comes to medication, you can choose how it is given and presented to you. Here's what your
+          pharmacist can do.</p>
+        <div class="cta-row">
+          <a href="tel:+19052943295" class="btn" data-cms-tel="store.phoneHref"><i class="fas fa-phone"></i> Call <span data-cms="store.phone">(905) 294-3295</span></a>
+          <a href="../where_are_we.html" class="btn btn-outline"><i class="fas fa-map-marker-alt"></i> Where Are We</a>
+        </div>
+      </div>
+      <img data-cms-src="servicesPages.medication_customization.introImg" src="https://images.unsplash.com/photo-1587854692152-cbe660dbde88?auto=format&fit=crop&w=1000&q=80"
+        alt="Pharmacist preparing customized medication">
+    </div>
+  </section>
+
+  <!-- ===== Service Blocks ===== -->
+  <section class="content">
+
+    <!-- Therapy Adjustments -->
+    <div class="health-block reverse">
+      <div class="health-text">
+        <h2 data-cms="servicesPages.medication_customization.blocks.0.heading">Therapy Adjustments</h2>
+        <p data-cms="servicesPages.medication_customization.blocks.0.text">If you have been taking medication for a while, your pharmacist can adjust your therapy to fit with your
+          needs and lifestyle even more.</p>
+        <a href="medication_customization/therapy_adjustment.html" class="health-btn" data-cms="servicesPages.medication_customization.blocks.0.btnLabel" data-cms-href="servicesPages.medication_customization.blocks.0.btnHref">Learn more</a>
+      </div>
+      <div class="health-img" data-cms-bg="servicesPages.medication_customization.blocks.0.img" style="background-image:url('https://images.unsplash.com/photo-1471864190281-a93a3070b6de?auto=format&fit=crop&w=1000&q=80');">
+      </div>
+    </div>
+
+    <!-- Customized Medication -->
+    <div class="health-block">
+      <div class="health-img" data-cms-bg="servicesPages.medication_customization.blocks.1.img" style="background-image:url('https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?auto=format&fit=crop&w=1000&q=80');">
+      </div>
+      <div class="health-text">
+        <h2 data-cms="servicesPages.medication_customization.blocks.1.heading">Customized Medication</h2>
+        <p data-cms="servicesPages.medication_customization.blocks.1.text">When it comes to medication, the one-size-fits-all approach does not always cut it. Some medication are
+          available in different formats, sizes, flavours and custom dosages based on your personal preferences.</p>
+        <a href="medication_customization/personalized_medication.html" class="health-btn" data-cms="servicesPages.medication_customization.blocks.1.btnLabel" data-cms-href="servicesPages.medication_customization.blocks.1.btnHref">Learn more</a>
+      </div>
+    </div>
+
+    <!-- Customized Packaging -->
+    <div class="health-block reverse">
+      <div class="health-text">
+        <h2 data-cms="servicesPages.medication_customization.blocks.2.heading">Customized Packaging</h2>
+        <p data-cms="servicesPages.medication_customization.blocks.2.text">Like your medication, packaging can also correspond to your needs and situation. Your pharmacist can print
+          larger labels and make sure your bottle is easy to open if you have poor motor skills.</p>
+        <a href="medication_customization/personalized_packaging.html" class="health-btn" data-cms="servicesPages.medication_customization.blocks.2.btnLabel" data-cms-href="servicesPages.medication_customization.blocks.2.btnHref">Learn more</a>
+      </div>
+      <div class="health-img" data-cms-bg="servicesPages.medication_customization.blocks.2.img" style="background-image:url('https://images.unsplash.com/photo-1557935728-3bcb0d3e8e5f?auto=format&fit=crop&w=1000&q=80');">
+      </div>
+    </div>
+
+  </section>
+
+  <!-- ===== Extra services ===== -->
+  <section class="section" style="margin-top: 0;">
+    <div class="info-box">
+<h3><i class="fas fa-mortar-pestle"></i><span data-cms="servicesPages.medication_customization.infoBoxes.0.heading">Compounding</span></h3>
+<p data-cms="servicesPages.medication_customization.infoBoxes.0.text">Certain particular health conditions require specific medications, such as a mixture of several medicated
+        creams, which can be prepared at the pharmacy.</p>
+    </div>
+
+    <div class="info-box">
+<h3><i class="fas fa-right-left"></i><span data-cms="servicesPages.medication_customization.infoBoxes.1.heading">Substituting a brand-name drug with a generic drug</span></h3>
+<p data-cms="servicesPages.medication_customization.infoBoxes.1.text">Don't hesitate to ask your pharmacist if a generic version of a prescribed drug exists. A generic drug is
+        pharmaceutically equivalent to a brand-name drug: it contains the same active medicinal ingredients, in the
+        same quantities, in a comparable dosage form.</p>
+    </div>
+  </section>
+
+  <!-- ===== Suggested Services ===== -->
+  <section class="suggested-services">
+    <div class="suggested-inner">
+      <div class="section-header">
+        <h2 data-cms="servicesPages.medication_customization.suggestedHeading">Suggested Services For You</h2>
+        <p data-cms="servicesPages.medication_customization.suggestedSub">Discover our wide range of services offered at our Markham pharmacy</p>
+      </div>
+
+      <div class="services-grid">
+        <div class="service-card">
+<i class="fas fa-heartbeat"></i>
+<h3 data-cms="servicesPages.medication_customization.suggestedCards.0.title">Assessments &amp; Monitoring</h3>
+<p data-cms="servicesPages.medication_customization.suggestedCards.0.text">Your pharmacist can provide an assessment of your initial therapy and make sure it is the best option
+            for you.</p>
+<a href="../services/assessments_monitoring.html" class="service-link" data-cms-href="servicesPages.medication_customization.suggestedCards.0.linkHref"><span data-cms="servicesPages.medication_customization.suggestedCards.0.linkLabel">All Assessment &amp; Monitoring
+            Services</span> <i class="fas fa-arrow-right"></i></a>
+        </div>
+
+        <div class="service-card">
+<i class="fas fa-leaf"></i>
+<h3 data-cms="servicesPages.medication_customization.suggestedCards.1.title">Wellness Consultations</h3>
+<p data-cms="servicesPages.medication_customization.suggestedCards.1.text">For your pharmacist, your health is also their goal. Turn to them for advice on how to reach your
+            wellness objectives and for private consultations.</p>
+<a href="../services/wellness_consultation.html" class="service-link" data-cms-href="servicesPages.medication_customization.suggestedCards.1.linkHref"><span data-cms="servicesPages.medication_customization.suggestedCards.1.linkLabel">All Wellness Consultation Services</span> <i class="fas fa-arrow-right"></i></a>
+        </div>
+
+        <div class="service-card">
+<i class="fas fa-syringe"></i>
+<h3 data-cms="servicesPages.medication_customization.suggestedCards.2.title">Vaccinations</h3>
+<p data-cms="servicesPages.medication_customization.suggestedCards.2.text">When you need protection against the Flu, common diseases or tropical diseases if you travel, turn to
+            your pharmacist for information and advice.</p>
+<a href="../services/vaccinations.html" class="service-link" data-cms-href="servicesPages.medication_customization.suggestedCards.2.linkHref"><span data-cms="servicesPages.medication_customization.suggestedCards.2.linkLabel">All Vaccination Services</span> <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Disclaimer ===== -->
+  <p class="disclaimer">
+    The pharmacy services presented in this section are offered by Guardian, I.D.A. and Remedy'sRx pharmacists. The
+    pharmacists are solely responsible for the professional activities carried out during the practice of pharmacy.
+    These services are offered in participating pharmacies only. Certain fees and conditions may apply.
+    <br><br>
+    * The information contained herein is provided for informational purposes only and is not intended to provide
+    complete information on the subject matter or to replace the advice of a health professional. This information
+    does not constitute medical consultation, diagnosis or opinion and should not be interpreted as such. Please
+    consult your health care provider if you have any questions about your health, medications or treatment.
+  </p>
+
+  <!-- ===== Footer Placeholder ===== -->
+  <div id="footer-container"></div>
+
+  <!-- Scripts -->
+  <script src="../assets/script.js"></script>
+  <script src="../assets/loader.js"></script>
+  <script>
+    window.addEventListener('load', () => window.loadComponents('../'));
+  </script>
+</body>
+
+</html>

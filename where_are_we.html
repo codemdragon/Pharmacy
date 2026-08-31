@@ -203,8 +203,8 @@
 
     <!-- Banner -->
     <section class="location-banner">
-        <h1>Where Are We</h1>
-        <p>Guardian MarkhaMack Pharmacy - Your trusted local healthcare partner</p>
+        <h1 data-cms="locationPage.bannerTitle">Where Are We</h1>
+        <p data-cms="locationPage.bannerSub">Guardian MarkhaMack Pharmacy - Your trusted local healthcare partner</p>
     </section>
 
     <!-- Main Content -->
@@ -218,7 +218,7 @@
 
                     <!-- Floating Map Actions -->
                     <div class="map-overlay-actions">
-                        <a href="https://maps.app.goo.gl/gFvvRHCLYUA9Cpq28" target="_blank" class="action-btn primary">
+                        <a href="https://maps.app.goo.gl/gFvvRHCLYUA9Cpq28" target="_blank" class="action-btn primary" data-cms-href="store.mapsUrl">
                             <i class="fas fa-directions"></i> Google Maps
                         </a>
                         <button class="action-btn" onclick="zoomIn()">
@@ -233,16 +233,16 @@
 
             <!-- Right Column: Store Info -->
             <div class="info-card">
-                <h2 class="section-title" style="color: var(--primary); margin-bottom: 5px;">Guardian MarkhaMack</h2>
-                <span class="pharmacy-badge">Open Now</span>
+                <h2 class="section-title" style="color: var(--primary); margin-bottom: 5px;" data-cms="store.name">Guardian MarkhaMack</h2>
+                <span class="pharmacy-badge" data-cms="store.badge">Open Now</span>
 
                 <div class="info-group">
                     <div class="info-label">Address</div>
                     <div class="info-content">
                         <i class="fas fa-map-marker-alt"></i>
                         <div>
-                            WP4M+M7 Markham, Ontario, Canada<br>
-                            9889 ON-48 #7, Markham, ON L6E 0B7
+                            <span data-cms="store.plusCode">WP4M+M7 Markham, Ontario, Canada</span><br>
+                            <span data-cms="store.addressLine1">9889 ON-48 #7</span>, <span data-cms="store.addressLine2">Markham, ON L6E 0B7</span>
                         </div>
                     </div>
                 </div>
@@ -251,18 +251,18 @@
                     <div class="info-label">Contact</div>
                     <div class="info-content">
                         <i class="fas fa-phone"></i>
-                        <a href="tel:+19052943295" style="text-decoration: none; color: inherit;">+1 (905) 294-3295</a>
+                        <a href="tel:+19052943295" style="text-decoration: none; color: inherit;" data-cms-tel="store.phoneHref"><span data-cms="store.phone">+1 (905) 294-3295</span></a>
                     </div>
                 </div>
 
                 <div class="info-group">
                     <div class="info-label">Store Hours</div>
-                    <div class="hours-list" id="hours-container">
+                    <div class="hours-list" id="hours-container" data-cms-hours>
                         <!-- Populated by JS -->
                     </div>
                 </div>
 
-                <a href="tel:+19052943295" class="carousel-btn"
+                <a href="tel:+19052943295" class="carousel-btn" data-cms-tel="store.phoneHref"
                     style="width: 100%; text-align: center; margin-top: 10px;">
                     <i class="fas fa-phone"></i> Call Now
                 </a>
@@ -345,6 +345,13 @@
         marker.bindPopup(popupContent).openPopup();
 
         function zoomIn() { map.zoomIn(); }
+
+        // CMS hook: repositions the map when coordinates change in admin
+        window.updateMapCoords = function (lat, lng, zoom) {
+            if (typeof lat !== 'number' || typeof lng !== 'number') return;
+            map.setView([lat, lng], zoom || 15);
+            marker.setLatLng([lat, lng]);
+        };
         function zoomOut() { map.zoomOut(); }
 
         // --- 2. Dynamic Hours Logic ---

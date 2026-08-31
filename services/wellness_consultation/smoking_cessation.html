@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Smoking Cessation Services | Guardian MarkhaMack Pharmacy</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Roboto:wght@400;500&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="../../assets/style.css">
+
+  <style>
+    :root {
+      --primary: #0056b3;
+      --accent: #ff6b00;
+      --light: #f8f9fa;
+      --text: #333;
+      --text-light: #6c757d;
+      --shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      --transition: all 0.3s ease;
+    }
+
+    body {
+      font-family: 'Roboto', sans-serif;
+      color: var(--text);
+      overflow-x: hidden;
+      line-height: 1.6;
+    }
+
+    h1,
+    h2,
+    h3 {
+      font-family: 'Poppins', sans-serif;
+    }
+
+    /* ===== Banner ===== */
+    .banner {
+      background: linear-gradient(135deg, var(--primary), #004494);
+      color: white;
+      text-align: center;
+      padding: 80px 20px;
+    }
+
+    .banner h1 {
+      font-size: 2.4rem;
+      font-weight: 600;
+      animation: fadeInUp 1s ease;
+    }
+
+    .banner p {
+      max-width: 700px;
+      margin: 10px auto 0;
+      opacity: 0.9;
+    }
+
+    /* ===== Section Layout ===== */
+    .section {
+      max-width: 1100px;
+      margin: 80px auto;
+      padding: 0 20px;
+    }
+
+    .intro {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 40px;
+    }
+
+    .intro img {
+      flex: 1;
+      width: 100%;
+      max-width: 480px;
+      border-radius: 12px;
+      box-shadow: var(--shadow);
+      animation: fadeIn 1.2s ease;
+    }
+
+    .intro-text {
+      flex: 1;
+    }
+
+    .intro-text h2 {
+      color: var(--primary);
+      margin-bottom: 15px;
+    }
+
+    .intro-text p {
+      margin-bottom: 15px;
+    }
+
+    .cta-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+      margin-top: 20px;
+    }
+
+    .btn {
+      display: inline-block;
+      background: var(--accent);
+      color: white;
+      text-decoration: none;
+      padding: 12px 25px;
+      border-radius: 25px;
+      transition: var(--transition);
+      font-weight: 500;
+    }
+
+    .btn:hover {
+      background: #e55a00;
+      transform: translateY(-2px);
+    }
+
+    .btn-outline {
+      background: white;
+      color: var(--primary);
+      border: 2px solid var(--primary);
+    }
+
+    .btn-outline:hover {
+      background: var(--primary);
+      color: white;
+    }
+
+    /* ===== Action plan steps ===== */
+    .info-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 25px;
+      margin-top: 40px;
+    }
+
+    .info-card {
+      background: var(--light);
+      padding: 25px;
+      border-radius: 12px;
+      box-shadow: var(--shadow);
+      transition: var(--transition);
+      animation: fadeInUp 0.8s ease;
+    }
+
+    .info-card:nth-child(2) {
+      animation-delay: 0.1s;
+    }
+
+    .info-card:nth-child(3) {
+      animation-delay: 0.2s;
+    }
+
+    .info-card:nth-child(4) {
+      animation-delay: 0.3s;
+    }
+
+    .info-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+      border-bottom: 3px solid var(--accent);
+    }
+
+    .step-badge {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background: var(--primary);
+      color: white;
+      font-family: 'Poppins', sans-serif;
+      font-weight: 600;
+      font-size: 1.3rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 15px;
+    }
+
+    .info-card h4 {
+      color: var(--primary);
+      margin-bottom: 10px;
+    }
+
+    .info-card p {
+      color: var(--text-light);
+      margin-bottom: 0;
+      font-size: 0.95rem;
+    }
+
+    .info-card ul {
+      margin: 0 0 0 20px;
+      color: var(--text-light);
+      font-size: 0.95rem;
+    }
+
+    .info-card ul li {
+      margin-bottom: 8px;
+    }
+
+    /* ===== See all services ===== */
+    .all-services {
+      text-align: center;
+      margin-top: 60px;
+    }
+
+    .disclaimer {
+      font-size: 0.9rem;
+      color: var(--text-light);
+      margin-top: 50px;
+      border-top: 1px solid #ddd;
+      padding-top: 20px;
+    }
+
+    @media (max-width: 768px) {
+      .intro {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ===== Header Placeholder ===== -->
+  <div id="header-container"></div>
+
+  <!-- ===== Page Banner ===== -->
+  <section class="banner">
+    <h1 data-cms="servicesPages.wellness_consultation.pages.smoking_cessation.bannerTitle">Smoking Cessation Services</h1>
+    <p data-cms="servicesPages.wellness_consultation.pages.smoking_cessation.bannerSub">Your smoking cessation action plan — with Guardian MarkhaMack Pharmacy.</p>
+  </section>
+
+  <!-- ===== Intro ===== -->
+  <section class="section">
+    <div class="intro">
+      <div class="intro-text">
+        <h2 data-cms="servicesPages.wellness_consultation.pages.smoking_cessation.introHeading">Your smoking cessation action plan</h2>
+        <p data-cms="servicesPages.wellness_consultation.pages.smoking_cessation.introPara1">Do you wish to stop smoking? Your pharmacist can provide advice and guide you through this journey. Here's
+          an action plan that you can follow with your pharmacist:</p>
+        <div class="cta-row">
+          <a href="tel:+19052943295" class="btn" data-cms-tel="store.phoneHref"><i class="fas fa-phone"></i> Call <span data-cms="store.phone">(905) 294-3295</span></a>
+          <a href="../../where_are_we.html" class="btn btn-outline"><i class="fas fa-map-marker-alt"></i> Where Are
+            We</a>
+        </div>
+      </div>
+      <img data-cms-src="servicesPages.wellness_consultation.pages.smoking_cessation.introImg" src="https://images.unsplash.com/photo-1551690656952-34342bb7c2f2?auto=format&fit=crop&w=1000&q=80"
+        alt="Smoking cessation support">
+    </div>
+  </section>
+
+  <!-- ===== Action Plan ===== -->
+  <section class="section">
+    <h2 data-cms="servicesPages.wellness_consultation.pages.smoking_cessation.sections.0.heading">The plan</h2>
+
+    <div class="info-grid">
+      <div class="info-card">
+        <div class="step-badge"><span data-cms="servicesPages.wellness_consultation.pages.smoking_cessation.sections.0.cards.0.badge">1</span></div>
+        <h4><span data-cms="servicesPages.wellness_consultation.pages.smoking_cessation.sections.0.cards.0.title">Choose a starting point</span></h4>
+        <p data-cms="servicesPages.wellness_consultation.pages.smoking_cessation.sections.0.cards.0.text1">We all have to start somewhere, so pick a starting date and set achievable goals.</p>
+        <p data-cms="servicesPages.wellness_consultation.pages.smoking_cessation.sections.0.cards.0.text2">Tell your friends and family and ask them for support.</p>
+      </div>
+
+      <div class="info-card">
+        <div class="step-badge"><span data-cms="servicesPages.wellness_consultation.pages.smoking_cessation.sections.0.cards.1.badge">2</span></div>
+        <h4><span data-cms="servicesPages.wellness_consultation.pages.smoking_cessation.sections.0.cards.1.title">Meet your pharmacist</span></h4>
+        <p data-cms="servicesPages.wellness_consultation.pages.smoking_cessation.sections.0.cards.1.text1">Your pharmacist will:</p>
+        <ul>
+          <li data-cms="servicesPages.wellness_consultation.pages.smoking_cessation.sections.0.cards.1.list.0">Determine how dependent you are on nicotine</li>
+          <li data-cms="servicesPages.wellness_consultation.pages.smoking_cessation.sections.0.cards.1.list.1">Help you understand your main smoking habits and identify your triggers</li>
+          <li data-cms="servicesPages.wellness_consultation.pages.smoking_cessation.sections.0.cards.1.list.2">Ask you about your previous attempts to quit smoking to make sure you don't fall back into the same bad
+            habits</li>
+        </ul>
+      </div>
+
+      <div class="info-card">
+        <div class="step-badge"><span data-cms="servicesPages.wellness_consultation.pages.smoking_cessation.sections.0.cards.2.badge">3</span></div>
+        <h4><span data-cms="servicesPages.wellness_consultation.pages.smoking_cessation.sections.0.cards.2.title">Follow a personalized treatment</span></h4>
+        <p data-cms="servicesPages.wellness_consultation.pages.smoking_cessation.sections.0.cards.2.text1">If needed, your pharmacist can prescribe a tailored solution, including:</p>
+        <ul>
+          <li data-cms="servicesPages.wellness_consultation.pages.smoking_cessation.sections.0.cards.2.list.0">Nicotine replacement products used for replacing the nicotine from cigarettes (patches, chewing gum and
+            lozenges)</li>
+        </ul>
+      </div>
+
+      <div class="info-card">
+        <div class="step-badge"><span data-cms="servicesPages.wellness_consultation.pages.smoking_cessation.sections.0.cards.3.badge">4</span></div>
+        <h4><span data-cms="servicesPages.wellness_consultation.pages.smoking_cessation.sections.0.cards.3.title">Reward yourself</span></h4>
+        <p data-cms="servicesPages.wellness_consultation.pages.smoking_cessation.sections.0.cards.3.text1">You should reward yourself when you're progressing.</p>
+        <p data-cms="servicesPages.wellness_consultation.pages.smoking_cessation.sections.0.cards.3.text2">Many benefits of a smoke-free life can be felt in the long-term, but some benefits are almost instant as
+          well. So keep on going!</p>
+      </div>
+    </div>
+
+    <div class="all-services"><a href="../wellness_consultation.html" class="btn" data-cms="servicesPages.wellness_consultation.pages.smoking_cessation.sections.0.ctaLabel" data-cms-href="servicesPages.wellness_consultation.pages.smoking_cessation.sections.0.ctaHref">See all services</a></div>
+  </section>
+
+  <!-- ===== Disclaimer ===== -->
+  <section class="section">
+    <p class="disclaimer" data-cms-multi="servicesPages.wellness_consultation.pages.smoking_cessation.disclaimer">
+      The pharmacy services presented in this section are offered by Guardian, I.D.A. and Remedy'sRx pharmacists. The
+      pharmacists are solely responsible for the professional activities carried out during the practice of pharmacy.
+      These services are offered in participating pharmacies only. Certain fees and conditions may apply.
+      <br><br>
+      * The information contained herein is provided for informational purposes only and is not intended to provide
+      complete information on the subject matter or to replace the advice of a health professional. This information
+      does not constitute medical consultation, diagnosis or opinion and should not be interpreted as such. Please
+      consult your health care provider if you have any questions about your health, medications or treatment.
+    </p>
+  </section>
+
+  <!-- ===== Footer Placeholder ===== -->
+  <div id="footer-container"></div>
+
+  <!-- Scripts -->
+  <script src="../../assets/script.js"></script>
+  <script src="../../assets/loader.js"></script>
+  <script>
+    window.addEventListener('load', () => window.loadComponents('../../'));
+  </script>
+</body>
+
+</html>

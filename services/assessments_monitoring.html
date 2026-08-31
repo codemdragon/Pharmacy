@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Assessments &amp; Monitoring Services | Guardian MarkhaMack Pharmacy</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Roboto:wght@400;500&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="../assets/style.css">
+
+  <style>
+    :root {
+      --primary: #0056b3;
+      --accent: #ff6b00;
+      --light: #f8f9fa;
+      --text: #333;
+      --text-light: #6c757d;
+      --shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      --transition: all 0.3s ease;
+    }
+
+    body {
+      font-family: 'Roboto', sans-serif;
+      color: var(--text);
+      overflow-x: hidden;
+      line-height: 1.6;
+    }
+
+    h1,
+    h2,
+    h3 {
+      font-family: 'Poppins', sans-serif;
+    }
+
+    /* ===== Banner ===== */
+    .banner {
+      background: linear-gradient(135deg, var(--primary), #004494);
+      color: white;
+      text-align: center;
+      padding: 80px 20px;
+    }
+
+    .banner h1 {
+      font-size: 2.4rem;
+      font-weight: 600;
+      animation: fadeInUp 1s ease;
+    }
+
+    .banner p {
+      max-width: 700px;
+      margin: 10px auto 0;
+      opacity: 0.9;
+    }
+
+    /* ===== Section Layout ===== */
+    .section {
+      max-width: 1100px;
+      margin: 80px auto;
+      padding: 0 20px;
+    }
+
+    .intro {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 40px;
+    }
+
+    .intro img {
+      flex: 1;
+      width: 100%;
+      max-width: 480px;
+      border-radius: 12px;
+      box-shadow: var(--shadow);
+      animation: fadeIn 1.2s ease;
+    }
+
+    .intro-text {
+      flex: 1;
+    }
+
+    .intro-text h2 {
+      color: var(--primary);
+      margin-bottom: 15px;
+    }
+
+    .intro-text p {
+      margin-bottom: 15px;
+    }
+
+    .cta-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+      margin-top: 20px;
+    }
+
+    .btn {
+      display: inline-block;
+      background: var(--accent);
+      color: white;
+      text-decoration: none;
+      padding: 12px 25px;
+      border-radius: 25px;
+      transition: var(--transition);
+      font-weight: 500;
+    }
+
+    .btn:hover {
+      background: #e55a00;
+      transform: translateY(-2px);
+    }
+
+    .btn-outline {
+      background: white;
+      color: var(--primary);
+      border: 2px solid var(--primary);
+    }
+
+    .btn-outline:hover {
+      background: var(--primary);
+      color: white;
+    }
+
+    /* ===== Alternating blocks ===== */
+    .content {
+      padding: 20px 0 60px;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding-inline: 20px;
+    }
+
+    .health-block {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 40px;
+      margin-bottom: 80px;
+      flex-wrap: wrap;
+    }
+
+    .health-block.reverse {
+      flex-direction: row-reverse;
+    }
+
+    .health-img {
+      flex: 1;
+      min-height: 300px;
+      background-size: cover;
+      background-position: center;
+      border-radius: 12px;
+      box-shadow: var(--shadow);
+    }
+
+    .health-text {
+      flex: 1;
+    }
+
+    .health-text h2 {
+      color: var(--primary);
+      font-size: 1.8rem;
+      margin-bottom: 15px;
+    }
+
+    .health-text p {
+      color: var(--text-light);
+      margin-bottom: 15px;
+      line-height: 1.7;
+    }
+
+    .health-btn {
+      display: inline-block;
+      background: var(--accent);
+      color: white;
+      text-decoration: none;
+      padding: 12px 25px;
+      border-radius: 25px;
+      font-weight: 500;
+      transition: var(--transition);
+    }
+
+    .health-btn:hover {
+      background: #e55a00;
+      transform: translateY(-2px);
+    }
+
+    /* ===== Suggested services (hover squares) ===== */
+    .suggested-services {
+      background: var(--light);
+      padding: 80px 20px;
+      text-align: center;
+    }
+
+    .suggested-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .section-header {
+      margin-bottom: 40px;
+    }
+
+    .section-header h2 {
+      color: var(--primary);
+      position: relative;
+      display: inline-block;
+    }
+
+    .section-header h2::after {
+      content: '';
+      position: absolute;
+      width: 70px;
+      height: 3px;
+      background: var(--accent);
+      bottom: -10px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    .section-header p {
+      color: var(--text-light);
+      margin-top: 20px;
+      font-size: 1.1rem;
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+    }
+
+    .service-card {
+      background: white;
+      padding: 30px 25px;
+      border-radius: 12px;
+      box-shadow: var(--shadow);
+      text-align: center;
+      transition: var(--transition);
+    }
+
+    .service-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+      border-bottom: 3px solid var(--accent);
+    }
+
+    .service-card i {
+      font-size: 2.5rem;
+      color: var(--primary);
+      margin-bottom: 15px;
+      display: inline-block;
+    }
+
+    .service-card h3 {
+      color: var(--primary);
+      margin-bottom: 10px;
+    }
+
+    .service-card p {
+      color: var(--text-light);
+      margin-bottom: 15px;
+      font-size: 0.95rem;
+    }
+
+    .service-link {
+      display: inline-block;
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 500;
+      transition: var(--transition);
+    }
+
+    .service-link:hover {
+      color: #e55a00;
+      transform: translateX(5px);
+    }
+
+    .disclaimer {
+      font-size: 0.9rem;
+      color: var(--text-light);
+      max-width: 1100px;
+      margin: 60px auto 0;
+      padding: 0 20px;
+    }
+
+    @media (max-width: 768px) {
+
+      .health-block,
+      .health-block.reverse {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ===== Header Placeholder ===== -->
+  <div id="header-container"></div>
+
+  <!-- ===== Page Banner ===== -->
+  <section class="banner">
+    <h1 data-cms="servicesPages.assessments_monitoring.bannerTitle">Assessments &amp; Monitoring Services</h1>
+    <p data-cms="servicesPages.assessments_monitoring.bannerSub">Always keeping an eye on your progress — at Guardian MarkhaMack Pharmacy.</p>
+  </section>
+
+  <!-- ===== Intro ===== -->
+  <section class="section">
+    <div class="intro">
+      <div class="intro-text">
+        <h2 data-cms="servicesPages.assessments_monitoring.introHeading">Your pharmacist can guide you</h2>
+        <p data-cms="servicesPages.assessments_monitoring.introPara1">As your partner in health, your pharmacist is not one to simply sit back on good results. They will review
+          your current medication and treatment to further optimize your health outcomes — giving you the right tools
+          to take your health into your own hands.</p>
+        <p data-cms="servicesPages.assessments_monitoring.introPara2">Your pharmacist can prescribe and execute certain tests to make sure your treatment is working for you,
+          and help you keep your condition in check with monitoring tools and advice.</p>
+        <div class="cta-row">
+          <a href="tel:+19052943295" class="btn" data-cms-tel="store.phoneHref"><i class="fas fa-phone"></i> Call <span data-cms="store.phone">(905) 294-3295</span></a>
+          <a href="../where_are_we.html" class="btn btn-outline"><i class="fas fa-map-marker-alt"></i> Where Are We</a>
+        </div>
+      </div>
+      <img data-cms-src="servicesPages.assessments_monitoring.introImg" src="https://images.unsplash.com/photo-1559757175-5700dde675bc?auto=format&fit=crop&w=1000&q=80"
+        alt="Health monitoring at the pharmacy">
+    </div>
+  </section>
+
+  <!-- ===== Service Blocks ===== -->
+  <section class="content">
+
+    <!-- Diabetes -->
+    <div class="health-block reverse">
+      <div class="health-text">
+        <h2 data-cms="servicesPages.assessments_monitoring.blocks.0.heading">Diabetes</h2>
+        <p data-cms="servicesPages.assessments_monitoring.blocks.0.text">Whether you have prediabetes, diabetes or are newly diagnosed, many tests exist to ensure your blood sugar
+          is well under control and that your treatment is working well.</p>
+        <a href="assessments/diabetes.html" class="health-btn" data-cms="servicesPages.assessments_monitoring.blocks.0.btnLabel" data-cms-href="servicesPages.assessments_monitoring.blocks.0.btnHref">Learn more</a>
+      </div>
+      <div class="health-img" data-cms-bg="servicesPages.assessments_monitoring.blocks.0.img" style="background-image:url('https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=1000&q=80');">
+      </div>
+    </div>
+
+    <!-- Heart Health -->
+    <div class="health-block">
+      <div class="health-img" data-cms-bg="servicesPages.assessments_monitoring.blocks.1.img" style="background-image:url('https://images.unsplash.com/photo-1576091160550-21735dba66ef?auto=format&fit=crop&w=1000&q=80');">
+      </div>
+      <div class="health-text">
+        <h2 data-cms="servicesPages.assessments_monitoring.blocks.1.heading">Heart Health</h2>
+        <p data-cms="servicesPages.assessments_monitoring.blocks.1.text">If you are taking medication for a heart condition, your pharmacist can suggest some tests to determine if
+          your blood pressure or cholesterol is well managed or to see if adjustments to your treatment are
+          necessary.</p>
+        <a href="assessments/heart_health.html" class="health-btn" data-cms="servicesPages.assessments_monitoring.blocks.1.btnLabel" data-cms-href="servicesPages.assessments_monitoring.blocks.1.btnHref">Learn more</a>
+      </div>
+    </div>
+
+    <!-- Respiratory Health -->
+    <div class="health-block reverse">
+      <div class="health-text">
+        <h2 data-cms="servicesPages.assessments_monitoring.blocks.2.heading">Respiratory Health</h2>
+        <p data-cms="servicesPages.assessments_monitoring.blocks.2.text">If you have asthma or are experiencing strep throat symptoms, talk to your pharmacist about tests to
+          ensure your respiratory health is in order.</p>
+        <a href="assessments/respiratory_health.html" class="health-btn" data-cms="servicesPages.assessments_monitoring.blocks.2.btnLabel" data-cms-href="servicesPages.assessments_monitoring.blocks.2.btnHref">Learn more</a>
+      </div>
+      <div class="health-img" data-cms-bg="servicesPages.assessments_monitoring.blocks.2.img" style="background-image:url('https://images.unsplash.com/photo-1579154204601-01588f351e67?auto=format&fit=crop&w=1000&q=80');">
+      </div>
+    </div>
+
+  </section>
+
+  <!-- ===== Suggested Services ===== -->
+  <section class="suggested-services">
+    <div class="suggested-inner">
+      <div class="section-header">
+        <h2 data-cms="servicesPages.assessments_monitoring.suggestedHeading">Suggested Services For You</h2>
+        <p data-cms="servicesPages.assessments_monitoring.suggestedSub">Discover our wide range of services offered at our Markham pharmacy</p>
+      </div>
+
+      <div class="services-grid">
+        <div class="service-card">
+<i class="fas fa-prescription"></i>
+<h3 data-cms="servicesPages.assessments_monitoring.suggestedCards.0.title">Prescriptions</h3>
+<p data-cms="servicesPages.assessments_monitoring.suggestedCards.0.text">As your partner in health, your pharmacist can prescribe medication for certain minor health problems
+            right away and help you manage any of the medication you are taking.</p>
+<a href="../services/prescriptions.html" class="service-link" data-cms-href="servicesPages.assessments_monitoring.suggestedCards.0.linkHref"><span data-cms="servicesPages.assessments_monitoring.suggestedCards.0.linkLabel">All Prescription Services</span> <i class="fas fa-arrow-right"></i></a>
+        </div>
+
+        <div class="service-card">
+<i class="fas fa-leaf"></i>
+<h3 data-cms="servicesPages.assessments_monitoring.suggestedCards.1.title">Wellness Consultations</h3>
+<p data-cms="servicesPages.assessments_monitoring.suggestedCards.1.text">For your pharmacist, your health is also their goal. Turn to them for advice on how to reach your
+            wellness objectives and for private consultations.</p>
+<a href="../services/wellness_consultation.html" class="service-link" data-cms-href="servicesPages.assessments_monitoring.suggestedCards.1.linkHref"><span data-cms="servicesPages.assessments_monitoring.suggestedCards.1.linkLabel">All Wellness Consultation Services</span> <i class="fas fa-arrow-right"></i></a>
+        </div>
+
+        <div class="service-card">
+<i class="fas fa-syringe"></i>
+<h3 data-cms="servicesPages.assessments_monitoring.suggestedCards.2.title">Vaccinations</h3>
+<p data-cms="servicesPages.assessments_monitoring.suggestedCards.2.text">When you need protection against the Flu, common diseases or tropical diseases if you travel, turn to
+            your pharmacist for information and advice.</p>
+<a href="../services/vaccinations.html" class="service-link" data-cms-href="servicesPages.assessments_monitoring.suggestedCards.2.linkHref"><span data-cms="servicesPages.assessments_monitoring.suggestedCards.2.linkLabel">All Vaccination Services</span> <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Disclaimer ===== -->
+  <p class="disclaimer">
+    The pharmacy services presented in this section are offered by Guardian, I.D.A. and Remedy'sRx pharmacists. The
+    pharmacists are solely responsible for the professional activities carried out during the practice of pharmacy.
+    These services are offered in participating pharmacies only. Certain fees and conditions may apply.
+    <br><br>
+    * The information contained herein is provided for informational purposes only and is not intended to provide
+    complete information on the subject matter or to replace the advice of a health professional. This information
+    does not constitute medical consultation, diagnosis or opinion and should not be interpreted as such. Please
+    consult your health care provider if you have any questions about your health, medications or treatment.
+  </p>
+
+  <!-- ===== Footer Placeholder ===== -->
+  <div id="footer-container"></div>
+
+  <!-- Scripts -->
+  <script src="../assets/script.js"></script>
+  <script src="../assets/loader.js"></script>
+  <script>
+    window.addEventListener('load', () => window.loadComponents('../'));
+  </script>
+</body>
+
+</html>

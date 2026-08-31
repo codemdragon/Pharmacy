@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us | Guardian MarkhaMack Pharmacy</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Roboto:wght@400;500&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="assets/style.css">
+
+  <style>
+    :root {
+      --primary: #0056b3;
+      --accent: #ff6b00;
+      --light: #f8f9fa;
+      --text: #333;
+      --text-light: #6c757d;
+      --border: #dee2e6;
+      --shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      --transition: all 0.3s ease;
+    }
+
+    body {
+      font-family: 'Roboto', sans-serif;
+      color: var(--text);
+      overflow-x: hidden;
+      line-height: 1.6;
+    }
+
+    h1,
+    h2,
+    h3 {
+      font-family: 'Poppins', sans-serif;
+    }
+
+    /* ===== Banner ===== */
+    .banner {
+      background: linear-gradient(135deg, var(--primary), #004494);
+      color: white;
+      text-align: center;
+      padding: 80px 20px;
+      animation: fadeInUp 1s ease;
+    }
+
+    .banner h1 {
+      font-size: 2.4rem;
+      font-weight: 600;
+    }
+
+    .banner p {
+      max-width: 700px;
+      margin: 10px auto 0;
+      opacity: 0.9;
+    }
+
+    /* ===== Layout ===== */
+    .section {
+      max-width: 1100px;
+      margin: 80px auto;
+      padding: 0 20px;
+    }
+
+    .contact-wrapper {
+      display: grid;
+      grid-template-columns: 1fr 1.2fr;
+      gap: 30px;
+      align-items: start;
+    }
+
+    /* ===== Info card ===== */
+    .info-card {
+      background: var(--light);
+      border-radius: 12px;
+      box-shadow: var(--shadow);
+      padding: 30px;
+      animation: fadeInUp 0.8s ease;
+    }
+
+    .info-card h2 {
+      color: var(--primary);
+      font-size: 1.5rem;
+      margin-bottom: 20px;
+    }
+
+    .info-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 15px;
+      margin-bottom: 20px;
+    }
+
+    .info-item i {
+      font-size: 1.2rem;
+      color: var(--primary);
+      margin-top: 4px;
+      width: 20px;
+      text-align: center;
+    }
+
+    .info-item .label {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      color: var(--text-light);
+      font-weight: 600;
+      margin-bottom: 2px;
+    }
+
+    .info-item .value {
+      font-weight: 500;
+    }
+
+    .info-item a {
+      color: var(--primary);
+      text-decoration: none;
+      transition: var(--transition);
+    }
+
+    .info-item a:hover {
+      color: var(--accent);
+    }
+
+    .call-btn {
+      display: inline-block;
+      background: var(--accent);
+      color: white;
+      text-decoration: none;
+      padding: 12px 25px;
+      border-radius: 25px;
+      font-weight: 500;
+      transition: var(--transition);
+      margin-top: 10px;
+      width: 100%;
+      text-align: center;
+    }
+
+    .call-btn:hover {
+      background: #e55a00;
+      transform: translateY(-2px);
+    }
+
+    /* ===== Form card ===== */
+    .form-card {
+      background: white;
+      border-radius: 12px;
+      box-shadow: var(--shadow);
+      padding: 30px;
+      border-top: 4px solid var(--accent);
+      animation: fadeInUp 0.8s ease 0.15s both;
+    }
+
+    .form-card h2 {
+      color: var(--primary);
+      font-size: 1.5rem;
+      margin-bottom: 10px;
+    }
+
+    .form-card>p {
+      color: var(--text-light);
+      margin-bottom: 25px;
+      font-size: 0.95rem;
+    }
+
+    /* ===== Formspree form ===== */
+    .contact-form .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    .form-group label {
+      display: block;
+      font-weight: 500;
+      font-size: 0.9rem;
+      margin-bottom: 6px;
+      color: var(--text);
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      width: 100%;
+      padding: 12px 15px;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      font-family: 'Roboto', sans-serif;
+      font-size: 0.95rem;
+      color: var(--text);
+      background: var(--light);
+      transition: var(--transition);
+      outline: none;
+    }
+
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+      border-color: var(--primary);
+      box-shadow: 0 0 0 3px rgba(0, 86, 179, 0.12);
+      background: white;
+    }
+
+    .form-group textarea {
+      resize: vertical;
+      min-height: 130px;
+    }
+
+    .submit-btn {
+      display: inline-block;
+      background: var(--accent);
+      color: white;
+      border: none;
+      padding: 13px 30px;
+      border-radius: 25px;
+      font-weight: 500;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: var(--transition);
+      font-family: 'Roboto', sans-serif;
+    }
+
+    .submit-btn:hover {
+      background: #e55a00;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(255, 107, 0, 0.35);
+    }
+
+    .form-note {
+      font-size: 0.8rem;
+      color: var(--text-light);
+      margin-top: 15px;
+      margin-bottom: 0;
+    }
+
+    /* ===== Map strip ===== */
+    .map-cta {
+      text-align: center;
+      margin-top: 40px;
+    }
+
+    .map-cta a {
+      color: var(--accent);
+      font-weight: 500;
+      text-decoration: none;
+      transition: var(--transition);
+    }
+
+    .map-cta a:hover {
+      color: #e55a00;
+    }
+
+    @media (max-width: 900px) {
+      .contact-wrapper {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .contact-form .form-row {
+        grid-template-columns: 1fr;
+        gap: 0;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ===== Header Placeholder ===== -->
+  <div id="header-container"></div>
+
+  <!-- ===== Page Banner ===== -->
+  <section class="banner">
+    <h1 data-cms="contactPage.bannerTitle">Contact Us</h1>
+    <p data-cms="contactPage.bannerSub">Questions, refills or feedback — the Guardian MarkhaMack team is here to help.</p>
+  </section>
+
+  <!-- ===== Contact Section ===== -->
+  <section class="section">
+    <div class="contact-wrapper">
+
+      <!-- Store info -->
+      <div class="info-card">
+        <h2 data-cms="store.name">Guardian MarkhaMack Pharmacy</h2>
+
+        <div class="info-item">
+          <i class="fas fa-map-marker-alt" data-cms-icon="contactPage.infoIcons.location"></i>
+          <div>
+            <div class="label">Address</div>
+            <div class="value"><span data-cms="store.addressLine1">9889 ON-48 #7</span>,<br><span data-cms="store.addressLine2">Markham, ON L6E 0B7</span></div>
+          </div>
+        </div>
+
+        <div class="info-item">
+          <i class="fas fa-phone" data-cms-icon="contactPage.infoIcons.phone"></i>
+          <div>
+            <div class="label">Phone</div>
+            <div class="value"><a href="tel:+19052943295" data-cms-tel="store.phoneHref"><span data-cms="store.phone">+1 (905) 294-3295</span></a></div>
+          </div>
+        </div>
+
+        <div class="info-item" id="contact-email-item">
+          <i class="fas fa-envelope" data-cms-icon="contactPage.infoIcons.email"></i>
+          <div>
+            <div class="label">Email</div>
+            <div class="value"><a href="#" data-cms-mailto="store.email"><span
+                  data-cms="store.email">pharmacy@email.com</span></a></div>
+          </div>
+        </div>
+
+        <div class="info-item">
+          <i class="fas fa-clock" data-cms-icon="contactPage.infoIcons.hours"></i>
+          <div>
+            <div class="label">Store Hours</div>
+            <div class="value" data-cms-hours-summary>
+              Monday – Friday: 10:00 AM – 8:00 PM • Saturday: 10:00 AM – 3:00 PM • Sunday: Closed
+            </div>
+          </div>
+        </div>
+
+        <div class="info-item">
+          <i class="fas fa-directions"></i>
+          <div>
+            <div class="label">Directions</div>
+            <div class="value"><a href="https://maps.app.goo.gl/gFvvRHCLYUA9Cpq28" target="_blank"
+                rel="noopener" data-cms-href="store.mapsUrl">Open in Google Maps</a></div>
+          </div>
+        </div>
+
+        <a href="tel:+19052943295" class="call-btn" data-cms-tel="store.phoneHref"><i class="fas fa-phone"></i> Call Now</a>
+      </div>
+
+      <!-- Formspree contact form -->
+      <!-- =====================================================================
+           FORMSPREE SETUP:
+           1. Create a free form at https://formspree.io
+           2. Replace YOUR_FORM_ID below with your form ID (e.g. xwkgabcd)
+           3. Done - submissions arrive in your email inbox.
+           ===================================================================== -->
+      <div class="form-card">
+        <h2 data-cms="contactPage.formHeading">Send us a message</h2>
+        <p data-cms="contactPage.formIntro">Fill out the form below and we'll get back to you as soon as possible. For urgent requests, please call the
+          pharmacy directly.</p>
+
+        <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" class="contact-form" data-cms-action="contactPage.formspreeId">
+
+          <!-- Optional: pre-fills the email subject line -->
+          <input type="hidden" name="_subject" value="Guardian MarkhaMack - Contact Form" />
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="name">Full Name *</label>
+              <input type="text" id="name" name="name" placeholder="Your name" required />
+            </div>
+            <div class="form-group">
+              <label for="phone">Phone Number</label>
+              <input type="tel" id="phone" name="phone" placeholder="(905) 000-0000" />
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email Address *</label>
+            <input type="email" id="email" name="email" placeholder="you@example.com" required />
+          </div>
+
+          <div class="form-group">
+            <label for="topic">What can we help you with? *</label>
+            <select id="topic" name="topic" required data-cms-options="contactPage.topics">
+              <option value="" disabled selected>Choose a topic...</option>
+              <option value="General Question">General Question</option>
+              <option value="Prescription Refill">Prescription Refill</option>
+              <option value="Prescription Transfer">Prescription Transfer</option>
+              <option value="Vaccination Appointment">Vaccination Appointment</option>
+              <option value="Wellness Consultation">Wellness Consultation</option>
+              <option value="Medication Question">Medication Question</option>
+              <option value="Feedback">Feedback</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="message">Message *</label>
+            <textarea id="message" name="message" placeholder="How can we help?" required></textarea>
+          </div>
+
+          <button type="submit" class="submit-btn"><i class="fas fa-paper-plane"></i> Send Message</button>
+
+          <p class="form-note" data-cms="contactPage.formNote">Please do not include sensitive personal health information in this form.</p>
+        </form>
+      </div>
+
+    </div>
+
+    <p class="map-cta">Looking for us on the map? <a href="where_are_we.html">Check the Where Are We page <i
+          class="fas fa-arrow-right"></i></a></p>
+  </section>
+
+  <!-- ===== Footer Placeholder ===== -->
+  <div id="footer-container"></div>
+
+  <!-- Scripts -->
+  <script src="assets/script.js"></script>
+  <script src="assets/loader.js"></script>
+  <script>
+    window.addEventListener('load', () => window.loadComponents('./'));
+  </script>
+</body>
+
+</html>

@@ -2,406 +2,357 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Support for Common Conditions | Guardian, I.D.A. and Remedy'sRx</title>
-    
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../../assets/style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Support for Common Conditions | Guardian, I.D.A. and Remedy'sRx</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Roboto:wght@400;500&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="../../assets/style.css">
 
-    <style>
-        /* General Page Styles */
-        body {
-            background-color: #ffffff;
-        }
+  <style>
+    :root {
+      --primary: #0056b3;
+      --accent: #ff6b00;
+      --light: #f8f9fa;
+      --text: #333;
+      --text-light: #6c757d;
+      --shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      --transition: all 0.3s ease;
+    }
 
-        /* Hero Section */
-        .conditions-hero {
-            background: linear-gradient(90deg, #ffffff 0%, #f9f9f9 50%, #f0f0f0 100%);
-            position: relative;
-            overflow: hidden;
-            padding: 60px 0;
-            min-height: 400px;
-            display: flex;
-            align-items: center;
-        }
-        
-        /* The grey sweeping shape background for the right side */
-        .conditions-hero::after {
-            content: '';
-            position: absolute;
-            top: -10%;
-            right: -5%;
-            width: 55%;
-            height: 120%;
-            background-color: #8fa0a8;
-            border-radius: 50% 0 0 50%;
-            z-index: 1;
-        }
+    body {
+      font-family: 'Roboto', sans-serif;
+      color: var(--text);
+      overflow-x: hidden;
+      line-height: 1.6;
+    }
 
-        .hero-container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            position: relative;
-            z-index: 2;
-        }
+    h1,
+    h2,
+    h3 {
+      font-family: 'Poppins', sans-serif;
+    }
 
-        .hero-text {
-            flex: 1;
-            max-width: 500px;
-        }
+    /* ===== Banner ===== */
+    .banner {
+      background: linear-gradient(135deg, var(--primary), #004494);
+      color: white;
+      text-align: center;
+      padding: 80px 20px;
+    }
 
-        .hero-text h1 {
-            font-size: 2.5rem;
-            color: #333;
-            line-height: 1.2;
-            margin: 0 0 20px;
-            font-weight: 700;
-            text-transform: uppercase;
-        }
+    .banner h1 {
+      font-size: 2.4rem;
+      font-weight: 600;
+    }
 
-        .hero-text p {
-            font-size: 1.1rem;
-            color: #555;
-            margin-bottom: 30px;
-        }
+    /* ===== Section Layout ===== */
+    .section {
+      max-width: 1100px;
+      margin: 80px auto;
+      padding: 0 20px;
+    }
 
-        .btn-dark {
-            display: inline-block;
-            background-color: #4b5563;
-            color: white;
-            padding: 12px 24px;
-            border-radius: 4px;
-            text-decoration: none;
-            font-weight: 600;
-            transition: background-color 0.3s ease;
-        }
+    .intro {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 40px;
+    }
 
-        .btn-dark:hover {
-            background-color: #374151;
-        }
+    .intro img {
+      flex: 1;
+      width: 100%;
+      max-width: 480px;
+      border-radius: 12px;
+      box-shadow: var(--shadow);
+    }
 
-        .hero-image {
-            flex: 1;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
+    .intro-text {
+      flex: 1;
+    }
 
-        .hero-image img {
-            max-width: 90%;
-            height: auto;
-            filter: drop-shadow(0px 10px 15px rgba(0,0,0,0.1));
-        }
+    .intro-text h2 {
+      color: var(--primary);
+      margin-bottom: 15px;
+    }
 
-        /* Breadcrumbs */
-        .breadcrumbs {
-            background-color: white;
-            padding: 15px 0;
-            font-size: 0.85rem;
-            color: #888;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
-        
-        .breadcrumbs a {
-            color: #888;
-            text-decoration: none;
-        }
+    .btn {
+      display: inline-block;
+      background: var(--accent);
+      color: white;
+      text-decoration: none;
+      padding: 12px 25px;
+      border-radius: 25px;
+      transition: var(--transition);
+      font-weight: 500;
+    }
 
-        .breadcrumbs a:hover {
-            color: var(--primary);
-        }
+    .btn:hover {
+      background: #e55a00;
+      transform: translateY(-2px);
+    }
 
-        /* Intro Section */
-        .intro-section {
-            padding: 60px 0;
-            background-color: #fcfcfc;
-        }
+    /* ===== Info sections ===== */
+    .info-box {
+      background: var(--light);
+      padding: 25px;
+      border-radius: 10px;
+      box-shadow: var(--shadow);
+      margin-top: 40px;
+    }
 
-        .intro-wrapper {
-            display: flex;
-            align-items: center;
-            gap: 50px;
-        }
+    .info-box h3 {
+      color: var(--primary);
+      margin-bottom: 10px;
+    }
 
-        .intro-image {
-            flex: 1;
-            display: flex;
-            justify-content: center;
-            position: relative;
-        }
-        
-        /* The grey semi-circle behind the pharmacy */
-        .intro-image::before {
-            content: '';
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 350px;
-            height: 350px;
-            background-color: #8fa0a8;
-            border-radius: 50%;
-            z-index: 0;
-        }
+    .info-box ul {
+      margin: 10px 0 10px 20px;
+      color: var(--text-light);
+    }
 
-        .intro-image img {
-            max-width: 100%;
-            height: auto;
-            position: relative;
-            z-index: 1;
-        }
+    .info-box ul li {
+      margin-bottom: 8px;
+    }
 
-        .intro-text {
-            flex: 1;
-        }
+    .info-box em {
+      color: var(--text-light);
+    }
 
-        .intro-text h2 {
-            font-size: 2.2rem;
-            color: #333;
-            margin-bottom: 20px;
-            line-height: 1.3;
-        }
+    /* ===== More Info Grid ===== */
+    .info-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 25px;
+      margin-top: 40px;
+    }
 
-        .intro-text p {
-            font-size: 1.1rem;
-            color: #555;
-            line-height: 1.6;
-            margin-bottom: 20px;
-        }
+    .info-card {
+      background: var(--light);
+      padding: 25px;
+      border-radius: 12px;
+      box-shadow: var(--shadow);
+      transition: var(--transition);
+    }
 
-        /* Cards Grid Section */
-        .cards-section {
-            padding: 60px 0;
-            background-color: #ffffff;
-        }
+    .info-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+      border-bottom: 3px solid var(--accent);
+    }
 
-        .cards-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 30px;
-        }
+    .info-card h4 {
+      color: var(--primary);
+      margin-bottom: 10px;
+    }
 
-        .info-card {
-            background-color: #f7f7f5;
-            border-radius: 8px;
-            padding: 40px;
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-        }
+    .info-card p {
+      color: var(--text-light);
+      margin-bottom: 15px;
+    }
 
-        .info-card h3 {
-            font-size: 1.4rem;
-            color: #0056b3;
-            margin-bottom: 15px;
-            font-weight: 600;
-        }
+    .info-card ul {
+      margin: 0 0 15px 20px;
+      color: var(--text-light);
+    }
 
-        .info-card p {
-            color: #555;
-            line-height: 1.6;
-            margin-bottom: 20px;
-            font-size: 1rem;
-        }
+    .info-card ul li {
+      margin-bottom: 8px;
+    }
 
-        .info-card ul {
-            list-style-type: disc;
-            margin-left: 20px;
-            margin-bottom: 25px;
-            color: #555;
-            line-height: 1.6;
-            font-size: 1rem;
-        }
+    .info-card a {
+      color: var(--accent);
+      font-weight: 500;
+      text-decoration: none;
+      transition: var(--transition);
+    }
 
-        .info-card ul li {
-            margin-bottom: 8px;
-        }
+    .info-card a:hover {
+      color: #e55a00;
+    }
 
-        .card-footer {
-            margin-top: auto; /* Pushes button to bottom if heights differ */
-            width: 100%;
-        }
+    /* ===== Other Services ===== */
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+      margin-top: 50px;
+    }
 
-        .card-disclaimer {
-            display: block;
-            margin-top: 15px;
-            font-size: 0.8rem;
-            color: #777;
-        }
+    .service-box {
+      background: var(--light);
+      padding: 25px;
+      text-align: center;
+      border-radius: 12px;
+      box-shadow: var(--shadow);
+      transition: var(--transition);
+    }
 
-        /* Disclaimer Section */
-        .disclaimer-section {
-            padding: 40px 0;
-            background-color: #ffffff;
-            border-top: 2px solid #333;
-        }
+    .service-box:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+      border-bottom: 3px solid var(--accent);
+    }
 
-        .disclaimer-content {
-            font-size: 0.85rem;
-            color: #666;
-            line-height: 1.5;
-            font-style: italic;
-        }
-        
-        .disclaimer-content p {
-            margin-bottom: 15px;
-        }
+    .service-box i {
+      font-size: 40px;
+      color: var(--primary);
+      margin-bottom: 15px;
+    }
 
-        /* Responsive Design */
-        @media (max-width: 992px) {
-            .intro-wrapper {
-                flex-direction: column;
-                text-align: center;
-            }
-            .cards-grid {
-                grid-template-columns: 1fr;
-            }
-        }
+    .service-box h4 {
+      color: var(--primary);
+      margin-bottom: 10px;
+    }
 
-        @media (max-width: 768px) {
-            .conditions-hero {
-                flex-direction: column;
-                text-align: center;
-                padding: 40px 20px;
-            }
-            .conditions-hero::after {
-                width: 100%;
-                height: 50%;
-                top: auto;
-                bottom: 0;
-                border-radius: 50% 50% 0 0;
-            }
-            .hero-container {
-                flex-direction: column;
-                gap: 40px;
-            }
-            .hero-text {
-                max-width: 100%;
-            }
-        }
-    </style>
+    .service-box p {
+      color: var(--text-light);
+      margin-bottom: 15px;
+      font-size: 0.95rem;
+    }
+
+    .disclaimer {
+      font-size: 0.9rem;
+      color: var(--text-light);
+      margin-top: 50px;
+      border-top: 1px solid #ddd;
+      padding-top: 20px;
+    }
+
+    @media (max-width: 768px) {
+      .intro {
+        flex-direction: column;
+      }
+    }
+  </style>
 </head>
 
 <body>
-    <!-- Header Container -->
-    <div id="header-container"></div>
 
-    <!-- Hero Section -->
-    <section class="conditions-hero">
-        <div class="container hero-container">
-            <div class="hero-text">
-                <h1>SUPPORT FOR COMMON CONDITIONS</h1>
-                <p>Contact your local pharmacy to find out if these services are available.</p>
-                <a href="#" class="btn-dark">Find your pharmacy</a>
-            </div>
-            <div class="hero-image">
-                <img src="https://images.unsplash.com/photo-1585435557343-3b092031d5ad?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Pharmacy Services Illustration" style="border-radius: 12px; max-height: 300px; object-fit: cover;">
-            </div>
-        </div>
-    </section>
+  <!-- ===== Header Placeholder ===== -->
+  <div id="header-container"></div>
 
-    <!-- Breadcrumbs -->
-    <div class="breadcrumbs">
-        <div class="container">
-            <a href="../../index.html">HOME</a> &gt; 
-            <a href="#">PHARMACY SERVICES</a> &gt; 
-            <a href="../prescriptions.html">PRESCRIPTIONS</a> &gt; 
-            <span>COMMON CONDITIONS</span>
-        </div>
+  <!-- ===== Page Banner ===== -->
+  <section class="banner">
+    <h1 data-cms="servicesPages.prescriptions.pages.common_conditions.bannerTitle">Support for Common Conditions</h1>
+  </section>
+
+  <!-- ===== Intro Section ===== -->
+  <section class="section">
+    <div class="intro">
+      <div class="intro-text">
+        <h2 data-cms="servicesPages.prescriptions.pages.common_conditions.introHeading">For short-term health conditions, we've got the solution.</h2>
+        <p data-cms="servicesPages.prescriptions.pages.common_conditions.introPara1">Are you dealing with a minor or temporary health issue? Your local pharmacist is a valuable resource for
+          treatment and relief.</p>
+        <p data-cms="servicesPages.prescriptions.pages.common_conditions.introPara2">Whether it's alleviating a common cold, managing seasonal allergies, or soothing a mild skin irritation,
+          your pharmacist is there to support your path to better health with the services below.</p>
+        <a href="../../where_are_we.html" class="btn" data-cms="servicesPages.prescriptions.pages.common_conditions.introBtnLabel" data-cms-href="servicesPages.prescriptions.pages.common_conditions.introBtnHref">Where Are We</a>
+      </div>
+      <img data-cms-src="servicesPages.prescriptions.pages.common_conditions.introImg" src="https://images.unsplash.com/photo-1625246333195-78d9c38ad449?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
+        alt="Local pharmacy">
+    </div>
+  </section>
+
+  <!-- ===== Prescribing for Common Conditions ===== -->
+  <section class="section">
+    <div class="info-box">
+      <h3><span data-cms="servicesPages.prescriptions.pages.common_conditions.sections.0.boxes.0.title">Prescribing for Common Conditions</span></h3>
+      <p data-cms="servicesPages.prescriptions.pages.common_conditions.sections.0.boxes.0.text1">Your pharmacist may be able to assess &amp; prescribe medication for common conditions right in the
+        pharmacy*.</p>
+      <p data-cms="servicesPages.prescriptions.pages.common_conditions.sections.0.boxes.0.note"><em>*Conditions apply. Contact your local pharmacy to find out if these services are available.</em></p>
+      <a href="#" class="btn" data-cms-href="servicesPages.prescriptions.pages.common_conditions.sections.0.boxes.0.linkHref"><span data-cms="servicesPages.prescriptions.pages.common_conditions.sections.0.boxes.0.linkLabel">Learn more</span></a>
+    </div>
+  </section>
+
+  <!-- ===== Ongoing Support & Advice ===== -->
+  <section class="section">
+    <div class="info-box">
+      <h3><span data-cms="servicesPages.prescriptions.pages.common_conditions.sections.1.boxes.0.title">Ongoing Support &amp; Advice</span></h3>
+      <p data-cms="servicesPages.prescriptions.pages.common_conditions.sections.1.boxes.0.text1">Beyond just filling prescriptions, your local pharmacist can enhance your recovery by:</p>
+      <ul>
+        <li data-cms="servicesPages.prescriptions.pages.common_conditions.sections.1.boxes.0.list.0">demonstrating proper technique and best practices for using the medication</li>
+        <li data-cms="servicesPages.prescriptions.pages.common_conditions.sections.1.boxes.0.list.1">providing education on hygiene practices or lifestyle changes to prevent re-occurrence</li>
+        <li data-cms="servicesPages.prescriptions.pages.common_conditions.sections.1.boxes.0.list.2">advising to see a doctor if the condition doesn't improve with treatment</li>
+        <li data-cms="servicesPages.prescriptions.pages.common_conditions.sections.1.boxes.0.list.3">ensuring you feel comfortable asking questions</li>
+        <li data-cms="servicesPages.prescriptions.pages.common_conditions.sections.1.boxes.0.list.4">medication and allergy records for doctor appointments or travel</li>
+      </ul>
+      <a href="../../where_are_we.html" class="btn" data-cms-href="servicesPages.prescriptions.pages.common_conditions.sections.1.boxes.0.linkHref"><span data-cms="servicesPages.prescriptions.pages.common_conditions.sections.1.boxes.0.linkLabel">Where Are We</span></a>
+    </div>
+  </section>
+
+  <!-- ===== Related Services ===== -->
+  <section class="section">
+    <h2 data-cms="servicesPages.prescriptions.pages.common_conditions.sections.2.heading">Related Services</h2>
+    <div class="info-grid">
+      <div class="info-card">
+        <h4><i class="fas fa-exchange-alt"></i> <span data-cms="servicesPages.prescriptions.pages.common_conditions.sections.2.cards.0.title">Prescription Transfers</span></h4>
+        <p data-cms="servicesPages.prescriptions.pages.common_conditions.sections.2.cards.0.text1">If you wish to transfer your prescriptions from another pharmacy to your local Guardian, I.D.A. or
+          Remedy'sRx, simply fill out our online form and we do the rest.</p>
+        <a href="tel:+19052943295" data-cms-tel="store.phoneHref"><span data-cms="servicesPages.prescriptions.pages.common_conditions.sections.2.cards.0.callLabel">Call to transfer</span></a>
+      </div>
+      <div class="info-card">
+        <h4><i class="fas fa-pills"></i> <span data-cms="servicesPages.prescriptions.pages.common_conditions.sections.2.cards.1.title">Product Recommendations</span></h4>
+        <p data-cms="servicesPages.prescriptions.pages.common_conditions.sections.2.cards.1.text1">Your local pharmacist can recommend products and supplements that complement prescribed medications to
+          alleviate symptoms of minor conditions, such as:</p>
+        <ul>
+          <li data-cms="servicesPages.prescriptions.pages.common_conditions.sections.2.cards.1.list.0">Probiotics to prevent antibiotic-associated diarrhea</li>
+          <li data-cms="servicesPages.prescriptions.pages.common_conditions.sections.2.cards.1.list.1">Saline nasal spray for congestion</li>
+          <li data-cms="servicesPages.prescriptions.pages.common_conditions.sections.2.cards.1.list.2">Throat lozenges for throat irritation</li>
+        </ul>
+        <a href="../../where_are_we.html" data-cms-href="servicesPages.prescriptions.pages.common_conditions.sections.2.cards.1.linkHref"><span data-cms="servicesPages.prescriptions.pages.common_conditions.sections.2.cards.1.linkLabel">Where Are We</span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Other Services ===== -->
+  <section class="section">
+    <h2 data-cms="servicesPages.prescriptions.pages.common_conditions.sections.3.heading">Other Services</h2>
+    <div class="services-grid">
+      <div class="service-box">
+        <i class="fas fa-sync-alt"></i>
+        <h4><span data-cms="servicesPages.prescriptions.pages.common_conditions.sections.3.cards.0.title">Prescription Renewals</span></h4>
+        <p data-cms="servicesPages.prescriptions.pages.common_conditions.sections.3.cards.0.text1">Renew your prescription in advance with the mobile app, online renewals or the medication synchronization
+          service.</p>
+        <a href="../prescriptions.html" class="btn" data-cms-href="servicesPages.prescriptions.pages.common_conditions.sections.3.cards.0.linkHref"><span data-cms="servicesPages.prescriptions.pages.common_conditions.sections.3.cards.0.linkLabel">Learn more</span></a>
+      </div>
+      <div class="service-box">
+        <i class="fas fa-recycle"></i>
+        <h4><span data-cms="servicesPages.prescriptions.pages.common_conditions.sections.3.cards.1.title">Medication Take Back</span></h4>
+        <p data-cms="servicesPages.prescriptions.pages.common_conditions.sections.3.cards.1.text1">Bring your expired or unused medications to your nearest pharmacy so they can be disposed of safely and
+          in an environmentally friendly way.</p>
+        <a href="../prescriptions.html" class="btn" data-cms-href="servicesPages.prescriptions.pages.common_conditions.sections.3.cards.1.linkHref"><span data-cms="servicesPages.prescriptions.pages.common_conditions.sections.3.cards.1.linkLabel">Learn more</span></a>
+      </div>
+      <div class="service-box">
+        <i class="fas fa-shield-alt"></i>
+        <h4><span data-cms="servicesPages.prescriptions.pages.common_conditions.sections.3.cards.2.title">Your Medication and Your Safety</span></h4>
+        <p data-cms="servicesPages.prescriptions.pages.common_conditions.sections.3.cards.2.text1">See how you can use and dispose of your medication safely, according to your pharmacist's direction.</p>
+        <a href="../prescriptions.html" class="btn" data-cms-href="servicesPages.prescriptions.pages.common_conditions.sections.3.cards.2.linkHref"><span data-cms="servicesPages.prescriptions.pages.common_conditions.sections.3.cards.2.linkLabel">Learn more</span></a>
+      </div>
     </div>
 
-    <!-- Intro Section -->
-    <section class="intro-section">
-        <div class="container">
-            <div class="intro-wrapper">
-                <div class="intro-image">
-                    <img src="https://images.unsplash.com/photo-1625246333195-78d9c38ad449?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Pharmacy Building" style="border-radius: 12px; width: 300px; height: 300px; object-fit: cover; border: 10px solid white; box-shadow: 0 10px 25px rgba(0,0,0,0.1);">
-                </div>
-                <div class="intro-text">
-                    <h2>For short-term health conditions, we've got the solution.</h2>
-                    <p>Are you dealing with a minor or temporary health issue? Your local pharmacist is a valuable resource for treatment and relief. Whether it's alleviating a common cold, managing seasonal allergies, or soothing a mild skin irritation, your pharmacist is there to support your path to better health with the services below:</p>
-                </div>
-            </div>
-        </div>
-    </section>
+    <p class="disclaimer" data-cms-multi="servicesPages.prescriptions.pages.common_conditions.disclaimer">
+      The pharmacy services presented in this section are offered by Guardian, I.D.A. and Remedy'sRx pharmacists. The
+      pharmacists are solely responsible for the professional activities carried out during the practice of pharmacy.
+      These services are offered in participating pharmacies only. Certain fees and conditions may apply.
+      <br><br>
+      * The information contained herein is provided for informational purposes only and is not intended to provide
+      complete information on the subject matter or to replace the advice of a health professional. This information
+      does not constitute medical consultation, diagnosis or opinion and should not be interpreted as such. Please
+      consult your health care provider if you have any questions about your health, medications or treatment.
+    </p>
+  </section>
 
-    <!-- Cards Section -->
-    <section class="cards-section">
-        <div class="container">
-            <div class="cards-grid">
-                
-                <div class="info-card">
-                    <h3>Prescribing for Common Conditions</h3>
-                    <p>Your pharmacist may be able to assess & prescribe medication for common conditions right in the pharmacy*.</p>
-                    <div class="card-footer">
-                        <a href="#" class="btn-dark">Learn more</a>
-                        <span class="card-disclaimer">*Conditions apply.</span>
-                    </div>
-                </div>
+  <!-- ===== Footer Placeholder ===== -->
+  <div id="footer-container"></div>
 
-                <div class="info-card">
-                    <h3>Ongoing Support & Advice</h3>
-                    <p>Beyond just filling prescriptions, your local pharmacist can enhance your recovery by:</p>
-                    <ul>
-                        <li>demonstrating proper technique and best practices for using the medication</li>
-                        <li>providing education on hygiene practices or lifestyle changes to prevent re-occurrence</li>
-                        <li>advising to see a doctor if the condition doesn't improve with treatment</li>
-                        <li>ensuring you feel comfortable asking questions</li>
-                        <li>medication and allergy records for doctor appointments or travel</li>
-                    </ul>
-                    <div class="card-footer">
-                        <a href="#" class="btn-dark">Find a pharmacy</a>
-                    </div>
-                </div>
-
-                <div class="info-card">
-                    <h3>Prescription Transfers</h3>
-                    <p>If you wish to transfer your prescriptions from another pharmacy to your local Guardian, I.D.A. or Remedy'sRx, simply fill out our online form and we do the rest.</p>
-                    <div class="card-footer">
-                        <a href="#" class="btn-dark">Go to form</a>
-                    </div>
-                </div>
-
-                <div class="info-card">
-                    <h3>Product Recommendations</h3>
-                    <p>Your local pharmacist can recommend products and supplements that complement prescribed medications to alleviate symptoms of minor conditions, such as:</p>
-                    <ul>
-                        <li>Probiotics to prevent antibiotic-associated diarrhea</li>
-                        <li>Saline nasal spray for congestion</li>
-                        <li>Throat lozenges for throat irritation</li>
-                    </ul>
-                    <div class="card-footer">
-                        <a href="#" class="btn-dark">Find a pharmacy</a>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-    <!-- Disclaimer Section -->
-    <section class="disclaimer-section">
-        <div class="container">
-            <div class="disclaimer-content">
-                <p>The pharmacy services presented in this section are offered by Guardian, I.D.A. and Remedy'sRx pharmacists. The pharmacists are solely responsible for the professional activities carried out during the practice of pharmacy. These services are offered in participating pharmacies only. Certain fees and conditions may apply.</p>
-                <p>* The information contained herein is provided for informational purposes only and is not intended to provide complete information on the subject matter or to replace the advice of a health professional. This information does not constitute medical consultation, diagnosis or opinion and should not be interpreted as such. Please consult your health care provider if you have any questions about your health, medications or treatment.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer Container -->
-    <div id="footer-container"></div>
-
-    <!-- Scripts -->
-    <script src="../../assets/script.js"></script>
-    <script src="../../assets/loader.js"></script>
-    <script>
-        // Load header/footer pointing base path to root '../../'
-        window.addEventListener('load', () => window.loadComponents('../../'));
-    </script>
+  <!-- Scripts -->
+  <script src="../../assets/script.js"></script>
+  <script src="../../assets/loader.js"></script>
+  <script>
+    window.addEventListener('load', () => window.loadComponents('../../'));
+  </script>
 </body>
+
 </html>

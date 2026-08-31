@@ -1,0 +1,295 @@
+/* ==========================================================================
+   CENTRAL MOTION SYSTEM (vanilla adaptation of the Motion Architecture doc)
+   --------------------------------------------------------------------------
+   Tokens + reveal states + micro-interaction upgrades.
+   Loaded sitewide via loader.js. Pair with assets/motion.js.
+   Rules implemented:
+   - Distance cap: entrances travel max 16px
+   - One-and-done reveals (motion.js unobserves after trigger)
+   - Only transform/opacity/filter animated (except legacy side-nav `left`)
+   - prefers-reduced-motion fully respected
+   ========================================================================== */
+
+:root {
+    /* Easing curves */
+    --ease-o: cubic-bezier(0.16, 1, 0.3, 1);   /* emphasized out - entrances */
+    --ease-io: cubic-bezier(0.4, 0, 0.2, 1);   /* in-out standard - layout shifts */
+    --ease-i: cubic-bezier(0.2, 0, 0, 1);      /* quick interactive - buttons/feedback */
+
+    /* Durations */
+    --dur-instant: 0.15s;    /* micro-interactions 150-250ms */
+    --dur-quick: 0.25s;
+    --dur-standard: 0.4s;    /* layout transitions 300-400ms */
+    --dur-deliberate: 0.6s;  /* scroll reveals 500-700ms */
+}
+
+/* ===== Universal scroll reveal states ================================
+   .mr is applied by motion.js (so a no-JS visit never hides content).
+   Trigger: motion.js adds .revealed when the element enters the viewport.
+   ====================================================================== */
+.mr {
+    opacity: 0;
+    transform: translateY(16px);
+    /* distance cap: 16px */
+    transition:
+        opacity var(--dur-deliberate) var(--ease-o),
+        transform var(--dur-deliberate) var(--ease-o);
+    will-change: opacity, transform;
+    /* central system replaces per-page load animations for tagged elements */
+    animation: none !important;
+}
+
+.mr.mr-scale {
+    transform: scale(0.96);
+    /* trust-badge style elastic scale-in */
+}
+
+.mr.mr-img {
+    transform: scale(1.08);
+    /* photos settle into place with a soft zoom */
+}
+
+.mr.mr-side-l {
+    transform: translateX(-16px);
+    /* side entrance - from the left */
+}
+
+.mr.mr-side-r {
+    transform: translateX(16px);
+    /* side entrance - from the right */
+}
+
+.mr.revealed {
+    opacity: 1;
+    transform: none;
+}
+
+.mr.done {
+    will-change: auto;
+    /* clear GPU hint after completion */
+}
+
+/* ===== Home hero: progressive entrance cascade ======================== */
+.carousel-content {
+    animation: none;
+}
+
+.carousel-content>* {
+    opacity: 0;
+    animation: heroCascade var(--dur-deliberate) var(--ease-o) forwards;
+}
+
+.carousel-content>*:nth-child(1) {
+    animation-delay: 0.05s;
+}
+
+.carousel-content>*:nth-child(2) {
+    animation-delay: 0.15s;
+}
+
+.carousel-content>*:nth-child(3) {
+    animation-delay: 0.25s;
+}
+
+@keyframes heroCascade {
+    from {
+        opacity: 0;
+        transform: translateY(16px);
+    }
+
+    to {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+/* ===== Header: mega-menu structural entrance (desktop) ================
+   IMPORTANT: preserve translateX(-50%) centering from style.css */
+.nav-container .mega-menu {
+    transform: translateX(-50%) translateY(-8px);
+    transition:
+        opacity var(--dur-standard) var(--ease-o),
+        transform var(--dur-standard) var(--ease-o),
+        visibility var(--dur-standard);
+}
+
+.nav-container .nav-item:hover .mega-menu,
+.nav-container .nav-item .mega-menu:hover {
+    transform: translateX(-50%) translateY(0);
+}
+
+/* Mobile drawer: emphasized slide-in curve */
+.side-nav {
+    transition: left var(--dur-standard) var(--ease-o);
+}
+
+/* ===== Search focus micro-interaction ================================= */
+.search-container {
+    transition:
+        transform var(--dur-quick) var(--ease-i),
+        box-shadow var(--dur-quick) var(--ease-i),
+        background var(--dur-quick) var(--ease-i);
+}
+
+.search-container:focus-within {
+    transform: scale(1.01);
+}
+
+/* ===== Button press feedback (150-250ms interactive) ================== */
+.btn:active,
+.health-btn:active,
+.carousel-btn:active,
+.quality-btn:active,
+.more-link:active,
+.view-all-btn:active,
+.call-btn:active,
+.submit-btn:active,
+.action-btn:active {
+    transform: scale(0.97);
+    transition-duration: var(--dur-instant);
+}
+
+/* ===== Card image hover scale (featured-card behaviour) ================ */
+.service-card .service-img {
+    transition: transform 0.45s var(--ease-o);
+}
+
+.service-card:hover .service-img {
+    transform: scale(1.04);
+}
+
+/* Alternating category blocks: gentle zoom on the image side */
+.health-img {
+    transition: transform 0.6s var(--ease-o);
+}
+
+.health-block:hover .health-img {
+    transform: scale(1.02);
+}
+
+/* ===== Arrow nudge: icons slide slightly on button/link hover ============ */
+.btn i,
+.health-btn i,
+.service-link i,
+.card-link i,
+.service-card .service-link i {
+    transition: transform var(--dur-quick) var(--ease-i);
+}
+
+.btn:hover i,
+.health-btn:hover i,
+.service-link:hover i,
+.card-link:hover i {
+    transform: translateX(4px);
+}
+
+/* ===== Progressive reveal footer =======================================
+   Fixed technique: motion.js wraps all page content in ONE opaque
+   .content-shell (so sectioned pages have no see-through gaps). The
+   footer is sticky at the bottom, behind the shell. body.has-shell is
+   only set when the wrap succeeds, so no-JS / reduced-motion pages
+   keep a normal static footer. */
+@media (prefers-reduced-motion: no-preference) {
+
+    body.has-shell #footer-container {
+        position: sticky;
+        bottom: 0;
+    }
+
+    body.has-shell .content-shell {
+        position: relative;
+        z-index: 1;
+        /* opaque bg is set inline by motion.js (matches each page's body
+           background, falling back to white) */
+    }
+}
+
+/* ===== Premium chrome: scrollbar, selection, focus ===================== */
+html {
+    scrollbar-width: thin;
+    scrollbar-color: var(--primary) #eef1f4;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #eef1f4;
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, var(--primary), #004494);
+    border-radius: 8px;
+    border: 2px solid #eef1f4;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--accent);
+}
+
+::selection {
+    background: rgba(255, 107, 0, 0.85);
+    color: #fff;
+}
+
+:focus-visible {
+    outline: 3px solid rgba(0, 86, 179, 0.4);
+    outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    html {
+        scroll-behavior: smooth;
+    }
+}
+
+/* ===== Back-to-top floating button ==================================== */
+.back-to-top {
+    position: fixed;
+    right: 22px;
+    bottom: 22px;
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    border: none;
+    background: var(--primary);
+    color: #fff;
+    font-size: 1.05rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 6px 18px rgba(0, 86, 179, 0.35);
+    z-index: 900;
+    opacity: 0;
+    transform: translateY(12px);
+    pointer-events: none;
+    transition:
+        opacity var(--dur-standard) var(--ease-io),
+        transform var(--dur-standard) var(--ease-io),
+        background var(--dur-quick) var(--ease-i);
+}
+
+.back-to-top.visible {
+    opacity: 1;
+    transform: none;
+    pointer-events: auto;
+}
+
+.back-to-top:hover {
+    background: var(--accent);
+}
+
+/* ===== Accessibility: respect user motion preference =================== */
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
