@@ -971,8 +971,12 @@ h6 {
     transition-delay: 0.34s;
 }
 
-.side-nav.open .side-actions {
+.side-nav.open .nav-links>*:nth-child(6) {
     transition-delay: 0.4s;
+}
+
+.side-nav.open .side-actions {
+    transition-delay: 0.46s;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -1106,6 +1110,29 @@ h6 {
         width: 100% !important;
         min-height: 250px;
         /* Ensure visible height */
+    }
+}
+
+@media (max-width: 992px) {
+    .top-header-links {
+        flex-wrap: wrap;
+    }
+}
+
+/* Phones: like the original site, the blue strip keeps only the essentials -
+   Contact Us and the language switch, everything else lives in the menu */
+@media (max-width: 768px) {
+    .top-header-links {
+        gap: 16px;
+    }
+
+    .top-header-links a {
+        display: none;
+    }
+
+    .top-header-links a.top-link-right,
+    .top-header-links #lang-toggle {
+        display: inline;
     }
 }
 
