@@ -483,7 +483,6 @@ h6 {
 .quality-content {
     max-width: 800px;
     margin: 0 auto;
-    animation: fadeIn 1s ease;
 }
 
 .quality-content h2 {
@@ -554,7 +553,6 @@ h6 {
     overflow: hidden;
     box-shadow: var(--shadow);
     transition: var(--transition);
-    animation: fadeIn 0.8s ease;
 }
 
 .service-card:hover {
@@ -626,7 +624,6 @@ h6 {
 .subscription-content {
     max-width: 600px;
     margin: 0 auto;
-    animation: fadeIn 1s ease;
 }
 
 .subscription-content h2 {
