@@ -103,23 +103,6 @@ if (nextBtn) {
 }
 
 
-// Add animation on scroll
-const observerOptions = {
-    root: null,
-    rootMargin: '0px',
-    threshold: 0.1
-};
-
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.style.animation = 'fadeInUp 1s ease forwards';
-        }
-    });
-}, observerOptions);
-
-// Observe service cards and quality section
-document.querySelectorAll('.service-card, .quality-content, .subscription-content').forEach(el => {
-    el.style.opacity = '0';
-    observer.observe(el);
-});
+// Scroll reveals are handled centrally by motion.js. Keep visibility out of
+// inline styles so content remains readable if animation assets load slowly or
+// a browser does not support IntersectionObserver.
