@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Search | Guardian, I.D.A. & Remedy'sRx</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Roboto:wght@400;500&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="assets/style.css">
+
+  <style>
+    :root {
+      --primary: #0056b3;
+      --accent: #ff6b00;
+      --light: #f8f9fa;
+      --text: #333;
+      --text-light: #6c757d;
+      --shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      --transition: all 0.3s ease;
+    }
+
+    body {
+      font-family: 'Roboto', sans-serif;
+      color: var(--text);
+      overflow-x: hidden;
+      line-height: 1.6;
+    }
+
+    h1,
+    h2,
+    h3 {
+      font-family: 'Poppins', sans-serif;
+    }
+
+    /* ===== Banner + search box ===== */
+    .banner {
+      background: linear-gradient(135deg, var(--primary), #004494);
+      color: white;
+      text-align: center;
+      padding: 64px 20px 72px;
+    }
+
+    .banner h1 {
+      font-size: 2.4rem;
+      font-weight: 600;
+      margin-bottom: 6px;
+    }
+
+    .banner p {
+      opacity: .9;
+      margin-bottom: 28px;
+    }
+
+    .search-big {
+      display: flex;
+      align-items: center;
+      max-width: 640px;
+      margin: 0 auto;
+      background: #fff;
+      border-radius: 40px;
+      padding: 6px 6px 6px 24px;
+      box-shadow: 0 10px 30px rgba(0, 20, 50, .25);
+    }
+
+    .search-big input {
+      flex: 1;
+      min-width: 0;
+      border: none;
+      outline: none;
+      font: 400 16px 'Roboto', sans-serif;
+      color: var(--text);
+      padding: 12px 8px;
+      background: transparent;
+    }
+
+    .search-big button {
+      flex: none;
+      border: none;
+      cursor: pointer;
+      background: var(--accent);
+      color: #fff;
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      font-size: 17px;
+      transition: var(--transition);
+    }
+
+    .search-big button:hover {
+      background: #e55a00;
+      transform: scale(1.05);
+    }
+
+    /* ===== Results ===== */
+    .results-section {
+      max-width: 900px;
+      margin: 56px auto 90px;
+      padding: 0 20px;
+    }
+
+    .sr-summary {
+      color: var(--text-light);
+      font-size: 15px;
+      margin-bottom: 30px;
+      padding-bottom: 14px;
+      border-bottom: 2px solid var(--light);
+    }
+
+    .sr-summary strong {
+      color: var(--primary);
+      font-size: 17px;
+    }
+
+    .sr-group {
+      margin-bottom: 44px;
+    }
+
+    .sr-group-title {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 1.05rem;
+      font-weight: 600;
+      letter-spacing: .4px;
+      text-transform: uppercase;
+      color: var(--primary);
+      margin-bottom: 18px;
+    }
+
+    .sr-group-title i {
+      color: var(--accent);
+    }
+
+    .sr-list {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .sr-card {
+      display: block;
+      background: #fff;
+      border: 1px solid #e7ecf2;
+      border-radius: 12px;
+      padding: 18px 22px;
+      text-decoration: none;
+      color: inherit;
+      box-shadow: 0 2px 6px rgba(10, 30, 60, .05);
+      transition: var(--transition);
+    }
+
+    .sr-card:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow);
+      border-color: rgba(0, 86, 179, .35);
+    }
+
+    .sr-crumb {
+      display: block;
+      font-size: 11.5px;
+      font-weight: 500;
+      letter-spacing: .6px;
+      text-transform: uppercase;
+      color: var(--text-light);
+      margin-bottom: 4px;
+    }
+
+    .sr-title {
+      display: block;
+      font: 600 1.2rem/1.3 'Poppins', sans-serif;
+      color: var(--primary);
+    }
+
+    .sr-snippet {
+      display: block;
+      color: #4c5560;
+      font-size: 14.5px;
+      margin-top: 6px;
+    }
+
+    .sr-open {
+      display: inline-block;
+      margin-top: 10px;
+      font: 500 13px 'Poppins', sans-serif;
+      color: var(--accent);
+    }
+
+    .sr-open i {
+      font-size: 11px;
+      margin-left: 4px;
+      transition: transform .2s ease;
+    }
+
+    .sr-card:hover .sr-open i {
+      transform: translateX(4px);
+    }
+
+    /* subheading group */
+    .sr-page-line {
+      display: block;
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .sr-subhits {
+      list-style: none;
+      margin: 12px 0 0;
+      padding: 12px 0 0;
+      border-top: 1px dashed #dfe6ee;
+    }
+
+    .sr-subhits li a {
+      display: block;
+      padding: 8px 0 8px 14px;
+      border-left: 3px solid #dfe9f5;
+      text-decoration: none;
+      color: inherit;
+      transition: var(--transition);
+    }
+
+    .sr-subhits li a:hover {
+      border-left-color: var(--accent);
+      background: var(--light);
+    }
+
+    .sr-subtitle {
+      display: block;
+      font: 600 15px/1.4 'Poppins', sans-serif;
+      color: var(--primary);
+    }
+
+    .sr-subtitle i {
+      color: var(--accent);
+      margin-right: 4px;
+    }
+
+    .sr-subhits .sr-snippet {
+      margin-top: 2px;
+      font-size: 13.5px;
+    }
+
+    .sr-more a {
+      font-size: 13.5px;
+      color: var(--primary);
+      font-weight: 500;
+    }
+
+    /* states */
+    .sr-empty {
+      text-align: center;
+      padding: 60px 20px;
+      color: var(--text-light);
+    }
+
+    .sr-empty i {
+      font-size: 44px;
+      color: #c3d2e4;
+      margin-bottom: 16px;
+    }
+
+    .sr-empty h3 {
+      color: var(--text);
+      margin-bottom: 8px;
+    }
+
+    .sr-loading {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      padding: 70px 0;
+      color: var(--primary);
+      font: 500 16px 'Poppins', sans-serif;
+    }
+
+    .sr-loading i {
+      font-size: 22px;
+    }
+
+    mark {
+      background: #ffe9a3;
+      color: inherit;
+      padding: 0 2px;
+      border-radius: 3px;
+    }
+
+    @media (max-width: 600px) {
+      .banner h1 {
+        font-size: 1.9rem;
+      }
+
+      .sr-card {
+        padding: 15px 16px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ===== Header Placeholder ===== -->
+  <div id="header-container"></div>
+
+  <!-- ===== Search Banner ===== -->
+  <section class="banner">
+    <h1>Search</h1>
+    <p>Find pages, sections and answers across the whole site</p>
+    <div class="search-big">
+      <input id="search-page-input" type="text" placeholder="Search pages, topics, services…"
+        aria-label="Search this site" autocomplete="off">
+      <button id="search-page-btn" type="button" aria-label="Search"><i class="fas fa-search"></i></button>
+    </div>
+  </section>
+
+  <!-- ===== Results ===== -->
+  <section class="results-section">
+    <div id="search-results" aria-live="polite"></div>
+  </section>
+
+  <!-- ===== Footer Placeholder ===== -->
+  <div id="footer-container"></div>
+
+  <!-- Scripts -->
+  <script src="assets/script.js"></script>
+  <script src="assets/loader.js"></script>
+  <script>
+    window.addEventListener('load', () => window.loadComponents('./'));
+  </script>
+</body>
+
+</html>

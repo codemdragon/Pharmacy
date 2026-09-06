@@ -179,9 +179,9 @@
                 <a href="/where_are_we.html" data-base-path="where_are_we.html">Where are We</a>
             </nav>
 
-            <div class="search-container">
-                <input type="text" placeholder="Search...">
-                <button><i class="fas fa-search"></i></button>
+            <div class="search-container" role="search">
+                <input type="text" placeholder="Search..." aria-label="Search this site" autocomplete="off">
+                <button type="button" aria-label="Search"><i class="fas fa-search"></i></button>
             </div>
         </div>
     </div>
@@ -190,6 +190,10 @@
 <div id="overlay"></div>
 <div class="side-nav">
     <button class="close-btn"><i class="fas fa-times"></i></button>
+    <div class="search-container" role="search">
+        <input type="text" placeholder="Search..." aria-label="Search this site" autocomplete="off">
+        <button type="button" aria-label="Search"><i class="fas fa-search"></i></button>
+    </div>
     <nav class="nav-links">
         <div class="nav-item">
             <a href="#" class="submenu-toggle">My Health <i class="fas fa-chevron-down"></i></a>
