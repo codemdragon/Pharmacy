@@ -525,6 +525,11 @@
         var cms = document.createElement('script');
         cms.src = new URL('cms.js', cs.src).toString();
         document.head.appendChild(cms);
+
+        // Site search (header quick-search dropdown + search results page)
+        var search = document.createElement('script');
+        search.src = new URL('search.js', cs.src).toString();
+        document.head.appendChild(search);
     })();
 
 })();
